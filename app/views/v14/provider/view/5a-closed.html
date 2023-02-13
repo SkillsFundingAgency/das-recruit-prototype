@@ -119,21 +119,22 @@ Vacancies
         </label>
         <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox" aria-labelledby="exp_elem exp_button">
           <optgroup label="Status">
-            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>closed vacancies</option>
+            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all vacancies</option>
             <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
             <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies</option>
-            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>closed vacancies</option>
+            <option value="pendingreview" {% if data.filter=='pendingreview' %}selected="selected" {%endif%}>pending employer review</option>
+            <option value="pendingdfe" {% if data.filter=='pendingdfe' %}selected="selected" {%endif%}>vacancies pending DfE review</option>
             <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft vacancies</option>
             <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed vacancies</option>
           </optgroup>
-          <optgroup label="Other">
+          <optgroup label="Applications">
             <option value="new" {% if data.filter=='new' %}selected="selected" {%endif%}>with new applications</option>
             <option value="withApplication" {% if data.filter=='withApplication' %}selected="selected" {%endif%}>with applications</option>
+            <option value="employerreviewed" {% if data.filter=='employerreviewed' %}selected="selected" {%endif%}>reviewed applications</option>
+          </optgroup>
+          <optgroup label="Other">
             <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
             <option value="closing" {% if data.filter=='closing' %}selected="selected" {%endif%}>closing soon</option>
-            {% if data.user == 'employer' %}
-            <option value="transferred" {% if data.filter=='transferred' %}selected="selected" {%endif%}>transferred from provider</option>
-            {% endif %}
           </optgroup>
         </select>
       </div>

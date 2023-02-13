@@ -139,13 +139,18 @@ Your adverts
             <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all adverts</option>
             <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live adverts</option>
             <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected adverts</option>
-            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>live adverts</option>
+            <option value="review" {% if data.filter=='pending review' %}selected="selected" {%endif%}>ready for review</option>
+            <option value="pending" {% if data.filter=='pending review' %}selected="selected" {%endif%}>adverts pending DfE review</option>
             <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft adverts</option>
             <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed adverts</option>
           </optgroup>
-          <optgroup label="Other">
+          <optgroup label="Applications">
             <option value="new" {% if data.filter=='new' %}selected="selected" {%endif%}>with new applications</option>
             <option value="withApplication" {% if data.filter=='withApplication' %}selected="selected" {%endif%}>with applications</option>
+            <option value="pending" {% if data.filter=='shared new' %}selected="selected" {%endif%}>shared applications to review</option>
+            <option value="pending" {% if data.filter=='shared all' %}selected="selected" {%endif%}>shared applications</option>
+          </optgroup>
+          <optgroup label="Other">
             <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
             <option value="closing" {% if data.filter=='closing' %}selected="selected" {%endif%}>closing soon</option>
             {% if data.user == 'employer' %}
