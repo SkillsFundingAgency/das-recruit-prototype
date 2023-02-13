@@ -1,0 +1,54 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage team members
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+
+<a href="1-your-team" class="govuk-back-link">Back to your team</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Chardai Brice</h1>
+
+  </div>
+</div>
+
+
+          <table class="govuk-table das-table--responsive">           
+            <thead class="govuk-table__head">
+                <tr>
+                    <th scope="col" class="govuk-table__header" style="width: 300px;">Email</span></th>
+                    <th scope="col" class="govuk-table__header">What they can do</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+      
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">chardai@email.com
+                      </td>
+                        <td class="govuk-table__cell">Manage apprentices, adverts and account – includes signing the employer agreement, adding PAYE schemes and managing team member access</td>
+                        <td class="govuk-table__cell"><a href="#" class="govuk-link">Change</a></td>   
+                      </tr>
+
+            </tbody>
+          </table>
+
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Resend Invitation   
+            </button>
+            <a class="govuk-link" href="#">Cancel</a>
+          </div>
+
+</div>
+</div>
+  
+    
+{% endblock %}

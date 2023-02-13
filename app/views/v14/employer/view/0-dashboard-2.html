@@ -235,11 +235,7 @@ Your apprentice adverts - Manage apprenticeships - GOV.UK
 
       <div class="govuk-grid-column-one-third ">
         <h3 class="govuk-heading-s">
-          {% if data.has_notifications == "yes" %}
-          <a href="#">Manage your emails</a>
-          {% else %}
-          <a href="#">Manage your emails</a>
-          {% endif%}
+          <a href="../manage-emails">Manage your emails</a>
         </h3>
         <p class="govuk-body">Set up and manage the emails you receive about your {%if data.user== "employer" %}adverts{%else%}vacancies{%endif%} and applications.</p>
       </div>
