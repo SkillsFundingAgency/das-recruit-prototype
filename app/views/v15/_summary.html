@@ -1,0 +1,271 @@
+{% set version = 'v15' %}
+
+
+<h2 class="govuk-heading-l">
+  <span class="govuk-tag">LATEST version</span><br>
+  Design sprint 15
+  <span class="govuk-caption-l">
+    7 March 2023 &ndash; 21 March 2023
+  </span>
+</h2>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {{ govukDetails({
+    summaryText: "Sprint design work",
+    html: "<table class='govuk-table'>
+      <thead class='govuk-table__head'>
+        <tr class='govuk-table__row'>
+          <th scope='col' class='govuk-table__header'>What we've done</th>
+          <th scope='col' class='govuk-table__header'>Why we're doing it</th>
+        </tr>
+      </thead>
+      <tbody class='govuk-table__body'>
+        <tr class='govuk-table__row'>
+          <td class='govuk-table__cell'>Allowing providers to share applications with employers within the service</td>
+          <td class='govuk-table__cell'>RAA improvements</td>
+        </tr>
+        <tr class='govuk-table__row'>
+          <td class='govuk-table__cell'>Allowing employers to review applications shared with them</td>
+          <td class='govuk-table__cell'>RAA improvements</td>
+        </tr>
+        <tr class='govuk-table__row'>
+          <td class='govuk-table__cell'>Improve managing applications</td>
+          <td class='govuk-table__cell'>RAA improvements</td>
+        </tr>
+
+      </tbody>
+    </table>"
+    }) }}
+
+
+
+
+    <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Design tickets (in Trello)</h4>
+    <ul class="govuk-list govuk-list--bullet">
+      <!-- <li><a href="https://trello.com/c/elcTGU4Q/219-219-update-edit-live-vacancy-journey-employer-prover-traineeships" class="govuk-link govuk-link--no-visited-state">Edit live vacancy</a></li>   -->
+    </ul>
+
+    <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Design artefacts</h4>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a
+          href="https://lucid.app/lucidspark/75df8cd3-1247-466f-b7c6-7980cf119bf5/edit?viewport_loc=-451923%2C-406751%2C41806%2C21450%2C0_0&invitationId=inv_295930d0-a2eb-4b25-a72a-e25f0aea5c39#"
+          class="govuk-link govuk-link--no-visited-state">Lucid board</a></li>
+    </ul>
+
+    <!-- ////EMPLOYER//// -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Employer</h4>
+    <div class="govuk-button-group">
+      <a href="/{{version}}/employer/login" class="govuk-button" style="background: #6F72AF"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>What we've done</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/employer/email-shared-applications">Email to employer</a></td>
+              <td class='govuk-table__cell'>
+                <li>NEW email send to employer what applications have been shared for them to review</li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Recruit dashboard</a></td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/v14/employer/view/0-dashboard">UPDATED
+                    Recruit dashboard - given provider permissions</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/v14/employer/view/0-dashboard-2">UPDATED
+                    Recruit dashboard - no provider permissions</a></li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>'Your adverts' page'</td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/v14/employer/view/6-shared-all?filter=shared all">UPDATED shared applications (all)
+                    filter</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/v14/employer/view/6-shared-new?filter=shared new">UPDATED shared applications (new to review)
+                    filter</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Shared applications page</td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/{{version}}/employer/view/6b-shared-applications-v1">Journey 1 for UR</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/{{version}}/employer/view/6b-shared-applications-v2">Journey 2 for UR</li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/{{version}}/employer/account/application-provider-unsuccessful">Shared application page view
+                    if provider has made unsuccessful</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/{{version}}/employer/view/3c-manage-applications">'Manage adverts' page</a></td>
+              <td class='govuk-table__cell'>
+                <li>CHANGED summary table</li>
+                <li>CHANGED vacancy analytics</li>
+                <li>UPDATED manage application statuses</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/{{version}}/employer/create/wages">Apprenticeship wage</a></td>
+              <td class='govuk-table__cell'>
+                <li>UPDATED the wages page to be refelctive of new minimum wage rate</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Employer team members</td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/{{version}}/employer/team/1-your-team">UPDATED the journey for adding team members and
+                    setting their permissions so it mentions abour recuit</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/{{version}}/employer/team/7-invitations">UPDATED invitation recevied</a></li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/{{version}}/employer/manage-emails">Employer manage advert emails</a></td>
+              <td class='govuk-table__cell'>
+                <li>UPDATED the page to include the invite receivers notification when training provider shares
+                  applications</li>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+
+
+
+    <!-- //// PROVIDER//// -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Provider</h4>
+
+    <div class="govuk-button-group">
+      <a href="/{{version}}/provider/login" class="govuk-button" style="background:#F47737"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>Notes</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/provider/view/0-dashboard">UR dashboard link</a></td>
+              <td class='govuk-table__cell'>
+                <li> For pre-share with employer (part 1) of sharing applications journey</li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/provider/view/0-dashboard-employer-reviewed">UR dashboard link</a></td>
+              <td class='govuk-table__cell'>
+                <li> For employer reviewed (part 2) of sharing applications journey</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/provider/create/wages">Apprenticeship wage</a></td>
+              <td class='govuk-table__cell'>
+                <li>UPDATED the wages page to be refelctive of new minimum wage rate</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/provider/view/3c-manage-applications">Manage vacancies page</a></td>
+              <td class='govuk-table__cell'>
+                <li>CHANGED the page to clean up its structure</li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+
+    <!-- ////TRAINEESHIP -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Traineeship</h4>
+
+    <div class="govuk-button-group">
+      <a href="/{{version}}/provider/login" class="govuk-button" style="background: #417F82"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>What we've done this sprint</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/traineeships/view-vacancy/0-dashboard">Traineeships dashboard </a></td>
+              <td class='govuk-table__cell'>
+                <li>CHANGED show banner, removed ‘create vacancy' button, changed 'drafts’ tile</li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'> <a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/traineeships/view-vacancy/1a-pending-esfa-review">Vacancies</a></td>
+              <td class='govuk-table__cell'>
+                <li>CHANGED show banner, remove ‘create vacancy’ button, remove ‘draft vacancies’ from filter</li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+
+
+
+  </div>
+</div>

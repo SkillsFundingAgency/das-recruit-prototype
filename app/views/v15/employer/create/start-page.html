@@ -1,0 +1,46 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Create an advert - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% if data.journey != "new" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Create an advert</h1>
+      <p class="govuk-body-l">Recruit an apprentice by creating an advert to post on <a href="#" class="govuk-link govuk-link--no-visited-state">Find an apprenticeship (opens in a new tab)</a>.</p>
+      
+      <h2 class="govuk-heading-m">Before you start</h2>
+      <p class="govuk-body">Before you create an advert, you’ll need to know:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the name of the apprenticeship training course and training provider - if you haven't found training provider yet, use <a href="#" class="govuk-link govuk-link--no-visited-state">Find apprenticeship training for your apprentice (opens in a new tab)</a></li>
+        <li>the duration of the apprenticeship</li>
+        <li>the number of hours spent working and training</li>
+        <li>how much your apprentice will be paid</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        If you don’t pay the apprenticeship levy, you’ll need to <a href="#">reserve apprenticeship funding</a> before an apprenticeship can start.
+      </div>
+
+
+      {% set _forwardLink = "task-list" %}
+
+      {{ govukButton({
+        text: "Start now",
+        href: _forwardLink,
+        classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
+        isStartButton: true
+      }) }}
+    </div>
+  </div>
+
+{% endblock %}

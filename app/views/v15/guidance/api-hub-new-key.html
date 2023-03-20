@@ -1,0 +1,54 @@
+{% extends "devhub-layout.html" %}
+
+{% block pageTitle %}
+Display adverts API key - Manage apprenticeships - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukPanel({
+      titleText: "Key renewed",
+      classes: "govuk-!-margin-bottom-9",
+      html: ""
+    }) }}
+      <h1 class="govuk-heading-xl">Display adverts API key</h1>
+      <p class="govuk-body">
+        You need to copy the API key and use it to access the API. If you give it to a developer, this gives them permission to connect to the API on your behalf.
+      </p>
+      <h2 class="govuk-heading-l">
+        Display Adverts API
+      </h2>
+      <p class="govuk-body">      
+        Display recruitment adverts from Find an apprenticeship.       
+        <br><br>
+        You'll need to send the API key and the API page to your developer. 
+        <br>
+        You can do this by copying the information below and pasting it into an email.
+        <br><br>             
+      </p>
+      <div class="app-summary-card ">
+        <header class="app-summary-card--header" data-module="app-copy">
+          <code style="color:darkgreen; font-size:16px;">34dkhjrjvjiojfivjoidjfem33435mfm<br><br>https://developer.apprenticeships.education.gov.uk/display-adverts-api-documentation</code>
+        </header>
+      </div>
+      <details class="govuk-details govuk-!-margin-top-9" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Do you need a new API key?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          Reasons you might want to renew your API key include &mdash; security concerns, a change in your systems or a change of developer or staff.<br><br>Renewing the key will disable the previous key and will stop your API from working until you use the new key. <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renew key</a>.
+        </div>
+      </details>
+    </div>
+  </div>
+{% endblock %}
