@@ -15,7 +15,8 @@ Adverts
   <div class="govuk-grid-column-two-thirds">
 
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
       <div class="govuk-notification-banner__header">
         <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
           Done
@@ -23,9 +24,10 @@ Adverts
       </div>
       <div class="govuk-notification-banner__content">
         <h3 class="govuk-notification-banner__heading">
-          You want to interview  applicant C5662EA. The applicant is now listed as Keith Stewart.
+          You want to interview applicant C5662EA. The applicant is now listed as Keith Stewart.
         </h3>
-        <p class="govuk-body">The applicant's contact details are now shown in their application. Your response has been to your training provider..</p>
+        <p class="govuk-body">The applicant's contact details are now shown in their application. Your response has been
+          to your training provider..</p>
       </div>
     </div>
 
@@ -33,103 +35,118 @@ Adverts
     <h1 class="govuk-heading-l">Shared applications</h1>
 
     <p>
-      Each application is anonymised. If you decide to interview the applicant, you will be able to see their name and contact information.
+      Each application is anonymised. If you decide to interview the applicant, you will be able to see their name and
+      contact information.
     </p>
+  </div>
+</div>
 
 <!-- table START -->
 {%- from "govuk/components/tag/macro.njk" import govukTag -%}
 
 {%
-  set appsTableData = [
+set appsTableData = [
 
-    {
-      id: "LP07688",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v2",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "LHK76TY",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v2",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "CP765D8",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v2",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "R384JP4",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v2",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "B1003GH",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v2",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "KR9678F",
-      status: "RESPONSE NEEDED",
-      link: "../account/application-shared-v2",
-      classes: "govuk-tag--blue",
-      date: "Not reviewed"
-    },
-    {
-      id: "Keith Stewart",
-      status: "INTERVIEWING",
-      link: "../account/application-shared-yes",
-      classes: "govuk-tag--yellow",
-      date: "today"
-    }
+{
+id: "LP07688",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "LHK76TY",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "CP765D8",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "R384JP4",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "KR9678F",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "Keith Stewart",
+status: "INTERVIEWING",
+link: "../account/application-shared-yes",
+classes: "govuk-tag--purple",
+date: "today",
+shared: "12 Jan 2023"
+}
 ]
 %}
-    <table class="govuk-table responsive-table" data-module="das-table-sort">
-      <thead class="govuk-table__header">
-        <tr class="govuk-table__row" role="row">
+<table class="govuk-table responsive-table" data-module="das-table-sort">
+  <thead class="govuk-table__header">
+    <tr class="govuk-table__row" role="row">
 
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Applicant</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Reviewed</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Response</a>
-          </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        {% for applicant in appsTableData %}
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
-            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a></td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">
-            {% if applicant.date == "today" %}
-              <span class="todays-date"></span>
-            {% else %}
-              {{ applicant.date }}
-            {% endif %}
-          </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">
-            {{ govukTag({
-              text: applicant.status, 
-              classes: applicant.classes
-            }) }}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Applicant</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Response</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date reviewed</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date shared</a>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    {% for applicant in appsTableData %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
+        <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a>
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Status">
+        {{ govukTag({
+        text: applicant.status,
+        classes: applicant.classes
+        }) }}
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">
+        {% if applicant.date == "today" %}
+        <span class="todays-date"></span>
+        {% else %}
+        {{ applicant.date }}
+        {% endif %}
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.shared }} </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 <!-- table END -->
 
 </div>
@@ -142,16 +159,16 @@ Adverts
 
 <!-- Today's date -->
 <script>
-var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var n = new Date();
-var y = n.getFullYear();
-var m = n.getMonth();
-var d = n.getDate();
-var todaysDate = d + " " + months[m] + " " + y;
-var td = document.getElementsByClassName("todays-date");
-for (let i = 0; i < td.length; i++) {
-  td[i].textContent = todaysDate
-}
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var n = new Date();
+  var y = n.getFullYear();
+  var m = n.getMonth();
+  var d = n.getDate();
+  var todaysDate = d + " " + months[m] + " " + y;
+  var td = document.getElementsByClassName("todays-date");
+  for (let i = 0; i < td.length; i++) {
+    td[i].textContent = todaysDate
+  }
 </script>
 
 <!-- Table sorts -->
@@ -165,7 +182,7 @@ for (let i = 0; i < td.length; i++) {
     };
 
     const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
-                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+      v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
     )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
 
     const sortableTable = document.querySelector('[data-module="das-table-sort"]');
@@ -197,9 +214,9 @@ for (let i = 0; i < td.length; i++) {
       }
 
       Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
-              .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
-                      .indexOf(sortLink.parentNode), this.asc = !this.asc))
-              .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+        .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+          .indexOf(sortLink.parentNode), this.asc = !this.asc))
+        .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
     }
 
     allSortLinks.forEach(link => {

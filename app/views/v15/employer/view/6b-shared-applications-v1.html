@@ -15,104 +15,117 @@ Manage vacancy
   <div class="govuk-grid-column-two-thirds">
 
     <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
-    <h1 class="govuk-heading-l">Shared applications</h1>
+    <h1 class="govuk-heading-l">Shared applications.</h1>
 
     <p>
       Each application is anonymised. If you decide to interview the applicant, you will be able to see their name and
       contact information.
     </p>
-
-    <!-- table START -->
-    {%- from "govuk/components/tag/macro.njk" import govukTag -%}
-
-    {%
-    set appsTableData = [
-    {
-    id: "C5662EA",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v2",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    },
-    {
-    id: "LP07688",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v1",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    },
-    {
-    id: "LHK76TY",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v1",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    },
-    {
-    id: "CP765D8",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v1",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    },
-    {
-    id: "R384JP4",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v1",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    },
-    {
-    id: "B1003GH",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v1",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    },
-    {
-    id: "KR9678F",
-    status: "RESPONSE NEEDED",
-    link: "../account/application-shared-v1",
-    classes: "govuk-tag--blue",
-    date: "Not reviewed"
-    }
-    ]
-    %}
-    <table class="govuk-table responsive-table" data-module="das-table-sort">
-      <thead class="govuk-table__header">
-        <tr class="govuk-table__row" role="row">
-
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Applicant</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Reviewed</a>
-          </th>
-          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
-            <a href="#" class="govuk-link das-table__sort">Response</a>
-          </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        {% for applicant in appsTableData %}
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
-            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a>
-          </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }} </td>
-          <td class="govuk-table__cell" role="gridcell" data-label="Status">
-            {{ govukTag({
-            text: applicant.status,
-            classes: applicant.classes
-            }) }}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <!-- table END -->
-
   </div>
+</div>
+
+<!-- table START -->
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{%
+set appsTableData = [
+{
+id: "C5662EA",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "LP07688",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "LHK76TY",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "CP765D8",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "R384JP4",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "KR9678F",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+}
+]
+%}
+<table class="govuk-table responsive-table" data-module="das-table-sort">
+  <thead class="govuk-table__header">
+    <tr class="govuk-table__row" role="row">
+
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Applicant</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Response</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date reviewed</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date shared</a>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    {% for applicant in appsTableData %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
+        <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a>
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Status">
+        {{ govukTag({
+        text: applicant.status,
+        classes: applicant.classes
+        }) }}
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }} </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.shared }} </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!-- table END -->
+
+</div>
 </div>
 
 {% endblock %}
@@ -186,6 +199,8 @@ Manage vacancy
   if (document.querySelector('[data-module="das-table-sort"]')) {
     tableSort();
   }
+
 </script>
+
 
 {% endblock %}

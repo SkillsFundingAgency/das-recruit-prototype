@@ -15,39 +15,44 @@ Manage vacancy
   <div class="govuk-grid-column-two-thirds">
 
 
-    <h1 class="govuk-heading-l">Are you sure you want to make these applications unsuccessful?</h1>
+    <h1 class="govuk-heading-l">Make multiple applications unsuccessful</h1>
 
-    
-  <!-- list START       -->
+    <p class="govuk-body">You will make these applications unsuccessful:</p>
 
-                 
-  <div style="background-color: #f3f2f1; padding: 15px;">
-    
-        <ul class="govuk-list govuk-list--bullet">
 
-            {% if data['unsuccessful'] is string %}
+    <!-- list START       -->
 
-            <li>{{ data[data['unsuccessful'] + '-name'] }}: {{ data['unsuccessful'] }}</li>
 
-            {% else %}
+    <div class="govuk-inset-text">
 
-                {% for applicantID in data['unsuccessful'] %}
-                <li>{{ data[applicantID + '-name'] }}: {{ applicantID }}</li>
-                {% else %}
-                <li>No applicants selected</li>
-                {% endfor %}
+      {% if data['unsuccessful'] is string %}
 
-            {% endif %}
+      <p>{{ data[data['unsuccessful'] + '-name'] }}: {{ data['unsuccessful'] }}</p>
 
-        </ul>
+      {% else %}
 
+      {% for applicantID in data['unsuccessful'] %}
+      <p>{{ data[applicantID + '-name'] }}: {{ applicantID }}</p>
+      {% else %}
+      <p>No applicants selected</p>
+      {% endfor %}
+
+      {% endif %}
     </div>
+  </div>
+  <br>
+
+
+  </ul>
+
+</div>
 <!-- list END -->
 
+
 <br>
 <br>
 
-<h2 class="govuk-heading-m">Your message to these applicants:</h2>
+<p class="govuk-body">These applicants will be notified with this message:</p>
 
 <div class="govuk-inset-text">
   {{ data['give-feedback'] }}
@@ -55,42 +60,55 @@ Manage vacancy
 <br>
 
 <!-- radio buttons START -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to make these applications unsuccessful?
+          </h1>
+        </legend>
+
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
 
             <form method="post" action="3c-manage-applications-unsuccessful-multiple">
 
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="share_applications_yes">
-                  Yes, make these applications unsuccessful and notify the applicants
-                </label>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio"
+                    value="yes">
+                  <label class="govuk-label govuk-radios__label" for="share_applications_yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio"
+                    value="no">
+                  <label class="govuk-label govuk-radios__label" for="share_applications_no">
+                    No
+                  </label>
+                </div>
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="share_applications_no">
-                  No, do not make these applications unsuccessful
-                </label>
-              </div>
-            </div>
-        
+
           </fieldset>
         </div>
- <!-- radio buttons END -->
+        <!-- radio buttons END -->
 
- {{ govukWarningText({
-  text: "This action cannot be undone.",
-  iconFallbackText: "Fallback text"
-}) }}
+        {{ govukWarningText({
+        text: "You can't undo this action.",
+        iconFallbackText: "Fallback text"
+        }) }}
 
- <button class="govuk-button" data-module="govuk-button">
-  Confirm
-</button>
+        <button class="govuk-button" data-module="govuk-button">
+          Confirm
+        </button>
 
-</form>
+        </form>
 
+    </div>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}

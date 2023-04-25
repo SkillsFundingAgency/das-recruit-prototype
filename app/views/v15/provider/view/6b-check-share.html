@@ -15,73 +15,98 @@ Manage vacancy
   <div class="govuk-grid-column-two-thirds">
 
 
-    <h1 class="govuk-heading-l">Do you want to share these applications?</h1>
+    <h1 class="govuk-heading-l">Share multiple applications</h1>
+
+    <p class="govuk-body">You will share these applications:</p>
 
 
-  <!-- list START       -->
-        <div style="background-color: #f3f2f1; padding: 15px;">
-
-        <ul class="govuk-list govuk-list--bullet">
+    <!-- list START       -->
 
 
-            {% if data['applications'] is string %}
+    <div class="govuk-inset-text">
 
-            <li>{{ data[data['applications'] + '-name'] }}: {{ data['applications'] }}</li>
+      {% if data['applications'] is string %}
 
-            {% else %}
+      <p>{{ data[data['applications'] + '-name'] }}: {{ data['applications'] }}</p>
 
-                {% for applicantID in data['applications'] %}
-                <li>{{ data[applicantID + '-name'] }}: {{ applicantID }}</li>
-                {% else %}
-                <li>No applicants selected</li>
-                {% endfor %}
+      {% else %}
 
-            {% endif %}
-        </ul>
+      {% for applicantID in data['applications'] %}
+      <p>{{ data[applicantID + '-name'] }}: {{ applicantID }}</p>
+      {% else %}
+      <p>No applicants selected</p>
+      {% endfor %}
+
+      {% endif %}
+    </div>
+  </div>
+  <br>
+
+
+  </ul>
+
 </div>
-
 <!-- list END -->
+
+<h2 class="govuk-heading-l">What happens next</h2>
+<p class="govuk-body">You will be notified when the employer makes a decision about an applicant.</p>
+
+<h2 class="govuk-heading-m">What the employer will need to do</h2>
+
+<p class="govuk-body">The employer will find these shared applications in the <b>Your apprenticeship adverts</b> section
+  of their apprenticeship service account</p>
+
+<p class="govuk-body">They will see an anonymised version of each application with the name and contact details removed.
+  They must select whether they want to interview the applicant.</p>
+
+<h2 class="govuk-heading-m">If the employer is organising their own interviews</h2>
+
+<p class="govuk-body">After the employer selects to interview an applicant, they can see the applicant’s name and
+  contact details.</p>
+
 
 <br><br>
 
-<p class="govuk-body">These applications will be shared: </p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>to the employer’s apprenticeship service account </li>
-  <li>anonymously—but the employer will an applicant's contact details if they want to interview an applicant</li>
-</ul>
-
-<br>
 
 <!-- radio buttons START -->
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to share these applications?
+          </h1>
+        </legend>
 
-            <form method="post" action="3c-manage-applications-shared-multiple">
+        <form method="post" action="3c-manage-applications-shared-multiple">
 
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="share_applications_yes">
-                  Yes, share these applications with employer
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="share_applications_no">
-                  No, don't share these applications with employer
-                </label>
-              </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio"
+                value="yes">
+              <label class="govuk-label govuk-radios__label" for="share_applications_yes">
+                Yes
+              </label>
             </div>
-        
-          </fieldset>
-        </div>
- <!-- radio buttons END -->
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="share_applications_no">
+                No
+              </label>
+            </div>
+          </div>
 
- <button class="govuk-button" data-module="govuk-button">
-  Confirm
-</button>
+      </fieldset>
+    </div>
+    <!-- radio buttons END -->
 
-</form>
+    <button class="govuk-button" data-module="govuk-button">
+      Confirm
+    </button>
+
+    </form>
 
   </div>
 </div>

@@ -155,11 +155,14 @@ Manage apprentices
 
     <!-- EMPLOYER RESPONSE -->
     <section>
-      <h2 class="govuk-heading-l">Employer response</h2>
 
-      <p>Yes, the employer wants to interview this applicant.</p>
+      <h2 class="govuk-heading-l">Progress this application</h2>
+      <h2 class="govuk-heading-m">Employer response</h2>
 
-      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p class="govuk-body">The employer <b>wants to interview</b>
+        this applicant.</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--not visible">
     </section>
 
     <!-- RADIO BUTTONS     -->
@@ -171,7 +174,7 @@ Manage apprentices
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h1 class="govuk-fieldset__heading">
                 What do you want to do with this application?
               </h1>
@@ -181,10 +184,12 @@ Manage apprentices
               <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist"
                 checked="selected">
               <label class="govuk-label govuk-radios__label" for="application-3">
-                Interview with employer
+                Mark application for interviewing with the employer
               </label>
               <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
-                Change application status to ‘interviewing’.
+                Change this application's status to 'interviewing' because the employer will interview this applicant.
+                Does not notify
+                the applicant.
               </div>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
@@ -203,6 +208,15 @@ Manage apprentices
                 Make successful
               </label>
               <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                Send a notification to the applicant offering them this apprenticeship.
+              </div>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
+                  type="tel" autocomplete="tel">
               </div>
             </div>
 
@@ -214,6 +228,15 @@ Manage apprentices
                 Make unsuccessful and give feedback
               </label>
               <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                Send a notification to the applicant telling them they won't be offered this apprenticeship.
+              </div>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
+                  type="tel" autocomplete="tel">
               </div>
             </div>
 

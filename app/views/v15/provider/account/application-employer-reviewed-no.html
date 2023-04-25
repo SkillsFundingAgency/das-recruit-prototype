@@ -25,24 +25,24 @@ Manage apprentices
 
       <p class="govuk-body-l">Application ID: 897DW5T</p>
 
-<!-- CONTACT DETAILS -->
-<h2 class="govuk-heading-l">Contact details</h2>
+      <!-- CONTACT DETAILS -->
+      <h2 class="govuk-heading-l">Contact details</h2>
 
-<div class="panel panel-border-narrow">
-  <p class="govuk-body">
-    Judy Ward<br>13 Old Hinckley Road<br>Nuneaton<br>Warwickshire<br>CV10 0AA
-  </p>
-  <p class="govuk-body">
-    07812345678
-    <br> <a href="mailto:faizal.dawood@domainname.co.uk">judy.ward@domainname.co.uk</a>
-  </p>
-</div>
-</section>
+      <div class="panel panel-border-narrow">
+        <p class="govuk-body">
+          Judy Ward<br>13 Old Hinckley Road<br>Nuneaton<br>Warwickshire<br>CV10 0AA
+        </p>
+        <p class="govuk-body">
+          07812345678
+          <br> <a href="mailto:faizal.dawood@domainname.co.uk">judy.ward@domainname.co.uk</a>
+        </p>
+      </div>
+    </section>
 
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-<!-- ABOUT YOU -->
+    <!-- ABOUT YOU -->
     <section>
       <h2 class="govuk-heading-l">About you</h2>
 
@@ -51,7 +51,8 @@ Manage apprentices
         <span>XXXXXXXXXX</span>
       </div>
       <div class="govuk-form-group">
-        <span class="govuk-label govuk-!-font-weight-bold">What skills would you like to improve during this apprenticeship?</span>
+        <span class="govuk-label govuk-!-font-weight-bold">What skills would you like to improve during this
+          apprenticeship?</span>
         <span>XXXXXXXXXX</span>
       </div>
       <div class="govuk-form-group">
@@ -62,7 +63,7 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<!-- EDUCATION -->
+    <!-- EDUCATION -->
     <section>
       <h2 class="govuk-heading-l">Education</h2>
 
@@ -88,7 +89,7 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<!-- QUALIFICATIONS -->
+    <!-- QUALIFICATIONS -->
     <section>
       <h2 class="govuk-heading-l">Qualifications</h2>
 
@@ -111,7 +112,7 @@ Manage apprentices
 
     </section>
 
-<!-- SKILLS -->
+    <!-- SKILLS -->
     <section>
       <h2 class="govuk-heading-l">Skills the Employer wants</h2>
 
@@ -122,86 +123,84 @@ Manage apprentices
 
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
-<!-- EMPLOYER QUESTIONS -->
-<section>
-  <h2 class="govuk-heading-l">Additional questions</h2>
-
-  <h3 class="govuk-heading-s">Why are you interested in this role?</h3>
-  <p>XXXXXXXXXX</p>
-
-  <h3 class="govuk-heading-s">Are you able to travel to multiple sites?</h3>
-  <p>Yes</p>
-
-</section>
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-<!-- ADDITIONAL QUESTIONS -->
-<section>
-  <h2 class="govuk-heading-l">Equality questions</h2>
-
-  <h3 class="govuk-heading-s">Do you have a learning difficulty, disability or health problem?</h3>
-  <p>No</p>
-
-  <h3 class="govuk-heading-s">Is there anything we can do to support your interview?</h3>
-  <p>
-    <span>I don't have any interview support requirements</span>
-
-  </p>
-  <br>
-  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-</section>
-      
-
-
-<!-- EMPLOYER RESPONSE -->
+    <!-- EMPLOYER QUESTIONS -->
     <section>
-      <h2 class="govuk-heading-l">Employer response</h2>
+      <h2 class="govuk-heading-l">Additional questions</h2>
 
-      <p>No, the employer does not want to interview this applicant.</p>
+      <h3 class="govuk-heading-s">Why are you interested in this role?</h3>
+      <p>XXXXXXXXXX</p>
 
-      {{ govukInsetText({
-        html: "No, I don't think this applicant will be a good fit for the role."
-      }) }}
+      <h3 class="govuk-heading-s">Are you able to travel to multiple sites?</h3>
+      <p>Yes</p>
 
+    </section>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <!-- ADDITIONAL QUESTIONS -->
+    <section>
+      <h2 class="govuk-heading-l">Equality questions</h2>
+
+      <h3 class="govuk-heading-s">Do you have a learning difficulty, disability or health problem?</h3>
+      <p>No</p>
+
+      <h3 class="govuk-heading-s">Is there anything we can do to support your interview?</h3>
+      <p>
+        <span>I don't have any interview support requirements</span>
+
+      </p>
       <br>
-
       <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     </section>
 
-<!-- RADIO BUTTONS     -->
-<section>
-     
-      <form method="post" action="../view/7b-check-unsuccessful">
 
-                <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
-                  <div class="govuk-form-group">
-                    <h1 class="govuk-heading-l">
-                      Make application unsuccessful
-                    </h1>
-                    <div id="sign-in-hint" class="govuk-hint">
-                      Help the applicant understand why their application was unsuccessful. Your comments will be sent to the applicant.
-                    </div>
-                    <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="8" aria-describedby="word-count-info"></textarea>
-                  </div>
-                
-                  <div id="word-count-info" class="govuk-hint govuk-character-count__message">
-                    You can enter up to 200 words
-                  </div>
-                
-                </div>
 
-              
-<!-- BUTTONS -->
+    <!-- EMPLOYER RESPONSE -->
+    <h2 class="govuk-heading-l">Make this application unsuccessful</h2>
+    <h3 class="govuk-heading-m">Employer response</h3>
+
+    <p class="govuk-body">The employer <b>does not want to interview</b> this applicant. They wrote:
+    </p>
+    {{ govukInsetText({
+    html: "No, I don't think this applicant will be a good fit for the role."
+    }) }}
+
+    <!-- RADIO BUTTONS     -->
+    <section style="margin-top: 30px;"">
+
+      <form method=" post" action="../view/7b-check-unsuccessful">
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+        <div class="govuk-form-group">
+          <h1 class="govuk-heading-m">
+            Respond to the applicant
+          </h1>
+          <div id="sign-in-hint" class="govuk-hint">
+            Help the applicant understand why their application was unsuccessful. Your comments will be sent to
+            the
+            applicant.
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful"
+            rows="8" aria-describedby="word-count-info"></textarea>
+        </div>
+
+        <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+          You can enter up to 200 words
+        </div>
+
+      </div>
+
+
+      <!-- BUTTONS -->
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-      
+
         <a class="govuk-link" href="#">Cancel</a>
       </div>
-      
-    </form>
+
+      </form>
 
 
 

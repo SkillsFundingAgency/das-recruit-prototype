@@ -145,7 +145,8 @@ Vacancies
             <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all
               vacancies</option>
             <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
-            <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies
+            <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>unsuccessful
+              vacancies
             </option>
             <option value="pendingreview" {% if data.filter=='pendingreview' %}selected="selected" {%endif%}>pending
               employer review</option>

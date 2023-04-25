@@ -170,11 +170,12 @@ Manage apprentices
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
               <label class="govuk-label govuk-radios__label" for="application-3">
-                Interview with employer
+                Mark application for interviewing with the employer
               </label>
               <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
-                Change application status to ‘interviewing’.
-              </div>
+                Change this application's status to 'interviewing' because the employer will interview this applicant.
+                Does not notify
+                the applicant. </div>
             </div>
             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
               <div class="govuk-form-group">
@@ -192,6 +193,14 @@ Manage apprentices
                 Make successful
               </label>
               <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                Send a notification to the applicant offering them this apprenticeship.</div>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
+                  type="tel" autocomplete="tel">
               </div>
             </div>
 
@@ -200,9 +209,17 @@ Manage apprentices
               <input class="govuk-radios__input" id="application-5" name="application" type="radio" value="unsuccessful"
                 data-aria-controls="conditional-contact-5">
               <label class="govuk-label govuk-radios__label" for="application-4">
-                Make unsuccessful
+                Make unsuccessful and give feedback
               </label>
               <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                Send a notification to the applicant telling them they won't be offered this apprenticeship.</div>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
+                  type="tel" autocomplete="tel">
               </div>
             </div>
 
