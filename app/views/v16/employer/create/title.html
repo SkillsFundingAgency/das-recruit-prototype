@@ -1,0 +1,50 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+What do you want to call this advert? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% if data.journey != "new" %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <h1 class="govuk-fieldset__heading">
+          What do you want to call this advert?
+          </h1>
+        </legend>
+        <p class="govuk-body">To make sure your advert appears in search results, use a title that relates to the apprenticeship training.</p>
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="100">
+        <div class="govuk-form-group govuk-!-margin-bottom-8">
+          <div class="govuk-hint">You must include the word ‘apprentice’ or ‘apprenticeship’ </div>
+          <input class="govuk-input govuk-!-width-three-quarters govuk-js-character-count" id="title" name="title" type="text" value="{% if data.title and data.edit == 'yes' %}{{data.title}}{%endif%}">
+        </div>
+        <div id="title-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 100 characters
+        </div>
+      </div>
+      
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
