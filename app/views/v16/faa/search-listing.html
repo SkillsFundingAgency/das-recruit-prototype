@@ -15,9 +15,11 @@ Find an apprenticeship - GOV.UK
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">66 apprenticeships found</h1>
+      <h1 class="govuk-heading-xl">62 apprenticeships found</h1>
     </div>
   </div>
+
+  <!-- START filter -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-one-third">
       <div class="das-show-hide" data-module="das-show-hide">
@@ -30,17 +32,34 @@ Find an apprenticeship - GOV.UK
 
               <button type="submit" class="govuk-button" id="filters-submit">Apply filters</button>
               <div class="govuk-form-group">
-                <label for="Keyword" class="govuk-fieldset__legend govuk-fieldset__legend--m">What
+                <label for="Keyword"
+                  class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-0">What
                   <p class="govuk-hint">Enter job company, skills</p>
                 </label>
                 <input name="keyword" type="search" title="Search" class="govuk-input" id="Keyword" value="">
               </div>
               <div class="govuk-form-group">
-                <label for="Keyword" class="govuk-fieldset__legend govuk-fieldset__legend--m">Where
+                <label for="Keyword"
+                  class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-0">Where
                   <p class="govuk-hint">Enter job company, skills</p>
                 </label>
                 <input name="keyword" type="search" title="Search" class="govuk-input" id="Keyword" value="">
+                <div id="subject-hint" class="govuk-hint govuk-!-margin-top-2">
+                  Within
+                </div>
+                <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+                  <option value="choose" selected>This area only</option>
+                  <option value="2">2 miles</option>
+                  <option value="5">5 miles</option>
+                  <option value="10">10 miles</option>
+                  <option value="15">15 miles</option>
+                  <option value="20">20 miles</option>
+                  <option value="30">30 miles</option>
+                  <option value="40">40 miles</option>
+                  <option value="england">England</option>
+                </select>
               </div>
+
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -226,6 +245,9 @@ Find an apprenticeship - GOV.UK
         </div>
       </div>
     </div>
+    <!-- END filter -->
+
+    <!-- START sort -->
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
@@ -239,136 +261,144 @@ Find an apprenticeship - GOV.UK
           <option value="salary-accending">Salary low to high</option>
         </select>
       </div>
+      <!-- END sort -->
+
+      <!-- START cards -->
       <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
       <div class="das-search-results">
         <ol class="das-search-results__list">
           <h2 class="govuk-heading-m das-search-results__heading">
             <a class="das-search-results__link" id="standard-274" href="/courses/274">
               Business Administration Apprentice</a>
-            <p class="govuk-body govuk-!-margin-bottom-0">Aspect 3 Apartments LTD</p>
-            <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+            <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Browns Housing LTD</p>
+            <p class="govuk-body" style="color:#505a5f">
               Sheffield, S3 7GE</p>
+            <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.4 miles from you</p>
+            <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)</p>
+            <p class="govuk-body"><b>Annual wage</b> £10,982.40</p>
+            <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 16 days (Tuesday 27 June)</p>
+            <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+              Posted 19 May</p>
             <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
-            <h2 class="govuk-heading-m das-search-results__heading">
-              <a class="das-search-results__link" id="standard-272" href="/courses/272">
-                Academic professional <span class="das-no-wrap">(level 7)</span>
-              </a>
-            </h2>
-            <p class="govuk-body das-search-results__body">Working within the higher education (HE) sector delivering
-              higher education teaching</p>
-            <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-              <dt class="das-definition-list__title">Apprenticeship category</dt>
-              <dd class="das-definition-list__definition">Education and early years</dd>
-            </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-176" href="/courses/176">
-                  Accident repair technician <span class="das-no-wrap">(level 3)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Mending damaged vehicles using a range of metalworking and
-                finishing techniques.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Engineering and manufacturing</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-204" href="/courses/204">
-                  Accountancy or taxation professional <span class="das-no-wrap">(level 7)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Providing financial information and advice to different
-                organisations.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-698" href="/courses/698">
-                  Accounting finance manager <span class="das-no-wrap">(level 6)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Manage and implement accounting, finance systems and
-                processes.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-488" href="/courses/488">
-                  Accounts or finance assistant <span class="das-no-wrap">(level 2)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Maintaining an efficient and accurate finance function
-                within
-                a business.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-463" href="/courses/463">
-                  Acoustics technician <span class="das-no-wrap">(level 4)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Understanding the science of sound and vibration
-                propagation
-                and applying this to work areas relevant to their employer&#x2019;s working practices.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Construction and the built environment</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-17" href="/courses/17">
-                  Actuarial technician <span class="das-no-wrap">(level 4)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Supporting senior colleagues to help manage risks for
-                clients. This will be through the use of actuarial techniques and building mathematical models</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-255" href="/courses/255">
-                  Actuary <span class="das-no-wrap">(level 7)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Analysing data to predict the likelihood and potential
-                financial risk of future events.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Legal, finance and accounting</dd>
-              </dl>
-            </li>
-            <li class="das-search-results__list-item">
-              <h2 class="govuk-heading-m das-search-results__heading">
-                <a class="das-search-results__link" id="standard-119" href="/courses/119">
-                  Adult care worker <span class="das-no-wrap">(level 2)</span>
-                </a>
-              </h2>
-              <p class="govuk-body das-search-results__body">Enable young people to develop and working with young
-                people
-                to
-                facilitate personal, social and educational development.</p>
-              <dl class="das-definition-list das-definition-list--meta das-search-results__meta">
-                <dt class="das-definition-list__title">Apprenticeship category</dt>
-                <dd class="das-definition-list__definition">Care services</dd>
-              </dl>
-            </li>
+
+            <strong class="govuk-tag govuk-!-margin-bottom-0">
+              New
+            </strong>
+            <h2 class="govuk-heading-m  das-search-results__heading">
+              <a class="das-search-results__link" id="vacancy-01" href="vacancy-page-01">
+                Business Administration Apprentice</a>
+              <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">King recruitment LTD</p>
+              <p class="govuk-body" style="color:#505a5f">
+                Sheffield, S1 3FG</p>
+              <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.6 miles from you</p>
+              <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)</p>
+              <p class="govuk-body"><b>Annual wage</b> £10,158.72 to £20,048.08</p>
+              <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 15 days (Monday 26 June)</p>
+              <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+                Posted 3 days ago (10 June)</p>
+              <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
+
+              <h2 class="govuk-heading-m  das-search-results__heading">
+                <a class="das-search-results__link" id="standard-274" href="/courses/274">
+                  Business Admin Apprentice</a>
+                <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Jack Jones Consulting LTD</p>
+                <p class="govuk-body" style="color:#505a5f">
+                  Sheffield, S10 2LR</p>
+                <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 1.3 miles from you</p>
+                <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)</p>
+                <p class="govuk-body"><b>Annual wage</b> £8,236.80</p>
+                <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes Monday 31 July
+                </p>
+                <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+                  Posted 20 Mar</p>
+                <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
+
+                <h2 class="govuk-heading-m  das-search-results__heading">
+                  <a class="das-search-results__link" id="standard-274" href="/courses/274">
+                    Business Administration Apprentice</a>
+                  <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Norvarst</p>
+                  <p class="govuk-body" style="color:#505a5f">
+                    Sheffield, S4 8BS</p>
+                  <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 1.8 miles from you</p>
+                  <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)
+                  </p>
+                  <p class="govuk-body"><b>Annual wage</b> £14,625.00</p>
+                  <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes Friday 7 July
+                  </p>
+                  <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+                    Posted 2 June</p>
+                  <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
+
+                  <strong class="govuk-tag govuk-tag--orange">
+                    Closing soon
+                  </strong>
+                  <h2 class="govuk-heading-m  das-search-results__heading">
+                    <a class="das-search-results__link" id="standard-274" href="/courses/274">
+                      Business Support Administrator Apprentice</a>
+                    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">ICT Software Limited</p>
+                    <p class="govuk-body" style="color:#505a5f">
+                      Sheffield, S12 3HL</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 3.7 miles from you</p>
+                    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)
+                    </p>
+                    <p class="govuk-body"><b>Annual wage</b> £12,740.00</p>
+                    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 4 days (Thursday 15
+                      June)</p>
+                    <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+                      Posted 22 May</p>
+                    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
+
+                    <h2 class="govuk-heading-m  das-search-results__heading">
+                      <a class="das-search-results__link" id="standard-274" href="/courses/274">
+                        Apprentice Business Administrator</a>
+                      <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Childcare Point LTD</p>
+                      <p class="govuk-body" style="color:#505a5f">
+                        Sheffield, S35 8PR</p>
+                      <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 4.4 miles from you</p>
+                      <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level
+                        3)</p>
+                      <p class="govuk-body"><b>Annual wage</b> £4,392.96</p>
+                      <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 19 days (Friday 30
+                        June)</p>
+                      <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
+                        Posted 31 May</p>
+                      <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-3 ">
+                      <!-- END cards -->
+
+
+                      <!-- START pagination -->
+                      <nav class="govuk-pagination" role="navigation" aria-label="results">
+                        <ul class="govuk-pagination__list">
+                          <li class="govuk-pagination__item govuk-pagination__item--current">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1"
+                              aria-current="page">
+                              1
+                            </a>
+                          </li>
+                          <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                              2
+                            </a>
+                          </li>
+                          <li class="govuk-pagination__item">
+                            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                              3
+                            </a>
+                          </li>
+                        </ul>
+                        <div class="govuk-pagination__next">
+                          <a class="govuk-link govuk-pagination__link" href="#" rel="next"> <span
+                              class="govuk-pagination__link-title">Next</span> <svg
+                              class="govuk-pagination__icon govuk-pagination__icon--next"
+                              xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true"
+                              focusable="false" viewBox="0 0 15 13">
+                              <path
+                                d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+                              </path>
+                            </svg></a>
+                        </div>
+                      </nav>
+                      <!-- END pagination -->
         </ol>
       </div>
     </div>
