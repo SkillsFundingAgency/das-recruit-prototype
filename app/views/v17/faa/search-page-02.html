@@ -11,13 +11,12 @@ Find an apprenticeship - GOV.UK
 
 {% block content %}
 
-<div class="govuk-width-container">
+<div class="govuk-width-container style">
   <main class="govuk-main-wrapper govuk-main-wrapper--l">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">Find an apprenticeship</h1>
-        <p class="govuk-body-l">There are currently <b>10,408</b> vacancies on Find an
-          apprenticeship.
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Find an apprenticeship</h1>
+        <p class="govuk-body-l govuk-!-margin-top-0"><b>10,408</b> apprenticeships currently listed
         </p>
       </div>
     </div>
@@ -25,191 +24,59 @@ Find an apprenticeship - GOV.UK
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-tabs" data-module="govuk-tabs">
-      <h2 class="govuk-tabs__title">
-        Contents
-      </h2>
-      <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-          <a class="govuk-tabs__tab" href="#select-careers">
-            Select careers
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#job-company">
-            Enter a job or company
-          </a>
-        </li>
-      </ul>
-      <div class="govuk-tabs__panel" id="select-careers">
-
-        <!-- START checkbox -->
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
-                Select career areas
-              </h1>
-            </legend>
-            <div class="govuk-!-padding-bottom-1"></div>
-
-            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-1" name="sector" type="checkbox" value="environment">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-1">
-                  Agriculture, environmental and animal care
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-2" name="sector" type="checkbox" value="business">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-2">
-                  Business and administration
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-3" name="sector" type="checkbox" value="care">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-3">
-                  Care services
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-4" name="sector" type="checkbox" value="catering">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-4">
-                  Catering and hospitality
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-5" name="sector" type="checkbox" value="construction">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-5">
-                  Construction and the built environment
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-6" name="sector" type="checkbox" value="creative">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-6">
-                  Creative and design
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-7" name="sector" type="checkbox" value="digital">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-7">
-                  Digital
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-8" name="sector" type="checkbox" value="education">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-8">
-                  Education and childcare
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-9" name="sector" type="checkbox" value="engineering">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-9">
-                  Engineering and manufacturing
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-10" name="sector" type="checkbox" value="hair">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-10">
-                  Hair and beauty
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-11" name="sector" type="checkbox" value="health">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-11">
-                  Health and science
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-12" name="sector" type="checkbox" value="legal">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-12">
-                  Legal, finance and accounting
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-13" name="sector" type="checkbox" value="protective">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-13">
-                  Protective services
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-14" name="sector" type="checkbox" value="sales">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-14">
-                  Sales, marketing and procurements
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="sector-15" name="sector" type="checkbox" value="transport">
-                <label class="govuk-label govuk-checkboxes__label" for="sector-15">
-                  Transport and logistics
-                </label>
-              </div>
-
-              <div class="govuk-!-padding-bottom-6"></div>
-
-              <div class="govuk-form-group">
-                <h1 class="govuk-label-wrapper">
-                  <label class="govuk-label govuk-label--m" for="where">
-                    Where
-                  </label>
-                </h1>
-                <div id="event-name-hint" class="govuk-hint">
-                  Enter a city, location or postcode
-                </div>
-                <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="where"
-                  aria-describedby="where">
-              </div>
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-
-                  <form class="form" action="search-listing" method="post">
-                    <button class="govuk-button" data-module="govuk-button">Search</button>
-                  </form>
-                </div>
-              </div>
+  <div
+    style="background-color:#F3F2F1;   padding-top: 50px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="Keyword">
+                What
+              </label>
+            </h1>
+            <div id="event-name-hint" class="govuk-hint">
+              Profession, job, company
             </div>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="job-company">
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="Keyword">
-              What
-            </label>
-          </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            Job or company
+            <input class="govuk-input" id="Keyword" name="Keyword" type="Keyword" aria-describedby="event-name-hint">
           </div>
-          <input name="keyword" type="search" title="Search" class="govuk-input govuk-!-width-one-half" id="Keyword"
-            value="">
         </div>
-
-
-        <div class="govuk-!-padding-bottom-2"></div>
-
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="where">
-              Where
-            </label>
-          </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            Enter a location or postcode
+        <div class="govuk-grid-column-one-half">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--m" for="where">
+                Where
+              </label>
+            </h1>
+            <div id="event-name-hint" class="govuk-hint">
+              City, town, postcode
+            </div>
+            <input class="govuk-input" id="where" name="event-name" type="where" aria-describedby="event-name-hint">
           </div>
-          <input class="govuk-input govuk-!-width-one-half" id="one-half" name="one-half" type="where"
-            aria-describedby="where">
         </div>
-        <form class="form" action="search-listing" method="post">
-          <button class="govuk-button" data-module="govuk-button">Search</button>
-        </form>
       </div>
     </div>
 
 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-one-half">
+          <form class="form" action="search-listing" method="post">
+            <div class="govuk-button-group" href="search-listing">
+              <button class="govuk-button" data-module="govuk-button">
+                Search
+              </button>
+              <a class="govuk-link" href="#">Browse by your interests instead</a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-    {% endblock %}
+
+
+  {% endblock %}
