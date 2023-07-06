@@ -22,11 +22,15 @@ GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <!-- Sprints section starts -->
   <div class="govuk-grid-column-two-thirds">
-    {% include './v16/_summary.html' %}
+    {% include './v17/_summary.html' %}
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">
       Previous sprints archive
     </h2>
+
+    {% set v16Html %}
+    {% include './v16/_summary.html' %}
+    {% endset %}
 
     {% set v15Html %}
     {% include './v15/_summary.html' %}
@@ -99,6 +103,20 @@ GOV.UK Prototype Kit
     {
     heading:
     {
+    text: "FAA Design 1 (V16)"
+    },
+    content:
+    {
+    html: v16Html
+    },
+    summary:
+    {
+    html: '16 June 2023 &mdash; 6 July 2023'
+    }
+    },
+    {
+    heading:
+    {
     text: "Design sprint 15"
     },
     content:
@@ -111,19 +129,19 @@ GOV.UK Prototype Kit
     }
     },
     {
-      heading:
-      {
-      text: "Design sprint 14"
-      },
-      content:
-      {
-      html: v14Html
-      },
-      summary:
-      {
-      html: '18 January &mdash; 14 February 2023'
-      }
-      },
+    heading:
+    {
+    text: "Design sprint 14"
+    },
+    content:
+    {
+    html: v14Html
+    },
+    summary:
+    {
+    html: '18 January &mdash; 14 February 2023'
+    }
+    },
     {
     heading:
     {
