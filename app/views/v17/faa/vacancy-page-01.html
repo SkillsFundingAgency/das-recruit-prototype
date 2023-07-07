@@ -33,9 +33,9 @@ Find an apprenticeship - GOV.UK
 {% block content %}
 
 
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <!-- START intro -->
     <strong class="govuk-tag">New</strong>
     <div class="govuk-!-padding-bottom-3"></div>
@@ -45,6 +45,30 @@ Find an apprenticeship - GOV.UK
     <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
     <div class="govuk-!-padding-bottom-3"></div>
 
+    <!-- END intro -->
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div
+      style="background-color:#F3F2F1; padding-top: 30px; padding-right: 30px; padding-bottom: 20px; padding-left: 30px">
+      <h2 class=" govuk-heading-m govuk-!-margin-bottom-3" id="your-employment">Apply now</h2>
+      <p class="govuk-body">Closes in 30 days (Friday 4 August at 11:59pm)</p>
+      <form class="form" action="search-listing" method="post">
+        <div class="govuk-button-group" href="search-listing">
+          <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
+            Apply
+          </button>
+        </div>
+      </form>
+
+      <p class="govuk-body govuk-body govuk-!-font-size-14" style="color:#505a5f">Posted 1 July</p>
+
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class=" govuk-heading-l govuk-!-margin-bottom-3">Summary</h2>
     <p class="govuk-body">As the business administration apprentice, you will be responsible for
       supporting the day-to-day running of our office.
       You will need to provide helpful and fast support to both staff and clients. You may also need to take on some
@@ -52,7 +76,6 @@ Find an apprenticeship - GOV.UK
     <!-- END intro -->
 
     <!-- START table -->
-    <h2 class=" govuk-heading-l govuk-!-margin-bottom-3">Summary</h2>
     <table class="govuk-table">
       </thead>
       <tbody class="govuk-table__body">
@@ -354,30 +377,13 @@ Find an apprenticeship - GOV.UK
       <p class="govuk-body govuk-body govuk-!-font-size-14" style="color:#505a5f">Posted 1 July</p>
       <!-- END apply -->
 
-
     </div>
 
 
+
   </div>
-  <div class="govuk-grid-column-one-third">
-
-    <!-- START apply -->
-    <div
-      style="background-color:#F3F2F1; padding-top: 30px; padding-right: 30px; padding-bottom: 20px; padding-left: 30px">
-      <h2 class=" govuk-heading-m govuk-!-margin-bottom-3" id="your-employment">Apply now</h2>
-      <p class="govuk-body">Closes in 30 days (Friday 4 August at 11:59pm)</p>
-      <form class="form" action="search-listing" method="post">
-        <div class="govuk-button-group" href="search-listing">
-          <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
-            Apply
-          </button>
-        </div>
-      </form>
-
-      <p class="govuk-body govuk-body govuk-!-font-size-14" style="color:#505a5f">Posted 1 July</p>
-      <!-- END apply -->
-    </div>
-  </div>
+</div>
+</div>
 
 
 
@@ -387,5 +393,4 @@ Find an apprenticeship - GOV.UK
 
 
 
-
-  {% endblock %}
+{% endblock %}
