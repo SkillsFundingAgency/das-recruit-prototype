@@ -1,0 +1,42 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype kit    
+{% endblock %}
+
+{% block content %}
+<!--<main id="content" role="main" style="text-align: center;">-->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <img src="/public/images/das-raa-new-apis-email.png" width="1280px" id="email">
+          <div style="margin-left: 45%;">
+          <!--<h1 class="govuk-heading-m">Create an account to access the API key</h1>-->
+          <p class="govuk-body">
+            Dear Sarah Philips,
+            <br><br>
+            <strong>Our new recruitment APIs</strong> enable you to:
+            <br><br>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>join up your organisation’s recruitment system with your Apprenticeship Service account and Find an apprenticeship, the official government website for apprenticeship vacancies in England, with over 8 million searches each month</li>
+              <li>create apprenticeship adverts using your recruitment system and link these to your Apprenticeship Service account</li>
+              <li>publish adverts to multiple websites, including your own website and <a href="#" class="govuk-link govuk-link--no-visited-state">Find an apprenticeship</a></li>
+            </ul>
+          </p>
+          <p class="govuk-body">
+            The new tools will refresh advert appearance, enable future updates, enhance security and avoid duplication.            
+          </p>
+          <p class="govuk-body">
+            <a href="employers-get-started" class="govuk-link govuk-link--no-visited-state">Find out about our APIs</a>
+          </p>
+          <p class="govuk-body">
+            <!--If you choose not to use the new tools, you will still be able to <a href="https://www.youtube.com/watch?v=HSms5I85bUc" class="govuk-link govuk-link--no-visited-state">create adverts using your Apprenticeship Service account</a>.-->
+            <br><br>
+            Kind regards,
+            <br><br>
+            Apprenticeship Service
+            <br><br>          
+            This is an automated message. Please don't reply to this email.            
+          </p>
+        </div>
+<!--</main>  -->
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="search-page-02.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="location-page" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Your interests
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Select all the sectors you’re interested in
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-1" name="sector" type="checkbox" value="environment">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-1">
+                Agriculture, environmental and animal care
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-2" name="sector" type="checkbox" value="Business">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Business and administration
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-3" name="sector" type="checkbox" value="care">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-3">
+                Care services
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-4" name="sector" type="checkbox" value="catering">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-4">
+                Catering and hospitality
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-5" name="sector" type="checkbox" value="construction">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-5">
+                Construction and the built environment
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-6" name="sector" type="checkbox" value="creative">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-6">
+                Creative and design
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-7" name="sector" type="checkbox" value="digital">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-7">
+                Digital
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-8" name="sector" type="checkbox" value="education">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-8">
+                Education and childcare
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-9" name="sector" type="checkbox" value="engineering">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-9">
+                Engineering and manufacturing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-10" name="sector" type="checkbox" value="hair">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-10">
+                Hair and beauty
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-11" name="sector" type="checkbox" value="health">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-11">
+                Health and science
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-12" name="sector" type="checkbox" value="legal">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-12">
+                Legal, finance and accounting
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-13" name="sector" type="checkbox" value="protective">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-13">
+                Protective services
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-14" name="sector" type="checkbox" value="sales">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-14">
+                Sales, marketing and procurements
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="sector-15" name="sector" type="checkbox" value="transport">
+              <label class="govuk-label govuk-checkboxes__label" for="sector-15">
+                Transport and logistics
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Learn what job could be right for you
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <a href="https://nationalcareers.service.gov.uk/skills-assessment"
+            class="govuk-link govuk-link--no-visited-state">Take a skills assessment (opens in new
+            tab)</a> with the National Careers Service and discover which
+          careers match your skills.
+        </div>
+      </details>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

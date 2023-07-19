@@ -1,0 +1,58 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="sector-selection-page.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="search-listing" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="one-half">
+            Where
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          City, town, postcode
+        </div>
+        <input class="govuk-input govuk-!-width-one-half" id="where" name="event-name" type="where"
+          aria-describedby="event-name-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Within
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">5 miles</option>
+          <option value="updated" selected>10 miles</option>
+          <option value="views">15 miles</option>
+          <option value="comments">20 miles</option>
+          <option value="comments">25 miles</option>
+          <option value="comments">30 miles</option>
+          <option value="comments">40 miles</option>
+          <option value="comments">50 miles</option>
+          <option value="comments">across all england</option>
+        </select>
+      </div>
+
+      
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

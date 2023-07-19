@@ -1,0 +1,41 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+What else do you want the applicant to consider? (optional) - Your apprenticeship advert - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    
+      <div class="govuk-form-group">
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="ThingsToConsider">
+            What else do you want the applicant to consider? (optional)
+          </label>
+        </h1>
+        <div id="with-hint-hint" class="govuk-hint">
+          For example, if the vacancy will involve working outdoors or lifting heavy objects
+        </div>
+        <textarea class="govuk-textarea" id="ThingsToConsider" name="ThingsToConsider" rows="5" aria-describedby="ThingsToConsider-info ThingsToConsider-hint"></textarea>
+      </div>
+
+    
+    <form method="post">
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+{% endblock %}
