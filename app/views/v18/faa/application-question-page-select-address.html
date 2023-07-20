@@ -1,0 +1,45 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Contact information</span>
+    <h1 class="govuk-heading-l">Select your address</h1>
+    </p>
+    <div class="govuk-form-group">
+      <div id="date-of-birth-hint" class="govuk-hint">
+        10 addresses found in SW1A 2AA
+      </div>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="updated" selected>Select address</option>
+        <option value="views">1 Hatchway Cottage</option>
+        <option value="comments">5 Brook House</option>
+        <option value="views">6 The manor</option>
+        <option value="comments">10 Cobblers house</option>
+      </select>
+    </div>
+
+    <form class="form" action="search-listing" method="post">
+      <div class="govuk-button-group" href="/">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}
