@@ -1,0 +1,37 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Personal information</span>
+    <h1 class="govuk-heading-l">What is your full name?</h1>
+    </p>
+    <div class="govuk-form-group">
+      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+    </div>
+
+
+    <form class="form" action="search-listing" method="post">
+      <div class="govuk-button-group" href="/">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}
