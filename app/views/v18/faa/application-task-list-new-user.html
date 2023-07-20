@@ -4,30 +4,32 @@
 Find an apprenticeship - GOV.UK
 {% endblock %}
 
-{% block content %}
+{% block beforeContent %}
 {{super()}}
+<a class="govuk-back-link" href="vacancy-page-01">Back</a>
+{% endblock %}
 
-<div class="govuk-width-container style">
-  <main class="govuk-main-wrapper govuk-main-wrapper--l">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <span class="govuk-caption-l">Apply for</span>
-        <h1 class="govuk-heading-l">Business Administration Apprentice</h1>
-        </p>
-      </div>
-    </div>
-    <div class="govuk-!-padding-bottom-3"></div>
-    <div class="govuk-grid-column-two-thirds"
-      style="background-color:#F3F2F1; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px">
+{% block content %}
 
-      <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Business Administration Apprentice</h3>
-      <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
-      <p class="govuk-body govuk-!-margin-bottom-3" style="color:#505a5f">
-        Sheffield, S1 3FG</p>
-      <a class="govuk-link" href="/">View full vacancy</a>
-    </div>
-  </main>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <span class="govuk-caption-l">Apply for</span>
+    <h1 class="govuk-heading-l">Business Administration Apprentice</h1>
+    </p>
+  </div>
 </div>
+<div class="govuk-!-padding-bottom-3"></div>
+<div class="govuk-grid-column-two-thirds"
+  style="background-color:#F3F2F1; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px">
+
+  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Business Administration Apprentice</h3>
+  <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
+  <p class="govuk-body govuk-!-margin-bottom-3" style="color:#505a5f">
+    Sheffield, S1 3FG</p>
+  <a class="govuk-link" href="/">View full vacancy</a>
+</div>
+
 
 
 
