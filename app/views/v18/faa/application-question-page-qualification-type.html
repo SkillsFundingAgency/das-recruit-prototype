@@ -1,0 +1,98 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Qualification type</h1>
+    </p>
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-gcse" name="qualification-type" type="radio"
+              value="gcse">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-gcse">
+              GCSE
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-aslevel" name="qualification-type" type="radio"
+              value="aslevel">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-aslevel">
+              AS Level
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-alevel" name="qualification-type" type="radio"
+              value="alevel">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-alevel">
+              A Level
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-btec" name="qualification-type" type="radio"
+              value="btec">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-btec">
+              BTEC
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-nvq-or-svq-level-1" name="qualification-type"
+              type="radio" value="nvq-or-svq-level-1">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-nvq-or-svq-level-1">
+              NVQ OR SVQ Level 1
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-nvq-or-svq-level-2" name="qualification-type"
+              type="radio" value="nvq-or-svq-level-2">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-nvq-or-svq-level-2">
+              NVQ OR SVQ Level 2
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-type-nvq-or-svq-level-3" name="qualification-type"
+              type="radio" value="nvq-or-svq-level-3">
+            <label class="govuk-label govuk-radios__label" for="qualification-type-nvq-or-svq-level-3">
+              NVQ OR SVQ Level 3
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="qualification-other" name="qualification-type" type="radio"
+              value="other">
+            <label class="govuk-label govuk-radios__label" for="qualification-other">
+              Other
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="application-question-page-phone-number" method="post">
+      <div class="govuk-button-group" href="application-question-page-phone-number.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
