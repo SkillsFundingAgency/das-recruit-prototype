@@ -1,0 +1,71 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">What are your main strengths?</h1>
+    </p>
+
+    <div class="govuk-inset-text">
+      <h3 class="govuk-body">King Recruitment is looking for:</h3>
+      <li>Communication skills</li>
+      <li>IT skills</li>
+      <li>Attention to detail</li>
+      <li>Organisation skills</li>
+      <li>Administrative skills</li>
+      <li>Team working</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <a href="vacancy-page-01.html" class="govuk-link" rel="noreferrer noopener" target="_blank">View the full vacancy
+        (opens in new
+        tab)</a>
+    </div>
+
+    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="with-hint">
+            Your answer
+          </label>
+        </h2>
+        <div id="with-hint-hint" class="govuk-hint">
+          Describe your main strengths and provide examples. Make sure to include any strengths that match what King
+          Recruitment’s looking for
+        </div>
+        <textarea class="govuk-textarea govuk-js-word-count" id="with-hint" name="with-hint" rows="5"
+          aria-describedby="with-hint-info with-hint-hint"></textarea>
+      </div>
+      <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
+        <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining
+        <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
+      </div>
+    </div>
+    <div class="govuk-!-padding-bottom-7"></div>
+
+
+
+    <form class="form" action="application-question-page-what-would-you-like-to-learn" method="post">
+      <div class="govuk-button-group" href="application-question-page-what-would-you-like-to-learn.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

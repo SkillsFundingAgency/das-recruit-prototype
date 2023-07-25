@@ -1,0 +1,71 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Interview support</span>
+    <h1 class="govuk-heading-l">Interview adjustments</h1>
+    <p class="govuk-body">A fair interview is your legal right. If you have a disability, you can ask for adjustments to
+      how you’ll be interviewed.</p>
+    </p>
+    <p class="govuk-body">Adjustments include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>communication support, like a British Sign Language interpreter</li>
+      <li>level, step-free access to the interview room</li>
+    </ul>
+    <p class="govuk-body">Get advice from Scope about <a
+        href="https://www.scope.org.uk/advice-and-support/ask-for-adjustments-at-interview/?gclid=Cj0KCQjw5f2lBhCkARIsAHeTvlj77TFVRFJ3qzDS7SYeU9ICjdUVgMlCwPmXyAXar2_RqO6766SIIIsaAnmEEALw_wcB"
+        class="govuk-link" rel="noreferrer noopener" target="_blank">asking for adjustments at interview</a>.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you need any adjustments?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="interview-adjustments-yes" name="interview-adjustments" type="radio"
+              value="yes">
+            <label class="govuk-label govuk-radios__label" for="interview-adjustments-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="ainterview-adjustments-no" name="interview-adjustments" type="radio"
+              value="no">
+            <label class="govuk-label govuk-radios__label" for="interview-adjustments-no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="application-question-page-input-interview-adjustments" method="post">
+      <div class="govuk-button-group" href="application-question-page-input-interview-adjustments.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
