@@ -60,8 +60,20 @@ Find an apprenticeship - GOV.UK
                 Personal information
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="personal-information-status">Not
-              started</strong>
+
+            {% if data['have-you-completed-personal-information'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['have-you-completed-personal-information'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
+
+
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -108,7 +120,8 @@ Find an apprenticeship - GOV.UK
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="application-question-page-jobs-and-work-experience.html" aria-describedby="job-work-experience-status">
+              <a href="application-question-page-jobs-and-work-experience.html"
+                aria-describedby="job-work-experience-status">
                 Jobs and work experience
               </a>
             </span>
@@ -154,7 +167,8 @@ Find an apprenticeship - GOV.UK
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="application-question-page-interview-adjustments.html" aria-describedby="interview-adjustments-status">
+              <a href="application-question-page-interview-adjustments.html"
+                aria-describedby="interview-adjustments-status">
                 Interview adjustments
               </a>
             </span>
@@ -179,7 +193,8 @@ Find an apprenticeship - GOV.UK
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="application-question-page-employer-question-one.html" aria-describedby="additional-questions-status">
+              <a href="application-question-page-employer-question-one.html"
+                aria-describedby="additional-questions-status">
                 Additional questions
               </a>
             </span>

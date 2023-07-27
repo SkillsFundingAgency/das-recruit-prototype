@@ -16,21 +16,23 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Personal information</span>
     <h1 class="govuk-heading-l">What is your full name?</h1>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="first-name">
-        First name
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="first-name" name="first-name" type="first">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="last-name">
-        Last name
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="last-name" name="last-name" type="last">
-    </div>
-
-
     <form class="form" action="application-question-page-date-of-birth" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="first-name">
+          First name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="first-name" name="first-name" type="first"
+          value="{{ data['first-name'] or '' }}">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="last-name">
+          Last name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="last-name" name="last-name" type="last"
+          value="{{ data['last-name'] or '' }}">
+      </div>
+
+
       <div class="govuk-button-group" href="application-question-page-date-of-birth.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue

@@ -25,7 +25,7 @@ Find an apprenticeship - GOV.UK
           First name
         </dt>
         <dd class="govuk-summary-list__value">
-          Sarah
+          {{ data['first-name'] or 'Sarah' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-name-input.html">
@@ -38,7 +38,7 @@ Find an apprenticeship - GOV.UK
           Last name
         </dt>
         <dd class="govuk-summary-list__value">
-          Jones
+          {{ data['last-name'] or 'Jones' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-name-input.html">
@@ -51,7 +51,8 @@ Find an apprenticeship - GOV.UK
           Date of birth
         </dt>
         <dd class="govuk-summary-list__value">
-          5 January 1999
+          {{ data['date-of-birth-day'] or '12' }} {{ data['date-of-birth-month'] or '3' }} {{ data['date-of-birth-year']
+          or '1999' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-date-of-birth.html">
@@ -63,7 +64,7 @@ Find an apprenticeship - GOV.UK
 
 
 
-    <form action="/form-handler" method="post" novalidate>
+    <form action="application-task-list-new-user" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -72,14 +73,14 @@ Find an apprenticeship - GOV.UK
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="have-you-completed-this-section"
-                name="have-you-completed-this-section" type="radio" value="yes">
+                name="have-you-completed-personal-information" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
                 Yes, I’ve completed this section
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="have-you-completed-this-section-2"
-                name="have-you-completed-this-section" type="radio" value="no">
+                name="have-you-completed-personal-information" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
                 No, I’ll come back to it later
               </label>

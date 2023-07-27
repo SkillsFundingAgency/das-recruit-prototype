@@ -16,47 +16,48 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Personal information</span>
     <h1 class="govuk-heading-l">What is your date of birth?</h1>
-    </p>
-
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
-        <div id="date-of-birth-hint" class="govuk-hint">
-          For example, 31 3 1980
-        </div>
-        <div class="govuk-date-input" id="date-of-birth">
-          <div class="govuk-date-input__item">
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
-                Day
-              </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day"
-                name="date-of-birth-day" type="text" inputmode="numeric">
-            </div>
-          </div>
-          <div class="govuk-date-input__item">
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
-                Month
-              </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month"
-                name="date-of-birth-month" type="text" inputmode="numeric">
-            </div>
-          </div>
-          <div class="govuk-date-input__item">
-            <div class="govuk-form-group">
-              <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
-                Year
-              </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year"
-                name="date-of-birth-year" type="text" inputmode="numeric">
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </div>
-
-
     <form class="form" action="application-summary-personal-info" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+          <div id="date-of-birth-hint" class="govuk-hint">
+            For example, 31 3 1980
+          </div>
+          <div class="govuk-date-input" id="date-of-birth">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day"
+                  name="date-of-birth-day" type="text" inputmode="numeric"
+                  value="{{ data['date-of-birth-day'] or '' }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month"
+                  name="date-of-birth-month" type="text" inputmode="numeric" value="{{ data['date-of-birth-month'] or '' }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year"
+                  name="date-of-birth-year" type="text" inputmode="numeric" value="{{ data['date-of-birth-year'] or '' }}">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
       <div class="govuk-button-group" href="application-summary-personal-info.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
