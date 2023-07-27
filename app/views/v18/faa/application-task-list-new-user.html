@@ -189,7 +189,20 @@ Find an apprenticeship - GOV.UK
                 Job role questions
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="job-role-status">Not started</strong>
+
+
+            {% if data['completed-role-questions'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-role-questions'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
+
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">

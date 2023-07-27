@@ -25,21 +25,23 @@ Find an apprenticeship - GOV.UK
           what are your main strengths?
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body govuk-!-margin-bottom-0">My biggest strength is that I can think on my feet and can work
-            under a lot of pressure. As an event manager at Sarah’s
-            boutique, we were organizing an IT conference that needed a number of last-minute changes - due to a speaker
-            canceling
-            because of an emergency and 2 of our volunteers not being able to show up.
-            So, we allocated more time to each speaker and added a QA section at the end of each speech. We also
-            encouraged the
-            present speakers to talk about their business and personal experience more in-depth after they were done
-            with their
-            speech.
-            As for being understaffed, one day before the conference, I reached out to my network and found 2 students
-            who were
-            willing to help out. I personally met them 2 hours before the conference and got them up to speed with
-            everything we
-            were doing for the day, and gave them their tasks.
+          {{ data['main-strengths'] or 'My biggest strength is that I can think on my feet and can work under a lot of
+          pressure. As an event manager at Sarah’s
+          boutique, we were organizing an IT conference that needed a number of last-minute changes - due to a speaker
+          canceling
+          because of an emergency and 2 of our volunteers not being able to show up.
+          So, we allocated more time to each speaker and added a QA section at the end of each speech. We also
+          encouraged the
+          present speakers to talk about their business and personal experience more in-depth after they were done
+          with
+          their
+          speech.
+          As for being understaffed, one day before the conference, I reached out to my network and found 2 students
+          who
+          were
+          willing to help out. I personally met them 2 hours before the conference and got them up to speed with
+          everything we
+          were doing for the day, and gave them their tasks.' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-main-strengths.html">
@@ -52,10 +54,12 @@ Find an apprenticeship - GOV.UK
           What would you like to learn during this apprenticeship?
         </dt>
         <dd class="govuk-summary-list__value">
-          I would like to learn more about business and leadership. I feel that working for your company will give me
-          many opportunities to expand my knowledge in these areas while helping your team to grow and your company to
-          be
-          more profitable.
+          {{ data['like-to-learn'] or 'I would like to learn more about business and leadership. I feel that working
+          for
+          your company will give me many
+          opportunities to expand my knowledge in these areas while helping your team to grow and your company to be
+          more
+          profitable.' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-what-would-you-like-to-learn.html">
@@ -66,8 +70,7 @@ Find an apprenticeship - GOV.UK
     </dl>
 
 
-
-    <form action="/form-handler" method="post" novalidate>
+    <form action="application-task-list-new-user" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -76,14 +79,14 @@ Find an apprenticeship - GOV.UK
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="have-you-completed-this-section"
-                name="have-you-completed-this-section" type="radio" value="yes">
+                name="completed-role-questions" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
                 Yes, I’ve completed this section
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="have-you-completed-this-section-2"
-                name="have-you-completed-this-section" type="radio" value="no">
+                name="completed-role-questions" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
                 No, I’ll come back to it later
               </label>
