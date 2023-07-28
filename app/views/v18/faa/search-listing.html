@@ -14,42 +14,42 @@ Find an apprenticeship - GOV.UK
 <!-- START title -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">62 apprenticeships found</h1>
+    <h1 class="govuk-heading-l">62 apprenticeships found</h1>
   </div>
 </div>
+<div class="govuk-!-padding-bottom-3"></div>
 <!-- END title -->
 
 <!-- START filter -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <div style="border: 1px solid #505a5f; padding: 20px;">
-      <h2 class="govuk-heading-l">Filter</h2>
+    <div style="border: 1px solid #B1B4B6; padding: 20px;">
+      <h2 class="govuk-heading-m">Filter</h2>
 
       <div class="govuk-form-group">
         <label for="Keyword" class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-0">What
-          <p class="govuk-hint">Profession, job, company</p>
+          <p class="govuk-hint">Enter a job or company</p>
         </label>
         <input name="keyword" type="search" title="Search" class="govuk-input" id="Keyword" value="">
       </div>
 
       <div class="govuk-form-group">
         <label for="Location" class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-0">Where
-          <p class="govuk-hint">Enter postcode, town or city</p>
+          <p class="govuk-hint">Enter a city or postcode</p>
         </label>
         <input name="Location" type="search" title="Search" class="govuk-input" id="Location" value="">
         <div id="Location" class="govuk-hint govuk-!-margin-top-2">
           Within
         </div>
         <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
-          <option value="choose" selected>This area only</option>
-          <option value="2">2 miles</option>
-          <option value="5">5 miles</option>
-          <option value="10">10 miles</option>
-          <option value="15">15 miles</option>
-          <option value="20">20 miles</option>
-          <option value="30">30 miles</option>
-          <option value="40">40 miles</option>
-          <option value="england">England</option>
+          <option value="published">2 miles</option>
+          <option value="published">5 miles</option>
+          <option value="updated" selected>10 miles</option>
+          <option value="views">15 miles</option>
+          <option value="comments">20 miles</option>
+          <option value="comments">30 miles</option>
+          <option value="comments">40 miles</option>
+          <option value="comments">Across England</option>
         </select>
       </div>
 
@@ -72,38 +72,56 @@ Find an apprenticeship - GOV.UK
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" />
                     <label class="govuk-label govuk-checkboxes__label" for="level-2">
-                      Level 2 - GCSE
+                      Level 2
                     </label>
+                    <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Equal to GCSEs
+                    </div>
                   </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="level-3" name="levels" type="checkbox" value="3" />
                     <label class="govuk-label govuk-checkboxes__label" for="level-3">
-                      Level 3 - A level
+                      Level 3
                     </label>
+                    <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Equal to A-levels
+                    </div>
                   </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="level-4" name="levels" type="checkbox" value="4" />
                     <label class="govuk-label govuk-checkboxes__label" for="level-4">
-                      Level 4 - higher national certificate (HNC)
+                      Level 4
                     </label>
+                    <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Equal to a HNC
+                    </div>
                   </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="level-5" name="levels" type="checkbox" value="5" />
                     <label class="govuk-label govuk-checkboxes__label" for="level-5">
-                      Level 5 - higher national diploma (HND)
+                      Level 5
                     </label>
+                    <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Equal to a HND or foundation
+                    </div>
                   </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="level-6" name="levels" type="checkbox" value="6" />
                     <label class="govuk-label govuk-checkboxes__label" for="level-6">
-                      Level 6 - degree
+                      Level 6 - degree apprenticeship
                     </label>
+                    <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Equal to an undergraduate degree
+                    </div>
                   </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="level-7" name="levels" type="checkbox" value="7" />
                     <label class="govuk-label govuk-checkboxes__label" for="level-7">
-                      Level 7 - master&#x2019;s degree
+                      Level 7 - degree apprenticeship
                     </label>
+                    <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                      Equal to a master’s degree
+                    </div>
                   </div>
                 </div>
               </fieldset>
@@ -122,7 +140,7 @@ Find an apprenticeship - GOV.UK
           <div class="govuk-accordion__section-header">
             <h2 class="govuk-accordion__section-heading">
               <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                Sectors
+                Job categories
               </span>
             </h2>
           </div>
@@ -245,22 +263,22 @@ Find an apprenticeship - GOV.UK
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Disability confident
-          </legend>
+          <label for="disability"
+            class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-0">Disability Confident
+            <p class="govuk-hint">Employers who have committed to support disabled people at work</p>
+          </label>
           <div class="govuk-checkboxes govuk-checkboxes--small">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="onlyshow" name="disability" type="checkbox" value="yes" />
               <label class="govuk-label govuk-checkboxes__label" for="disability">
-                Only show
+                Only show Disability Confident employers
               </label>
             </div>
           </div>
         </fieldset>
         <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-3"><a
-            class="govuk-link govuk-link--no-visited-state" href="/" target="_blank" rel="external">Find out
-            more about disability confident (opens in new tab or
-            window)</a></p>
+            class="govuk-link govuk-link--no-visited-state" href="/" target="_blank" rel="external">Learn more about
+            Disability Confident (opens in new tab)</a></p>
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-5 ">
         <button type="submit" class="govuk-button" id="filters-submit-second">Apply filters</button>
       </div>
@@ -310,8 +328,8 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0">Browns Housing LTD</p>
     <p class="govuk-body" style="color:#505a5f">
       Sheffield, S3 7GE</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.4 miles from you</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.4 miles</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Training course</b> Business administrator (Level 3)</p>
     <p class="govuk-body"><b>Annual wage</b> £10,982.40</p>
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 16 days (Tuesday 27 June)</p>
     <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
@@ -328,8 +346,8 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
     <p class="govuk-body" style="color:#505a5f">
       Sheffield, S1 3FG</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.6 miles from you</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.6 miles</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Training course</b> Business administrator (Level 3)</p>
     <p class="govuk-body"><b>Annual wage</b> £10,158.72 to £20,048.08</p>
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 14 days (Monday 10 July)
     </p>
@@ -344,8 +362,8 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0">Jack Jones Consulting LTD</p>
     <p class="govuk-body" style="color:#505a5f">
       Sheffield, S10 2LR</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 1.3 miles from you</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 1.3 miles</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Training course</b> Business administrator (Level 3)
     </p>
     <p class="govuk-body"><b>Annual wage</b> £8,236.80</p>
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes Monday 31 July
@@ -363,8 +381,8 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Norvarst</p>
     <p class="govuk-body" style="color:#505a5f">
       Sheffield, S4 8BS</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 1.8 miles from you</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level 3)
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 1.8 miles</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Training course</b> Business administrator (Level 3)
     </p>
     <p class="govuk-body"><b>Annual wage</b> £14,625.00</p>
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes Friday 7 July
@@ -383,8 +401,8 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">ICT Software Limited</p>
     <p class="govuk-body" style="color:#505a5f">
       Sheffield, S12 3HL</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 3.7 miles from you</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 3.7 miles</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Training course</b> Business administrator (Level
       3)
     </p>
     <p class="govuk-body"><b>Annual wage</b> £12,740.00</p>
@@ -401,8 +419,8 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Childcare Point LTD</p>
     <p class="govuk-body" style="color:#505a5f">
       Sheffield, S35 8PR</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 4.4 miles from you</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Business administrator (Level
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 4.4 miles</p>
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Training course</b> Business administrator (Level
       3)</p>
     <p class="govuk-body"><b>Annual wage</b> £4,392.96</p>
     <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 19 days (Friday 30
