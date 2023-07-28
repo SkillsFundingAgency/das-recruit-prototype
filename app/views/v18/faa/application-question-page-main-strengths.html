@@ -34,24 +34,24 @@ Find an apprenticeship - GOV.UK
     </div>
 
 
-    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
       <form class="form" action="application-question-page-what-would-you-like-to-learn" method="post">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="with-hint">
+            <label class="govuk-label govuk-label--m" for="your-answer">
               Your answer
             </label>
           </h2>
-          <div id="with-hint-hint" class="govuk-hint">
+          <div id="main-strengths-hint" class="govuk-hint">
             Describe your main strengths and provide examples. Make sure to include any strengths that match what King
             Recruitment’s looking for
           </div>
-          <textarea class="govuk-textarea govuk-js-word-count" id="main-strengths" name="main-strengths"
-            type="strengths" rows="5" aria-describedby="main-strengths"
+          <textarea class="govuk-textarea govuk-js-character-count" id="main-strengths" name="main-strengths"
+            type="strengths" rows="5" aria-describedby="main-strengths-info"
             value="{{ data['main-strengths'] or '' }}"></textarea>
         </div>
-        <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining
+        <div id="word-count-hint" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
           <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
         </div>
 
