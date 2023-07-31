@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="vacancy-page-01">Back</a>
+<a class="govuk-back-link" href="vacancy-page-02">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -81,8 +81,18 @@ Find an apprenticeship - GOV.UK
                 Contact information
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-information-status">Not
-              started</strong>
+
+            {% if data['completed-contact-info'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-contact-info'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
         </ul>
       </li>
@@ -98,8 +108,18 @@ Find an apprenticeship - GOV.UK
                 Qualifications
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="qualifications-status">Not
-              started</strong>
+
+            {% if data['completed-qualification-section'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-qualification-section'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -107,8 +127,18 @@ Find an apprenticeship - GOV.UK
                 Training courses
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="training-courses-status">Not
-              started</strong>
+
+            {% if data['completed-training-courses-section'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-training-courses-section'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
         </ul>
       </li>
@@ -125,8 +155,18 @@ Find an apprenticeship - GOV.UK
                 Jobs and work experience
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="job-work-experience-status">Not
-              started</strong>
+
+            {% if data['completed-jobs-work-experience'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-jobs-work-experience'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
         </ul>
       </li>
@@ -142,8 +182,19 @@ Find an apprenticeship - GOV.UK
                 Skills
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="skills-status">Not
-              started</strong>
+
+            {% if data['completed-skills-section'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-skills-section'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
+
           </li>
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -151,8 +202,18 @@ Find an apprenticeship - GOV.UK
                 Hobbies and interests
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="hobbies-interests-status">Not
-              started</strong>
+
+            {% if data['completed-add-hobbies'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-add-hobbies'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
         </ul>
       </li>
@@ -172,8 +233,18 @@ Find an apprenticeship - GOV.UK
                 Interview adjustments
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="interview-adjustments-status">Not
-              started</strong>
+
+            {% if data['completed-interview-adjustments-section'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-interview-adjustments-section'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
         </ul>
       </li>
@@ -211,8 +282,18 @@ Find an apprenticeship - GOV.UK
                 Additional questions
               </a>
             </span>
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="additional-questions-status">Not
-              started</strong>
+
+            {% if data['completed-employer-questions'] == "yes" %}
+            <strong class="govuk-tag app-task-list__tag">Completed</strong>
+
+            {% elseif data['completed-employer-questions'] == "no" %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
+
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
+
+            {% endif %}
+
           </li>
         </ul>
       </li>

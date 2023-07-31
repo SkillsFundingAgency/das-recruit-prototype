@@ -30,26 +30,27 @@ Find an apprenticeship - GOV.UK
       <li>how your interests show a particular passion for a profession</li>
     </ul>
 
-    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
-      <div class="govuk-form-group">
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="with-hint">
-            Your answer
-          </label>
-        </h2>
-        <textarea class="govuk-textarea govuk-js-word-count" id="with-hint" name="with-hint" rows="5"
-          aria-describedby="with-hint-info with-hint-hint"></textarea>
-      </div>
-      <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-        <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining
-        <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
-      </div>
-    </div>
-    <div class="govuk-!-padding-bottom-7"></div>
-
-
-
     <form class="form" action="application-summary-hobbies-interest" method="post">
+      <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Your answer
+            </label>
+          </h2>
+          <textarea class="govuk-textarea govuk-js-word-count" id="add-hobbies" name="add-hobbies" rows="5"
+            type="hobbies" aria-describedby="add-hobbies-info" value="{{ data['add-hobbies'] or '' }}"></textarea>
+        </div>
+        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining
+          <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
+        </div>
+      </div>
+      <div class="govuk-!-padding-bottom-7"></div>
+
+
+
+
       <div class="govuk-button-group" href="application-summary-hobbies-interest.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue

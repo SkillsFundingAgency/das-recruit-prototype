@@ -27,7 +27,7 @@ Find an apprenticeship - GOV.UK
         <dd class="govuk-summary-list__value">
           <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage
           <p class="govuk-body govuk-!-margin-bottom-0">London</p>
-          <p class="govuk-body govuk-!-margin-bottom-0">SW1A 2AA</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-postcode.html">
@@ -40,7 +40,7 @@ Find an apprenticeship - GOV.UK
           Phone number
         </dt>
         <dd class="govuk-summary-list__value">
-          07700 9009754
+          {{ data['phone-number'] or '07700 9009754' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-phone-number.html">
@@ -65,7 +65,7 @@ Find an apprenticeship - GOV.UK
 
 
 
-    <form action="/form-handler" method="post" novalidate>
+    <form action="application-task-list-new-user" method="post" novalidate>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -73,15 +73,15 @@ Find an apprenticeship - GOV.UK
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="have-you-completed-this-section"
-                name="have-you-completed-this-section" type="radio" value="yes">
+              <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-contact-info"
+                type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
                 Yes, I’ve completed this section
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="have-you-completed-this-section-2"
-                name="have-you-completed-this-section" type="radio" value="no">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2" name="completed-contact-info"
+                type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
                 No, I’ll come back to it later
               </label>

@@ -18,31 +18,31 @@ Find an apprenticeship - GOV.UK
     <h1 class="govuk-heading-l">What made you apply for this role?</h1>
     </p>
 
-
-    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
-      <div class="govuk-form-group">
-        <h2 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="with-hint">
-            Your answer
-          </label>
-        </h2>
-        <textarea class="govuk-textarea govuk-js-word-count" id="with-hint" name="with-hint" rows="5"
-          aria-describedby="with-hint-info with-hint-hint"></textarea>
-      </div>
-      <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
-        <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining
-        <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
-      </div>
-    </div>
-    <div class="govuk-!-padding-bottom-7"></div>
-
-
-
     <form class="form" action="application-question-page-employer-question-two" method="post">
-      <div class="govuk-button-group" href="application-question-page-employer-question-two.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
+      <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Your answer
+            </label>
+          </h2>
+          <textarea class="govuk-textarea govuk-js-word-count" id="employer-question-one" name="employer-question-one"
+            type="question-one" rows="5" aria-describedby="employer-question-one-info"
+            value="{{ data['employer-question-one'] or '' }}"></textarea>
+        </div>
+        <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining
+          <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
+        </div>
+        <div class="govuk-!-padding-bottom-7"></div>
+
+
+
+        <div class="govuk-button-group" href="application-question-page-employer-question-two.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
       </div>
     </form>
 
