@@ -20,7 +20,9 @@ Find an apprenticeship - GOV.UK
 
     <div class="govuk-inset-text">
       <h3 class="govuk-heading-s">Your answer</h3>
-      <p class="govuk-body">I would need a British Sign Language (BSL) interpreter to complete my interview.</p>
+      <p class="govuk-body"> {{ data['interview-adjustments-input'] or ' I would need a British Sign Language (BSL)
+        interpreter
+        to complete my interview.' }}</p>
       <a class="govuk-link" href="application-question-page-input-interview-adjustments.html">
         Change<span class="govuk-visually-hidden"> interview adjustments</span>
       </a>
