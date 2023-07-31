@@ -21,7 +21,7 @@ Find an apprenticeship - GOV.UK
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">Customer service assistant</h2>
+        <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Customer service assistant' }}</h2>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
@@ -30,7 +30,7 @@ Find an apprenticeship - GOV.UK
               Name of employer
             </dt>
             <dd class="govuk-summary-list__value">
-              Betty’s Corner Shop
+              {{ data['employer-name'] or 'Betty’s Corner Shop' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
@@ -43,9 +43,9 @@ Find an apprenticeship - GOV.UK
               What you did
             </dt>
             <dd class="govuk-summary-list__value">
-              The role involved stacking selfs, assisting customers with inquiries about products, scanning and updating
-              the prices on
-              products, liaising with senior members of staff, keeping the shop cleaning and organised.
+              {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with
+              inquiries about products, scanning and updating the prices on products, liaising with senior members of
+              staff, keeping the shop cleaning and organised.' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
@@ -58,7 +58,7 @@ Find an apprenticeship - GOV.UK
               Start date
             </dt>
             <dd class="govuk-summary-list__value">
-              February 2019
+              {{ data['work-start-date-month'] or '03' }} {{ data['work-start-date-year'] or '2019' }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
