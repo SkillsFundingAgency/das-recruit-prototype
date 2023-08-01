@@ -21,8 +21,9 @@ Find an apprenticeship - GOV.UK
     <form class="form" action="application-summary-interview-adjustments" method="post">
       <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
         <div class="govuk-form-group">
-          <textarea class="govuk-textarea govuk-js-word-count" id="interview-adjustments-input" name="interview-adjustments-input" type="interview" rows="5"
-            aria-describedby="with-hint-info with-hint-hint" value="{{ data['interview-adjustments-input'] or '' }}"></textarea>
+          <textarea class="govuk-textarea govuk-js-word-count" id="interview-adjustments-input"
+            name="interview-adjustments-input" type="interview" rows="5"
+            aria-describedby="with-hint-info with-hint-hint">{{ data['interview-adjustments-input'] or '' }}</textarea>
         </div>
         <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
           <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining

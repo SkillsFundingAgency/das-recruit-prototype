@@ -20,19 +20,22 @@ Find an apprenticeship - GOV.UK
 
 
     <div class="govuk-form-group">
-      <h1 class="govuk-label-wrapper">
-        <label class="govuk-label govuk-label--m" for="add-skills">
-          Add a skill
+      <form class="form" action="application-summary-skills" method="post">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="add-skills">
+            Add a skill
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          We recommend adding at least 6 skills
+        </div>
+        <label class="govuk-label" for="skills">
+          Skill 1
         </label>
-      </h1>
-      <div id="event-name-hint" class="govuk-hint">
-        We recommend adding at least 6 skills
-      </div>
-      <label class="govuk-label" for="skills">
-        Skill 1
-      </label>
-      <input class="govuk-input govuk-!-width-one-half" id="skill-1" name="skill-1" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="skill-one" name="skill-one" type="one"
+          value="{{ data['skill-one'] or '' }}">
     </div>
+
 
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Add another skill
@@ -90,16 +93,11 @@ Find an apprenticeship - GOV.UK
 
 
 
-
-
-
-
-    <form class="form" action="application-summary-skills" method="post">
-      <div class="govuk-button-group" href="application-summary-skills.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Save skills
-        </button>
-      </div>
+    <div class="govuk-button-group" href="application-summary-skills.html">
+      <button class="govuk-button" data-module="govuk-button">
+        Save skills
+      </button>
+    </div>
     </form>
 
 

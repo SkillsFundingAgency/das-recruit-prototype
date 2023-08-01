@@ -54,8 +54,9 @@ Find an apprenticeship - GOV.UK
             this
             role involved. You’ll be able to describe your strengths and experience later
           </div>
-          <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-role" name="what-you-did-in-the-role" rows="5"
-            aria-describedby="what-you-did-in-the-role-info" value="{{ data['what-you-did-in-the-role'] or '' }}"></textarea>
+          <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-role"
+            name="what-you-did-in-the-role" rows="5"
+            aria-describedby="what-you-did-in-the-role-info">{{ data['what-you-did-in-the-role'] or '' }}</textarea>
         </div>
         <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
           <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining
@@ -79,7 +80,8 @@ Find an apprenticeship - GOV.UK
                   Month
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="work-start-date-month"
-                  name="work-start-date-month" type="month" inputmode="numeric" value="{{ data['work-start-date-month'] or '' }}">
+                  name="work-start-date-month" type="month" inputmode="numeric"
+                  value="{{ data['work-start-date-month'] or '' }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -88,7 +90,8 @@ Find an apprenticeship - GOV.UK
                   Year
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="work-start-date-year"
-                  name="work-start-date-year" type="year" inputmode="numeric" value="{{ data['work-start-date-year'] or '' }}">
+                  name="work-start-date-year" type="year" inputmode="numeric"
+                  value="{{ data['work-start-date-year'] or '' }}">
               </div>
             </div>
           </div>

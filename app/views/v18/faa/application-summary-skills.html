@@ -20,12 +20,7 @@ Find an apprenticeship - GOV.UK
 
     <div class="govuk-inset-text">
       <h3 class="govuk-heading-s">List of skills</h3>
-      <li>Communication skills</li>
-      <li>IT skills</li>
-      <li>Attention to detail</li>
-      <li>Organisation skills</li>
-      <li>Administrative skills</li>
-      <li>Team working</li>
+      <li>{{ data['skill-one'] or 'Team work' }}</li>
     </div>
 
 
@@ -34,7 +29,7 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Have you completed this section?
+            Have you completed this section
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
