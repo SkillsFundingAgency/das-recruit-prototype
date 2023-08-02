@@ -1108,3 +1108,11 @@ margin-top: -40px;
   text-decoration: underline;
   color: #1d70b8;
 }
+
+.content-list__sticky {
+  @include govuk-media-query($from: tablet) {
+    top: 10px;
+    position: sticky;
+  }
+  margin-bottom: 20px;
+}
