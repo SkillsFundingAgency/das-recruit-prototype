@@ -1,0 +1,46 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-phone-number.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Contact information</span>
+    <h1 class="govuk-heading-l">Confirm your email</h1>
+    </p>
+    <p class="govuk-body">The person who looks at your application may need to email you. They will see this email
+      address:</p>
+    <div class="govuk-inset-text">
+      <b>sarah.philips@email.com</b>
+      <p class="govuk-body govuk-!-margin-top-1">Email address you use in your GOV.UK One Login</p>
+    </div>
+    <p class="govuk-body">Make sure you have access to this email address and check it regularly.</p>
+    <div class="govuk-!-padding-bottom-3"></div>
+
+
+
+    <form class="form" action="application-summary-contact-info" method="post">
+      <div class="govuk-button-group" href="application-summary-contact-info.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Confirm email address
+        </button>
+      </div>
+    </form>
+
+    <p class="govuk-body">To use a different email address, you need to<a href="/"
+        class="govuk-link govuk-link--no-visited-state"> change the sign in details in your GOV.UK One Login</a>.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}

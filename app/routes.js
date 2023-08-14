@@ -23,5 +23,6 @@ require('./routes/15/routes.js')(router);
 require('./routes/16/routes.js')(router);
 require('./routes/17/routes.js')(router);
 require('./routes/18/routes.js')(router);
+require('./routes/19/routes.js')(router);
 
 module.exports = router

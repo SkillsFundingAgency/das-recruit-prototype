@@ -1,0 +1,102 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-qualification-type.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Add GCSEs</h1>
+    <form class="form" action="application-summary-qualifications" method="post">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="school-name">
+            Name of school, university or college
+          </label>
+        </h1>
+        <input class="govuk-input" id="school-name" name="school-name" type="school"
+          value="{{ data['school-name'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Subjects
+        </label>
+      </h1>
+      <div id="event-name-hint" class="govuk-hint">
+        If you’re still studying a subject, use the predicted grade your teacher expects you to get
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="subject">
+          Subject name
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="subject-name" name="subject-name" type="subject"
+          value="{{ data['subject-name'] or '' }}">
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="grade">
+          Grade
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="subject-grade" name="subject-grade" type="grade"
+          value="{{ data['subject-grade'] or '' }}">
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="predicted-grade-yes">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="predicted-grade" name="predicted-grade" type="checkbox"
+                value="yes">
+              <label class="govuk-label govuk-checkboxes__label" for="predicted-grade">
+                Predicted grade
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another subject
+      </button>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="year-acheived">
+            Year achieved
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          If you are still studying, enter the year you will finish
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="qualifications-year-achieved"
+          name="qualifications-year-achieved" type="year" aria-describedby="event-name-hint"
+          value="{{ data['qualifications-year-achieved'] or '' }}">
+      </div>
+
+
+      <div class="govuk-button-group" href="application-summary-qualifications.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
