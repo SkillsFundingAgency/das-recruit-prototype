@@ -15,25 +15,44 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Training courses summary</h1>
+    <h1 class="govuk-heading-l">Training summary</h1>
     </p>
 
-
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          {{ data['training-provider-name'] or 'Created academy' }}
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['course-name'] or 'UX Foundation' }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="application-question-page-postcode.html">
-            Change<span class="govuk-visually-hidden"> address</span>
-          </a>
-        </dd>
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"> {{ data['course-name'] or 'E33 Building Safety' }}</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="application-question-page-add-training-courses">
+              Change<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </dl>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              College or training provider
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['training-provider-name'] or 'Newquay Professional Training' }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year achieved
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['year-achieved'] or '2018' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Add another training course
