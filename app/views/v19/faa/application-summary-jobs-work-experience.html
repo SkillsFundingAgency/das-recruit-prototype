@@ -18,10 +18,20 @@ Find an apprenticeship - GOV.UK
     <h1 class="govuk-heading-l">Add jobs and work experience</h1>
     </p>
 
-
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Customer service assistant' }}</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> jobs and work experience</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="application-question-page-add-jobs-work-experience">
+              Change<span class="govuk-visually-hidden"> jobs and work experience</span>
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
@@ -31,11 +41,6 @@ Find an apprenticeship - GOV.UK
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['employer-name'] or 'Betty’s Corner Shop' }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
-                Change<span class="govuk-visually-hidden"> name of employer</span>
-              </a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -47,11 +52,6 @@ Find an apprenticeship - GOV.UK
               inquiries about products, scanning and updating the prices on products, liaising with senior members of
               staff, keeping the shop cleaning and organised.' }}
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
-                Change<span class="govuk-visually-hidden"> what you did</span>
-              </a>
-            </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -59,11 +59,6 @@ Find an apprenticeship - GOV.UK
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['work-start-date-month'] or '03' }} {{ data['work-start-date-year'] or '2019' }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
-                Change<span class="govuk-visually-hidden"> start date</span>
-              </a>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -73,15 +68,12 @@ Find an apprenticeship - GOV.UK
             <dd class="govuk-summary-list__value">
               No
             </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="application-question-page-add-jobs-work-experience.html">
-                Change<span class="govuk-visually-hidden"> is theis your current role</span>
-              </a>
-            </dd>
           </div>
         </dl>
       </div>
     </div>
+
+
 
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
       Add another job or work experience

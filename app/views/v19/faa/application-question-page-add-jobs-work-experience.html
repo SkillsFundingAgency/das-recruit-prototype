@@ -63,8 +63,7 @@ Find an apprenticeship - GOV.UK
           <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
         </div>
       </div>
-      <div class="govuk-!-padding-bottom-7"></div>
-
+      <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date">
@@ -79,8 +78,8 @@ Find an apprenticeship - GOV.UK
                 <label class="govuk-label govuk-date-input__label" for="start-date-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="work-start-date-month"
-                  name="work-start-date-month" type="month" inputmode="numeric"
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month"
+                  name="start-date-month" type="text" inputmode="numeric"
                   value="{{ data['work-start-date-month'] or '' }}">
               </div>
             </div>
@@ -89,14 +88,15 @@ Find an apprenticeship - GOV.UK
                 <label class="govuk-label govuk-date-input__label" for="start-date-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="work-start-date-year"
-                  name="work-start-date-year" type="year" inputmode="numeric"
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year"
+                  name="start-date-year" type="text" inputmode="numeric"
                   value="{{ data['work-start-date-year'] or '' }}">
               </div>
             </div>
           </div>
         </fieldset>
       </div>
+
       <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
