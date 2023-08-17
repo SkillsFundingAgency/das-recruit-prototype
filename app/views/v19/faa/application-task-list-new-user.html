@@ -23,11 +23,14 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-column-two-thirds"
   style="background-color:#F3F2F1; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px">
 
-  <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Business Administration Apprentice</h3>
+  <h3 class="govuk-heading-s  das-search-results__heading govuk-!-margin-bottom-1">
+    <a rel="noreferrer noopener" target="_blank" href="vacancy-page-02">
+      Business Administration Apprentice (opens in a new tab)</a>
+  </h3>
   <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
   <p class="govuk-body govuk-!-margin-bottom-3" style="color:#505a5f">
     Sheffield, S1 3FG</p>
-  <a class="govuk-link" href="vacancy-page-01.html">View full vacancy</a>
+  <p class="govuk-body govuk-!-margin-bottom-0">Closes in 30 days (Friday 4 August)</p>
 </div>
 
 
@@ -37,15 +40,12 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
 
     <div class="govuk-!-padding-bottom-8"></div>
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">My profile</h2>
-    <p class="govuk-body">Use your profile to apply for apprenticeships as part of your application. These details
-      will
-      be saved for future
-      applications.</p>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">My application</h2>
+    <p class="govuk-body">These details will be saved for future applications.</p>
 
     <div class="govuk-inset-text">
       <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Application incomplete</h3>
-      <p class="govuk-body">You have completed 0 of 6 sections.</p>
+      <p class="govuk-body">You have completed 0 of 5 sections.</p>
     </div>
 
     <ol class="app-task-list">
@@ -124,7 +124,7 @@ Find an apprenticeship - GOV.UK
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="application-question-page-training-courses.html" aria-describedby="training-courses-status">
-                Training courses
+                Training
               </a>
             </span>
 
@@ -171,22 +171,23 @@ Find an apprenticeship - GOV.UK
         </ul>
       </li>
 
+
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">4. </span> About you
+          <span class="app-task-list__section-number">4. </span> Equality
         </h2>
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="application-question-page-add-skills.html" aria-describedby="skills-status">
-                Skills
+              <a href="/" aria-describedby="disclose-disability-status">
+                Disclose a disability or health condition
               </a>
             </span>
 
-            {% if data['completed-skills-section'] == "yes" %}
+            {% if data['completed-disclose-disability'] == "yes" %}
             <strong class="govuk-tag app-task-list__tag">Completed</strong>
 
-            {% elseif data['completed-skills-section'] == "no" %}
+            {% elseif data['completed-disclose-disability'] == "no" %}
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
 
             {% else %}
@@ -196,38 +197,12 @@ Find an apprenticeship - GOV.UK
 
 
           </li>
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              <a href="application-question-page-hobbies-interests.html" aria-describedby="hobbies-interests-status">
-                Hobbies and interests
-              </a>
-            </span>
 
-            {% if data['completed-add-hobbies'] == "yes" %}
-            <strong class="govuk-tag app-task-list__tag">Completed</strong>
-
-            {% elseif data['completed-add-hobbies'] == "no" %}
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
-
-            {% else %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Not started</strong>
-
-            {% endif %}
-
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">5. </span> Interview support
-        </h2>
-        <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
               <a href="application-question-page-interview-adjustments.html"
                 aria-describedby="interview-adjustments-status">
-                Interview adjustments
+                Request interview adjustments
               </a>
             </span>
 
@@ -248,7 +223,7 @@ Find an apprenticeship - GOV.UK
 
       <li>
         <h2 class="app-task-list__section govuk-!-margin-bottom-1">
-          <span class="app-task-list__section-number">6. </span> Application questions
+          <span class="app-task-list__section-number">5. </span> Application questions
         </h2>
         <p class="govuk-body style govuk-!-static-padding-left-6" style="color:	#505a5f">Tailor your answers to
           match
@@ -279,7 +254,7 @@ Find an apprenticeship - GOV.UK
             <span class="app-task-list__task-name">
               <a href="application-question-page-employer-question-one.html"
                 aria-describedby="additional-questions-status">
-                Additional questions
+                Questions added by the employer
               </a>
             </span>
 
@@ -299,11 +274,12 @@ Find an apprenticeship - GOV.UK
       </li>
     </ol>
 
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Preview your profile</h2>
-    <p class="govuk-body">Review your profile before submitting.</p>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Preview your application</h2>
+    <p class="govuk-body">Review your application before submitting.
+    </p>
 
-    </p> <a class="govuk-link govuk-!-margin-right-2" href="/">Preview your profile</a>
-    <a class="govuk-link" href="/">Remove your profile</a></p>
+    </p> <a class="govuk-link govuk-!-margin-right-2" href="/">Preview your application</a>
+    <a class="govuk-link" href="/">Cancel your application</a></p>
     <div class="govuk-!-padding-bottom-7"></div>
 
 
