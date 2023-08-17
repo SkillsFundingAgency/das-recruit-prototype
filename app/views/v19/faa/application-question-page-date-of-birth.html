@@ -16,7 +16,7 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Personal information</span>
     <h1 class="govuk-heading-l">What is your date of birth?</h1>
-    <form class="form" action="application-summary-personal-info" method="post">
+    <form class="form" action="application-question-page-postcode" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
@@ -40,7 +40,8 @@ Find an apprenticeship - GOV.UK
                   Month
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month"
-                  name="date-of-birth-month" type="text" inputmode="numeric" value="{{ data['date-of-birth-month'] or '' }}">
+                  name="date-of-birth-month" type="text" inputmode="numeric"
+                  value="{{ data['date-of-birth-month'] or '' }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -49,7 +50,8 @@ Find an apprenticeship - GOV.UK
                   Year
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year"
-                  name="date-of-birth-year" type="text" inputmode="numeric" value="{{ data['date-of-birth-year'] or '' }}">
+                  name="date-of-birth-year" type="text" inputmode="numeric"
+                  value="{{ data['date-of-birth-year'] or '' }}">
               </div>
             </div>
           </div>
@@ -58,7 +60,7 @@ Find an apprenticeship - GOV.UK
 
 
 
-      <div class="govuk-button-group" href="application-summary-personal-info.html">
+      <div class="govuk-button-group" href="application-question-page-postcode.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>

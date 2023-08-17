@@ -51,12 +51,28 @@ Find an apprenticeship - GOV.UK
           Date of birth
         </dt>
         <dd class="govuk-summary-list__value">
-          {{ data['date-of-birth-day'] or '12' }} {{ data['date-of-birth-month'] or '03' }} {{ data['date-of-birth-year']
+          {{ data['date-of-birth-day'] or '12' }} {{ data['date-of-birth-month'] or '03' }} {{
+          data['date-of-birth-year']
           or '1999' }}
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="application-question-page-date-of-birth.html">
             Change<span class="govuk-visually-hidden"> date of birth</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage
+          <p class="govuk-body govuk-!-margin-bottom-0">London</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-postcode.html">
+            Change<span class="govuk-visually-hidden"> address</span>
           </a>
         </dd>
       </div>

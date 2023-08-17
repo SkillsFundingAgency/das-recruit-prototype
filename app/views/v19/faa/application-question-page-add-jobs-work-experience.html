@@ -16,7 +16,37 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Work history</span>
     <h1 class="govuk-heading-l">Add job or work experience</h1>
+    <div class="govuk-!-padding-bottom-3"></div>
     <form class="form" action="application-summary-jobs-work-experience" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Type of experience
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-experience-job" name="type-of-experience-job" type="radio"
+                value="job">
+              <label class="govuk-label govuk-radios__label" for="type-of-experience-job">
+                Job
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="type-of-experience-work-experience"
+                name="type-of-experience-work-experience" type="radio" value="work-experience">
+              <label class="govuk-label govuk-radios__label" for="type-of-experience-work-experience">
+                Work experience or volunteering
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="employer-name">
@@ -46,13 +76,11 @@ Find an apprenticeship - GOV.UK
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="with-hint">
-              What you did
+              Your responsibilities
             </label>
           </h2>
           <div id="with-hint-hint" class="govuk-hint">
-            Briefly describe your responsibilities to help the person looking at your application to understand what
-            this
-            role involved. You’ll be able to describe your strengths and experience later
+            Briefly describe what you did
           </div>
           <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-role"
             name="what-you-did-in-the-role" rows="5"
@@ -100,7 +128,7 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
+        <fieldset class="govuk-fieldset" aria-describedby="current-role-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
               Is this your current role?
@@ -108,16 +136,52 @@ Find an apprenticeship - GOV.UK
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="current-role-yes" name="current-role-yes" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="current-role-yes">
+              <input class="govuk-radios__input" id="current-role" name="current-role" type="radio" value="yes"
+                data-aria-controls="conditional-current-role">
+              <label class="govuk-label govuk-radios__label" for="current-role">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="current-role-no" name="current-role-no" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="current-role-no">
+              <input class="govuk-radios__input" id="current-role" name="current-role" type="radio" value="no"
+                data-aria-controls="conditional-current-role-2">
+              <label class="govuk-label govuk-radios__label" for="current-role-2">
                 No
               </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current-role-2">
+              <div class="govuk-form-group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    End date
+                  </h1>
+                </legend>
+                <div id="end-date-hint" class="govuk-hint">
+                  For example, 8 2022
+                </div>
+                <div class="govuk-date-input" id="start-date">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="start-date-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month"
+                        name="start-date-month" type="text" inputmode="numeric"
+                        value="{{ data['work-start-date-month'] or '' }}">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="start-date-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year"
+                        name="start-date-year" type="text" inputmode="numeric"
+                        value="{{ data['work-start-date-year'] or '' }}">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </fieldset>
