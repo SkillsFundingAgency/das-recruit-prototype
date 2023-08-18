@@ -179,15 +179,16 @@ Find an apprenticeship - GOV.UK
         <ul class="app-task-list__items">
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
-              <a href="/" aria-describedby="disclose-disability-status">
+              <a href="application-question-page-disability-disclosure.html"
+                aria-describedby="disclose-disability-status">
                 Disclose a disability or health condition
               </a>
             </span>
 
-            {% if data['completed-disclose-disability'] == "yes" %}
+            {% if data['completed-disability-disclosure-section'] == "yes" %}
             <strong class="govuk-tag app-task-list__tag">Completed</strong>
 
-            {% elseif data['completed-disclose-disability'] == "no" %}
+            {% elseif data['completed-disability-disclosure-section'] == "no" %}
             <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
 
             {% else %}

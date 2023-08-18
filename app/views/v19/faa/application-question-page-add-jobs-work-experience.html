@@ -159,25 +159,25 @@ Find an apprenticeship - GOV.UK
                 <div id="end-date-hint" class="govuk-hint">
                   For example, 8 2022
                 </div>
-                <div class="govuk-date-input" id="start-date">
+                <div class="govuk-date-input" id="end-date">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="start-date-month">
+                      <label class="govuk-label govuk-date-input__label" for="end-date-month">
                         Month
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month"
-                        name="start-date-month" type="text" inputmode="numeric"
-                        value="{{ data['work-start-date-month'] or '' }}">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month"
+                        name="end-date-month" type="text" inputmode="numeric"
+                        value="{{ data['work-end-date-month'] or '' }}">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="start-date-year">
+                      <label class="govuk-label govuk-date-input__label" for="end-date-year">
                         Year
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year"
-                        name="start-date-year" type="text" inputmode="numeric"
-                        value="{{ data['work-start-date-year'] or '' }}">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year"
+                        name="end-date-year" type="text" inputmode="numeric"
+                        value="{{ data['work-end-date-year'] or '' }}">
                     </div>
                   </div>
                 </div>

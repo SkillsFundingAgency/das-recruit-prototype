@@ -37,6 +37,14 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
+              Type of experience
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Job
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
               Name of employer
             </dt>
             <dd class="govuk-summary-list__value">
@@ -67,6 +75,14 @@ Find an apprenticeship - GOV.UK
             </dt>
             <dd class="govuk-summary-list__value">
               No
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              End date
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['work-end-date-month'] or '05' }} {{ data['work-start-end-year'] or '2022' }}
             </dd>
           </div>
         </dl>
