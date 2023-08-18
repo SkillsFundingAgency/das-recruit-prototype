@@ -14,19 +14,28 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Interview support</span>
-    <h1 class="govuk-heading-l">Interview adjustment summary</h1>
+    <span class="govuk-caption-l">Equality</span>
+    <h1 class="govuk-heading-l">Interview adjustments summary</h1>
     </p>
 
-    <div class="govuk-inset-text">
-      <h3 class="govuk-heading-s">Your answer</h3>
-      <p class="govuk-body"> {{ data['interview-adjustments-input'] or ' I would need a British Sign Language (BSL)
-        interpreter
-        to complete my interview.' }}</p>
-      <a class="govuk-link" href="application-question-page-input-interview-adjustments.html">
-        Change<span class="govuk-visually-hidden"> interview adjustments</span>
-      </a>
-    </div>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Adjustments you’ll need at an interview
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['interview-adjustments-input'] or ' I would need a British Sign Language (BSL)
+          interpreter
+          to complete my interview.' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-input-interview-adjustments.html">
+            Change<span class="govuk-visually-hidden"> interview adjustments</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <div class="govuk-!-padding-bottom-5"></div>
 
 
 

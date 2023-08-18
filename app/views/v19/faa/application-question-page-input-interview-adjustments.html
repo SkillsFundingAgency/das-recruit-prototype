@@ -14,9 +14,33 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Interview support</span>
-    <h1 class="govuk-heading-l">Describe the adjustments you need at an interview</h1>
-    </p>
+    <span class="govuk-caption-l">Equality</span>
+    <h1 class="govuk-heading-l">What adjustments will you need at an interview?</h1>
+    <p class="govuk-body">We’ll show this answer on your application.</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with interview adjustments
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Get advice about:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <p class="govuk-body">
+              <a href="https://business.scope.org.uk/article/making-adjustments-for-job-interviews?gclid=EAIaIQobChMI6o-LmfzlgAMV2evtCh2m8QYYEAAYASAAEgJfkvD_BwE"
+                class="govuk-link" rel="noreferrer noopener" target="_blank">adjustments at interview from
+                Scope (opens in a new tab)</a>
+            </p>
+          </li>
+          <li><a
+              href="https://www.mind.org.uk/information-support/legal-rights/discrimination-in-everyday-life/reasonable-adjustments/#:~:text=mental%20health%20problems.-,What%20kinds%20of%20reasonable%20adjustments%20can%20I%20ask%20for%3F,then%20it%20must%20make%20them."
+              class="govuk-link" rel="noreferrer noopener" target="_blank">adjustments for mental health conditions from
+              Mind (opens in a new tab)</a></li>
+        </ul>
+      </div>
+    </details>
 
     <form class="form" action="application-summary-interview-adjustments" method="post">
       <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
@@ -25,12 +49,8 @@ Find an apprenticeship - GOV.UK
             name="interview-adjustments-input" type="interview" rows="5"
             aria-describedby="with-hint-info with-hint-hint">{{ data['interview-adjustments-input'] or '' }}</textarea>
         </div>
-        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining
-          <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
-        </div>
       </div>
-      <div class="govuk-!-padding-bottom-7"></div>
+      <div class="govuk-!-padding-bottom-5"></div>
 
 
       <div class="govuk-button-group" href="application-summary-interview-adjustments.html">

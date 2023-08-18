@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+<a class="govuk-back-link" href="application-question-page-hobbies.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,23 +14,32 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">About you</span>
+    <span class="govuk-caption-l">Application questions</span>
     <h1 class="govuk-heading-l">What are your hobbies and interests?</h1>
-    </p>
 
-    <p class="govuk-body">Help an employer to understand more about you.</p>
-    <p class="govuk-body">You could include:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>what you do outside of work or school</li>
-      <li>things you care about and are interested in</li>
-    </ul>
-    <p class="govuk-body">You could also mention:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>how you take on responsibilities at clubs</li>
-      <li>how your interests show a particular passion for a profession</li>
-    </ul>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with this section
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">Help an employer to understand more about you.</p>
+        <p class="govuk-body">You could include:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>what you do outside of work or school</li>
+          <li>things you care about and are interested in</li>
+        </ul>
+        <p class="govuk-body">You could also mention:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>how you take on responsibilities at clubs</li>
+          <li>how your interests show a particular passion for a profession</li>
+        </ul>
+      </div>
+    </details>
 
-    <form class="form" action="application-summary-hobbies-interest" method="post">
+
+    <form class="form" action="application-summary-role-questions" method="post">
       <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
@@ -42,7 +51,7 @@ Find an apprenticeship - GOV.UK
             type="hobbies" aria-describedby="add-hobbies-info">{{ data['add-hobbies'] or '' }}</textarea>
         </div>
         <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining
           <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
         </div>
       </div>
@@ -51,7 +60,7 @@ Find an apprenticeship - GOV.UK
 
 
 
-      <div class="govuk-button-group" href="application-summary-hobbies-interest.html">
+      <div class="govuk-button-group" href="application-summary-role-questions.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
