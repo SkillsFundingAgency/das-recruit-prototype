@@ -1,0 +1,109 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Preview your application</h1>
+    <p class="govuk-body govuk-!-margin-bottom-3">Text could go here about printing, not to sure?</p>
+    <!-- Add the link with the print icon -->
+
+    <head>
+      <title>Link with Print Icon</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+
+    <body>
+
+      <a href="#" class="print-link govuk-!-padding-right-5">
+        <i class="fas fa-print" style="color: #1d70b8"></i> Print application
+      </a>
+
+    </body>
+    <!-- End the link with the print icon -->
+    <div class="govuk-!-padding-bottom-5"></div>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-8"></div>
+
+
+    <!-- START personal details -->
+    <h2 class="govuk-heading-m">Personal details</h2>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          First name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['first-name'] or 'Sarah' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Last name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['last-name'] or 'Jones' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['date-of-birth-day'] or '12' }} {{ data['date-of-birth-month'] or '03' }} {{
+          data['date-of-birth-year']
+          or '1999' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage
+          <p class="govuk-body govuk-!-margin-bottom-0">London</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END personal details -->
+
+    <!-- START contact details -->
+    <h2 class="govuk-heading-m">Contact details</h2>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['phone-number'] or '07700 9009754' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          TESTEMAIL@email.com
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- END contact details -->
+
+  </div>
+</div>
+
+{% endblock %}
