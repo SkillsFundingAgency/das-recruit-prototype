@@ -50,7 +50,7 @@ Find an apprenticeship - GOV.UK
               School, college or other organisation
             </dt>
             <dd class="govuk-summary-list__value">
-              Handsworth Grange
+              {{ data['school-name'] or 'Handsworth Grange' }}
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -58,7 +58,7 @@ Find an apprenticeship - GOV.UK
               Year qualification(s) were awarded
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">2013</p>
+              <p class="govuk-body">{{ data['qualifications-year-achieved'] or '2013' }}</p>
             </dd>
           </div>
         </dl>

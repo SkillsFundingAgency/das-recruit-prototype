@@ -103,6 +103,200 @@ Find an apprenticeship - GOV.UK
 
     <!-- END contact details -->
 
+    <!-- START qualifications -->
+    <h2 class="govuk-heading-m">Qualifications</h2>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">GCSEs</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">{{ data['school-name'] or 'Handsworth Grange' }}</p>
+    <p class="govuk-body" style="color:#505a5f">
+      {{ data['qualifications-year-achieved'] or '2013' }}</p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Grade</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Science</td>
+          <td class="govuk-table__cell">C</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Maths</td>
+          <td class="govuk-table__cell">B</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Art</td>
+          <td class="govuk-table__cell">A</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">English</td>
+          <td class="govuk-table__cell">B</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">A Levels</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">Chesterfield College</p>
+    <p class="govuk-body" style="color:#505a5f">2015</p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Grade</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Science</td>
+          <td class="govuk-table__cell">C</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Maths</td>
+          <td class="govuk-table__cell">C</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Art</td>
+          <td class="govuk-table__cell">B</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END qualifications -->
+
+    <!-- START training -->
+    <h2 class="govuk-heading-m">Training</h2>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{ data['course-name'] or 'E33 Building Safety' }}</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">{{ data['training-provider-name'] or 'Newquay Professional Training'
+      }}</p>
+    <p class="govuk-body" style="color:#505a5f">
+      {{ data['year-achieved'] or '2018' }}</p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- START training -->
+
+    <!-- START job and work experience -->
+    <h2 class="govuk-heading-m">Jobs and work experience</h2>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{ data['role-name'] or 'Customer service assistant' }}</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">{{ data['employer-name'] or 'Betty’s Corner Shop' }}</p>
+    <p class="govuk-body govuk-!-margin-bottom-2" style="color:#505a5f">
+      {{ data['work-start-date-month'] or '03' }} {{ data['work-start-date-year'] or '2019' }} - {{
+      data['work-end-date-month'] or '05' }} {{ data['work-start-end-year'] or '2022' }}</p>
+    <p class="govuk-body">{{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers
+      with
+      inquiries about products, scanning and updating the prices on products, liaising with senior members of
+      staff, keeping the shop cleaning and organised.' }}</p>
+
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Night shift manager</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">Fresh supermarket</p>
+    <p class="govuk-body govuk-!-margin-bottom-2" style="color:#505a5f">
+      11 2015 - 02 2019</p>
+    <p class="govuk-body">As a nightshift worker at a supermarket, I bring reliability, dedication, and a strong work
+      ethic to the team. My
+      commitment to ensuring the store is well-prepared for the next day's operations is unwavering. I excel in tasks
+      such as restocking shelves, meticulously checking inventory, and maintaining a clean and organized store
+      environment.</p>
+
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Shift manager</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">Food superstore</p>
+    <p class="govuk-body govuk-!-margin-bottom-2" style="color:#505a5f">
+      11 2013 - 02 2015</p>
+    <p class="govuk-body">I am a seasoned shift manager with a track record of success in the supermarket industry. With
+      a strong background in
+      retail management, I excel in overseeing the daily operations of the store, ensuring efficiency, and delivering
+      exceptional customer service. My leadership skills shine as I mentor and motivate team members, ensuring they meet
+      and exceed performance targets. I'm
+      adept at scheduling, inventory management, and maintaining a well-organized store layout to optimize sales and
+      customer
+      satisfaction.
+    </p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END job and work experience -->
+
+    <!-- START role questions -->
+    <h2 class="govuk-heading-m">Application questions</h2>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What is your skills and strengths?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">{{ data['main-strengths'] or 'My biggest strength is that I can think
+      on my feet and can work under a lot of
+      pressure. As an event manager at Sarah’s boutique, we were organizing an IT conference that needed a number of
+      last-minute changes - due to a speaker
+      canceling because of an emergency and 2 of our volunteers not being able to show up.
+      So, we allocated more time to each speaker and added a QA section at the end of each speech. We also
+      encouraged the present speakers to talk about their business and personal experience more in-depth after they
+      were done
+      with their speech. As for being understaffed, one day before the conference, I reached out to my network and
+      found 2 students
+      who were willing to help out. I personally met them 2 hours before the conference and got them up to speed
+      with
+      everything we were doing for the day, and gave them their tasks.' }}</p>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What interests you about this apprenticeship?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">{{ data['like-to-learn'] or 'I would like to learn more about business
+      and leadership. I feel that working
+      for your company will give me many opportunities to expand my knowledge in these areas while helping your team
+      to grow and your company to be more
+      profitable.' }}</p>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What are your hobbies and interests?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">{{ data['add-hobbies'] or 'I help maintain vintage cars with my dad.
+      We normally
+      spend a day a week in his
+      workshop where we do specialist repairs
+      on cards built between 1960 and 1980. I help him with engine rebuilds, bodywork, cleaning and general
+      maintenance.
+      This has helped me understand how to be useful in a workshop and has given me a good understanding of engines
+      and
+      cars.' }}</p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END role questions -->
+
+    <!-- START employer questions -->
+    <h2 class="govuk-heading-m">Question from the employer</h2>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">When you’re balancing multiple projects, how do you keep
+      yourself organised?
+    </h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">{{ data['employer-question-one'] or 'I’m used to juggling projects at
+      my current job where I’m often moving
+      between coding one software program to another. I
+      use the time-boxing technique to make sure they’re all on track, allocating time on my calendar for certain
+      tasks. I’ve
+      found it really helps me prioritise what needs to get done first, and it holds me accountable for the more
+      repetitive
+      day-to-day tasks I’m responsible for.' }}</p>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">How will you get to and from this vacancy every day if
+      successful?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">{{ data['employer-question-two'] or 'I can drive so will be commuting
+      to and from work by car.' }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END employer questions -->
+
+    <!-- START equality questions -->
+    <h2 class="govuk-heading-m">Equality</h2>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Do you have a disability or health condition?
+    </h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">Yes</p>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Do you want to ask for any interview adjustments?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">{{ data['interview-adjustments-input'] or ' I would need a British
+      Sign Language (BSL)
+      interpreter
+      to complete my interview.' }}</p>
+    <!-- END equality questions -->
+
   </div>
 </div>
 
