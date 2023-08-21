@@ -38,6 +38,14 @@ Find an apprenticeship - GOV.UK
 
     <!-- START personal details -->
     <h2 class="govuk-heading-m">Personal details</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-personal-info.html">Change</a>
+        </li>
+      </ul>
+    </div>
+
     <dl class="govuk-summary-list govuk-summary-list--no-border">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -81,6 +89,14 @@ Find an apprenticeship - GOV.UK
 
     <!-- START contact details -->
     <h2 class="govuk-heading-m">Contact details</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-contact-info.html">Change</a>
+        </li>
+      </ul>
+    </div>
+
     <dl class="govuk-summary-list govuk-summary-list--no-border">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -105,6 +121,13 @@ Find an apprenticeship - GOV.UK
 
     <!-- START qualifications -->
     <h2 class="govuk-heading-m">Qualifications</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-qualifications.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">GCSEs</h3>
     <p class="govuk-body govuk-!-margin-bottom-0">{{ data['school-name'] or 'Handsworth Grange' }}</p>
@@ -170,6 +193,13 @@ Find an apprenticeship - GOV.UK
 
     <!-- START training -->
     <h2 class="govuk-heading-m">Training</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-training-courses.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{ data['course-name'] or 'E33 Building Safety' }}</h3>
     <p class="govuk-body govuk-!-margin-bottom-0">{{ data['training-provider-name'] or 'Newquay Professional Training'
@@ -181,6 +211,14 @@ Find an apprenticeship - GOV.UK
 
     <!-- START job and work experience -->
     <h2 class="govuk-heading-m">Jobs and work experience</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-jobs-work-experience.html">Change</a>
+        </li>
+      </ul>
+    </div>
+
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{ data['role-name'] or 'Customer service assistant' }}</h3>
     <p class="govuk-body govuk-!-margin-bottom-0">{{ data['employer-name'] or 'Betty’s Corner Shop' }}</p>
     <p class="govuk-body govuk-!-margin-bottom-2" style="color:#505a5f">
@@ -222,6 +260,13 @@ Find an apprenticeship - GOV.UK
 
     <!-- START role questions -->
     <h2 class="govuk-heading-m">Application questions</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-role-questions.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What is your skills and strengths?</h3>
     <p class="govuk-body govuk-!-margin-bottom-3">{{ data['main-strengths'] or 'My biggest strength is that I can think
@@ -261,6 +306,13 @@ Find an apprenticeship - GOV.UK
 
     <!-- START employer questions -->
     <h2 class="govuk-heading-m">Question from the employer</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-employer-questions.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">When you’re balancing multiple projects, how do you keep
       yourself organised?
@@ -289,12 +341,26 @@ Find an apprenticeship - GOV.UK
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Do you have a disability or health condition?
     </h3>
     <p class="govuk-body govuk-!-margin-bottom-3">Yes</p>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-disability-discloure.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Do you want to ask for any interview adjustments?</h3>
     <p class="govuk-body govuk-!-margin-bottom-3">{{ data['interview-adjustments-input'] or ' I would need a British
       Sign Language (BSL)
       interpreter
       to complete my interview.' }}</p>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-interview-adjustments.html">Change</a>
+        </li>
+      </ul>
+    </div>
     <!-- END equality questions -->
 
   </div>
