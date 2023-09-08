@@ -1,0 +1,74 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">Your skills and strengths</h1>
+
+
+    <div class="govuk-inset-text">
+      <h3 class="govuk-body">KING RECRUITMENT is looking for:</h3>
+      <li>Communication skills</li>
+      <li>IT skills</li>
+      <li>Attention to detail</li>
+      <li>Organisation skills</li>
+      <li>Administrative skills</li>
+      <li>Team working</li>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <a href="vacancy-page-01.html" class="govuk-link" rel="noreferrer noopener" target="_blank">View the full
+        vacancy
+        (opens in new
+        tab)</a>
+    </div>
+
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+      <form class="form" action="application-question-page-interests-you-about-this-apprenticeship" method="post">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="your-answer">
+              Describe how you have these skills
+            </label>
+          </h2>
+          <div id="main-strengths-hint" class="govuk-hint">
+            Provide examples of when you have used these skills to make your application stronger.
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="main-strengths" name="main-strengths"
+            type="strengths" rows="5"
+            aria-describedby="main-strengths-info">{{ data['main-strengths'] or '' }}</textarea>
+        </div>
+        <div id="word-count-hint" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
+          <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-7"></div>
+
+
+
+
+        <div class="govuk-button-group" href="application-question-page-interests-you-about-this-apprenticeship.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

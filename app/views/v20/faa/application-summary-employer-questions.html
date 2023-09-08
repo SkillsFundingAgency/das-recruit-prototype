@@ -1,0 +1,95 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-employer-question-two.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">Additional questions summary</h1>
+    </p>
+
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          When you’re balancing multiple projects, how do you keep yourself organised?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['employer-question-one'] or 'I’m used to juggling projects at my current job where I’m often moving
+          between coding one software program to another. I
+          use the time-boxing technique to make sure they’re all on track, allocating time on my calendar for certain
+          tasks. I’ve
+          found it really helps me prioritise what needs to get done first, and it holds me accountable for the more
+          repetitive
+          day-to-day tasks I’m responsible for.' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-employer-question-one.html">
+            Change<span class="govuk-visually-hidden"> why apply</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How will you get to and from this vacancy every day if successful?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['employer-question-two'] or 'I can drive so will be commuting to and from work by car.' }}
+
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-employer-question-two.html">
+            Change<span class="govuk-visually-hidden"> how will you get to the apprenticeship</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Have you completed this section?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section"
+                name="completed-employer-questions" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                Yes, I’ve completed this section
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2"
+                name="completed-employer-questions" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                No, I’ll come back to it later
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

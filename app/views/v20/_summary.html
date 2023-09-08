@@ -1,0 +1,286 @@
+{% set version = 'v20' %}
+
+
+<h2 class="govuk-heading-l">
+  <span class="govuk-tag">LATEST version</span><br>
+  FAA Design 5 (V20)
+  <span class="govuk-caption-l">
+    8 September 2023 &ndash; Present
+  </span>
+</h2>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {{ govukDetails({
+    summaryText: "Sprint design work",
+    html: "<table class='govuk-table'>
+      <thead class='govuk-table__head'>
+        <tr class='govuk-table__row'>
+          <th scope='col' class='govuk-table__header'>What we've done</th>
+          <th scope='col' class='govuk-table__header'>Why we're doing it</th>
+        </tr>
+      </thead>
+      <tbody class='govuk-table__body'>
+        <tr class='govuk-table__row'>
+          <td class='govuk-table__cell'>Redesigning the apprentice journey on Find an apprenticeship</td>
+          <td class='govuk-table__cell'>Find an apprenticeship upgrade</td>
+        </tr>
+
+      </tbody>
+    </table>"
+    }) }}
+
+
+
+
+    <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Design tickets (in Trello)</h4>
+    <ul class="govuk-list govuk-list--bullet">
+      <!-- <li><a href="https://trello.com/c/elcTGU4Q/219-219-update-edit-live-vacancy-journey-employer-prover-traineeships" class="govuk-link govuk-link--no-visited-state">Edit live vacancy</a></li>   -->
+    </ul>
+
+    <h4 class="govuk-heading-s govuk-!-margin-bottom-2">Design artefacts</h4>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a
+          href="https://lucid.app/lucidspark/75df8cd3-1247-466f-b7c6-7980cf119bf5/edit?viewport_loc=-451923%2C-406751%2C41806%2C21450%2C0_0&invitationId=inv_295930d0-a2eb-4b25-a72a-e25f0aea5c39#"
+          class="govuk-link govuk-link--no-visited-state">Lucid board</a></li>
+    </ul>
+
+    <!-- ////APPRENTICE//// -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Apprentice</h4>
+    <div class="govuk-button-group">
+      <a href="/{{version}}/faa/start-page" class="govuk-button" style="background: #1d70b8"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>What we've done</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v17/faa/search-page-02">Search and browse page</a></td>
+              <td class='govuk-table__cell'>
+                <li>Reverted to a “What / Where” pattern for apprenticeship search
+                </li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v17/faa/sector-selection-page">Browse by interests</a></td>
+              <td class='govuk-table__cell'>
+                <li>Created a separate flow for users who aren’t sure what career they want to pursue (“Browse by your
+                  interests instead”)
+                </li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v17/faa/map-02">Maps</a></td>
+              <td class='govuk-table__cell'>
+                <li>Implemented full-bleed maps into the search listing page (“Open map” - This is a screen shot for
+                  testing)
+                </li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v17/faa/search-listing">Search listing page</a></td>
+              <td class='govuk-table__cell'>
+                <li>New filter design on the search listing page</li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v17/faa/vacancy-page-01">Vacancy page</a></td>
+              <td class='govuk-table__cell'>
+                <li>Re-ordered the content on the vacancy page</li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Content edits throughout
+                </a></td>
+              <td class='govuk-table__cell'>
+                <li>Minor content edits throughout the design. Consistency of experience. </li>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- ////EMPLOYER//// -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Employer</h4>
+    <div class="govuk-button-group">
+      <a href="/{{version}}/employer/login" class="govuk-button" style="background: #6F72AF"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>What we've done</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v15/employer/view/6b-shared-applications-yes-v2">Shared applications</a>
+              </td>
+              <td class='govuk-table__cell'>
+                <li>UPDATED the prototype to version 2 with the de anonymised flow </li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/v15/employer/view/6b-shared-applications-no-v2">UPDATED content on notification banner </li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Application page</a></td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/v15/employer/account/application-new">
+                    UPDATED content edits to the radio buttons </a></li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Manage adverts</td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/v15/employer/view/3c-manage-applications">UPDATED all summary tables in the flow to be
+                    accessible for screen readers</a></li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/v15/employer/view/3c-manage-applications-in-review">UPDATED content to all notification
+                    banners
+                    in the manage application flow </li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'>Your apprenticeship adverts</td>
+              <td class='govuk-table__cell'>
+                <li><a class="govuk-link govuk-link--no-visited-state" href="/v15/employer/view/0-dashboard">UPDATED the
+                    tile order of the cards to
+                    closed at the end</a>
+                </li>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+
+
+
+    <!-- //// PROVIDER//// -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Provider</h4>
+
+    <div class="govuk-button-group">
+      <a href="/{{version}}/provider/login" class="govuk-button" style="background:#F47737"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              <th scope='col' class='govuk-table__header'>Page</th>
+              <th scope='col' class='govuk-table__header'>Notes</th>
+            </tr>
+          </thead>
+          <tbody class='govuk-table__body'>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v15/provider/view/0-dashboard">Recruitment dashboard</a></td>
+              <td class='govuk-table__cell'>
+                <li> UPDATED the tile order of the cards to closed at the end</li>
+              </td>
+            </tr>
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v15/provider/view/3c-manage-applications">Manage vacancies </a></td>
+              <td class='govuk-table__cell'>
+                <li> UPDATED all summary tables in the flow to be accessible for screen readers</li>
+                <li><a class="govuk-link govuk-link--no-visited-state"
+                    href="/v15/provider/view/3c-manage-applications-in-review">UPDATED content to all notification
+                    banners </li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v15/provider/account/application-new">Application page</a></td>
+              <td class='govuk-table__cell'>
+                <li>UPDATED content edits to the radio buttons</li>
+              </td>
+            </tr>
+
+            <tr class='govuk-table__row'>
+              <td class='govuk-table__cell'><a class="govuk-link govuk-link--no-visited-state"
+                  href="/v14/provider/view/3c-manage-applications">Manage vacancies page</a></td>
+              <td class='govuk-table__cell'>
+                <li>UPDATED content on notification banners</li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+
+    <!-- ////TRAINEESHIP -->
+    <h4 class="govuk-heading-m govuk-!-margin-bottom-2">Traineeship</h4>
+
+    <div class="govuk-button-group">
+      <a href="/{{version}}/provider/login" class="govuk-button" style="background: #417F82"
+        data-module="govuk-button">View journey</a>
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          What we've done
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class='govuk-table'>
+          <thead class='govuk-table__head'>
+            <tr class='govuk-table__row'>
+              </td>
+            </tr>
+            </tbody>
+        </table>
+      </div>
+    </details>
+
+
+
+
+  </div>
+</div>

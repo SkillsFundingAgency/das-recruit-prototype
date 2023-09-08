@@ -1,0 +1,51 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-main-strengths.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">What interests you about this apprenticeship?</h1>
+
+    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
+      <form class="form" action="application-question-page-hobbies" method="post">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Your answer
+            </label>
+          </h2>
+          <textarea class="govuk-textarea govuk-js-word-count" id="like-to-learn" name="like-to-learn" rows="5"
+            aria-describedby="with-hint-info with-hint-hint">{{ data['like-to-learn'] or '' }}</textarea>
+        </div>
+        <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining
+          <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-7"></div>
+
+
+        <div class="govuk-button-group" href="application-question-page-hobbies.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

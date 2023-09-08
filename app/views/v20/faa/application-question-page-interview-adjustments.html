@@ -1,0 +1,76 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equality</span>
+    <h1 class="govuk-heading-l">Request interview adjustments</h1>
+    <p class="govuk-body">If you have a disability or health condition, you can ask for interview adjustments so you’re
+      not disadvantaged.</p>
+    </p>
+    <p class="govuk-body">Adjustments include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>clevel, step-free access to the interview room</li>
+      <li>a quiet environment</li>
+      <li>communication support, like a British Sign Language interpreter</li>
+    </ul>
+    <p class="govuk-body">We’ll show your answer on your application, so the employer or training provider can make the
+      adjustments for your
+      interview.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <form class="form" action="application-question-page-input-interview-adjustments" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to request any interview adjustments?
+            </h1>
+          </legend>
+          <p class="govuk-body">You don’t need to request adjustments at this point. You can talk to the employer
+            directly if they offer you an
+            interview.</p>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustments-yes" name="interview-adjustments"
+                type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ainterview-adjustments-no" name="interview-adjustments"
+                type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments-no">
+                No (I don’t want adjustments or I’ll talk to the employer myself later)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group" href="application-question-page-input-interview-adjustments.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

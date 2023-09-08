@@ -1,0 +1,229 @@
+{% extends "ma-layout.html" %}
+
+
+{% block pageTitle %}
+Manage apprentices
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <section>
+
+      <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
+      <h1 class="govuk-heading-xl">Application ID: C5662EA</h1>
+
+      <!-- CONTACT DETAILS -->
+      <section>
+        <h2 class="govuk-heading-l">Contact details </h2>
+
+        <p>
+          You'll be able to see this applicant's name and contact details if you decide to interview them.
+        </p>
+
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- ABOUT YOU -->
+      <section>
+        <h2 class="govuk-heading-l">About you</h2>
+
+        <div class="govuk-form-group">
+          <span class="govuk-label govuk-!-font-weight-bold">What are your main strengths?</span>
+          <span>xxxxxxxxxx</span>
+        </div>
+        <div class="govuk-form-group">
+          <span class="govuk-label govuk-!-font-weight-bold">What skills would you like to improve during this
+            apprenticeship?</span>
+          <span>xxxxxxxxxx</span>
+        </div>
+        <div class="govuk-form-group">
+          <span class="govuk-label govuk-!-font-weight-bold">What are your hobbies and interests?</span>
+          <span>xxxxxxxxxx</span>
+        </div>
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- EDUCATION -->
+      <section>
+        <h2 class="govuk-heading-l">Education</h2>
+
+        <h3 class="govuk-heading-s">Name of most recent school/college</h3>
+        <p>xxxxxxxxxx</p>
+
+        <h3 class="govuk-heading-s">Years attended</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Started &nbsp;</th>
+              <th>Finished</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2016</td>
+              <td>2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- QUALIFICATIONS -->
+      <section>
+        <h2 class="govuk-heading-l">Qualifications</h2>
+        <p>xxxxxxxxxx</p>
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- WORK EXPERIENCE -->
+      <section>
+        <h2 class="govuk-heading-l">Work experience</h2>
+        <p>xxxxxxxxxx</p>
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- TRAINING COURSES -->
+      <section>
+        <h2 class="govuk-heading-l">Training courses</h2>
+        <p>xxxxxxxxxx</p>
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- SKILLS -->
+      <section>
+        <h2 class="govuk-heading-l">Skills the Employer wants</h2>
+        <p>
+          xxxxxxxxxx
+        </p>
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- EMPLOYER QUESTIONS -->
+      <section>
+        <h2 class="govuk-heading-l">Additional questions</h2>
+
+        <h3 class="govuk-heading-s">Why are you interested in this role?</h3>
+        <p>xxxxxxxxxx</p>
+
+        <h3 class="govuk-heading-s">Are you able to travel to multiple sites?</h3>
+        <p>xxxxxxxxxx</p>
+
+      </section>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <!-- ADDITIONAL QUESTIONS -->
+      <section>
+        <h2 class="govuk-heading-l">Equality questions</h2>
+
+        <h3 class="govuk-heading-s">Do you have a learning difficulty, disability or health problem?</h3>
+        <p>Yes</p>
+
+        <h3 class="govuk-heading-s">Is there anything we can do to support your interview?</h3>
+        <p>
+          <span>I don't have any interview support requirements</span>
+
+        </p>
+        <br>
+
+        <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </section>
+
+      <!-- RESPOND -->
+      <section>
+
+        <form method="post">
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Do you want to interview this applicant?
+                </h1>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                Your response will be shared with your training provider.
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="response" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                  <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                    You'll be able to see the applicant's name and contact details. </div>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email"
+                      type="email" spellcheck="false" autocomplete="email">
+                  </div>
+
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-3" name="response" type="radio" value="no"
+                    data-aria-controls="conditional-contact-3">
+                  <label class="govuk-label govuk-radios__label" for="contact-3">
+                    No
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden govuk-character-count"
+                  id="conditional-contact-3" data-module="govuk-character-count" data-maxwords="200">
+                  <div class="govuk-form-group">
+                    <div id="with-hint-hint" class="govuk-hint">
+                      Explain why you don't want to interview this applicant. Your comments will be sent to your
+                      training provider, who will then give feedback to the applicant.
+                    </div>
+                    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="respond-no" rows="6"
+                      aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+                    <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+                      You can enter up to 200 words
+                    </div>
+                  </div>
+
+                </div>
+            </fieldset>
+          </div>
+
+
+
+          <!-- Buttons -->
+
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Confirm
+            </button>
+
+            <a class="govuk-link" href="../view/6b-shared-applications-v1">Cancel</a>
+          </div>
+
+      </section>
+      </form>
+
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}

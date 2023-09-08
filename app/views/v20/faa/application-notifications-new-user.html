@@ -1,0 +1,76 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+      aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Success
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <h3 class="govuk-notification-banner__heading">
+          Your application has been sent.
+        </h3>
+        <p class="govuk-body">You’ll hear back when a decision is made. You can check the status of this application in <a class="govuk-notification-banner__link" href="#">My applications</a>.</p>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-l">Get a notification when a decision is made</h1>
+    </p>
+    <p class="govuk-body">We can notify you when a decision is made on an application you’ve submitted.</p>
+    <form class="form" action="vacancy-page-submitted-application-new-user" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="application-notifactions">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              How would you like to be notified?
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="notification" name="notification" type="checkbox"
+                value="email">
+              <label class="govuk-label govuk-checkboxes__label" for="notification">
+                Email
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="notification-2" name="notification" type="checkbox"
+                value="text">
+              <label class="govuk-label govuk-checkboxes__label" for="notification-2">
+                Text
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group" href="vacancy-page-submitted-application-new-user.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="vacancy-page-submitted-application-new-user.html">Skip - don’t get notifications</a>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
