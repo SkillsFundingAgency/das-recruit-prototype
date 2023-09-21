@@ -13,22 +13,29 @@ What else do you want the applicant to consider? (optional) - Your apprenticeshi
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-  
-    
-      <div class="govuk-form-group">
-        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--xl" for="ThingsToConsider">
-            What else do you want the applicant to consider? (optional)
-          </label>
-        </h1>
-        <div id="with-hint-hint" class="govuk-hint">
-          For example, if the vacancy will involve working outdoors or lifting heavy objects
-        </div>
-        <textarea class="govuk-textarea" id="ThingsToConsider" name="ThingsToConsider" rows="5" aria-describedby="ThingsToConsider-info ThingsToConsider-hint"></textarea>
-      </div>
 
-    
+
+    <div class="govuk-form-group">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
+        Apprentice{% endif %}</span>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--xl" for="ThingsToConsider">
+          Other applicant requirements (optional)
+        </label>
+      </h1>
+      <p class="govuk-body">Add requirements that aren’t school, college or university qualifications. For example,
+        mention if an applicant will
+        need to: </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>travel to different work locations </li>
+        <li>pass a DBS clearance </li>
+        <li>work evenings or weekends </li>
+      </ul>
+      <textarea class="govuk-textarea" id="ThingsToConsider" name="ThingsToConsider" rows="5"
+        aria-describedby="ThingsToConsider-info ThingsToConsider-hint"></textarea>
+    </div>
+
+
     <form method="post">
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
