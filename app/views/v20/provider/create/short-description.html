@@ -13,7 +13,8 @@ Short description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
+      Apprentice{% endif %}</span>
     <h1 class="govuk-label-wrapper">
       <label class="govuk-label govuk-label--xl" for="shortDescription">
         Summary of the apprenticeship
@@ -23,27 +24,30 @@ Short description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="350">
         <div class="govuk-form-group">
 
-          <p class="govuk-body">Write a few sentences about the vacancy to attract applicants. This is an important part of what applicants will see when looking through a list of vacancies, so make it stand out.</p>
-          <p class="govuk-body">This could be: </p>
+          <p class="govuk-body">Write a few sentences that summarise your apprenticeship. <br>This text will be the
+            first thing applicants read when they open your advert.
+          </p>
+          <p class="govuk-body">You could include: </p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>what you are offering </li>
+            <li>what your apprenticeship involves </li>
             <li>why the applicant should apply</li>
           </ul>
 
           <!-- <label class="govuk-label govuk-!-font-weight-bold" for="shortDescription">
               Write a few sentences to describe your vacancy
           </label> -->
-          <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription" rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription"
+            rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
         </div>
         <div id="shortDescription-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
           You can enter up to 350 characters
         </div>
       </div>
-      
-        <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-          <a class="govuk-link" href="../dashboard">Cancel</a>
-        </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
     </form>
   </div>
 </div>
