@@ -1,0 +1,68 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">What are your skills and strengths?</h1>
+
+    <p class="govuk-body">Tell this company about your skills and strengths.</p>
+
+    <p class="govuk-body">King Recruitment is particularly looking for people with:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>communication skills</li>
+      <li>IT skills</li>
+      <li>attention to details</li>
+      <li>organisational skills</li>
+      <li>administrative skills</li>
+      <li>team working</li>
+    </ul>
+
+    <p class="govuk-body govuk-!-margin-bottom-8">Mention situations in which you've shown these skills to make your application stronger.</p>
+
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+      <form class="form" action="application-summary-main-strengths-question" method="post">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="your-answer">
+              Your skills and strengths
+            </label>
+          </h2>
+          <textarea class="govuk-textarea govuk-js-character-count" id="main-strengths" name="main-strengths"
+            type="strengths" rows="5"
+            aria-describedby="main-strengths-info">{{ data['main-strengths'] or '' }}</textarea>
+        </div>
+        <div id="word-count-hint" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-7"></div>
+
+
+
+
+        <div class="govuk-button-group" href="application-summary-main-strengths-question.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

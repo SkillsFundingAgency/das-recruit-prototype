@@ -1,0 +1,59 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">What interests you about this apprenticeship?</h1>
+
+    <p class="govuk-body">Explain to the company why you want to do this apprenticeship.</p>
+
+    <p class="govuk-body">You could write about:</p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li>your interest in business administration</li>
+      <li>why you want to work for King Recruitment</li>
+      <li>hobbies you have that are relevant to this apprenticeship</li>
+    </ul>
+
+    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
+      <form class="form" action="application-summary-what-interests-you-about-this-apprenticeship" method="post">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Your interest in this apprenticeship
+            </label>
+          </h2>
+          <textarea class="govuk-textarea govuk-js-word-count" id="like-to-learn" name="like-to-learn" rows="5"
+            aria-describedby="with-hint-info with-hint-hint">{{ data['like-to-learn'] or '' }}</textarea>
+        </div>
+        <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-7"></div>
+
+
+        <div class="govuk-button-group" href="application-summary-what-interests-you-about-this-apprenticeship.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+      </form>
+
+
+
+    </div>
+  </div>
+
+  {% endblock %}

@@ -1,0 +1,80 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equality</span>
+    <h1 class="govuk-heading-l">Disability Confidence</h1>
+    <p class="govuk-body">This apprenticeship is part of the government’s Disability Confidence scheme.</p>
+    </p>
+    <p class="govuk-body">This employer will normally offer you an interview if you:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>say that you have a disability or health condition</li>
+      <li>meet the minimum requirements for this apprenticeship</li>
+    </ul>
+    <p class="govuk-body">There might be some situations when the company can’t meet this commitment. For example, if an
+      apprenticeship is
+      particularly popular, the employer may need to limit the amount of people they interview.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <form class="form" action="application-summary-disability-discloure" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to say that you have a disability or health condition?
+            </h1>
+          </legend>
+          <p class="govuk-body">There is no legal requirement to disclose a disability or health condition when applying
+            for an apprenticeship.</p>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-disclosure-yes" name="disability-disclosure"
+                type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="disability-disclosure-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-disclosure-no" name="disability-disclosure"
+                type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="idisability-disclosure-no">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-disclosure-prefer-not-to-say" name="disability-disclosure"
+                type="radio" value="prefer-not-to-say">
+              <label class="govuk-label govuk-radios__label" for="disability-disclosure-prefer-not-to-say">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group" href="application-summary-disability-discloure.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
