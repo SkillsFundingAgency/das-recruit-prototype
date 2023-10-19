@@ -14,9 +14,9 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Personal information</span>
+    <span class="govuk-caption-l">Create an account</span>
     <h1 class="govuk-heading-l">Select your address</h1>
-    <form class="form" action="application-summary-personal-info" method="post">
+    <form class="form" action="application-question-page-phone-number" method="post">
       <div class="govuk-form-group">
         <div id="date-of-birth-hint" class="govuk-hint">
           10 addresses found in {{ data['postcode-input'] or 'SW1A 2AA' }}
@@ -36,10 +36,11 @@ Find an apprenticeship - GOV.UK
         </select>
       </div>
 
-      <div class="govuk-button-group" href="application-summary-personal-info.html">
+      <div class="govuk-button-group" href="application-question-page-phone-number.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
+        <a class="govuk-link" href="application-question-page-enter-postcode-manually.html">Enter address manually</a>
       </div>
     </form>
 
