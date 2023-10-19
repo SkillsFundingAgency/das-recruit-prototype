@@ -14,27 +14,27 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Personal information</span>
+    <span class="govuk-caption-l">Create an account</span>
     <h1 class="govuk-heading-l">What is your name?</h1>
-    <p class="govuk-body">Write your name as you want it to appear when you apply for an apprenticeship.</p>
-    <form class="form" action="application-question-page-date-of-birth" method="post">
+    <p class="govuk-body">Write your name as you want it to show on applications</p>
+    <form class="form" action="application-question-page-postcode" method="post">
       <div class="govuk-form-group">
         <label class="govuk-label" for="first-name">
-          First name
+          First name (given names)
         </label>
         <input class="govuk-input govuk-!-width-two-thirds" id="first-name" name="first-name" type="first"
           value="{{ data['first-name'] or '' }}">
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="last-name">
-          Last name
+          Last name (family name)
         </label>
         <input class="govuk-input govuk-!-width-two-thirds" id="last-name" name="last-name" type="last"
           value="{{ data['last-name'] or '' }}">
       </div>
 
 
-      <div class="govuk-button-group" href="application-question-page-date-of-birth.html">
+      <div class="govuk-button-group" href="application-question-page-postcode.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
