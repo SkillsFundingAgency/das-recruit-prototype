@@ -14,15 +14,52 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">Agree to the terms of use for Find an apprenticeship</h1>
-    </p>
-    <p class="govuk-body">By continuing, you confirm that you agree to this service’s:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><a href="#" class="govuk-link">privacy notice (opens in a new tab)</a>, which explains how we use your
-        personal information</li>
-      <li><a href="#" class="govuk-link">terms and conditions (opens in a new tab)</a></li>
-    </ul>
-    <div class="govuk-!-padding-bottom-5"></div>
+    <h1 class="govuk-heading-l">Do you agree to the terms of use?</h1>
+
+    <p class="govuk-body">To continue, confirm that you agree to the:</p>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="terms-conditions-hint">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+            <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+              <p class="govuk-body">
+                <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Terms and conditions (opens in
+                  a new tab)</a> which explains Find an apprenticeship’s policies
+              </p>
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other">
+            <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+              <p class="govuk-body">
+                <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Privacy notice (opens in a new
+                  tab)</a> which explains how DfE will use any personal information you give Find an apprenticeship
+              </p>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Confirm your age
+          </h1>
+        </legend>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I am over 13 years old
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
     <form class="form" action="../apply/application-task-list-new-user" method="post">
       <div class="govuk-button-group" href="../apply/application-task-list-new-user">
