@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-question-page-add-jobs-work-experience.html">Back</a>
+<a class="govuk-back-link" href="application-question-page-add-jobs.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,12 +15,13 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Work history</span>
-    <h1 class="govuk-heading-l">Add jobs and work experience</h1>
+    <h1 class="govuk-heading-l">Jobs summary</h1>
     </p>
+
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Customer service assistant' }}</h2>
+        <h2 class="govuk-summary-card__title">{{ data['employer-name'] or 'Betty’s Corner Shop' }}</h2>
         <ul class="govuk-summary-card__actions">
           <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
               Delete<span class="govuk-visually-hidden"> jobs and work experience</span>
@@ -37,23 +38,15 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Type of experience
+              Role
             </dt>
             <dd class="govuk-summary-list__value">
-              Job
+              {{ data['role-name'] or 'Customer service assistant' }}
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Name of employer
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['employer-name'] or 'Betty’s Corner Shop' }}
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              What you did
+              Responsibilities
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with
@@ -63,26 +56,10 @@ Find an apprenticeship - GOV.UK
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Start date
+              Dates
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['work-start-date-month'] or '03' }} {{ data['work-start-date-year'] or '2019' }}
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Is this your current role?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              No
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              End date
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['work-end-date-month'] or '05' }} {{ data['work-start-end-year'] or '2022' }}
+              {{ data['work-start-date-month'] or 'March' }} {{ data['work-start-date-year'] or '2019' }} to {{ data['work-end-date-month'] or 'May' }} {{ data['work-start-end-year'] or '2021' }}
             </dd>
           </div>
         </dl>
@@ -92,7 +69,7 @@ Find an apprenticeship - GOV.UK
 
 
     <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Add another job or work experience
+      Add another job
     </button>
     <div class="govuk-!-padding-bottom-5"></div>
 

@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-question-page-jobs-and-work-experience.html">Back</a>
+<a class="govuk-back-link" href="application-question-page-jobs.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -17,40 +17,13 @@ Find an apprenticeship - GOV.UK
     <span class="govuk-caption-l">Work history</span>
     <h1 class="govuk-heading-l">Add job or work experience</h1>
     <div class="govuk-!-padding-bottom-3"></div>
-    <form class="form" action="application-summary-jobs-work-experience" method="post">
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h1 class="govuk-fieldset__heading">
-              Type of experience
-            </h1>
-          </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-experience-job" name="type-of-experience-job" type="radio"
-                value="job">
-              <label class="govuk-label govuk-radios__label" for="type-of-experience-job">
-                Job
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="type-of-experience-work-experience"
-                name="type-of-experience-work-experience" type="radio" value="work-experience">
-              <label class="govuk-label govuk-radios__label" for="type-of-experience-work-experience">
-                Work experience or volunteering
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
+    <form class="form" action="application-summary-jobs" method="post">
 
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="employer-name">
-            Name of employer
+            Company
           </label>
         </h1>
         <input class="govuk-input" id="employer-name" name="employer-name" type="employer"
@@ -62,7 +35,7 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="training-provider-name">
-            Role
+            Your role
           </label>
         </h1>
         <div id="event-name-hint" class="govuk-hint">
@@ -79,16 +52,12 @@ Find an apprenticeship - GOV.UK
               Your responsibilities
             </label>
           </h2>
-          <div id="with-hint-hint" class="govuk-hint">
-            Briefly describe what you did
-          </div>
           <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-role"
             name="what-you-did-in-the-role" rows="5"
             aria-describedby="what-you-did-in-the-role-info">{{ data['what-you-did-in-the-role'] or '' }}</textarea>
         </div>
         <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining
-          <p class="govuk-hint govuk-!-margin-bottom-0">You do not need to use the full word count</p>
+          <p class="govuk-hint">300 words remaining</p>
         </div>
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
@@ -100,6 +69,9 @@ Find an apprenticeship - GOV.UK
               Start date
             </label>
           </h2>
+          <div id="event-name-hint" class="govuk-hint">
+            For example 08 2019
+          </div>
           <div class="govuk-date-input" id="start-date">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
@@ -189,7 +161,7 @@ Find an apprenticeship - GOV.UK
 
 
 
-      <div class="govuk-button-group" href="application-summary-jobs-work-experience.html">
+      <div class="govuk-button-group" href="application-summary-jobs.html">
         <button class="govuk-button" data-module="govuk-button">
           Save
         </button>
