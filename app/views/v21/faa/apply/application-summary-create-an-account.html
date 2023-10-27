@@ -1,0 +1,131 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-notifications-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Check your account details</h1>
+    </p>
+
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Full name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Jones' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-name-input.html">
+            Change<span class="govuk-visually-hidden"> first name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage
+          <p class="govuk-body govuk-!-margin-bottom-0">London</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-postcode.html">
+            Change<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['phone-number'] or '07700 9009754' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-name-input.html">
+            Change<span class="govuk-visually-hidden"> first name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['email'] or 'sarah.philips@email.com' }}
+          <div class="govuk-inset-text">
+            To use a different email address, you’ll need to change the address for
+            <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">GOV.UK One Login sign in details
+              (opens in new tab)</a>.
+            </p>
+          </div>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-name-input.html">
+            Change<span class="govuk-visually-hidden"> first name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          When you want to be notified
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Your application gets a response</li>
+            <li>An advert is about to close</li>
+            <li>A saved search is updated</li>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-name-input.html">
+            Change<span class="govuk-visually-hidden"> first name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          How you want to be notified
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Email</li>
+            <li>Text</li>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-name-input.html">
+            Change<span class="govuk-visually-hidden"> first name</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <button class="govuk-button" data-module="govuk-button">
+        Create your account
+      </button>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

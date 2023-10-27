@@ -20,18 +20,35 @@ Find an apprenticeship - GOV.UK
     <form class="form" action="application-question-page-postcode" method="post">
       <div class="govuk-form-group">
         <label class="govuk-label" for="first-name">
-          First name (given names)
+          First name
         </label>
         <input class="govuk-input govuk-!-width-two-thirds" id="first-name" name="first-name" type="first"
           value="{{ data['first-name'] or '' }}">
       </div>
       <div class="govuk-form-group">
         <label class="govuk-label" for="last-name">
-          Last name (family name)
+          Last name
         </label>
         <input class="govuk-input govuk-!-width-two-thirds" id="last-name" name="last-name" type="last"
           value="{{ data['last-name'] or '' }}">
       </div>
+
+      <h2 class="govuk-heading-m">Terms and conditions</h2>
+      <p class="govuk-body">By continuing, you confirm that you agree to our:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <p class="govuk-body">
+            <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">terms and conditions (opens in
+              a new tab)</a> which explains our policies
+          </p>
+        </li>
+        <li>
+          <p class="govuk-body">
+            <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">privacy notice (opens in a new
+              tab)</a> which explains how we will use any personal information you enter into Find an apprenticeship
+          </p>
+        </li>
+      </ul>
 
 
       <div class="govuk-button-group" href="application-question-page-postcode.html">

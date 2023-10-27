@@ -6,6 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
+<a class="govuk-back-link" href="application-question-page-phone-number.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,16 +15,59 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <span class="govuk-caption-l">Create an account</span>
+    <h1 class="govuk-heading-l">Tell us your notification preferences</h1>
+    <form class="form" action="application-summary-create-an-account" method="post">
 
-    <h1 class="govuk-heading-l">Tell us your notification preferences before submitting this application</h1>
-    </p>
-    <p class="govuk-body">We can notify you when a decision is made on an application you’ve submitted.</p>
-    <form class="form" action="vacancy-page-submitted-application-new-user" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              When do you want to be notified?
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="nationality" name="nationality" type="checkbox" value="british"
+                aria-describedby="nationality-item-hint">
+              <label class="govuk-label govuk-checkboxes__label" for="nationality">
+                Your application gets a response
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                A company decides if your application is successful or unsuccessful.
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox"
+                value="irish">
+              <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                An advert is about to close
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                A saved advert or an advert you’ve started an application for is about to close. We’ll remind you two
+                days before the
+                closing date.
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox"
+                value="irish">
+              <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                A saved search is updated
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                New apprenticeships that match your saved searches are uploaded.
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="application-notifactions">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              How do you want to hear if an application’s been successful?
+              How do you want to be notified?
             </h1>
           </legend>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
@@ -46,11 +90,11 @@ Find an apprenticeship - GOV.UK
       </div>
 
 
-      <div class="govuk-button-group" href="vacancy-page-submitted-application-new-user.html">
+      <div class="govuk-button-group" href="application-summary-create-an-account.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-        <a class="govuk-link" href="vacancy-page-submitted-application-new-user.html">Skip - don’t get notifications</a>
+        <a class="govuk-link" href="application-summary-create-an-account.html">Skip - don’t get notifications</a>
       </div>
     </form>
 
