@@ -101,15 +101,15 @@ Find an apprenticeship - GOV.UK
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-jobs.html" aria-describedby="job-work-experience-status">
+                <a href="application-question-page-jobs.html" aria-describedby="job-status">
                   Jobs
                 </a>
               </span>
 
-              {% if data['completed-jobs-work-experience'] == "yes" %}
+              {% if data['completed-jobs'] == "yes" %}
               <strong class="govuk-tag app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-jobs-work-experience'] == "no" %}
+              {% elseif data['completed-jobs'] == "no" %}
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
 
               {% else %}
@@ -120,16 +120,16 @@ Find an apprenticeship - GOV.UK
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-jobs-and-work-experience.html"
-                  aria-describedby="job-work-experience-status">
+                <a href="application-question-page-volunteering-and-work-experience.html"
+                  aria-describedby="work-experience-status">
                   Volunteering and work experience
                 </a>
               </span>
 
-              {% if data['completed-jobs-work-experience'] == "yes" %}
+              {% if data['completed-work-experience'] == "yes" %}
               <strong class="govuk-tag app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-jobs-work-experience'] == "no" %}
+              {% elseif data['completed-work-experience'] == "no" %}
               <strong class="govuk-tag govuk-tag--blue app-task-list__tag">In progress</strong>
 
               {% else %}

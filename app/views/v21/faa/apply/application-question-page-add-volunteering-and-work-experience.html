@@ -15,19 +15,19 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Work history</span>
-    <h1 class="govuk-heading-l">Add a job</h1>
+    <h1 class="govuk-heading-l">Add volunteering or work experience</h1>
     <div class="govuk-!-padding-bottom-3"></div>
     <form class="form" action="application-summary-jobs" method="post">
 
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="employer-name">
-            Company
+          <label class="govuk-label govuk-label--m" for="work-experience-organisation-name">
+            Organisation
           </label>
         </h1>
-        <input class="govuk-input" id="employer-name" name="employer-name" type="employer"
-          value="{{ data['employer-name'] or '' }}">
+        <input class="govuk-input" id="work-experience-organisation-name" name="work-experience-organisation-name" type="organisation"
+          value="{{ data['work-experience-organisation-name'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
