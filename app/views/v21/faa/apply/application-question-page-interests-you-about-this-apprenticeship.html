@@ -27,7 +27,7 @@ Find an apprenticeship - GOV.UK
     </ul>
 
     <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
-      <form class="form" action="application-summary-what-interests-you-about-this-apprenticeship" method="post">
+      <form action="application-task-list-new-user" method="post" novalidate>
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="with-hint">
@@ -43,13 +43,35 @@ Find an apprenticeship - GOV.UK
 
         <div class="govuk-!-padding-bottom-7"></div>
 
-
-        <div class="govuk-button-group" href="application-summary-what-interests-you-about-this-apprenticeship.html">
+        <form action="application-task-list-new-user" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Have you completed this section?
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-question-two"
+                    type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                    Yes, I’ve completed this section
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="have-you-completed-this-section-2"
+                    name="completed-question-two" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                    No, I’ll come back to it later (saves your answer)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
-        </div>
-      </form>
+        </form>
+
 
 
 
