@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-question-page-jobs.html">Back</a>
+<a class="govuk-back-link" href="application-question-page-volunteering-and-work-experience.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -17,7 +17,7 @@ Find an apprenticeship - GOV.UK
     <span class="govuk-caption-l">Work history</span>
     <h1 class="govuk-heading-l">Add volunteering or work experience</h1>
     <div class="govuk-!-padding-bottom-3"></div>
-    <form class="form" action="application-summary-jobs" method="post">
+    <form class="form" action="application-summary-volunteering-work-experience" method="post">
 
 
       <div class="govuk-form-group">
@@ -32,19 +32,6 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-!-padding-bottom-3"></div>
 
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="training-provider-name">
-            Your role
-          </label>
-        </h1>
-        <div id="event-name-hint" class="govuk-hint">
-          If you had more than one role with this employer, enter your last role
-        </div>
-        <input class="govuk-input" id="role-name" name="role-name" type="role" value="{{ data['role-name'] or '' }}">
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
-
       <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
@@ -52,9 +39,9 @@ Find an apprenticeship - GOV.UK
               Your responsibilities
             </label>
           </h2>
-          <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-role"
-            name="what-you-did-in-the-role" rows="5"
-            aria-describedby="what-you-did-in-the-role-info">{{ data['what-you-did-in-the-role'] or '' }}</textarea>
+          <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-work-experience-role"
+            name="what-you-did-in-the-work-experience-role" rows="5"
+            aria-describedby="wwhat-you-did-in-the-work-experience-role-info">{{ data['what-you-did-in-the-work-experience-role'] or '' }}</textarea>
         </div>
         <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
           <p class="govuk-hint">300 words remaining</p>
@@ -80,7 +67,7 @@ Find an apprenticeship - GOV.UK
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month"
                   name="start-date-month" type="text" inputmode="numeric"
-                  value="{{ data['work-start-date-month'] or '' }}">
+                  value="{{ data['work-experience-start-date-month'] or '' }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -90,7 +77,7 @@ Find an apprenticeship - GOV.UK
                 </label>
                 <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year"
                   name="start-date-year" type="text" inputmode="numeric"
-                  value="{{ data['work-start-date-year'] or '' }}">
+                  value="{{ data['work-experience-start-date-year'] or '' }}">
               </div>
             </div>
           </div>
@@ -103,7 +90,7 @@ Find an apprenticeship - GOV.UK
         <fieldset class="govuk-fieldset" aria-describedby="current-role-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              Is this your current role?
+              Are you still doing this volunteering or work experience?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
@@ -139,7 +126,7 @@ Find an apprenticeship - GOV.UK
                       </label>
                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month"
                         name="end-date-month" type="text" inputmode="numeric"
-                        value="{{ data['work-end-date-month'] or '' }}">
+                        value="{{ data['work-experience-end-date-month'] or '' }}">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
@@ -149,7 +136,7 @@ Find an apprenticeship - GOV.UK
                       </label>
                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year"
                         name="end-date-year" type="text" inputmode="numeric"
-                        value="{{ data['work-end-date-year'] or '' }}">
+                        value="{{ data['work-experience-end-date-year'] or '' }}">
                     </div>
                   </div>
                 </div>
@@ -161,7 +148,7 @@ Find an apprenticeship - GOV.UK
 
 
 
-      <div class="govuk-button-group" href="application-summary-jobs.html">
+      <div class="govuk-button-group" href="application-summary-volunteering-work-experience.html">
         <button class="govuk-button" data-module="govuk-button">
           Save
         </button>
