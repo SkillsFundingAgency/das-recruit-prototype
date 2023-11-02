@@ -1,0 +1,97 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="equality-question.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equality questions</span>
+    <h1 class="govuk-heading-l">Sex and gender identity</h1>
+
+    <form class="form" action="equality-question-ethinic-group" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              What is your sex?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatisyoursex" name="whatisyoursex" type="radio" value="female">
+              <label class="govuk-label govuk-radios__label" for="whatisyoursex">
+                Female
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatisyoursex-2" name="whatisyoursex" type="radio" value="male">
+              <label class="govuk-label govuk-radios__label" for="whatisyoursex-2">
+                Male
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whatisyoursex-3" name="whatisyoursex" type="radio"
+                value="prefernottosay">
+              <label class="govuk-label govuk-radios__label" for="whatisyoursex-3">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Is the gender you identify with the same as your sex registered at birth?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="isthisyourgender" name="isthisyourgender" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="wisthisyourgender">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="isthisyourgender-2" name="isthisyourgender" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="isthisyourgender-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="isthisyourgender-3" name="isthisyourgender" type="radio"
+                value="prefernottosay">
+              <label class="govuk-label govuk-radios__label" for="isthisyourgender-3">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group" href="equality-question-ethinic-group.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="equality-question-ethinic-group.html">Skip</a>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

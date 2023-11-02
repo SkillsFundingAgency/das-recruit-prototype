@@ -6,61 +6,71 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
 {% endblock %}
 
 {% block content %}
 
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Qualifications</h1>
-    </p>
-    <p class="govuk-body">Add qualifications you:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>already have</li>
-      <li>are currently studying for</li>
-    </ul>
-    <div class="govuk-!-padding-bottom-5"></div>
-
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-            Do you want to add any qualifications?
-          </h1>
-        </legend>
-        <div class="govuk-radios" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="add-qualifications-yes" name="add-qualifications" type="radio"
-              value="yes">
-            <label class="govuk-label govuk-radios__label" for="add-qualifications-yes">
-              Yes
-            </label>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+          aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Success
+            </h2>
           </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="add-qualifications-no" name="add-qualifications" type="radio"
-              value="no">
-            <label class="govuk-label govuk-radios__label" for="add-qualifications-no">
-              No
-            </label>
+          <div class="govuk-notification-banner__content">
+            <h3 class="govuk-notification-banner__heading">
+              Application submitted.
+            </h3>
+            <p class="govuk-body">Check the status of this application at any time in <a class="govuk-notification-banner__link"
+                href="#">Your applications</a>.</p>
           </div>
         </div>
-      </fieldset>
-    </div>
+        <h1 class="govuk-heading-l">Do you want to answer additional equality questions?</h1>
+        <p class="govuk-body">These questions are optional. The Department for Education will use any information you
+          provide to monitor and reduce
+          discrimination in apprenticeship recruitment.</p>
+        <p class="govuk-body">We don’t share these answers when you apply for an apprenticeship.</p>
 
-    <form class="form" action="application-question-page-qualification-type" method="post">
-      <div class="govuk-button-group" href="application-question-page-qualification-type.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
+        <form class="form" action="equality-question-sex-gender" method="post">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-qualifications-yes" name="add-qualifications" type="radio"
+                    value="yes">
+                  <label class="govuk-label govuk-radios__label" for="add-qualifications-yes">
+                    Yes, answer the equality questions (takes 2 minutes)
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-qualifications-no" name="add-qualifications" type="radio"
+                    value="no">
+                  <label class="govuk-label govuk-radios__label" for="add-qualifications-no">
+                    No, skip the equality questions
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="govuk-button-group" href="equality-question-sex-gender.html">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+  </main>
+</div>
 
 
 
-  </div>
+
+</div>
 </div>
 
 {% endblock %}
