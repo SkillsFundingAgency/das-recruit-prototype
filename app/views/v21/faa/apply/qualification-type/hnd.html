@@ -14,39 +14,43 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Add a BTEC</h1>
+    <h1 class="govuk-heading-l">Add a Higher National Diploma (HND)</h1>
 
     <form class="form" action="application-summary-qualifications" method="post">
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="btec-name">
-            Name of BTEC
+          <label class="govuk-label govuk-label--m" for="hnd-subject">
+            Subject
           </label>
         </h1>
-        <input class="govuk-input" id="btec-name" name="btec-name" type="name" value="{{ data['btec-name'] or '' }}">
+        <input class="govuk-input" id="hnd-subject" name="hnd-subject" type="subject"
+          value="{{ data['hnd-subject'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="btec-location">
-            Where you studied (your college, school or university)
+          <label class="govuk-label govuk-label--m" for="hnd-location">
+            College
           </label>
         </h1>
-        <input class="govuk-input" id="btec-location" name="btec-location" type="location"
-          value="{{ data['btec-location'] or '' }}">
+        <input class="govuk-input" id="hnd-location" name="hnd-location" type="location"
+          value="{{ data['hnd-location'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="btec-grade">
-            Grade (optional)
+          <label class="govuk-label govuk-label--m" for="hnd-grade">
+            Grade
           </label>
         </h1>
-        <input class="govuk-input govuk-!-width-one-third" id="btec-grade" name="btec-grade" type="grade"
-          value="{{ data['btec-grade'] or '' }}">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="pass" selected>Pass</option>
+          <option value="merit">Merit</option>
+          <option value="distinction">Distinction</option>
+        </select>
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
@@ -61,9 +65,9 @@ Find an apprenticeship - GOV.UK
         <div id="event-name-hint" class="govuk-hint">
           If you are still studying, enter the year you’ll finish
         </div>
-        <input class="govuk-input govuk-input--width-4" id="qualifications-btec-year-achieved"
-          name="qualifications-btec-year-achieved" type="year" aria-describedby="event-name-hint"
-          value="{{ data['qualifications-btec-year-achieved'] or '' }}">
+        <input class="govuk-input govuk-input--width-4" id="qualifications-hnd-year-achieved"
+          name="qualifications-hnd-year-achieved" type="year" aria-describedby="event-name-hint"
+          value="{{ data['qualifications-hnd-year-achieved'] or '' }}">
       </div>
 
 
