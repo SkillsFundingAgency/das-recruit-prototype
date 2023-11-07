@@ -679,18 +679,33 @@ module.exports = function (router) {
 
   // APPLICATION QUESTION PAGE - QUALIFICATION TYPE
   router.post('/' + base_url + 'faa/apply/qualification-type/action', function (req, res) {
-    var qual = req.session.data['qualification']
-    if (qual == "gcse") {
-      res.redirect('/' + base_url + '*/apply/qualification-type/gcse')
-    }
-    if (qual == "a-level") {
-      res.redirect('/' + base_url + '*/apply/qualification-type/a-level')
-    }
-    if (qual == "as-level" || qual == "as-level") {
-      res.redirect('/' + base_url + '*/apply/qualification-type/as-level')
-    }
-    else {
-      res.redirect('/' + base_url + '*/apply/qualification-type/non-apply')
+    var qual = req.session.data['qualification'];
+
+    if (qual === "gcse") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/gcse');
+    } else if (qual === "a-level") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/a-level');
+    } else if (qual === "as-level") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/as-level');
+    } else if (qual === "apprenticeship") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/apprenticeship');
+    } else if (qual === "btec") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/btec');
+    } else if (qual === "degree") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/degree');
+    } else if (qual === "hnc") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/hnc');
+    } else if (qual === "hnd") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/hnd');
+    } else if (qual === "nvq") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/nvq');
+    } else if (qual === "t-level") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/t-level');
+    } else if (qual === "t-level") {
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/other-qualification');
+    } else {
+      // Handle any other cases or invalid values here
+      res.redirect('/' + base_url + 'faa/apply/qualification-type/default'); // You can replace 'default' with an appropriate route
     }
   })
 
