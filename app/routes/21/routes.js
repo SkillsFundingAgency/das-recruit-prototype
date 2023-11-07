@@ -676,4 +676,22 @@ module.exports = function (router) {
 
   })
 
+
+  // APPLICATION QUESTION PAGE - QUALIFICATION TYPE
+  router.post('/' + base_url + 'faa/apply/qualification-type/action', function (req, res) {
+    var qual = req.session.data['qualification']
+    if (qual == "gcse") {
+      res.redirect('/' + base_url + '*/apply/qualification-type/gcse')
+    }
+    if (qual == "a-level") {
+      res.redirect('/' + base_url + '*/apply/qualification-type/a-level')
+    }
+    if (qual == "as-level" || qual == "as-level") {
+      res.redirect('/' + base_url + '*/apply/qualification-type/as-level')
+    }
+    else {
+      res.redirect('/' + base_url + '*/apply/qualification-type/non-apply')
+    }
+  })
+
 }
