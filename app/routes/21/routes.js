@@ -701,7 +701,7 @@ module.exports = function (router) {
       res.redirect('/' + base_url + 'faa/apply/qualification-type/nvq');
     } else if (qual === "t-level") {
       res.redirect('/' + base_url + 'faa/apply/qualification-type/t-level');
-    } else if (qual === "t-level") {
+    } else if (qual === "other-qualification") {
       res.redirect('/' + base_url + 'faa/apply/qualification-type/other-qualification');
     } else {
       // Handle any other cases or invalid values here
