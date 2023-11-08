@@ -1,0 +1,25 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{{ govukOneLoginServiceHeader({
+serviceName: "Find an apprenticeship",
+navigationItems: [{
+href: "#",
+text: '',
+id: 'servicelink1'
+},{
+href: "#",
+text: '',
+activeLinkId: 'servicelink2'
+},{
+href: "#",
+text: '',
+id: 'servicelink3'
+}],
+id: 'servicelink3'
+}) }}
+{% endblock %}
