@@ -16,7 +16,6 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Work history</span>
     <h1 class="govuk-heading-l">Jobs summary</h1>
-    </p>
 
 
     <div class="govuk-summary-card">
@@ -59,7 +58,8 @@ Find an apprenticeship - GOV.UK
               Dates
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['work-start-date-month'] or 'March' }} {{ data['work-start-date-year'] or '2019' }} to {{ data['work-end-date-month'] or 'May' }} {{ data['work-start-end-year'] or '2021' }}
+              {{ data['work-start-date-month'] or 'March' }} {{ data['work-start-date-year'] or '2019' }} to {{
+              data['work-end-date-month'] or 'May' }} {{ data['work-start-end-year'] or '2021' }}
             </dd>
           </div>
         </dl>
@@ -68,9 +68,11 @@ Find an apprenticeship - GOV.UK
 
 
 
-    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Add another job
-    </button>
+    <form action="application-question-page-add-jobs" method="post">
+      <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
+        Add another job
+      </button>
+    </form>
     <div class="govuk-!-padding-bottom-5"></div>
 
 
@@ -83,15 +85,15 @@ Find an apprenticeship - GOV.UK
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="have-you-completed-this-section"
-                name="completed-jobs" type="radio" value="yes">
+              <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-jobs" type="radio"
+                value="yes">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
                 Yes, I’ve completed this section
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="have-you-completed-this-section-2"
-                name="completed-jobs" type="radio" value="no">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2" name="completed-jobs"
+                type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
                 No, I’ll come back to it later
               </label>
