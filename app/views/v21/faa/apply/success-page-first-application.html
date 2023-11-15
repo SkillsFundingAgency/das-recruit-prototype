@@ -1,0 +1,53 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Application submitted
+          </h1>
+          <div class="govuk-panel__body">
+            Business Administration Apprentice, King Recruitment
+          </div>
+        </div>
+        <div class="govuk-!-padding-bottom-5"></div>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          This company will contact you if they want to invite you to an interview. They should reply to you within 2
+          weeks of the
+          closing date.
+        </p>
+        <p class="govuk-body">
+          You can check if you’ve had a response in <a href="#" class="govuk-link">Your applications</a>.
+        </p>
+        <div class="govuk-!-padding-bottom-5"></div>
+
+        <form class="form" action="../search-listing" method="post">
+          <div class="govuk-button-group" href="../search-listing.html">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Return to search results
+            </button>
+            <a class="govuk-link" href="../search-page-02.html">Back to search</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
