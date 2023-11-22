@@ -1,0 +1,210 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Vacancies
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="0-dashboard" class="govuk-back-link">Return to dashboard</a>
+
+<style>
+  .search-field-darker .search-input input {
+    border-color: #0b0c0c;
+    height: 41px;
+  }
+  .search-submit button{
+    background-color: 	#005ea5;
+    height: 41px;
+  }
+  .search-submit{
+    height: 41px;
+
+  }
+  span.das-tag {
+    background: transparent;
+    border:3px solid #bfc1c3;
+    color: #0b0c0c;
+    font-weight:400;
+  }
+
+  span.das-tag--rejected{
+    border-color: #B10E1E;
+    color:#000000;
+  }
+  span.das-tag--closed{
+    border-color: #0b0c0c;
+
+  }
+  span.das-tag--live {
+      border-color: #006435;
+  }
+  span.das-tag--submitted {
+      border-color: #F47738;
+  }
+
+  .accordion-controls{display:none !important;}
+  .das-table__header--sort{font-weight: normal}
+  .annotate{
+  	font-style: italic;
+  	color: #366ED4;
+  }
+  select optgroup{
+   background:#000;
+   color:#fff;
+   font-style:normal;
+   font-weight:normal;
+   }
+
+
+
+
+  .hidden {
+  	display: none;
+  }
+
+  .toolbar {
+  	font-size: 0;
+  }
+
+  .toolbar-item {
+  	border: 1px solid #aaa;
+  	background: #ccc;
+  }
+
+  .toolbar-item[aria-disabled="false"]:focus {
+  	background-color: #eee;
+  }
+
+  .offscreen {
+  	clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+  	font-size: 18px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  .das-button-filter{
+    display:inline-block;
+    margin-bottom: 0;
+  }
+  span.das-tag--transferred{border-color:#005ea5;margin-top:5px}
+  span.das-tag--pending{border-color:#f47738;}
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Vacancies</h1>
+  </div>
+  <div class="govuk-grid-column-one-third" style="text-align:right;">
+
+      <p class="govuk-body govuk-!-margin-bottom-0"><a href="../create/start-page" class="govuk-button govuk-!-margin-bottom-2">Create vacancy</a></p>
+
+  </div>
+</div>
+
+<!-- FILTER start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <form method="post" action="vacancies" {% if query.search %}data-query="{{query.search}}" {%endif%}>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Filter vacancies by
+        </label>
+        <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox" aria-labelledby="exp_elem exp_button">
+          <optgroup label="Status">
+            <option value="any" {% if data.filter=='any' or not data.filter %}selected="selected" {%endif%}>all vacancies</option>
+            <option value="live" {% if data.filter=='live' %}selected="selected" {%endif%}>live vacancies</option>
+            <option value="rejected" {% if data.filter=='rejected' %}selected="selected" {%endif%}>rejected vacancies</option>
+            <option value="pendingreview" {% if data.filter=='pendingreview' %}selected="selected" {%endif%}>pending employer review</option>
+            <option value="pendingdfe" {% if data.filter=='pendingdfe' %}selected="selected" {%endif%}>vacancies pending DfE review</option>
+            <option value="draft" {% if data.filter=='draft' %}selected="selected" {%endif%}>draft vacancies</option>
+            <option value="closed" {% if data.filter=='closed' %}selected="selected" {%endif%}>closed vacancies</option>
+          </optgroup>
+          <optgroup label="Applications">
+            <option value="new" {% if data.filter=='new' %}selected="selected" {%endif%}>with new applications</option>
+            <option value="withApplication" {% if data.filter=='withApplication' %}selected="selected" {%endif%}>with applications</option>
+            <option value="employerreviewed" {% if data.filter=='employerreviewed' %}selected="selected" {%endif%}>with employer-reviewed applications</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="closing-no-applications" {% if data.filter=='closing-no-applications' %}selected="selected" {%endif%}>closing soon with no applications</option>
+            <option value="closing" {% if data.filter=='closing' %}selected="selected" {%endif%}>closing soon</option>
+          </optgroup>
+        </select>
+      </div>
+    </form>
+  </div>
+<!-- FILTER end -->
+
+<!-- SEARCH start -->
+  <div class="govuk-grid-column-two-thirds">
+    <form action="vacancies" method="get" >
+      <div class="row-group">
+        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
+          <fieldset class="govuk-fieldset">
+            
+            <div class="form-group search-field search-field-darker">
+              <div class="search-input search-input-with-button">
+                <label class="govuk-label" for="search">
+                  Search by vacancy title, reference number, employer or applicant
+                </label>
+
+                <div class="autocomplete__parent_wrapper">
+                  <div class="autocomplete__wrapper">
+                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search" name="search" placeholder="" role="combobox" type="text" value="{%if query.search %}{{query.search}}{%endif%}">
+                  </div>
+                </div>
+
+              </div>
+              <div class="search-submit">
+                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search clients</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- SEARCH end -->
+
+  <p class="govuk-body"><b>1 closed vacancy</b> &nbsp;
+    <a href="#">Show all vacancies</a>
+  </p>
+
+<table class="govuk-table das-table--responsive">           
+  <thead class="govuk-table__head govuk-body-s">
+      <tr>
+          <th scope="col" class="govuk-table__header"><span class="no-wrap">Vacancy</span></th>
+          <th scope="col" class="govuk-table__header">Employer</th>
+          <th scope="col" class="govuk-table__header">Applications</th>
+          <th scope="col" class="govuk-table__header">Closing</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header"></th>
+      </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+          <tr class="govuk-table__row govuk-body-s">
+            <td class="govuk-table__cell">Entry Level Development Engineer Apprentice</td>
+              <td class="govuk-table__cell">FENDI LTD</td>
+              <td class="govuk-table__cell"><b>1 (1 new)</b> </td>
+              <td class="govuk-table__cell">01 Jun 2022</td>             
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">closed</strong></td>
+              <td class="govuk-table__cell"><a href="5b-manage-vacancy" class="govuk-link">Manage</a></td>   
+          </tr>
+
+
+  </tbody>
+</table>
+
+</div>
+</div>
+  
+    
+{% endblock %}

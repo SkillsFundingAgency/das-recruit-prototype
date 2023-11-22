@@ -1,0 +1,111 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equal opportunity</span>
+    <h1 class="govuk-heading-l">Request interview adjustments</h1>
+    <p class="govuk-body">You can ask for interview adjustments if you have a physical or mental condition. You can also
+      ask for adjustments if
+      you have a neurodiversity.</p>
+    </p>
+    <p class="govuk-body">Adjustments could include:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>level, step-free access to the interview room</li>
+      <li>having the interview at a certain time of day</li>
+      <li>communication support, like a British Sign Language interpreter</li>
+    </ul>
+    <p class="govuk-body">We’ll show your answer on your application, so the company can make adjustments for your
+      interview.</p>
+    <div class="govuk-inset-text">
+      If you don’t want to mention a health condition in your application, you can wait and ask for adjustments later.
+      Discuss
+      your needs when the company offers you an interview.
+    </div>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with asking for interview adjustments
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body govuk-!-font-weight-bold">Read advice on interview adjustments</p>
+        <p class="govuk-body">Scope provides advice on
+          <a href="https://business.scope.org.uk/article/making-adjustments-for-job-interviews?gclid=EAIaIQobChMI6o-LmfzlgAMV2evtCh2m8QYYEAAYASAAEgJfkvD_BwE"
+            class="govuk-link" rel="noreferrer noopener" target="_blank">adjustments at interview (opens in a new
+            tab)</a>.
+        </p>
+        <div class="govuk-!-padding-bottom-3"></div>
+        <p class="govuk-body govuk-!-font-weight-bold">Adjustments for mental health conditions</p>
+        <p class="govuk-body">See examples for
+          <a href="https://www.mind.org.uk/information-support/legal-rights/discrimination-in-everyday-life/reasonable-adjustments/#:~:text=mental%20health%20problems.-,What%20kinds%20of%20reasonable%20adjustments%20can%20I%20ask%20for%3F,then%20it%20must%20make%20them."
+            class="govuk-link" rel="noreferrer noopener" target="_blank">adjustments for mental health conditions (opens
+            in a new tab)</a> on the Mind website.
+        </p>
+      </div>
+    </details>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <form class="form" action="application-summary-interview-adjustments" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="interview-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to request any interview adjustments?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustment" name="interview-adjustment" type="radio"
+                value="yes" data-aria-controls="conditional-interview-adjustment">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustment">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-interview-adjustment">
+              <div class="govuk-form-group">
+                <div id="more-detail-hint" class="govuk-hint">
+                  Describe the interview adjustments you need
+                </div>
+                <textarea class="govuk-textarea" id="interview-adjustments-input" name="interview-adjustments-input" rows="5"
+                  aria-describedby="interview-adjustments-input">{{ data['interview-adjustments-input'] or '' }}</textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustment-2" name="interview-adjustment" type="radio"
+                value="no" data-aria-controls="conditional-interview-adjustment-2">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustment-2">
+                No, I don’t want adjustments or will talk to the company myself later
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-button-group" href="application-summary-interview-adjustments.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

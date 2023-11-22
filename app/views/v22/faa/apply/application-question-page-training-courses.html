@@ -1,0 +1,66 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Training</h1>
+    </p>
+    <p class="govuk-body">Add relevant training such as:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>professional development courses</li>
+      <li>first aid training</li>
+    </ul>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to add any training courses?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-qualifications-yes" name="add-qualifications" type="radio"
+              value="yes">
+            <label class="govuk-label govuk-radios__label" for="add-qualifications-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-qualifications-no" name="add-qualifications" type="radio"
+              value="no">
+            <label class="govuk-label govuk-radios__label" for="add-qualifications-no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="application-question-page-add-training-courses" method="post">
+      <div class="govuk-button-group" href="application-question-page-add-training-courses.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

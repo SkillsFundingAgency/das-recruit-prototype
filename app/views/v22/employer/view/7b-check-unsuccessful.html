@@ -1,0 +1,71 @@
+{% extends "ma-home-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Are you sure you want to make Judy Ward's application unsuccessful?</h1>
+
+    
+
+        <p class="govuk-body" >
+          This will notify Judy Ward that they won’t be offered the apprenticeship.
+        </p>
+
+        <h2 class="govuk-heading-m">Your message to the applicant:</h2>
+
+        <div class="govuk-inset-text">
+          {{ data['contact-by-unsuccessful'] }}
+        </div>
+
+<!-- radio buttons START -->
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+            <form method="post" action="3c-manage-applications-unsuccessful">
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="share_applications_yes">
+                  Yes, make this application unsuccessful and notify the applicant
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="share_applications_no">
+                  No, do not make this application unsuccessful
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+ <!-- radio buttons END -->
+
+ {{ govukWarningText({
+  text: "You cannot undo this action.",
+  iconFallbackText: "Fallback text"
+}) }}
+
+ <button class="govuk-button" data-module="govuk-button">
+  Confirm
+</button>
+
+</form>
+
+  </div>
+</div>
+
+{% endblock %}

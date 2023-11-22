@@ -1,0 +1,148 @@
+{% extends "devhub-layout.html" %}
+
+{% block pageTitle %}
+Get started - Apprenticeship services - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<div class="login-nav login-border">
+  <ul class="login-nav__list">
+    <!--<li class="login-nav__list-item" id="Nav-DisplayName">Prototype user</li>
+    <li class="login-nav__list-item"> | <a href="account" class="govuk-link login-nav__link govuk-link--no-visited-state profile" id="Link-ManageAccount">Manage account</a>|</li>-->
+    <li class="login-nav__list-item"><a href="login" class="govuk-link login-nav__link govuk-link--no-visited-state" id="Link-SignOut">Sign out</a></li>
+  </ul>
+</div>
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Get started</h1>      
+    <h2 class="govuk-heading-l">About the Recruitment and Display adverts APIs</h2>
+    <p class="govuk-body">
+      <a href="recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">Recruitment API</a>
+      <br>
+      <span class="govuk-caption">Use this product to create and submit adverts.</span>
+      <br><br>
+      <a href="recruitment-api-sandbox-documentation" class="govuk-link govuk-link--no-visited-state">Recruitment API sandbox</a>
+      <br><br>
+      <a href="display-adverts-api-documentation" class="govuk-link govuk-link--no-visited-state">Display adverts API</a><br>
+      <span class="govuk-caption">Use this product to retrieve adverts.</span>
+      <br><br>
+    </p>
+    <h2 class="govuk-heading-l" id="working-together">Using our APIs if you are working with an employer or training provider</h2>
+    <p class="govuk-body">
+      You need the employer or provider to give you an API key. They can do this for the Recruitment API and the Display adverts API using their Apprenticeship service account.
+      <br><br>
+      The API key the employer or training provider will send to you is linked to their account and provides additional functionality, so use that one.
+      <br><br>
+      You can view the API documentation now, using the links at the top of the page. You can read the documentation but will not be able to call the API until the employer or provider gives you an API key.
+    </p>
+    <h2 class="govuk-heading-l" id="working-independently">Using our display adverts API if you are working independently</h2>
+    <p class="govuk-body">
+      If you are not working with an employer or training provider and don’t have an apprenticeship service account, you can use the Display adverts API to show adverts from Find apprenticeship training on any website.
+      <br><br>
+      If you are not a software developer, you'll need someone with technical knowledge to connect your system with the API.
+      <br><br>
+      You will need to <a href="register" class="govuk-link govuk-link--no-visited-state">create an account or sign in to get an API key</a> to use the display advert API.
+      <br><br>
+      You can <a href="display-adverts-api-documentation" class="govuk-link govuk-link--no-visited-state">view the API</a>, but you will need a key before you can call the API.
+    </p>
+    <h2 class="govuk-heading-l">RESTful APIs</h2>
+    <p class="govuk-body">
+      Apprenticeship service APIs are RESTful. In a RESTful style of API, data resources are given unique URLs and are manipulated through standard HTTP verbs such as:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><code style="color:darkgreen;">GET</code> to request a resource</li>
+      <li><code style="color:darkgreen;">POST</code> to create a resource</li>
+      <li><code style="color:darkgreen;">PUT</code> to replace a resource</li>
+      <li><code style="color:darkgreen;">DELETE</code> to remove a resource</li>
+    </ul>
+    <p class="govuk-body">
+      All Apprenticeship service APIs use the JSON data standard as the content type. JSON, or JavaScript Object Notation, is an open, standard format for storing and exchanging data. It can be used as a data format by any programming language, which makes it ideal for HTTP-based API services.
+    </p>
+    <h2 class="govuk-heading-l">API authentication</h2>
+    <p class="govuk-body">
+      Apprenticeship service APIs require authentication credentials to be sent with each request. Credentials are sent in the form of an API key which is contained within a custom HTTP request header.
+    </p>
+    <p class="govuk-body">
+      The custom request header must be named <i>Ocp-Apim-Subscription-Key</i> and you must use your API key as the value for this custom request header in each API request.<br><br>
+      For example:
+    </p>
+    <code>
+      GET https://api.apprenticeships.education.gov.uk/vacancies/{yourAction} HTTP/1.1<br>
+      Host: api.apprenticeships.education.gov.uk<br>
+      X-Version: 1<br>
+      Ocp-Apim-Subscription-Key:<br>
+    </code>   
+    <p class="govuk-body govuk-!-margin-top-6">
+      In the case of an authentication failure, the API request will return a HTTP 401 response with a message giving the reason for the authentication failure, either:
+    </p>
+    <ul class="govuk-list govuk-list--number">
+      <li>the <i>Ocp-Apim-Subscription-Key </i> header is missing</li>
+      <li>the subscription key given as the header value is invalid</li>
+    </ul>
+    <p class="govuk-body">
+      If you are accessing different APIs, they will have their own API key.
+    </p>
+    <p class="govuk-body">
+      The following sections provide information on how to obtain your API key(s).
+    </p>
+    <h2 class="govuk-heading-l">API Versioning</h2>
+    <p class="govuk-body">
+      All Apprenticeship service APIs are versioned. This ensures API consumers receive a predictable response from an API, even when a newer version of an API is released.
+      <br><br>
+      The version of the API you require must be specified within a custom HTTP request header.  
+      <br><br>
+      The custom request header must be named <i>X-Version</i> and you must specify the version (as a whole number) as the value for this custom request header in each API request.
+    </p>
+    <p class="govuk-body">
+      For example:
+    </p>
+    <code>
+      GET https://api.apprenticeships.education.gov.uk/vacancies/{yourAction} HTTP/1.1<br>
+      Host: api.apprenticeships.education.gov.uk<br>
+      X-Version: 1<br>
+      Ocp-Apim-Subscription-Key:<br>
+    </code>
+    <p class="govuk-body govuk-!-margin-top-6">
+      In case of a version check failure, you will receive a HTTP 404 response with a message giving the reason for the failure, either:
+    </p>
+    <ul class="govuk-list govuk-list--number">
+      <li>the <i>X-Version </i> header is missing</li>
+      <li>the version specified does not exist</li>
+    </ul>
+    <p class="govuk-body">
+      The Apprenticeship service maintains the current version of an API, as well as the previous version for a limited period of time. 3 months after the release of a new version of an API, the previous version will be decommissioned, so you will need to update to the latest version within 3 months of the new one becoming available.
+    </p>
+    
+    <h2 class="govuk-heading-l">API Rate Limiting</h2>
+    <p class="govuk-body">
+      Rate limiting is applied to the Apprenticeship service APIs to ensure a high quality service is delivered for all users.<br><br>
+      You can make up to <span style="color:red;">XXXX</span> requests within a <span style="color:red;">X</span>  minute period. If you exceed this limit, you will receive a <code style="color:darkgreen;">429 Too Many Requests</code> HTTP status code for each request made within the rest of the <span style="color:red;">X</span>  minute timeframe. At the end of the time period, your rate limit will reset back to <span style="color:red;">XXXX</span> requests.
+    </p>    
+    <h2 class="govuk-heading-l">API Key Security</h2>
+    <p class="govuk-body">
+      It is important to keep your API keys secure. This will prevent them from being discovered, your account from being compromised and your rate-limit quota from being exceeded.
+    </p>
+    <h2 class="govuk-heading-l">Do not embed API keys in your code</h2>
+    <p class="govuk-body">
+      Storing subscription keys in your application code increases the risk that they will be discovered, particularly if any of your source code is made public or it can be viewed by people who should not have access to the API key. Instead, you should consider storing them inside environment variables or configuration.
+    </p>
+    <h2 class="govuk-heading-l">Do not store API keys in your source tree</h2>
+    <p class="govuk-body">
+      If you store API keys in files, for example, configuration or environment files, do not store them inside the application source tree. If all or part of the source is made public, the API key may be compromised.
+    </p>
+    <h2 class="govuk-heading-l">Regenerate your API keys</h2>
+    <p class="govuk-body">
+      Regenerate your API keys regularly, including with each application release, to reduce the chance that an API key will be discovered.
+    </p>
+    <h2 class="govuk-heading-l">Environments</h2>
+    <p class="govuk-body">
+      Apprenticeship service APIs are hosted in our live environment where production data is made available. A sandbox environment is also provided for some APIs, which run the same API versions as live to allow software developers to test their integration with Apprenticeship service APIs in a safe place.
+    </p>
+  </div>
+</div>
+{% endblock %}

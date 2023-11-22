@@ -1,0 +1,78 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="equality-question-ethinic-group.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equality questions</span>
+    <h1 class="govuk-heading-l">Which of the following best describes your White background?</h1>
+
+    <form class="form" action="equality-summary" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yourwhitebackground" name="yourwhitebackground" type="radio"
+                value="english-welsh-scottish-northern-irish-british">
+              <label class="govuk-label govuk-radios__label" for="yourwhitebackground">
+                English, Welsh, Scottish, Northern Irish or British
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yourwhitebackground-2" name="yourwhitebackground" type="radio"
+                value="irish">
+              <label class="govuk-label govuk-radios__label" for="yourwhitebackground-2">
+                Irish
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yourwhitebackground-3" name="yourwhitebackground" type="radio"
+                value="gypsy-or-irish-traveller">
+              <label class="govuk-label govuk-radios__label" for="yourwhitebackground-3">
+                Gypsy or Irish Traveller
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yourwhitebackground-4" name="yourwhitebackground" type="radio"
+                value="any-other-white-background">
+              <label class="govuk-label govuk-radios__label" for="yourwhitebackground-4">
+                Any other White background
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yourwhitebackground-6" name="yourwhitebackground" type="radio"
+                value="prefer-not-to-say">
+              <label class="govuk-label govuk-radios__label" for="yourwhitebackground-5">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group" href="equality-summary.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="equality-summary.html">Skip</a>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

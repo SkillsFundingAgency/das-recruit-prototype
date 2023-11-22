@@ -1,0 +1,73 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="..//application-question-page-qualification-type.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Add an apprenticeship</h1>
+
+    <form class="form" action="..//application-summary-qualifications" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="apprenticeship-training-course">
+            Training course
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          For example, Network engineer (Level 4)
+        </div>
+        <input class="govuk-input" id="apprenticeship-training-course" name="apprenticeship-training-course"
+          type="course" value="{{ data['apprenticeship-training-course'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="apprenticeship-company-name">
+            Company you worked for
+          </label>
+        </h1>
+        <input class="govuk-input" id="apprenticeship-company-name" name="apprenticeship-company-name" type="company"
+          value="{{ data['apprenticeship-company-name'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="year-acheived">
+            Year achieved
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          If you are still studying, enter the year you’ll finish
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="qualifications-apprenticeship-year-achieved"
+          name="qualifications-apprenticeship-year-achieved" type="year" aria-describedby="event-name-hint"
+          value="{{ data['qualifications-apprenticeship-year-achieved'] or '' }}">
+      </div>
+
+
+      <div class="govuk-button-group" href="..//application-summary-qualifications.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
