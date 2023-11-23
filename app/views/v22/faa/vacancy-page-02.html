@@ -145,26 +145,26 @@ Find an apprenticeship - GOV.UK
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Working for</th>
-          <td class="govuk-table__cell">King Recruitment
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Training with</th>
-          <td class="govuk-table__cell">Sheffield Professional College
-          </td>
-        </tr>
-        <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Annual age</th>
-          <td class="govuk-table__cell">£10,290 to £21,670<p class="govuk-body govuk-!-font-size-14 govuk-!-margin-0"
-              govuk-!-font-size-14 govuk-!-margin->You’ll be paid the <a
-                href="https://www.gov.uk/national-minimum-wage-rates"
-                class="govuk-link govuk-link--no-visited-state">National Minimum Wage</a> for your age.</p>
+          <td class="govuk-table__cell">You’ll start on £19,670<p
+              class="govuk-body govuk-!-font-size-14 govuk-!-margin-0">
+              National Minimum Wage for a 20 year old</p>
+            <p class="govuk-body govuk-!-font-size-14 govuk-!-margin-0">
+              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Minimum wage rates (opens in new
+                tab)</a>
+            </p>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Training course</th>
+          <td class="govuk-table__cell">Business administration (Level 3)
           </td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Hours</th>
-          <td class="govuk-table__cell">37 hours a week</p>
+          <td class="govuk-table__cell">Monday to Friday 8.30am to 5pm<p
+              class="govuk-body govuk-!-font-size-14 govuk-!-margin-0">
+              37 hours a week</p>
           </td>
         </tr>
         <tr class="govuk-table__row">
@@ -173,8 +173,8 @@ Find an apprenticeship - GOV.UK
           </td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Length of apprenticeship</th>
-          <td class="govuk-table__cell">18 months</td>
+          <th scope="row" class="govuk-table__header">Length</th>
+          <td class="govuk-table__cell">1 year 6 months</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Positions available</th>
@@ -184,10 +184,13 @@ Find an apprenticeship - GOV.UK
     </table>
     <!-- END table -->
 
-    <!-- START what you'll do -->
+    <!-- START work -->
     <div class="govuk-!-padding-bottom-3"></div>
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="your-work">What you’ll do on this apprenticeship</h2>
-    <h3 class="govuk-heading-s">Work</h3>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="your-work">Work</h2>
+    <p class="govuk-body style=" style="color:	#505a5f">Most of an apprenticeship is spent at work. You’ll get hands-on
+      experience working for a company alongside skilled
+      colleagues.</p>
+    <h3 class="govuk-heading-s">Your role</h3>
     <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
       <li>
         Be part of King Recruitment’s commitment to being an inclusive, open and supportive workplace
@@ -213,13 +216,68 @@ Find an apprenticeship - GOV.UK
       </li>
     </ul>
 
-    <h3 class="govuk-heading-s">Training course</h3>
-    <p class="govuk-body govuk-!-margin-bottom-1" style="color:#0b0c0c">Business administrator</p>
-    <p class="govuk-body" style="color:	#505a5f">Level 3 (equal to A level)</p>
+    <h3 class="govuk-heading-s">Work location</h3>
+    <p class="govuk-body govuk-!-margin-bottom-0">10 Jam Jar Way</p>
+    <p class="govuk-body govuk-!-margin-bottom-0">Sheffield</p>
+    <p class="govuk-body govuk-!-margin-bottom-3">S3 7GE</p>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check your travel to work
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">Check your commute</h3>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label" for="event-name">
+              Enter your postcode
+            </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+            For example SW1A 2AA <a href="#" class="govuk-link"> use current location</a>
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="subject">
+            Select a transport method
+          </label>
+          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+            <option value="choose" selected>Select a method</option>
+            <option value="eastmidlands">Car</option>
+            <option value="eastofengland">Public transport</option>
+            <option value="london">Walking</option>
+            <option value="northeast">Cycling</option>
+          </select>
+        </div>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Show route
+        </button>
+        <img src="/public/images/Map-sheff-college.png" width="630px">
+      </div>
+    </details>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END work -->
+
+
+    <!-- START training -->
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="your-training">Training</h2>
+    <p class="govuk-body style=" style="color:	#505a5f">An apprenticeship includes regular training time with a college
+      or other training organisation. You’ll get dedicated
+      time being taught new skills.</p>
+    <h3 class="govuk-heading-s">College or training organisation</h3>
+    <p class="govuk-body">Sheffield Professional College</p>
+    <h3 class="govuk-heading-s">Training plan</h3>
+    <p class="govuk-body">You will spend a day week at Sheffield Professional College 0930 to 1730.</p>
+    <h3 class="govuk-heading-s">Course</h3>
+    <p class="govuk-body govuk-!-margin-bottom-1" style="color:#0b0c0c">Business administrator (Level 3)</p>
+    <p class="govuk-body" style="color:	#505a5f">Equal to A levels</p>
     <details class="govuk-details govuk-!-margin-top-0" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          What you’ll learn
+          Course contents
         </span>
       </summary>
       <div class="govuk-details__text">
@@ -293,7 +351,7 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body govuk-!-margin-bottom-0">4. COMMUNICATION SKILLS</p>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-    <!-- END what you'll do -->
+    <!-- END training -->
 
     <!-- START requirements -->
     <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="requirements">Requirements</h2>
@@ -332,63 +390,7 @@ Find an apprenticeship - GOV.UK
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- END requirements -->
 
-
-    <!-- START working week -->
-    <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="working-week-timetable">Work and training timetable</h2>
-
-    <h3 class="govuk-heading-s">Working hours</h3>
-    <p class="govuk-body">Monday to Friday 8.30am to 5pm</p>
-
-    <h3 class="govuk-heading-s">Work location</h3>
-    <p class="govuk-body govuk-!-margin-bottom-0">10 Jam Jar Way</p>
-    <p class="govuk-body govuk-!-margin-bottom-0">Sheffield</p>
-    <p class="govuk-body govuk-!-margin-bottom-3">S3 7GE</p>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Check your travel to work
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <h3 class="govuk-heading-s">Check your commute</h3>
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label" for="event-name">
-              Enter your postcode
-            </label>
-          </h1>
-          <div id="event-name-hint" class="govuk-hint">
-            For example SW1A 2AA <a href="#" class="govuk-link"> use current location</a>
-          </div>
-          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
-        </div>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="subject">
-            Select a transport method
-          </label>
-          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
-            <option value="choose" selected>Select a method</option>
-            <option value="eastmidlands">Car</option>
-            <option value="eastofengland">Public transport</option>
-            <option value="london">Walking</option>
-            <option value="northeast">Cycling</option>
-          </select>
-        </div>
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Show route
-        </button>
-        <img src="/public/images/Map-sheff-college.png" width="630px">
-      </div>
-    </details>
-
-    <h3 class="govuk-heading-s">Training plan</h3>
-    <p class="govuk-body">You will spend a day week at Sheffield Professional College 0930 to 1730.</p>
-
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-    <!-- END working week -->
-
-    <!-- START working week -->
+    <!-- START about this company -->
 
     <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="about-this-company">About this company</h2>
     <p class="govuk-body">King Recruitment is a leading recruitment company specialising in medical, science and
@@ -396,6 +398,9 @@ Find an apprenticeship - GOV.UK
       mission is to find people jobs that help them meet and exceed their potential. We’ve helped over 1,000 people into
       work.
       We have a staff of 15 employees and our office is busy.</p>
+    <p class="govuk-body">
+      <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">www.kingrecruitment.co.uk (opens in new tab)</a>
+    </p>
 
     <h3 class="govuk-heading-s">Company benefits</h3>
     <ul class="govuk-list govuk-list--bullet">
@@ -416,7 +421,7 @@ Find an apprenticeship - GOV.UK
     <img src="/public/images/disability-confident.png" width="150px">
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
+    <!-- END about this company -->
 
 
     <!-- START after this apprenticeship -->
@@ -424,7 +429,7 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body">On successful completion, you might be able to continue working this role or continue learning
       and become a recruiter or work in our IT department.</p>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-    <!-- START after this apprenticeship -->
+    <!-- END after this apprenticeship -->
 
     <!-- START contact -->
     <h2 class="govuk-heading-m govuk-!-margin-bottom-3" id="ask-a-question">Ask a question
