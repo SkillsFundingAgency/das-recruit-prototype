@@ -1,0 +1,54 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Create your account for Find an apprenticeship</h1>
+        <p class="govuk-body">Before continuing, we need to ask you for a couple of details about yourself. This will
+          take 2 minutes.</p>
+        <div class="govuk-!-padding-bottom-5"></div>
+        <h2 class="govuk-heading-m">Terms and conditions</h2>
+        <p class="govuk-body">By continuing, you confirm that you agree to our:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            <p class="govuk-body">
+              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">terms and conditions (opens in
+                a new tab)</a> which explains our policies
+            </p>
+          </li>
+          <li>
+            <p class="govuk-body">
+              <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">privacy notice (opens in a new
+                tab)</a> which explains how we will use any personal information you enter into Find an apprenticeship
+            </p>
+          </li>
+        </ul>
+
+        <form class="form" action="application-question-page-name-input" method="post">
+          <div class="govuk-button-group" href="application-question-page-name-input.html">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}
