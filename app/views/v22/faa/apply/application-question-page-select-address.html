@@ -16,10 +16,15 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Create an account</span>
     <h1 class="govuk-heading-l">Select your address</h1>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Postcode</h2>
+    <p class="govuk-body govuk-!-font-weight-bold"> {{ data['postcode-input'] or 'SW1A 2AA' }}
+      <a class="govuk-body" href="#" class="govuk-link" rel="noreferrer noopener" target="_blank"> Change</a>
+    </p>
+    <div class="govuk-!-padding-bottom-2"></div>
     <form class="form" action="application-question-page-phone-number" method="post">
       <div class="govuk-form-group">
         <div id="date-of-birth-hint" class="govuk-hint">
-          10 addresses found in {{ data['postcode-input'] or 'SW1A 2AA' }}
+          10 addresses found
         </div>
         <select class="govuk-select" id="sort" name="sort">
           <option value="updated" selected>Select address</option>

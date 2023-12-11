@@ -35,11 +35,11 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="training-provider-name">
-            Your role
+            Job title
           </label>
         </h1>
         <div id="event-name-hint" class="govuk-hint">
-          If you had more than one role with this company, enter your last role
+          Enter your most recent job title while you worked here
         </div>
         <input class="govuk-input" id="role-name" name="role-name" type="role" value="{{ data['role-name'] or '' }}">
       </div>
@@ -52,6 +52,9 @@ Find an apprenticeship - GOV.UK
               Your responsibilities
             </label>
           </h2>
+          <div id="event-name-hint" class="govuk-hint">
+            Describe what you did at work
+          </div>
           <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-role"
             name="what-you-did-in-the-role" rows="5"
             aria-describedby="what-you-did-in-the-role-info">{{ data['what-you-did-in-the-role'] or '' }}</textarea>
