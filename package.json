@@ -14,7 +14,7 @@
     "govuk-one-login-service-header": "github:alphagov/di-govuk-one-login-service-header",
     "govuk-prototype-kit": "13.16.0",
     "jquery": "3.7.0",
-    "notifications-node-client": "5.2.3",
+    "notifications-node-client": "7.0.3",
     "radio-button-redirect": "1.2.0"
   }
 }
