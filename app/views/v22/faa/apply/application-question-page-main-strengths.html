@@ -17,74 +17,79 @@ Find an apprenticeship - GOV.UK
     <span class="govuk-caption-l">Application questions</span>
     <h1 class="govuk-heading-l">What are your skills and strengths?</h1>
 
-    <p class="govuk-body">Tell this company about your skills and strengths. Mention situations in which you've shown
-      these skills to make your
-      application stronger.</p>
+    <p class="govuk-body">Tell this company what you can bring to the apprenticeship.</p>
 
-    <p class="govuk-body">King Recruitment is particularly looking for people with:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>communication skills</li>
-      <li>IT skills</li>
-      <li>attention to details</li>
-      <li>organisational skills</li>
-      <li>administrative skills</li>
-      <li>team working</li>
-    </ul>
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Skills wanted for this apprenticeship</h2>
+      <p class="govuk-body"><b>King Recruitment</b> is looking for people with:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>communication skills</li>
+        <li>IT skills</li>
+        <li>attention to details</li>
+        <li>organisational skills</li>
+        <li>administrative skills</li>
+        <li>team working</li>
+      </ul>
+
+      <p class="govuk-body">Give examples of when you’ve used these skills to make your application stronger.</p>
+    </div>
+
     <div class="govuk-!-padding-bottom-5"></div>
 
-    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
-      <form class="form" action="application-task-list-new-user" method="post">
+
+    <form class="form" action="application-task-list-new-user" method="post">
+      <div class="govuk-word-count" data-module="govuk-word-count" data-minwords="50" data-maxwords="300">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="your-answer">
               Your skills and strengths
             </label>
           </h2>
-          <textarea class="govuk-textarea govuk-js-character-count" id="main-strengths" name="main-strengths"
-            type="strengths" rows="5"
-            aria-describedby="main-strengths-info">{{ data['main-strengths'] or '' }}</textarea>
+          <textarea class="govuk-textarea govuk-js-word-count" id="main-strengths" name="main-strengths" rows="5"
+            aria-describedby="main-strenghts-info main-strengths-hint">{{ data['main-strengths'] or '' }}</textarea>
         </div>
-        <div id="word-count-hint" class="govuk-hint govuk-character-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
+        <div id="main-strengths-info" class="govuk-hint govuk-word-count__message" aria-live="polite">
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
         </div>
+      </div>
 
-        <div class="govuk-!-padding-bottom-7"></div>
+      <div class="govuk-!-padding-bottom-7"></div>
 
 
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              Have you completed this section?
-            </legend>
-            <div class="govuk-radios" data-module="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-role-questions"
-                  type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
-                  Yes, I’ve completed this section
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="have-you-completed-this-section-2"
-                  name="completed-role-questions" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
-                  No, I’ll come back to it later (saves your answer)
-                </label>
-              </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Have you completed this section?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-role-questions"
+                type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                Yes, I’ve completed this section
+              </label>
             </div>
-          </fieldset>
-        </div>
-        <div class="govuk-!-padding-bottom-5"></div>
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </form>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2" name="completed-role-questions"
+                type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                No, I’ll come back to it later (saves your answer)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
 
 
 
-
-    </div>
   </div>
+</div>
 
-  {% endblock %}
+{% endblock %}
