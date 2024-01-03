@@ -18,9 +18,9 @@ Find an apprenticeship - GOV.UK
     <h1 class="govuk-heading-l">What are your skills and strengths?</h1>
 
     <p class="govuk-body">Tell this company what you can bring to the apprenticeship.</p>
+    <h2 class="govuk-heading-m">Skills wanted for this apprenticeship</h2>
 
     <div class="govuk-inset-text">
-      <h2 class="govuk-heading-m">Skills wanted for this apprenticeship</h2>
       <p class="govuk-body"><b>King Recruitment</b> is looking for people with:</p>
 
       <ul class="govuk-list govuk-list--bullet">
@@ -39,17 +39,17 @@ Find an apprenticeship - GOV.UK
 
 
     <form class="form" action="application-task-list-new-user" method="post">
-      <div class="govuk-word-count" data-module="govuk-word-count" data-minwords="50" data-maxwords="300">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="your-answer">
               Your skills and strengths
             </label>
           </h2>
-          <textarea class="govuk-textarea govuk-js-word-count" id="main-strengths" name="main-strengths" rows="5"
-            aria-describedby="main-strenghts-info main-strengths-hint">{{ data['main-strengths'] or '' }}</textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="main-strenths" name="main-strenths" rows="5"
+            aria-describedby="main-strenths-info">{{ data['main-strengths'] or '' }}</textarea>
         </div>
-        <div id="main-strengths-info" class="govuk-hint govuk-word-count__message" aria-live="polite">
+        <div id="main-strenths-info" class="govuk-hint govuk-character-count__message">
           <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
         </div>
       </div>
