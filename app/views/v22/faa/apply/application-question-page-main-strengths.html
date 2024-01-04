@@ -37,19 +37,19 @@ Find an apprenticeship - GOV.UK
 
     <div class="govuk-!-padding-bottom-5"></div>
 
+    <h2 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--m" for="your-answer">
+        Your skills and strengths
+      </label>
+    </h2>
 
     <form class="form" action="application-task-list-new-user" method="post">
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="your-answer">
-              Your skills and strengths
-            </label>
-          </h2>
-          <textarea class="govuk-textarea govuk-js-character-count" id="main-strenths" name="main-strenths" rows="5"
-            aria-describedby="main-strenths-info">{{ data['main-strengths'] or '' }}</textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="main-strengths" name="main-strengths" rows="5"
+            aria-describedby="main-strengths-info">{{ data['main-strengths'] or '' }}</textarea>
         </div>
-        <div id="main-strenths-info" class="govuk-hint govuk-character-count__message">
+        <div id="main-strengths-info" class="govuk-hint govuk-character-count__message">
           <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
         </div>
       </div>
@@ -81,6 +81,7 @@ Find an apprenticeship - GOV.UK
           </div>
         </fieldset>
       </div>
+
       <div class="govuk-!-padding-bottom-5"></div>
       <button class="govuk-button" data-module="govuk-button">
         Continue
