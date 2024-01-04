@@ -26,19 +26,20 @@ Find an apprenticeship - GOV.UK
       <li>hobbies you have that are relevant to this apprenticeship</li>
     </ul>
 
-    <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
-      <form action="application-task-list-new-user" method="post" novalidate>
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="with-hint">
               Your interest in this apprenticeship
             </label>
           </h2>
-          <textarea class="govuk-textarea govuk-js-word-count" id="like-to-learn" name="like-to-learn" rows="5"
-            aria-describedby="with-hint-info with-hint-hint">{{ data['like-to-learn'] or '' }}</textarea>
+          <textarea class="govuk-textarea govuk-js-character-count" id="like-to-learn" name="like-to-learn" rows="5"
+            aria-describedby="like-to-learn-info">{{ data['like-to-learn'] or '' }}</textarea>
         </div>
-        <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
+        <div id="like-to-learn-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
         </div>
 
         <div class="govuk-!-padding-bottom-7"></div>
@@ -67,15 +68,15 @@ Find an apprenticeship - GOV.UK
               </div>
             </fieldset>
           </div>
+          <div class="govuk-!-padding-bottom-5"></div>
           <button class="govuk-button" data-module="govuk-button">
             Continue
           </button>
         </form>
+      </div>
 
 
-
-
-    </div>
   </div>
+</div>
 
-  {% endblock %}
+{% endblock %}
