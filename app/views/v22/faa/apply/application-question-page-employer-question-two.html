@@ -19,19 +19,17 @@ Find an apprenticeship - GOV.UK
     </p>
 
     <form action="application-task-list-new-user" method="post" novalidate>
-      <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="500">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
         <div class="govuk-form-group">
-          <textarea class="govuk-textarea govuk-js-word-count" id="employer-question-two" name="employer-question-two"
-            type="question-two" rows="5"
+          <textarea class="govuk-textarea govuk-js-character-count" id="employer-question-two"
+            name="employer-question-two" rows="5"
             aria-describedby="employer-question-two-info">{{ data['employer-question-two'] or '' }}</textarea>
         </div>
-        <div id="with-hint-info" class="govuk-hint govuk-word-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">500 words remaining</p>
+        <div id="employer-question-two-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
         </div>
       </div>
       <div class="govuk-!-padding-bottom-7"></div>
-
-
 
 
       <form action="application-task-list-new-user" method="post" novalidate>
