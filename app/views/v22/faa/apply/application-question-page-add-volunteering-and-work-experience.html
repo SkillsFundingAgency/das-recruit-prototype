@@ -26,25 +26,28 @@ Find an apprenticeship - GOV.UK
             Company or organisation
           </label>
         </h1>
-        <input class="govuk-input" id="work-experience-organisation-name" name="work-experience-organisation-name" type="organisation"
-          value="{{ data['work-experience-organisation-name'] or '' }}">
+        <input class="govuk-input" id="work-experience-organisation-name" name="work-experience-organisation-name"
+          type="organisation" value="{{ data['work-experience-organisation-name'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
 
-      <div class="govuk-word-count" data-module="govuk-word-count" data-maxlength="200">
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="100">
         <div class="govuk-form-group">
           <h2 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--m" for="with-hint">
-              Your responsibilities
+              What you did
             </label>
           </h2>
-          <textarea class="govuk-textarea govuk-js-word-count" id="what-you-did-in-the-work-experience-role"
+          <div id="event-name-hint" class="govuk-hint">
+            Describe your role
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="what-you-did-in-the-work-experience-role"
             name="what-you-did-in-the-work-experience-role" rows="5"
-            aria-describedby="wwhat-you-did-in-the-work-experience-role-info">{{ data['what-you-did-in-the-work-experience-role'] or '' }}</textarea>
+            aria-describedby="what-you-did-in-the-work-experience-role-info">{{ data['what-you-did-in-the-work-experience-role'] or '' }}</textarea>
         </div>
-        <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
-          <p class="govuk-hint">300 words remaining</p>
+        <div id="what-you-did-in-the-work-experience-role-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint">100 words remaining</p>
         </div>
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
@@ -145,7 +148,6 @@ Find an apprenticeship - GOV.UK
           </div>
         </fieldset>
       </div>
-
 
 
       <div class="govuk-button-group" href="application-summary-volunteering-work-experience.html">
