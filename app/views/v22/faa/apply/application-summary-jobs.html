@@ -15,12 +15,12 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Work history</span>
-    <h1 class="govuk-heading-l">Jobs summary</h1>
+    <h1 class="govuk-heading-l">Jobs</h1>
 
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">{{ data['employer-name'] or 'Betty’s Corner Shop' }}</h2>
+        <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Junior Mechanic' }} , {{ data['employer-name'] or 'BMW' }}</h2>
         <ul class="govuk-summary-card__actions">
           <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
               Delete<span class="govuk-visually-hidden"> jobs and work experience</span>
@@ -37,20 +37,14 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Role
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['role-name'] or 'Customer service assistant' }}
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Responsibilities
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with
-              inquiries about products, scanning and updating the prices on products, liaising with senior members of
-              staff, keeping the shop cleaning and organised.' }}
+              {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with inquiries about products, scanning and updating the prices on
+              products, liaising with senior members of staff, keeping the shop cleaning and organised.
+              
+              The role involved stacking selfs, assisting customers with inquiries about products, scanning and updating the prices on
+              products, liaising with senior members of staff, keeping the shop cleaning and organised.' }}
             </dd>
           </div>
           <div class="govuk-summary-list__row">
