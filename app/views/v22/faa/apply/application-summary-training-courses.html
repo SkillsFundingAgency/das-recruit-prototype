@@ -15,7 +15,7 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Training summary</h1>
+    <h1 class="govuk-heading-l">Training courses</h1>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -36,14 +36,6 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              College or training provider
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['training-provider-name'] or 'Newquay Professional Training' }}
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
               Year
             </dt>
             <dd class="govuk-summary-list__value">
@@ -56,7 +48,7 @@ Find an apprenticeship - GOV.UK
 
     <form action="application-question-page-add-training-courses" method="post">
       <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
-        Add a training course
+        Add another training course
       </button>
     </form>
     <div class="govuk-!-padding-bottom-5"></div>
