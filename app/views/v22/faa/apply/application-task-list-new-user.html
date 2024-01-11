@@ -177,6 +177,26 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
+              {% if data['completed-employer-question-two'] == "yes" %}
+              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
+
+              {% elseif data['completed-employer-question-two'] == "no" %}
+              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">In progress</strong>
+
+              {% else %}
+              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
+
+              {% endif %}
+
+            </li>
+            <li class="govuk-task-list__item govuk-task-list__item--with-link">
+              <span class="app-task-list__task-name">
+                <a href="application-question-page-employer-question-one.html"
+                  aria-describedby="additional-questions-status">
+                  When you’re balancing multiple projects, how do you<br>keep yourself organised?<br>
+                </a>
+              </span>
+
               {% if data['completed-employer-questions'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
