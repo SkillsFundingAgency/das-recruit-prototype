@@ -14,72 +14,64 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Add a T level</h1>
+    <h1 class="govuk-heading-l">Add a T Level</h1>
+  </div>
+</div>
 
-    <form class="form" action="..//application-summary-qualifications" method="post">
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="t-level-subject">
-            Subject
+
+<form class="form" action="..//application-summary-qualifications" method="post">
+  <div data-module="moj-add-another">
+
+    <div class="govuk-form-group govuk-!-width-two-thirds">
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Add subject
+        </label>
+      </h1>
+      <input class="govuk-input" id="event-name" name="eventName" type="text">
+    </div>
+
+    <fieldset class="govuk-fieldset moj-add-another__item">
+      <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m govuk-visually-hidden">
+        Subject
+      </legend>
+      <div class="govuk-grid-row app-grid-row--flex">
+        <div class="govuk-grid-column-one-quarter">
+          <label class="govuk-heading-m" for="subject[0][grade]">
+            Grade
           </label>
-        </h1>
-        <input class="govuk-input" id="t-level-subject" name="t-level-subject" type="subject"
-          value="{{ data['t-level-subject'] or '' }}">
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="t-level-location">
-            College
-          </label>
-        </h1>
-        <input class="govuk-input" id="t-level-location" name="t-level-location" type="location"
-          value="{{ data['t-level-location'] or '' }}">
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="t-level-grade">
-            Grade (Optional)
-          </label>
-        </h1>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="pass" selected>Pass</option>
-          <option value="merit">Merit</option>
-          <option value="distinction">Distinction</option>
-          <option value="distinction*">Distinction*</option>
-        </select>
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
-
-
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="year-acheived">
-            Year achieved
-          </label>
-        </h1>
-        <div id="event-name-hint" class="govuk-hint">
-          If you are still studying, enter the year you’ll finish
+          <input class="govuk-input" id="subject[0][grade]" name="subject[0][grade]" type="text"
+            data-name="subject[%index%][grade]" data-id="subject[%index%][grade]">
         </div>
-        <input class="govuk-input govuk-input--width-4" id="qualifications-hnc-year-achieved"
-          name="qualifications-hnc-year-achieved" type="year" aria-describedby="event-name-hint"
-          value="{{ data['qualifications-hnc-year-achieved'] or '' }}">
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="subject[0][predicted]" name="subject[0][predicted]"
+                type="checkbox" value="yes" data-name="subject[%index%][predicted]"
+                data-id="subject[%index%][predicted]">
+              <label class="govuk-label govuk-checkboxes__label" for="subject[0][predicted]">
+                Predicted grade
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
+    </fieldset>
+  </div>
+</form>
+<div class="govuk-!-padding-bottom-8"></div>
 
 
-      <div class="govuk-button-group" href="..//application-summary-qualifications.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Save
-        </button>
-      </div>
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-button-group" href="..//application-summary-qualifications.html">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </div>
 
-    </form>
   </div>
 </div>
 
