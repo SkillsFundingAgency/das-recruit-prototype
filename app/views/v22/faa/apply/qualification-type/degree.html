@@ -35,7 +35,7 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="degree-subject">
-            Subject
+            Course title
           </label>
         </h1>
         <input class="govuk-input" id="degree-subject" name="degree-subject" type="subject"
@@ -43,36 +43,21 @@ Find an apprenticeship - GOV.UK
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-!-width-one-third">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="degree-institution">
-            University or institution
+          <label class="govuk-label govuk-label--m" for="event-name">
+            Grade
           </label>
         </h1>
-        <input class="govuk-input" id="degree-institution" name="degree-institution" type="institution"
-          value="{{ data['degree-institution'] or '' }}">
+        <input class="govuk-input" id="degree-grade" name="degree-grade" type="grade"
+          value="{{ data['degree-grade'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="year-acheived">
-            Year achieved
-          </label>
-        </h1>
-        <div id="event-name-hint" class="govuk-hint">
-          If you are still studying, enter the year you’ll finish
-        </div>
-        <input class="govuk-input govuk-input--width-4" id="qualifications-degree-year-achieved"
-          name="qualifications-degree-year-achieved" type="year" aria-describedby="event-name-hint"
-          value="{{ data['qualifications-apprenticeship-degree-achieved'] or '' }}">
-      </div>
-
-
       <div class="govuk-button-group" href="..//application-summary-qualifications.html">
         <button class="govuk-button" data-module="govuk-button">
-          Save
+          Save and continue
         </button>
       </div>
 
