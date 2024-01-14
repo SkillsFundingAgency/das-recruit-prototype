@@ -10,33 +10,18 @@ Find an apprenticeship - GOV.UK
 {% endblock %}
 
 {% block content %}
-<form class="form" action="..//application-summary-qualifications" method="post">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <span class="govuk-caption-l">Education history</span>
-      <h1 class="govuk-heading-l">Add A levels</h1>
-
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="a-level-school-name">
-            Your school or college
-          </label>
-        </h1>
-        <input class="govuk-input" id="a-level-school-name" name="a-level-school-name" type="school"
-          value="{{ data['a-level-school-name'] or '' }}">
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
-    </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Add A Levels</h1>
   </div>
+</div>
 
 
 
-
+<form class="form" action="..//application-summary-qualifications" method="post">
   <div data-module="moj-add-another">
-    <h2 class="govuk-heading-m moj-add-another__heading" tabindex="-1">Subjects</h2>
-    <div class="govuk-hint govuk-!-margin-bottom-6">
-      If you’re still studying a subject, use the predicted grade your teacher expects you to get
-    </div>
+    <h2 class="govuk-heading-m moj-add-another__heading" tabindex="-1">Add subjects</h2>
     <fieldset class="govuk-fieldset moj-add-another__item">
       <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m govuk-visually-hidden">
         Subject
@@ -44,7 +29,7 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-grid-row app-grid-row--flex">
         <div class="govuk-grid-column-one-third">
           <label class="govuk-label" for="subject[0][name]">
-            Subject name
+            Subject
           </label>
           <input class="govuk-input" id="subject[0][name]" name="subject[0][name]" type="text"
             data-name="subject[%index%][name]" data-id="subject[%index%][name]">
@@ -77,33 +62,20 @@ Find an apprenticeship - GOV.UK
       </button>
     </div>
   </div>
-
-
-
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="year-acheived">
-            Year achieved
-          </label>
-        </h1>
-        <div id="event-name-hint" class="govuk-hint">
-          If you are still studying, enter the year you’ll finish
-        </div>
-        <input class="govuk-input govuk-input--width-4" id="qualifications-a-level-year-achieved"
-          name="qualifications-a-level-year-achieved" type="year" aria-describedby="event-name-hint"
-          value="{{ data['qualifications-a-level-year-achieved'] or '' }}">
-      </div>
-      <div class="govuk-button-group" href="..//application-summary-qualifications.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Save
-        </button>
-      </div>
-
-    </div>
-  </div>
 </form>
+<div class="govuk-!-padding-bottom-6"></div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-button-group" href="..//application-summary-qualifications.html">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+    </div>
+
+  </div>
+</div>
 
 {% endblock %}
