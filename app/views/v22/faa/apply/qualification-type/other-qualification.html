@@ -25,7 +25,7 @@ Find an apprenticeship - GOV.UK
           </label>
         </h1>
         <div id="event-name-hint" class="govuk-hint">
-          For example, International Baccalaureate
+          For example, NVQ, International Baccalaureate
         </div>
         <input class="govuk-input" id="other-qualification-name" name="other-qualification-name" type="name"
           value="{{ data['other-qualification-name'] or '' }}">
@@ -35,7 +35,7 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="other-qualification-subject">
-            Subject of qualification (optional)
+            Subject
           </label>
         </h1>
         <input class="govuk-input" id="other-qualification-subject" name="other-qualification-subject" type="subject"
@@ -43,16 +43,6 @@ Find an apprenticeship - GOV.UK
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="other-qualification-institution">
-            School, college or institution
-          </label>
-        </h1>
-        <input class="govuk-input" id="other-qualification-institution" name="other-qualification-institution"
-          type="institution" value="{{ data['other-qualification-institution'] or '' }}">
-      </div>
-      <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
@@ -66,24 +56,10 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-!-padding-bottom-3"></div>
 
 
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="year-acheived">
-            Year achieved
-          </label>
-        </h1>
-        <div id="event-name-hint" class="govuk-hint">
-          If you are still studying, enter the year you’ll finish
-        </div>
-        <input class="govuk-input govuk-input--width-4" id="qualifications-other-qualification-year-achieved"
-          name="qualifications-other-qualification-year-achieved" type="year" aria-describedby="event-name-hint"
-          value="{{ data['qualifications-apprenticeship-other-qualification-achieved'] or '' }}">
-      </div>
-
 
       <div class="govuk-button-group" href="..//application-summary-qualifications.html">
         <button class="govuk-button" data-module="govuk-button">
-          Save
+          Save and continue
         </button>
       </div>
 
