@@ -96,12 +96,13 @@ Find an apprenticeship - GOV.UK
         </fieldset>
       </div>
 
+
       <div class="govuk-!-padding-bottom-3"></div>
 
 
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="current-role-hint">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
               Is this your current role?
@@ -109,20 +110,24 @@ Find an apprenticeship - GOV.UK
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="current-role" name="current-role" type="radio" value="yes"
-                data-aria-controls="conditional-current-role">
-              <label class="govuk-label govuk-radios__label" for="current-role">
+              <input class="govuk-radios__input" id="interview-adjustments" name="interview-adjustments" type="radio"
+                value="yes" data-aria-controls="conditional-interview-adjustments">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments">
                 Yes
               </label>
             </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-interview-adjustments">
+            </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="current-role-2" name="current-role" type="radio" value="no"
-                data-aria-controls="conditional-current-role-2">
-              <label class="govuk-label govuk-radios__label" for="current-role-2">
+              <input class="govuk-radios__input" id="interview-adjustments-2" name="interview-adjustments" type="radio"
+                value="no" data-aria-controls="conditional-interview-adjustments-2">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments-2">
                 No
               </label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-current-role-2">
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-interview-adjustments-2">
               <div class="govuk-form-group">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                   <h1 class="govuk-fieldset__heading">
@@ -156,7 +161,6 @@ Find an apprenticeship - GOV.UK
                 </div>
               </div>
             </div>
-          </div>
         </fieldset>
       </div>
 
