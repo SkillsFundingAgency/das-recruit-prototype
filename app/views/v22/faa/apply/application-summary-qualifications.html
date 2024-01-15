@@ -22,12 +22,11 @@ Find an apprenticeship - GOV.UK
         <h2 class="govuk-summary-card__title">Degree</h2>
         <ul class="govuk-summary-card__actions">
           <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
-              Delete<span class="govuk-visually-hidden"> GCSEs</span>
+              Delete<span class="govuk-visually-hidden"> degree</span>
             </a>
           </li>
-          <li class="govuk-summary-card__action"> <a class="govuk-link"
-              href="application-question-page-qualification-gcse">
-              Change<span class="govuk-visually-hidden">GCSEs</span>
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="../apply/qualification-type/degree.html">
+              Change<span class="govuk-visually-hidden">degree</span>
             </a>
           </li>
         </ul>
@@ -36,15 +35,62 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Type of degree
+              {{ data['degree-subject'] or 'Linguistics' }} {{ data['degree-type'] or 'MA (Hons)' }}
             </dt>
             <dd class="govuk-summary-list__value">
-              C (predicted)
+              {{ data['degree-grade'] or '2:1' }}
             </dd>
           </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Apprenticeship</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> Apprenticeship</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="../apply/qualification-type/apprenticeship.html">
+              Change<span class="govuk-visually-hidden">Apprenticeship</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Subject
+              Buisness admin (level 3)
+            </dt>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">A levels</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> A levels</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/qualification-type/a-level.html">
+              Change<span class="govuk-visually-hidden">A levels</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              English
             </dt>
             <dd class="govuk-summary-list__value">
               B
@@ -52,10 +98,104 @@ Find an apprenticeship - GOV.UK
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Grade
+              French
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['degree-grade'] or '2:1' }}
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">AS levels</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> AS levels</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/qualification-type/as-level.html">
+              Change<span class="govuk-visually-hidden">AS levels</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Art
+            </dt>
+            <dd class="govuk-summary-list__value">
+              B
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">T Level</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> T Level</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/qualification-type/t-level.html">
+              Change<span class="govuk-visually-hidden">T Level</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Education and Early Years
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Distinction*
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">BTECs</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> Btec</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="..//apply/qualification-type/btec.html">
+              Change<span class="govuk-visually-hidden">Btec</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Physical education
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Merit
             </dd>
           </div>
         </dl>
@@ -70,8 +210,7 @@ Find an apprenticeship - GOV.UK
               Delete<span class="govuk-visually-hidden"> GCSEs</span>
             </a>
           </li>
-          <li class="govuk-summary-card__action"> <a class="govuk-link"
-              href="application-question-page-qualification-gcse">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="..//apply/qualification-type/gcse.html">
               Change<span class="govuk-visually-hidden">GCSEs</span>
             </a>
           </li>
@@ -117,6 +256,36 @@ Find an apprenticeship - GOV.UK
             </dt>
             <dd class="govuk-summary-list__value">
               D
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Other</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> other</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="../apply/qualification-type/other-qualification.html">
+              Change<span class="govuk-visually-hidden">other</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              {{ data['other-qualification-subject'] or 'Business management' }} {{ data['other-qualification-name'] or
+              'NVQ' }}
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['other-qualification-grade'] or 'Pass' }}
             </dd>
           </div>
         </dl>
