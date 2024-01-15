@@ -15,7 +15,52 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Qualification summary</h1>
+    <h1 class="govuk-heading-l">School, college and university qualifications</h1>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Degree</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">
+              Delete<span class="govuk-visually-hidden"> GCSEs</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="application-question-page-qualification-gcse">
+              Change<span class="govuk-visually-hidden">GCSEs</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of degree
+            </dt>
+            <dd class="govuk-summary-list__value">
+              C (predicted)
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Subject
+            </dt>
+            <dd class="govuk-summary-list__value">
+              B
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Grade
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['degree-grade'] or '2:1' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -36,28 +81,42 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Subjects and grades
+              Maths
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body govuk-!-margin-bottom-0">Maths : A</p>
-              <p class="govuk-body govuk-!-margin-bottom-0">Science : C</p>
-              <p class="govuk-body govuk-!-margin-bottom-0">English : B</p>
+              C (predicted)
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              School or college
+              Science
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['school-name'] or 'Handsworth Grange' }}
+              B
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Year
+              English
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">{{ data['qualifications-year-achieved'] or '2013' }}</p>
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Geography
+            </dt>
+            <dd class="govuk-summary-list__value">
+              D
             </dd>
           </div>
         </dl>
