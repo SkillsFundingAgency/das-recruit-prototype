@@ -14,54 +14,67 @@ Find an apprenticeship - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Equality questions</span>
-    <h1 class="govuk-heading-l">Which of the following best describes your Asian or Asian British background?</h1>
 
     <form class="form" action="equality-summary" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <span class="govuk-caption-l">Equality questions</span>
+            <h1 class="govuk-fieldset__heading">
+              Which of the following best describes your Asian or Asian British background?
+            </h1>
+          </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="asian-british" name="asian-british" type="radio"
-                value="english-welsh-scottish-northern-irish-british">
-              <label class="govuk-label govuk-radios__label" for="asian-british">
+              <input class="govuk-radios__input" id="ethnicityDetail" name="ethnicityDetail" type="radio"
+                value="indian">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail">
                 Indian
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="asian-british-2" name="asian-british" type="radio"
-                value="irish">
-              <label class="govuk-label govuk-radios__label" for="asian-british-2">
+              <input class="govuk-radios__input" id="ethnicityDetail-2" name="ethnicityDetail" type="radio"
+                value="pakistani">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-2">
                 Pakistani
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="asian-british-3" name="asian-british" type="radio"
-                value="gypsy-or-irish-traveller">
-              <label class="govuk-label govuk-radios__label" for="asian-british-3">
+              <input class="govuk-radios__input" id="ethnicityDetail-3" name="ethnicityDetail" type="radio"
+                value="bangladeshi">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-3">
                 Bangladeshi
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="asian-british-4" name="asian-british" type="radio"
-                value="any-other-white-background">
-              <label class="govuk-label govuk-radios__label" for="asian-british-4">
+              <input class="govuk-radios__input" id="ethnicityDetail-4" name="ethnicityDetail" type="radio"
+                value="chinese">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-4">
                 Chinese
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="asian-british-5" name="asian-british" type="radio"
-                value="any-other-white-background">
-              <label class="govuk-label govuk-radios__label" for="asian-british-5">
+              <input class="govuk-radios__input" id="ethnicityDetail-5" name="ethnicityDetail" type="radio"
+                value="other" data-aria-controls="conditional-ethnicityDetail-5">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-5">
                 Any other Asian background
               </label>
             </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ethnicityDetail-5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="other-description">
+                  How would you describe your background? (optional)
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="other-description" name="otherDescription"
+                  type="text">
+              </div>
+            </div>
             <div class="govuk-radios__divider">or</div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="asian-british-6" name="asian-british" type="radio"
-                value="prefer-not-to-say">
-              <label class="govuk-label govuk-radios__label" for="asian-british-6">
+              <input class="govuk-radios__input" id="ethnicityDetail-7" name="ethnicityDetail" type="radio"
+                value="skip">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-7">
                 Prefer not to say
               </label>
             </div>
