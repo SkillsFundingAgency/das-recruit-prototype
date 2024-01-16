@@ -40,14 +40,26 @@ Find an apprenticeship - GOV.UK
 
     <!-- START personal details -->
     <h2 class="govuk-heading-m">Personal details</h2>
+    <p class="govuk-body">
+      You can change your personal details in your <a href="#" class="govuk-link">settings</a>.
+    </p>
 
-    <dl class="govuk-summary-list">
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Full name
+          Name
         </dt>
         <dd class="govuk-summary-list__value">
           {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Jones' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['date-of-birth-day'] or '28' }} {{ data['date-of-birth-month'] or 'April' }} {{
+          data['date-of-birth-year'] or '1999' }}
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -72,7 +84,8 @@ Find an apprenticeship - GOV.UK
         <dt class="govuk-summary-list__key">
           Email address
         </dt>
-        <dd class="govuk-summary-list__value">
+        <dd class="govuk-summary-list__value govuk-!-padding-bottom-5
+            ">
           {{ data['email'] or 'sarah.philips@email.com' }}
         </dd>
       </div>
@@ -82,12 +95,137 @@ Find an apprenticeship - GOV.UK
 
 
     <!-- START qualifications -->
-    <h2 class="govuk-heading-m">Qualifications</h2>
-    <p class="govuk-body govuk-!-padding-bottom-3">
-      <a href="application-summary-qualifications.html" class="govuk-link govuk-link--no-visited-state">Change
-        qualifications</a>
-    </p>
 
+    <h2 class="govuk-heading-m">School, college and university qualifications</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-qualifications.html">Change</a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Degree</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              {{ data['degree-subject'] or 'Linguistics' }} {{ data['degree-type'] or 'MA (Hons)' }}
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['degree-grade'] or '2:1' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Apprenticeship</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Buisness admin (level 3)
+            </dt>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">A levels</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              English
+            </dt>
+            <dd class="govuk-summary-list__value">
+              B
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              French
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">AS levels</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Art
+            </dt>
+            <dd class="govuk-summary-list__value">
+              B
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">T Level</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Education and Early Years
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Distinction*
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">BTECs</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Physical education
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Merit
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -97,28 +235,61 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Subjects and grades
+              Maths
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body govuk-!-margin-bottom-0">Maths : A</p>
-              <p class="govuk-body govuk-!-margin-bottom-0">Science : C</p>
-              <p class="govuk-body govuk-!-margin-bottom-0">English : B</p>
+              C (predicted)
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              School or college
+              Science
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['school-name'] or 'Handsworth Grange' }}
+              B
             </dd>
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Year
+              English
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">{{ data['qualifications-year-achieved'] or '2013' }}</p>
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Geography
+            </dt>
+            <dd class="govuk-summary-list__value">
+              D
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Other</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              {{ data['other-qualification-subject'] or 'Business management' }} {{ data['other-qualification-name'] or
+              'NVQ' }}
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['other-qualification-grade'] or 'Pass' }}
             </dd>
           </div>
         </dl>
@@ -128,11 +299,14 @@ Find an apprenticeship - GOV.UK
     <!-- END qualifications -->
 
     <!-- START training -->
-    <h2 class="govuk-heading-m">Training</h2>
-    <p class="govuk-body govuk-!-padding-bottom-3">
-      <a href="application-summary-training-courses.html" class="govuk-link govuk-link--no-visited-state">Change
-        training</a>
-    </p>
+    <h2 class="govuk-heading-m">Training courses</h2>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-training-courses.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -140,14 +314,6 @@ Find an apprenticeship - GOV.UK
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              College or training provider
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['training-provider-name'] or 'Newquay Professional Training' }}
-            </dd>
-          </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Year
@@ -164,33 +330,35 @@ Find an apprenticeship - GOV.UK
 
     <!-- START job -->
     <h2 class="govuk-heading-m">Jobs</h2>
-    <p class="govuk-body govuk-!-padding-bottom-3">
-      <a href="application-summary-jobs.html" class="govuk-link govuk-link--no-visited-state">Change
-        jobs</a>
-    </p>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-jobs.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">{{ data['employer-name'] or 'Betty’s Corner Shop' }}</h2>
+        <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Junior Mechanic' }} , {{ data['employer-name'] or
+          'BMW' }}</h2>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Role
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['role-name'] or 'Customer service assistant' }}
-            </dd>
-          </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Responsibilities
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with
-              inquiries about products, scanning and updating the prices on products, liaising with senior members of
-              staff, keeping the shop cleaning and organised.' }}
+              inquiries
+              about products, scanning and updating the prices on
+              products, liaising with senior members of staff, keeping the shop cleaning and organised.
+
+              The role involved stacking selfs, assisting customers with inquiries about products, scanning and updating
+              the
+              prices on
+              products, liaising with senior members of staff, keeping the shop cleaning and organised.' }}
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -211,22 +379,24 @@ Find an apprenticeship - GOV.UK
 
     <!-- START volunteering and work experience -->
     <h2 class="govuk-heading-m">Volunteering and work experience</h2>
-    <p class="govuk-body govuk-!-padding-bottom-3">
-      <a href="application-summary-volunteering-work-experience.html" class="govuk-link govuk-link--no-visited-state">Change
-        volunteering and work experience</a>
-    </p>
+    <div style="text-align: right;">
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link " href="application-summary-volunteering-work-experience.html">Change</a>
+        </li>
+      </ul>
+    </div>
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title">{{ data['work-experience-organisation-name'] or 'Sheffield animal rescue'
-          }}
-        </h2>
+          }}</h2>
       </div>
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Responsibilities
+              What you did
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['what-you-did-in-the-work-experience-role'] or 'As a sports youth coach volunteer, I guided and
@@ -246,10 +416,8 @@ Find an apprenticeship - GOV.UK
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['work-experience-start-date-month'] or 'March' }} {{ data['work-experience-start-date-year'] or
-              '2019'
-              }} to {{ data['work-experience-end-date-month'] or 'May' }} {{ data['work-experience-end-date-year'] or
-              '2021'
-              }}
+              '2019' }} to {{ data['work-experience-end-date-month'] or 'May' }} {{
+              data['work-experience-end-date-year'] or '2021' }}
             </dd>
           </div>
         </dl>
@@ -259,41 +427,7 @@ Find an apprenticeship - GOV.UK
     </hr>
     <!-- END volunteering and work experience -->
 
-    <!-- START equal opportunity questions -->
-    <h2 class="govuk-heading-m">Equal opportunity</h2>
 
-    <dl class="govuk-summary-list">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Apply through Disability Confident
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Yes
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="application-question-page-disability-disclosure.html">
-            Change<span class="govuk-visually-hidden"> disability-disclosure</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Requested interview adjustments
-        </dt>
-        <dd class="govuk-summary-list__value">
-          {{ data['interview-adjustments-input'] or ' I would need a British Sign Language (BSL)
-          interpreter
-          to complete my interview.' }}
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="application-question-page-input-interview-adjustments.html">
-            Change<span class="govuk-visually-hidden"> interview adjustments</span>
-          </a>
-        </dd>
-      </div>
-    </dl>
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break-non-visible">
-    <!-- END equal opportunity questions -->
 
     <!-- START role questions -->
     <h2 class="govuk-heading-m">Application questions</h2>
@@ -363,6 +497,64 @@ Find an apprenticeship - GOV.UK
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break-non-visible">
     </hr>
     <!-- END role questions -->
+
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-m">Interview adjustments</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to request support at an interview?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-input-interview-adjustments.html">
+            Change<span class="govuk-visually-hidden"> interview adjustments</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Interview support request
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['interview-adjustments-input'] or ' I would need a British Sign Language (BSL)
+          interpreter
+          to complete my interview.' }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-input-interview-adjustments.html">
+            Change<span class="govuk-visually-hidden"> interview adjustments</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break-non-visible">
+    <!-- END equal opportunity questions -->
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-m">Disability Confidence scheme</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to apply under the Disability Confident scheme?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-disability-disclosure.html">
+            Change<span class="govuk-visually-hidden"> disability-disclosure</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break-non-visible">
+    <!-- END equal opportunity questions -->
 
     <!-- START submit -->
     <div class="govuk-form-group">
