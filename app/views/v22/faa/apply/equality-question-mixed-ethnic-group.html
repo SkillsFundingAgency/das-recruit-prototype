@@ -1,0 +1,78 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="equality-question-ethinic-group.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equality questions</span>
+    <h1 class="govuk-heading-l">Which of the following best describes your mixed or multiple ethnic groups background?</h1>
+
+    <form class="form" action="equality-summary" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-mixed-ethnic-background" name="your-mixed-ethnic-background" type="radio"
+                value="white-black-caribbean">
+              <label class="govuk-label govuk-radios__label" for="your-mixed-ethnic-background">
+                White and Black Caribbean
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-mixed-ethnic-background-2" name="your-mixed-ethnic-background" type="radio"
+                value="white-black-african">
+              <label class="govuk-label govuk-radios__label" for="your-mixed-ethnic-background-2">
+                White and Black African
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-mixed-ethnic-background-3" name="your-mixed-ethnic-background" type="radio"
+                value="white-asian">
+              <label class="govuk-label govuk-radios__label" for="your-mixed-ethnic-background-3">
+                White and Asian
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-mixed-ethnic-background-4" name="your-mixed-ethnic-background" type="radio"
+                value="any-other-mixed-background">
+              <label class="govuk-label govuk-radios__label" for="your-mixed-ethnic-background-4">
+                Any other mixed or multiple ethnic groups background
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-mixed-ethnic-background-5" name="your-mixed-ethnic-background" type="radio"
+                value="prefer-not-to-say">
+              <label class="govuk-label govuk-radios__label" for="your-mixed-ethnic-background-5">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group" href="equality-summary.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="equality-summary.html">Skip</a>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
