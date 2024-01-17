@@ -1,0 +1,44 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-date-of-birth.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Create an account</span>
+    <h1 class="govuk-heading-l">What is your address?</h1>
+    <p class="govuk-body">Use the address you want to appear on your applications.</p>
+    <form class="form" action="application-question-page-select-address" method="post">
+      <label class="govuk-label" for="postcode">
+        UK postcode
+      </label>
+      <div id="postcode-hint" class="govuk-hint">
+        For example SW1A 2AA
+      </div>
+      <div class="govuk-form-group">
+        <input class="govuk-input govuk-input--width-10" id="postcode-input" name="postcode-input" type="postcode"
+          value="{{ data['postcode-input'] or '' }}">
+      </div>
+
+      <div class="govuk-button-group" href="application-question-page-select-address.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Find my address
+        </button>
+      </div>
+      <a class="govuk-link" href="application-question-page-enter-postcode-manually.html">Enter my address manually
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

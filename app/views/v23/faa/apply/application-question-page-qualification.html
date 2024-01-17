@@ -1,0 +1,66 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">School, college and university qualifications</h1>
+    <p class="govuk-body">Add qualifications you have from school, college and university.</p>
+    <p class="govuk-body">If you have your results, you can add your predicted grades for your GCSEs, BTECs or A levels.
+    </p>
+    <p class="govuk-body">Some apprenticeships don’t need you to have any qualifications. Check the vacancy’s
+      requirements section to see what
+      qualifications are essential.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to add any qualifications?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-qualifications-yes" name="add-qualifications" type="radio"
+              value="yes">
+            <label class="govuk-label govuk-radios__label" for="add-qualifications-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-qualifications-no" name="add-qualifications" type="radio"
+              value="no">
+            <label class="govuk-label govuk-radios__label" for="add-qualifications-no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="application-question-page-qualification-type" method="post">
+      <div class="govuk-button-group" href="application-question-page-qualification-type.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

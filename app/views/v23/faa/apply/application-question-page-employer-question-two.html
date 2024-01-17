@@ -1,0 +1,68 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">How will you get to and from this vacancy every day if successful?</h1>
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
+        <div class="govuk-form-group">
+          <textarea class="govuk-textarea govuk-js-character-count" id="employer-question-two"
+            name="employer-question-two" rows="5"
+            aria-describedby="employer-question-two-info">{{ data['employer-question-two'] or '' }}</textarea>
+        </div>
+        <div id="employer-question-two-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
+        </div>
+      </div>
+      <div class="govuk-!-padding-bottom-7"></div>
+
+
+      <form action="application-task-list-new-user" method="post" novalidate>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Have you completed this section?
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-completed-this-section"
+                  name="completed-employer-question-two" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                  Yes, I’ve completed this section
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-completed-this-section-2"
+                  name="completed-employer-question-two" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                  No, I’ll come back to it later (saves your answer)
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

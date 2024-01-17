@@ -1,0 +1,51 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-phone-number.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Contact information</span>
+    <h1 class="govuk-heading-l">Confirm your email</h1>
+    </p>
+    <p class="govuk-body">We’ll share this address when you apply for an apprenticeship:</p>
+    <div class="govuk-inset-text">
+      <b>TESTEMAIL@email.com</b>
+      <p class="govuk-body govuk-!-margin-top-1">Email address you use in your GOV.UK One Login</p>
+    </div>
+    <p class="govuk-body">We do this because an employer may need to email you to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>clarify something in your application</li>
+      <li>offer you an interview</li>
+    </ul>
+    <div class="govuk-!-padding-bottom-3"></div>
+
+
+
+    <form class="form" action="application-summary-contact-info" method="post">
+      <div class="govuk-button-group" href="application-summary-contact-info.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Confirm email address
+        </button>
+      </div>
+    </form>
+
+    <h3 class="govuk-heading-s">Change your email address</h3>
+    <p class="govuk-body">To change this email address, you’ll need to change the email address you use for your GOV.UK
+      One Login. Do this by<a href="/" class="govuk-link govuk-link--no-visited-state"> changing the sign in details in
+        your GOV.UK One Login (opens in a new tab)</a>.</p>
+
+
+  </div>
+</div>
+
+{% endblock %}

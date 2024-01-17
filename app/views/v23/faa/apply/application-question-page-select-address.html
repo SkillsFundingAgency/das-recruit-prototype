@@ -1,0 +1,56 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-postcode.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Create an account</span>
+    <h1 class="govuk-heading-l">Select your address</h1>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Postcode</h2>
+    <p class="govuk-body govuk-!-font-weight-bold"> {{ data['postcode-input'] or 'SW1A 2AA' }}
+      <a class="govuk-body" href="#" class="govuk-link" rel="noreferrer noopener" target="_blank"> Change</a>
+    </p>
+    <div class="govuk-!-padding-bottom-2"></div>
+    <form class="form" action="application-question-page-phone-number" method="post">
+      <div class="govuk-form-group">
+        <div id="date-of-birth-hint" class="govuk-hint">
+          10 addresses found
+        </div>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="updated" selected>Select address</option>
+          <option value="hathway">1 Hatchway Cottage</option>
+          <option value="brook">5 Brook House</option>
+          <option value="manor">6 The Manor</option>
+          <option value="cobblers">10 Cobblers house</option>
+          <option value="bath">11 Bath House</option>
+          <option value="penny">13 Penny Cottage</option>
+          <option value="broomhill">14 Broomhill House</option>
+          <option value="honey">15 Honey Cottage</option>
+          <option value="oakhill">16 Oakhill House</option>
+          <option value="hill">18 Hill House</option>
+        </select>
+      </div>
+
+      <div class="govuk-button-group" href="application-question-page-phone-number.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+      <a class="govuk-link" href="application-question-page-enter-postcode-manually.html">Enter address manually</a>
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

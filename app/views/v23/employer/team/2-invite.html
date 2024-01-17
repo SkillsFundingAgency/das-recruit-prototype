@@ -1,0 +1,78 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage team members
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+
+<a href="1-your-team" class="govuk-back-link">Back to your team</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Create invitation</h1>
+
+<p class="govuk-body-l">
+  Invite somebody from your organisation to access this account.
+</p>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort-code">
+    <b>Email</b>
+  </label>
+  <div id="sort-code-hint" class="govuk-hint">
+    An invitation will be sent to this email address
+  </div>
+  <input class="govuk-input govuk-input--width-20" id="sort-code" name="sort-code" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort-code">
+    <b>Full name</b>
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="sort-code" name="sort-code" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
+</div>
+       
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <label class="govuk-label">
+       <b> Team member access </b>
+    </legend>
+    <div id="sign-in-hint" class="govuk-hint">
+      Choose the level of access this user can have.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in">
+          Manage adverts and view account information
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          Manage apprentices, adverts and view account information
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="sign-in-2">
+          Manage apprentices, adverts and account – includes signing the employer agreement, adding PAYE schemes and managing team member access 
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<a href="#" class="govuk-button" data-module="govuk-button">Send invitation</a>
+
+</div>
+</div>
+  
+    
+{% endblock %}

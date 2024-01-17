@@ -1,0 +1,44 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage team members
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Invitations</h1>
+
+
+
+          <table class="govuk-table das-table--responsive">           
+            <thead class="govuk-table__head">
+                <tr>
+                    <th scope="col" class="govuk-table__header" style="width: 25px;">Account name</span></th>
+                    <th scope="col" class="govuk-table__header" style="width: 25px;">What you can do</th>
+                    <th scope="col" class="govuk-table__header" style="width: 25px;">Expires in</th>
+                    <th scope="col" class="govuk-table__header" style="width: 25px;"></th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">FENDI LTD</td>
+                    <td class="govuk-table__cell"> Manage adverts and view account information </td>
+                    <td class="govuk-table__cell">7 days</td>
+                    <td class="govuk-table__cell"><a href="#" class="govuk-link">Accept invite</a></td>   
+                </tr>
+          
+            </tbody>
+          </table>
+
+</div>
+</div>
+  
+    
+{% endblock %}

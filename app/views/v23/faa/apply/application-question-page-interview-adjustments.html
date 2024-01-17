@@ -1,0 +1,88 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Interview adjustments</span>
+    <h1 class="govuk-heading-l">Ask for support at an interview</h1>
+    <p class="govuk-body">f you have a disability or health condition, you can ask for support at an interview.
+    </p>
+    <p class="govuk-body">You can ask for your interview to have reasonable adjustments. Adjustments could include
+      things like:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>step-free access to the interview room</li>
+      <li>a quiet place for the interview</li>
+    </ul>
+    <h2 class="govuk-heading-m">It’s your choice when to discuss your needs</h2>
+    <p class="govuk-body">If you make a request here, we’ll show it on your application.</p>
+    <p class="govuk-body">You can choose to select ‘No’ on this question, even if you need adjustments. You can wait and
+      see if the company offers
+      you an interview first, and then discuss your needs with them.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <form class="form" action="application-summary-interview-adjustments" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to request any interview adjustments?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustments" name="interview-adjustments" type="radio" value="yes"
+                data-aria-controls="conditional-interview-adjustments">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-interview-adjustments">
+              <div class="govuk-form-group">
+                <div id="more-detail-hint" class="govuk-hint">
+                  Describe the interview adjustments you need
+                </div>
+                <textarea class="govuk-textarea" id="interview-adjustments-input" name="interview-adjustments-input"
+                  rows="5"
+                  aria-describedby="interview-adjustments-input">{{ data['interview-adjustments-input'] or '' }}</textarea>
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustments-2" name="interview-adjustments" type="radio" value="no"
+                data-aria-controls="conditional-interview-adjustments-2">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments-2">
+                No, I don’t need support or I’ll discuss it if I get an interview
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-interview-adjustments-2">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-button-group" href="application-summary-interview-adjustments.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
