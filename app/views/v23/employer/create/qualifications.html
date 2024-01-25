@@ -35,7 +35,7 @@ What qualifications would you like the applicant to have? - Your apprenticeship 
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
       <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
         Apprentice{% endif %}</span>
-      What qualifications does the applicant need to have?
+      Add a qualification
     </h1>
     <p class="govuk-hint"> <a class="govuk-link--no-visited-state" target="_blank"
         href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels"> What's the GCSE
@@ -43,18 +43,17 @@ What qualifications would you like the applicant to have? - Your apprenticeship 
     <br>
     <form method="post">
       <div class="govuk-form-group">
-        <label class="govuk-label" id="QualificationsHeading" for="QualificationType">Add qualifications applicants
-          should have</label>
+        <label class="govuk-label" id="QualificationsHeading" for="QualificationType">Type of qualification</label>
         <select class="govuk-select" id="QualificationType" name="QualificationType">
           <option value="">Select from list</option>
           <option value="GCSE or equivalent" {% if data.hasError or (data.edit=="yes" and
-            query.editQualificationType=="GCSE or equivalent" )%}selected="selected" {% endif %}>GCSE or equivalent
+            query.editQualificationType=="GCSE or equivalent" )%}selected="selected" {% endif %}>GCSE
           </option>
-          <option value="AS Level or equivalent" {% if data.edit=="yes" and
-            query.editQualificationType=="AS Level or equivalent" %}selected="selected" {% endif %}>AS Level or
-            equivalent</option>
           <option value="A Level or equivalent" {% if data.edit=="yes" and
-            query.editQualificationType=="A Level or equivalent" %}selected="selected" {% endif %}>A Level or equivalent
+            query.editQualificationType=="A Level or equivalent" %}selected="selected" {% endif %}>A Level
+          </option>
+          <option value="BTEC or equivalent" {% if data.edit=="yes" and
+            query.editQualificationType=="BTEC or equivalent" %}selected="selected" {% endif %}>BTEC or equivalent
           </option>
           <option value="BTEC or equivalent" {% if data.edit=="yes" and
             query.editQualificationType=="BTEC or equivalent" %}selected="selected" {% endif %}>BTEC or equivalent
