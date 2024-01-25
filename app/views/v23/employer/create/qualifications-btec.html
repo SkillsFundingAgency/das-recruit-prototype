@@ -45,23 +45,37 @@ What qualifications would you like the applicant to have? - Your apprenticeship 
       <div class="govuk-form-group">
         <label class="govuk-label" id="QualificationsHeading" for="QualificationType">Type of qualification</label>
         <select class="govuk-select" id="QualificationType" name="QualificationType">
-          <option value="">Select from list</option>
-          <option value="GCSE or equivalent" {% if data.hasError or (data.edit=="yes" and
-            query.editQualificationType=="GCSE or equivalent" )%}selected="selected" {% endif %}>GCSE
-          </option>
-          <option value="A Level or equivalent" {% if data.edit=="yes" and
-            query.editQualificationType=="A Level or equivalent" %}selected="selected" {% endif %}>A Level
-          </option>
-          <option value="T Level or equivalent" {% if data.edit=="yes" and
-            query.editQualificationType=="T Level or equivalent" %}selected="selected" {% endif %}>T Level
-          </option>
           <option value="BTEC or equivalent" {% if data.edit=="yes" and
             query.editQualificationType=="BTEC or equivalent" %}selected="selected" {% endif %}>BTEC
           </option>
-          <option value="Degree or equivalent" {% if data.edit=="yes" and
-            query.editQualificationType=="Degree or equivalent" %}selected="selected" {% endif %}>Degree
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" id="BtecLevelHeading" for="BtecLevel">Level </label>
+        <select class="govuk-select" id="BtecLevel" name="BtecLevel">
+          <option value="">Select from list</option>
+          <option value="Level 1" {% if data.hasError or (data.edit=="yes" and
+            query.editBtecLevel=="GCSE or equivalent" )%}selected="selected" {% endif %}>1
           </option>
-          <option value="Other">Other</option>
+          <option value="Level 2" {% if data.edit=="yes" and
+            query.editBtecLevel=="Level 2" %}selected="selected" {% endif %}>2
+          </option>
+          <option value="Level 3" {% if data.edit=="yes" and
+            query.editBtecLevel=="Level 3" %}selected="selected" {% endif %}>3
+          </option>
+          <option value="Level 4" {% if data.edit=="yes" and
+            query.editBtecLevel=="Level 4" %}selected="selected" {% endif %}>4
+          </option>
+          <option value="Level 5" {% if data.edit=="yes" and
+            query.editBtecLevel=="Level 5" %}selected="selected" {% endif %}>5
+          </option>
+          <option value="Level 6" {% if data.edit=="yes" and
+            query.editBtecLevel=="Level 6" %}selected="selected" {% endif %}>6
+          </option>
+          <option value="Level 7" {% if data.edit=="yes" and
+            query.editBtecLevel=="Level 7" %}selected="selected" {% endif %}>7
+          </option>
         </select>
       </div>
 
