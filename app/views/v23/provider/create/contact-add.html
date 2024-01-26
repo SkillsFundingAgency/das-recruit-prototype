@@ -41,15 +41,15 @@ Add contact information - Recruitment - {{serviceName}} - GOV.UK
           <div id="contact-hint" class="govuk-hint">
             You can select more than one option
           </div>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email"
                 data-aria-controls="conditional-contact">
-              <label class="govuk-label govuk-radios__label" for="contact">
+              <label class="govuk-label govuk-checkboxes__label" for="contact">
                 Email
               </label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-email">
                   Email address
@@ -58,14 +58,14 @@ Add contact information - Recruitment - {{serviceName}} - GOV.UK
                   type="email" spellcheck="false" autocomplete="email">
               </div>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="phone"
                 data-aria-controls="conditional-contact-2">
-              <label class="govuk-label govuk-radios__label" for="contact-2">
-                Telephone
+              <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+                Telehone
               </label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-2">
               <div class="govuk-form-group">
                 <label class="govuk-label" for="contact-by-phone">
                   Telephone number
