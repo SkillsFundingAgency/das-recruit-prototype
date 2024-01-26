@@ -1,0 +1,50 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Add contact information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+      Contact details for ABC Opticians (optional)
+    </h1>
+    <p class="govuk-body">This should be someone an applicant can contact to ask questions about the apprenticeship position.</p>
+    <form method="post" class="dirty">
+      <div class="govuk-form-group">
+          <label class="govuk-label" for="EmployerContactName">Contact name (optional) </label>
+          <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactName" name="EmployerContactName" value="{% if data.EmployerContactName %}{{data.EmployerContactName}}{%endif%}">
+      </div>
+      <div class="govuk-form-group">
+          <label class="govuk-label" for="EmployerContactEmail">Contact email (optional)</label>
+          <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactEmail" name="EmployerContactEmail" value="{% if data.EmployerContactEmail %}{{data.EmployerContactEmail}}{%endif%}">
+      </div>
+      <div class="govuk-form-group">
+          <label class="govuk-label" for="EmployerContactPhone">Contact number (optional)</label>
+          <input class="govuk-input govuk-input--width-20" type="tel" maxlength="16" id="EmployerContactPhone" name="EmployerContactPhone" value="{% if data.EmployerContactPhone %}{{data.EmployerContactPhone}}{%endif%}">
+      </div>
+      
+      <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
+
+          <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        </div>
+        
+    </form>
+  </div>
+</div>
+{% endblock %}
