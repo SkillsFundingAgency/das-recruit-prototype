@@ -18,32 +18,78 @@ Add contact information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
-      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
-      Contact details for ABC Opticians (optional)
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
+        Apprentice{% endif %}</span>
+      Add contact details
     </h1>
-    <p class="govuk-body">This should be someone an applicant can contact to ask questions about the apprenticeship position.</p>
+    <p class="govuk-body">These contact details will be displayed on your advert</p>
     <form method="post" class="dirty">
       <div class="govuk-form-group">
-          <label class="govuk-label" for="EmployerContactName">Contact name (optional) </label>
-          <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactName" name="EmployerContactName" value="{% if data.EmployerContactName %}{{data.EmployerContactName}}{%endif%}">
+        <label class="govuk-label" for="EmployerContactName">Full name </label>
+        <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactName"
+          name="EmployerContactName" value="{% if data.EmployerContactName %}{{data.EmployerContactName}}{%endif%}">
       </div>
       <div class="govuk-form-group">
-          <label class="govuk-label" for="EmployerContactEmail">Contact email (optional)</label>
-          <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactEmail" name="EmployerContactEmail" value="{% if data.EmployerContactEmail %}{{data.EmployerContactEmail}}{%endif%}">
+        <label class="govuk-label" for="RoleName">Role in company (optional) </label>
+        <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="RoleName" name="RoleName"
+          value="{% if data.RoleName %}{{data.RoleName}}{%endif%}">
       </div>
-      <div class="govuk-form-group">
-          <label class="govuk-label" for="EmployerContactPhone">Contact number (optional)</label>
-          <input class="govuk-input govuk-input--width-20" type="tel" maxlength="16" id="EmployerContactPhone" name="EmployerContactPhone" value="{% if data.EmployerContactPhone %}{{data.EmployerContactPhone}}{%endif%}">
-      </div>
-      
-      <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">
-            Save and continue
-          </button>
 
-          <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
-        </div>
-        
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              How would you like to be contacted?
+            </h1>
+          </legend>
+          <div id="contact-hint" class="govuk-hint">
+            You can select more than one option
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
+                data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Email
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Email address
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contactByEmail"
+                  type="email" spellcheck="false" autocomplete="email">
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+                data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                Telephone
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Telephone number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contactByPhone"
+                  type="tel" autocomplete="tel">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
     </form>
   </div>
 </div>
