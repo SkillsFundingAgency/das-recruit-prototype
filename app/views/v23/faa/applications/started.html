@@ -1,0 +1,120 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Applications</h1>
+
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page" href="#1">Started</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="#2">Submitted</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="#3">Successful</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="#4">Unsuccessful</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <h2 class="govuk-heading-m">Started applications (3)</h2>
+        <p class="govuk-body">Complete any applications as soon as possible. A company may close their vacancy early if
+          they receive a lot of
+          applications.
+        </p>
+        <div class="govuk-!-padding-bottom-5"></div>
+
+        <!-- START cards -->
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-aof" href="vacancy-page-aof.html">
+            Business Apprenticeship</a>
+        </h2>
+        <p class="govuk-body" style="color:#505a5f">
+          AOF Consulting Ltd</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Started on 31 January 2024</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Closes 5 May at 11:59pm
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Continue application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Remove<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <strong class="govuk-tag govuk-tag--orange govuk-!-margin-bottom-2">
+          Closing soon
+        </strong>
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="vacancy-page-02.html">
+            Business Administration Apprentice</a>
+        </h2>
+        <p class="govuk-body" style="color:#505a5f">
+          King Recruitment</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Started on 13 November 2023</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Closes tomorrow at 11:59pm
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Continue application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Remove<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="vacancy-page-02.html">
+            Business Admin Apprentice</a>
+        </h2>
+        <p class="govuk-body" style="color:#505a5f">
+          FIELDS Studios</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Started on 12 November 2023</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Closes 8 April at 11:59pm
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Continue application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Remove<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <!-- END cards -->
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
