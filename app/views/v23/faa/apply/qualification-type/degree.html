@@ -14,32 +14,32 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Add degree</h1>
+    <h1 class="govuk-heading-l">Add a degree</h1>
 
     <form class="form" action="..//application-summary-qualifications" method="post">
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--m" for="degree-type">
-            Type of degree
+            Degree
           </label>
         </h1>
         <div id="event-name-hint" class="govuk-hint">
-          For example BA, MSc, FdEng
+          For example, BSc Mechanical Engineering
         </div>
-        <input class="govuk-input" id="degree-type" name="degree-type" type="degree"
-          value="{{ data['degree-type'] or '' }}">
+        <input class="govuk-input" id="degree-subject" name="degree-subect" type="degree"
+          value="{{ data['degree-subject'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
       <div class="govuk-form-group">
         <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="degree-subject">
-            Course title
+          <label class="govuk-label govuk-label--m" for="university-name">
+            University
           </label>
         </h1>
-        <input class="govuk-input" id="degree-subject" name="degree-subject" type="subject"
-          value="{{ data['degree-subject'] or '' }}">
+        <input class="govuk-input" id="university-name" name="university-name" type="name"
+          value="{{ data['university-name'] or '' }}">
       </div>
       <div class="govuk-!-padding-bottom-3"></div>
 
