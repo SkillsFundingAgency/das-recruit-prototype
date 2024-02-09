@@ -36,6 +36,8 @@ Find an apprenticeship - GOV.UK
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               {{ data['degree-subject'] or 'Linguistics' }} {{ data['degree-type'] or 'MA (Hons)' }}
+              <p class="govuk-body govuk-!-margin-top-1" style="color:#505a5f">
+                University of Edinburgh</p>
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['degree-grade'] or '2:1' }}
@@ -192,7 +194,7 @@ Find an apprenticeship - GOV.UK
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Physical education
+              Physical education (Level 3)
             </dt>
             <dd class="govuk-summary-list__value">
               Merit
@@ -292,7 +294,7 @@ Find an apprenticeship - GOV.UK
       </div>
     </div>
 
-    <form action="application-question-page-qualification-type" method="post">
+    <form action="application-question-page-add-another-qualification.html" method="post">
       <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
         Add another qualification
       </button>
