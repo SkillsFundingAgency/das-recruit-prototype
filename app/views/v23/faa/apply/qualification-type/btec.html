@@ -14,55 +14,63 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
-    <h1 class="govuk-heading-l">Add BTECs</h1>
+    <h1 class="govuk-heading-l">Add a BTEC</h1>
   </div>
 </div>
 
 
 
 <form class="form" action="..//application-summary-qualifications" method="post">
-  <div data-module="moj-add-another">
-    <h2 class="govuk-heading-m moj-add-another__heading" tabindex="-1">Add subjects</h2>
-    <fieldset class="govuk-fieldset moj-add-another__item">
-      <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m govuk-visually-hidden">
-        Subject
-      </legend>
-      <div class="govuk-grid-row app-grid-row--flex">
-        <div class="govuk-grid-column-one-third">
-          <label class="govuk-label" for="subject[0][name]">
-            Subject
-          </label>
-          <input class="govuk-input" id="subject[0][name]" name="subject[0][name]" type="text"
-            data-name="subject[%index%][name]" data-id="subject[%index%][name]">
-        </div>
-        <div class="govuk-grid-column-one-quarter">
-          <label class="govuk-label" for="subject[0][grade]">
-            Grade
-          </label>
-          <input class="govuk-input" id="subject[0][grade]" name="subject[0][grade]" type="text"
-            data-name="subject[%index%][grade]" data-id="subject[%index%][grade]">
-        </div>
-        <div class="govuk-grid-column-one-third">
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="subject[0][predicted]" name="subject[0][predicted]"
-                type="checkbox" value="yes" data-name="subject[%index%][predicted]"
-                data-id="subject[%index%][predicted]">
-              <label class="govuk-label govuk-checkboxes__label" for="subject[0][predicted]">
-                Predicted grade
-              </label>
-            </div>
+  <div class="govuk-form-group govuk-!-width-two-thirds">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--m" for="event-name">
+        Add subjects
+      </label>
+    </h1>
+    <input class="govuk-input" id="event-name" name="eventName" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-label--m" for="event-name">
+      Level
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="select" selected>Select a level</option>
+      <option value="level-1">Level 1</option>
+      <option value="level-2">Level 2</option>
+      <option value="level-3">Level 3</option>
+      <option value="level-4">Level 4</option>
+      <option value="level-5">Level 5</option>
+      <option value="level-6">Level 6</option>
+      <option value="level-7">Level 7</option>
+    </select>
+  </div>
+
+  <fieldset class="govuk-fieldset moj-add-another__item">
+    <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m govuk-visually-hidden">
+      Subject
+    </legend>
+    <div class="govuk-grid-row app-grid-row--flex">
+      <div class="govuk-grid-column-one-quarter">
+        <label class="govuk-heading-m" for="subject[0][grade]">
+          Grade
+        </label>
+        <input class="govuk-input" id="subject[0][grade]" name="subject[0][grade]" type="text"
+          data-name="subject[%index%][grade]" data-id="subject[%index%][grade]">
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="subject[0][predicted]" name="subject[0][predicted]"
+              type="checkbox" value="yes" data-name="subject[%index%][predicted]" data-id="subject[%index%][predicted]">
+            <label class="govuk-label govuk-checkboxes__label" for="subject[0][predicted]">
+              Predicted grade
+            </label>
           </div>
         </div>
       </div>
-    </fieldset>
-    <div class="moj-button-action">
-      <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-top-6"
-        data-module="govuk-button">
-        Add another subject
-      </button>
     </div>
-  </div>
+  </fieldset>
 
   <div class="govuk-!-padding-bottom-6"></div>
 
