@@ -709,4 +709,26 @@ module.exports = function (router) {
     }
   })
 
+  // APPLICATION QUESTION PAGE - QUALIFICATION TYPE - employer - no - js
+  router.post('/' + base_url + 'employer/create/select-qualification-no-js/action', function (req, res) {
+    var qual = req.session.data['qualification-employer-no-js'];
+
+    if (qual === "gcse") {
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/gcse');
+    } else if (qual === "a-level") {
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/a-level');
+    } else if (qual === "btec") {
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/btec');
+    } else if (qual === "degree") {
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/degree');
+    } else if (qual === "t-level") {
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/t-level');
+    } else if (qual === "other") {
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/other');
+    } else {
+      // Handle any other cases or invalid values here
+      res.redirect('/' + base_url + 'employer/create/qualification-type-no-js/default'); // You can replace 'default' with an appropriate route
+    }
+  })
+
 }

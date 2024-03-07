@@ -1,16 +1,13 @@
-{% extends "ma-layout.html" %}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
-What qualifications would you like the applicant to have? - Your apprenticeship advert - {{serviceName}} - GOV.UK
+Qualifications - Recruitment - {{serviceName}} - GOV.UK
 {% endblock %}
-
 
 {% block beforeContent %}
 {{super()}}
 <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
-
-
 
 {% block content %}
 
@@ -25,43 +22,43 @@ What qualifications would you like the applicant to have? - Your apprenticeship 
       </h1>
     </legend>
 
-    <form class="qualification-type-employer-no-js-form" id="qualification-type-employer-no-js-form" action="/v23/employer/create/select-qualification-no-js/action"
+    <form class="qualification-type-provider-no-js-form" id="qualification-type-provider-no-js-form" action="/v23/provider/create/select-qualification-no-js/action"
       method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
-              <input class="govuk-radios__input" id="gcse" name="qualification-employer-no-js" type="radio" value="gcse">
+            <div class="govuk-radios__item" data-target="qualification-type-provider-no-js">
+              <input class="govuk-radios__input" id="gcse" name="qualification-provider-no-js" type="radio" value="gcse">
               <label class="govuk-label govuk-radios__label" for="qualification">
                 GCSE
               </label>
             </div>
-            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
-              <input class="govuk-radios__input" id="a-level" name="qualification-employer-no-js" type="radio" value="a-level">
+            <div class="govuk-radios__item" data-target="qualification-type-provider-no-js">
+              <input class="govuk-radios__input" id="a-level" name="qualification-provider-no-js" type="radio" value="a-level">
               <label class="govuk-label govuk-radios__label" for="a-level">
                 A level
               </label>
             </div>
-            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
-              <input class="govuk-radios__input" id="t-level" name="qualification-employer-no-js" type="radio" value="t-level">
+            <div class="govuk-radios__item" data-target="qualification-type-provider-no-js">
+              <input class="govuk-radios__input" id="t-level" name="qualification-provider-no-js" type="radio" value="t-level">
               <label class="govuk-label govuk-radios__label" for="t-level">
                 T level
               </label>
             </div>
-            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
-              <input class="govuk-radios__input" id="btec" name="qualification-employer-no-js" type="radio" value="btec">
+            <div class="govuk-radios__item" data-target="qualification-type-provider-no-js">
+              <input class="govuk-radios__input" id="btec" name="qualification-provider-no-js" type="radio" value="btec">
               <label class="govuk-label govuk-radios__label" for="btec">
                 BTEC
               </label>
             </div>
-            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
-              <input class="govuk-radios__input" id="degree" name="qualification-employer-no-js" type="radio" value="degree">
+            <div class="govuk-radios__item" data-target="qualification-type-provider-no-js">
+              <input class="govuk-radios__input" id="degree" name="qualification-provider-no-js" type="radio" value="degree">
               <label class="govuk-label govuk-radios__label" for="degree">
                 Degree
               </label>
             </div>
-            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
-              <input class="govuk-radios__input" id="other" name="qualification-employer-no-js" type="radio"
+            <div class="govuk-radios__item" data-target="qualification-type-provider-no-js">
+              <input class="govuk-radios__input" id="other" name="qualification-provider-no-js" type="radio"
                 value="other">
               <label class="govuk-label govuk-radios__label" for="other">
                 Other
