@@ -1,0 +1,96 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Get started with the recruitment APIs as an employer - Recruitment collection - GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Apprenticeships</a>
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds contents-list">        
+        <!--<span class="govuk-caption-xl gem-c-title__context">Collection</span>-->        
+        <h1 class="govuk-heading-xl">Get started with the recruitment APIs as an employer</h1>      
+          
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds mainstream-guide-content">
+        <h2 class="govuk-heading-l">What do our APIs do?</h2> 
+        <p class="govuk-body">
+          APIs (Application Programming Interfaces) let applications share information and data with each other.
+          <br><br>
+          We have two APIs you can use:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Recruitment API</strong> &ndash; our Recruitment API allows you to create adverts on Find an apprenticeship using your own systems</li>
+          <li><strong>Display adverts API</strong> &ndash; our Display adverts API allows you to display adverts from Find an apprenticeship on your own websites</li>
+        </ul>
+        <h2 class="govuk-heading-l">How do I use the APIs?</h2> 
+        <div class="govuk-inset-text">
+          You'll need someone with technical knowledge to connect your system with the API, for example a software developer.
+        </div>
+        <p class="govuk-body">
+          You can share this <a href="get-started#working-together" class="govuk-link govuk-link--no-visited-state">developer get started page</a> with the person who is going to connect your system with the API, they can access the API from there.             
+          <br><br>
+          You will need to give your developer API keys. The keys give your developer permission to connect to the API on your behalf.
+          <br><br>
+          Your developer will also be able to try out the API using the sandbox provided.
+        </p>
+        <h2 class="govuk-heading-l">Where do I access the API Key?</h2>
+        <p class="govuk-body">
+          <!-- need to add a deep link to ../employer/api/api-list on the login screen -->
+          If you have owner permissions you will be able to access the <a href="../employer/login" class="govuk-link govuk-link--no-visited-state">API keys here</a>.
+        </p>
+
+        <ul class="gem-c-pagination__list" data-module="gem-track-click">
+              <li class="gem-c-pagination__item gem-c-pagination__item--next">
+                <a href="/how-to-vote/voting-and-coronavirus" class="govuk-link gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/how-to-vote/voting-and-coronavirus" data-track-dimension="next" data-track-dimension-index="29">
+                  <span class="gem-c-pagination__link-title">
+                    <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                      <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                    </svg>
+                    <span class="gem-c-pagination__link-text">Next</span>
+                  </span>
+                  <!--<span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                  <span class="gem-c-pagination__link-label">Voting and coronavirus (COVID-19)</span>-->
+                </a>
+              </li>
+          </ul>
+          <!--<div class="pagination">
+            <p class="govuk-heading-s"><a href="#" class="pagination-link">Next</a></p>
+            <p class="govuk-body-s pagination-subtitle-link"><a href="#">Voting and coronavirus (COVID-19)</a></p>
+          </div>-->
+      </div>
+
+    <div class="govuk-grid-column-one-third">
+      <div class="related-navigation">
+        <h2 class="govuk-heading-s">Related content</h2>
+        <ul class="govuk-list related-links">
+          <li class="govuk-body-s"><a href="dev-to-user-email" class="govuk-link govuk-link--no-visited-state">List item 1</a></li>
+          <li class="govuk-body-s"><a href="../employer/login" class="govuk-link govuk-link--no-visited-state">List item 2</a></li>          
+          <li class="govuk-body-s"><a href="../provider/login" class="govuk-link govuk-link--no-visited-state">List item 3</a></li>          
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

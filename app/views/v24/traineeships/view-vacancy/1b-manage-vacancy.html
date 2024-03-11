@@ -1,0 +1,111 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    {% if data.alert=="clone" and data.user=='employer'%}
+    <div class="govuk-info-basic ">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <!-- <span class="govuk-!-font-weight-bold">Activity</span> -->
+          <p class="govuk-body">You can now clone from the any vacancy management page. From your vacancies dashabord search for a vacancy and click manage.</p>
+          <p class="govuk-body govuk-!-margin-bottom-0"><a href="?alert=none" class="govuk-link--no-visited-state">Dismiss this notification</a></p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <h1 class="govuk-heading-xl">Manage vacancy</h1>
+
+
+
+<!-- ////START SUMMARY//// -->
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Pending DfE review
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Vacancy title
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Electronic Engineering Technician Apprentice
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Vacancy reference
+    </dt>
+    <dd class="govuk-summary-list__value">
+      VAC1000000997
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Closing date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">01 Jan 2022</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Possible start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">01 Aug 2022</p>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Disability confident
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">Yes</p>
+    </dd>
+  </div>
+</dl>
+<!-- ////END SUMMARY//// -->
+    
+
+    <div class="grid-row">
+      <div class="column-full">
+
+        <p class="govuk-body">
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="view">View vacancy</a> &nbsp;
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone vacancy</a> &nbsp;
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Delete vacancy</a> 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-l">Manage applications</h2>
+   
+    <p>
+      Candidate applications for this apprenticeship will appear here.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  
+    <div class="govuk-form-group">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Optical Assistant Traineeship{% endif %}</span>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--xl" for="OutcomeDescription">
+          What is the expected career progression after this traineeship?
+        </label>
+      </h1>
+      <div id="with-hint-hint" class="govuk-hint">
+        You may want to mention specific routes they could take. For example, an apprenticeship, employment or further education.
+      </div>
+      <textarea class="govuk-textarea" id="OutcomeDescription" name="OutcomeDescription" rows="5" aria-describedby="OutcomeDescription-info OutcomeDescription-hint"></textarea>
+    </div>
+    
+    <form method="post">
+      <div class="govuk-form-group">
+        {{ govukButton({
+          text: "Save and continue",
+          href: "things-to-consider"
+        }) }}   
+        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+     
+      </div>
+    </form>
+
+  </div>
+</div>
+{% endblock %}

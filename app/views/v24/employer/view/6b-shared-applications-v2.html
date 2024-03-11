@@ -1,0 +1,189 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="6-shared-new" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Entry Level Development Engineer Apprentice</span>
+    <h1 class="govuk-heading-l">Shared applications</h1>
+
+    <p>
+      Each application is anonymised. If you decide to interview the applicant, you will be able to see their name and contact information.
+    </p>
+
+<!-- table START -->
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{%
+  set appsTableData = [
+    {
+      id: "C5662EA",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "LP07688",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "LHK76TY",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "CP765D8",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "R384JP4",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "B1003GH",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    },
+    {
+      id: "KR9678F",
+      status: "RESPONSE NEEDED",
+      link: "../account/application-shared-v2",
+      classes: "govuk-tag--blue",
+      date: "Not reviewed"
+    }
+]
+%}
+    <table class="govuk-table responsive-table" data-module="das-table-sort">
+      <thead class="govuk-table__header">
+        <tr class="govuk-table__row" role="row">
+
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Applicant</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Reviewed</a>
+          </th>
+          <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+            <a href="#" class="govuk-link das-table__sort">Response</a>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        {% for applicant in appsTableData %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
+            <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a></td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }} </td>
+          <td class="govuk-table__cell" role="gridcell" data-label="Status">
+            {{ govukTag({
+              text: applicant.status, 
+              classes: applicant.classes
+            }) }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+<!-- table END -->
+
+</div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+
+<!-- Today's date -->
+<script>
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+ var n = new Date();
+ var y = n.getFullYear();
+ var m = n.getMonth();
+ var d = n.getDate();
+ document.getElementById("date").innerHTML = d + " " + months[m] + " " + y;
+   </script>
+
+<!-- Table sorts -->
+<script>
+  const selectAllCB = document.getElementById("select-all-applications");
+  const allApplicantsCB = document.getElementsByName('applications');
+
+  const tableSort = () => {
+    const getCellValue = (tr, idx) => {
+      return tr.children[idx].innerText || tr.children[idx].textContent
+    };
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+                    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
+    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
+
+    const handleClick = event => {
+      event.preventDefault();
+      const sortLink = event.target
+
+      allSortLinks.forEach(link => {
+        if (link === event.target) return false;
+        link.parentNode.classList.add("das-table--double-arrows")
+        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
+        link.setAttribute("aria-sort", "none")
+      });
+
+      if (sortLink.classList.contains("das-table__sort--asc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      } else if (sortLink.classList.contains("das-table__sort--desc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
+        sortLink.setAttribute("aria-sort", "ascending")
+      } else {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.add("das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      }
+
+      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
+              .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+                      .indexOf(sortLink.parentNode), this.asc = !this.asc))
+              .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+    }
+
+    allSortLinks.forEach(link => {
+      link.addEventListener('click', handleClick)
+    });
+  }
+
+  if (document.querySelector('[data-module="das-table-sort"]')) {
+    tableSort();
+  }
+</script>
+
+{% endblock %}

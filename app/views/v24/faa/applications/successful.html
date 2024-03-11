@@ -1,0 +1,74 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Applications</h1>
+
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./started.html" href="#1">Started</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./submitted.html">Submitted</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page">Successful</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./unsuccessful.html">Unsuccessful</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <h2 class="govuk-heading-m">Successful applications (1)</h2>
+        <p class="govuk-body">
+          The company should now be in contact with you to discuss your next steps.
+          Learn <a href="https://www.apprenticeships.gov.uk/apprentices/preparing-apprenticeship" class="govuk-link govuk-link--no-visited-state">how to prepare for an apprenticeship (opens in new tab)</a>.
+        </p>
+        <div class="govuk-!-padding-bottom-5"></div>
+
+        <!-- START cards -->
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-aof" href="vacancy-page-aof.html">
+            Business Apprenticeship</a>
+        </h2>
+        <p class="govuk-body" style="color:#505a5f">
+          Aspect 3 Apartments LTD</p>
+        <p class="govuk-body">Offered to you on 1 February 2024</p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <!-- END cards -->
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

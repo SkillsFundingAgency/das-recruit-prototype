@@ -1,0 +1,94 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+How much would you like to pay the apprentice? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- {{minWage}} -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if data.error == "wages" %}
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+      data-module="error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#yearly-wage-issue">The yearly wage must be at least £{{minWage}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    <div class="govuk-form-group">
+      <form method="post" action="positions">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+              Technician Apprentice{% endif %}</span>
+            <h1 class="govuk-fieldset__heading">
+              Extra information about pay and benefits (optional)
+            </h1>
+          </legend>
+
+        </fieldset>
+    </div>
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-minlength="50" data-maxlength="250">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="WageAdditionalInformation">
+          Information about pay (optional)
+        </label>
+        <div id="WageAdditionalInformation-hint" class="govuk-hint">
+          Mention anything that affects the apprentice’s wage. For example, a planned salary increase. This will be
+          displayed next
+          to the annual wage
+        </div>
+        <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count"
+          id="WageAdditionalInformation" name="WageAdditionalInformation" rows="5"></textarea>
+      </div>
+      <div id="WageAdditionalInformation-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 250 characters
+      </div>
+    </div>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <div class="govuk-character-count" data-module="govuk-character-count" data-minlength="50" data-maxlength="250">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="WageAdditionalInformation">
+          Company benefits (optional)
+        </label>
+        <div id="WageAdditionalInformation-hint" class="govuk-hint">
+          Mention benefits your company offers. For example, you pay for a gym membership. This will be displayed next
+          to
+          information about your company
+        </div>
+        <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count"
+          id="WageAdditionalInformation" name="WageAdditionalInformation" rows="5"></textarea>
+      </div>
+      <div id="WageAdditionalInformation-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 250 characters
+      </div>
+    </div>
+
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+      <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+    </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

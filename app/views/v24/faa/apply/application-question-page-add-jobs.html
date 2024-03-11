@@ -1,0 +1,181 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-jobs.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Work history</span>
+    <h1 class="govuk-heading-l">Add a job</h1>
+    <div class="govuk-!-padding-bottom-3"></div>
+    <form class="form" action="application-summary-jobs" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="training-provider-name">
+            Job title
+          </label>
+        </h1>
+        <input class="govuk-input" id="role-name" name="role-name" type="role" value="{{ data['role-name'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="employer-name">
+            Company
+          </label>
+        </h1>
+        <input class="govuk-input" id="employer-name" name="employer-name" type="employer"
+          value="{{ data['employer-name'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="100">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Responsibilities
+            </label>
+          </h2>
+          <div id="event-name-hint" class="govuk-hint">
+            Describe what you did at work
+          </div>
+          <textarea class="govuk-textarea govuk-js-character-count" id="what-you-did-in-the-role"
+            name="what-you-did-in-the-role" rows="5"
+            aria-describedby="what-you-did-in-the-role-info">{{ data['what-you-did-in-the-role'] or '' }}</textarea>
+        </div>
+        <div id="what-you-did-in-the-role-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint">300 words remaining</p>
+        </div>
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Start date
+            </label>
+          </h2>
+          <div id="event-name-hint" class="govuk-hint">
+            For example 08 2019
+          </div>
+          <div class="govuk-date-input" id="start-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="start-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-date-month"
+                  name="start-date-month" type="text" inputmode="numeric"
+                  value="{{ data['work-start-date-month'] or '' }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="start-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-date-year"
+                  name="start-date-year" type="text" inputmode="numeric"
+                  value="{{ data['work-start-date-year'] or '' }}">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-!-padding-bottom-3"></div>
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Is this your current role?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustments" name="interview-adjustments" type="radio"
+                value="yes" data-aria-controls="conditional-interview-adjustments">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-interview-adjustments">
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="interview-adjustments-2" name="interview-adjustments" type="radio"
+                value="no" data-aria-controls="conditional-interview-adjustments-2">
+              <label class="govuk-label govuk-radios__label" for="interview-adjustments-2">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-interview-adjustments-2">
+              <div class="govuk-form-group">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    End date
+                  </h1>
+                </legend>
+                <div id="end-date-hint" class="govuk-hint">
+                  For example, 8 2022
+                </div>
+                <div class="govuk-date-input" id="end-date">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="end-date-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-date-month"
+                        name="end-date-month" type="text" inputmode="numeric"
+                        value="{{ data['work-end-date-month'] or '' }}">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="end-date-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-date-year"
+                        name="end-date-year" type="text" inputmode="numeric"
+                        value="{{ data['work-end-date-year'] or '' }}">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-button-group" href="application-summary-jobs.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

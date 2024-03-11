@@ -1,0 +1,46 @@
+{% extends "ma-home-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<form method="post" action="7b-check-unsuccessful-single">
+
+    <h1 class="govuk-heading-l"> Give feedback to Ellen Collins</h1>
+
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="200">
+      <div class="govuk-form-group">
+        <div id="sign-in-hint" class="govuk-hint">
+          Help the applicant understand why their application was unsuccessful. Your comments will be sent to the applicant.
+        </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="contact-by-unsuccessful" rows="8" aria-describedby="word-count-info"></textarea> 
+      </div>
+    
+      <div id="word-count-info" class="govuk-hint govuk-character-count__message">
+        You can enter up to 200 words
+      </div>
+    </div>
+
+  
+
+    <button class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+
+</form>
+
+  </div>
+</div>
+
+{% endblock %}
