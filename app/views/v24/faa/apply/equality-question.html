@@ -37,33 +37,34 @@ Find an apprenticeship - GOV.UK
         <p class="govuk-body">We’ll never share your answers when you apply for an apprenticeship.</p>
         <div class="govuk-!-padding-bottom-5"></div>
 
-        <form class="form" action="equality-question-sex-gender" method="post">
+        <form class="equality-question-form" id="equality-question-form"
+          action="/v24/faa/apply/equality-question/action" method="post">
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="equalitiesInfo-hint">
+            <fieldset class="govuk-fieldset" aria-describedby="equality-question">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                 Do you want to answer the equality questions?
               </legend>
               <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="equalitiesInfo" name="equalitiesInfo" type="radio" value="yes">
-                  <label class="govuk-label govuk-radios__label" for="equalitiesInfo">
+                <div class="govuk-radios__item" data-target="equality-question">
+                  <input class="govuk-radios__input" id="yes-equality" name="equality-question" type="radio"
+                    value="yes-equality">
+                  <label class="govuk-label govuk-radios__label" for="yes-equality">
                     Yes, answer our equality questions (4 questions)
                   </label>
                 </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="equalitiesInfo-2" name="equalitiesInfo" type="radio"
-                    value="no">
-                  <label class="govuk-label govuk-radios__label" for="equalitiesInfo-2">
+                <div class="govuk-radios__item" data-target="equality-question">
+                  <input class="govuk-radios__input" id="no-equality" name="equality-question" type="radio"
+                    value="no-equality">
+                  <label class="govuk-label govuk-radios__label" for="no-equality">
                     No, don’t answer the equality questions
                   </label>
                 </div>
               </div>
             </fieldset>
           </div>
-          <div class="govuk-button-group" href="equality-question-sex-gender.html">
-            <button class="govuk-button" data-module="govuk-button">
-              Continue
-            </button>
+
+          <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
           </div>
         </form>
       </div>
