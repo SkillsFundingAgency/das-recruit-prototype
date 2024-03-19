@@ -13,63 +13,88 @@ Find an apprenticeship - GOV.UK
 
 
 <div class="govuk-width-container">
-  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+  <main class="govuk-main-wrapper">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-xl">Withdraw your application for Business Apprenticeship at Globe management LTD</h1>
-
-        <p class="govuk-body">Withdraw this application if:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>you are no longer interested in the apprenticeship (for example, you have been offered another
-            apprenticeship)</li>
-          <li>you need to change your application (there’s a mistake in your answers)</li>
-        </ul>
-
-        <div class="govuk-inset-text">
-          You can apply again after withdrawing. Submit your application before this apprenticeship closes.
-        </div>
-
-        <div class="govuk-form-group">
-          <form class="form" action="application-summary-jobs" method="post">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <h1 class="govuk-fieldset__heading">
-                  Are you sure you want to withdraw this application?
-                </h1>
-              </legend>
-              <div class="govuk-radios" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio"
-                    value="england">
-                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-                    Yes
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
-                    value="scotland">
-                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
-
-            <div class="govuk-!-padding-bottom-5"></div>
-            <div class="govuk-button-group" href="application-summary-jobs.html">
-              <button class="govuk-button" data-module="govuk-button">
-                Confirm
-              </button>
-            </div>
-          </form>
-
-
-
-
-        </div>
+        <h1 class="govuk-heading-l">Withdraw your application</h1>
+        </p>
       </div>
+    </div>
   </main>
+</div>
+
+<div class="govuk-grid-column-two-thirds"
+  style="background-color:#F3F2F1; padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px">
+
+  <h3 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
+    Business admin apprentice
+  </h3>
+  <p class="govuk-body govuk-!-margin-bottom-5
+  " style="color:#505a5f">
+    King recruitment LTD</p>
+  <p class="govuk-body govuk-!-margin-bottom-0">Submitted on 1 February 2024</p>
+  <p class="govuk-body govuk-!-margin-bottom-1">Closes on 3 March 2024</p>
+</div>
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-7"></div>
+    <p class="govuk-body">Withdraw this application if:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>you’re no longer interested in this apprenticeship</li>
+      <li>you need to change something in your application</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      You can apply again after withdrawing. Submit your application before this apprenticeship closes on Friday 24
+      February.
+    </div>
+
+    <div class="govuk-form-group">
+      <form class="form" action="application-summary-jobs" method="post">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Are you sure you want to withdraw this application?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="govuk-!-padding-bottom-5"></div>
+        <div class="govuk-button-group" href="application-summary-jobs.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Confirm
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+</main>
 </div>
 
 {% endblock %}
