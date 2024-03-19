@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="submitted.html">Back</a>
+<a class="govuk-back-link" href="started.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -43,12 +43,12 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body">You’ll lose your progress on this application.</p>
 
     <div class="govuk-!-padding-bottom-3"></div>
-    <form action="..//application-summary-jobs" method="post" novalidate>
-      <div class="govuk-button-group" href="..//application-summary-jobs.html">
+    <form action="./delete-application-success-banner" method="post" novalidate>
+      <div class="govuk-button-group" href="./delete-application-success-banner.html">
         <button class="govuk-button govuk-button--warning" data-module="govuk-button">
           Yes, delete
         </button>
-        <a class="govuk-link" href="..//application-summary-jobs.html">Cancel – don't delete</a>
+        <a class="govuk-link" href="./started.html">Cancel – don't delete</a>
       </div>
     </form>
 
