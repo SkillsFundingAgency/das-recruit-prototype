@@ -12,7 +12,7 @@
     "@ministryofjustice/frontend": "^2.0.0",
     "govuk-frontend": "5.2.0",
     "govuk-one-login-service-header": "github:alphagov/di-govuk-one-login-service-header",
-    "govuk-prototype-kit": "13.16.0",
+    "govuk-prototype-kit": "13.16.1",
     "jquery": "3.7.1",
     "notifications-node-client": "7.0.6",
     "radio-button-redirect": "1.2.0"
