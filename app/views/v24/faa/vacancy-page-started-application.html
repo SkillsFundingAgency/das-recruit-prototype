@@ -1,4 +1,4 @@
-{% extends "layout-guidance.html" %}
+{% extends "gov-uk-one-search.html" %}
 
 {% block pageTitle %}
 Find an apprenticeship - GOV.UK
@@ -20,11 +20,32 @@ Find an apprenticeship - GOV.UK
 {% block content %}
 
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+      data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          Application started.
+          <a class="govuk-notification-banner__link" href="./apply/application-task-list-returning-user.html">Continue
+            your application</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Business Administration Apprentice</h1>
     <p class="govuk-caption-l" style="color:#0b0c0c">King Recruitment</p>
     <p class="govuk-caption-l govuk-!-margin-bottom-5" style="color:	#505a5f">Sheffield, S3 7GE</p>
-    <p class="govuk-body govuk-!-margin-bottom-1">Closes in 5 days (14 October at 11:59pm)</p>
+    <p class="govuk-body govuk-!-margin-bottom-1">Closes on 23 June 2024</p>
     <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
       Posted on 19 September</p>
 
@@ -430,10 +451,12 @@ Find an apprenticeship - GOV.UK
     </ul>
 
     <h3 class="govuk-heading-s">Disability Confident</h3>
-    <p class="govuk-body">A fair proportion of interviews for this apprenticeship will be offered to applicants with a disability or long-term
-    health condition. This includes non-visible disabilities and conditions.</p>
-    <p class="govuk-body">You can choose to be considered for an interview under the Disability Confident scheme. You’ll need to meet the
-    essential requirements to be considered for an interview.</p>
+    <p class="govuk-body">A fair proportion of interviews for this apprenticeship will be offered to applicants with a
+      disability or long-term
+      health condition. This includes non-visible disabilities and conditions.</p>
+    <p class="govuk-body">You can choose to be considered for an interview under the Disability Confident scheme. You’ll
+      need to meet the
+      essential requirements to be considered for an interview.</p>
     <img src="/public/images/disability-confident.png" width="150px">
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
@@ -463,14 +486,14 @@ Find an apprenticeship - GOV.UK
 
     <!-- START apply -->
     <h2 class="govuk-heading-m govuk-!-margin-bottom-3" id="apply-now">Apply now</h2>
-    <p class="govuk-body">Closes in 5 days (14 October at 11:59pm)</p>
+    <p class="govuk-body">Closes on 23 June 2024</p>
     <p class="govuk-body">When you apply, you’ll be asked to sign in with a GOV.UK One Login. You can create one at the
       same time as applying for
       this apprenticeship.</p>
     <form class="form" action="govuk-one-login/sign-in-or-create" method="post">
       <div class="govuk-button-group" href="govuk-one-login/sign-in-or-create.html">
         <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
-          Sign in to apply
+          Continue your application
         </button>
       </div>
     </form>
