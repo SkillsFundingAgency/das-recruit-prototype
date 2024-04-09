@@ -1,4 +1,4 @@
-{% extends "gov-uk-one.html" %}
+{% extends "gov-uk-one-saved-vacancies.html" %}
 
 {% block pageTitle %}
 Find an apprenticeship - GOV.UK
@@ -17,7 +17,21 @@ Find an apprenticeship - GOV.UK
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-xl">Saved vacancies</h1>
-        <hr class="govuk-section-break govuk-section-break-non-visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+
+        <!-- START sort -->
+
+        <div class="govuk-form-group">
+          <label for=" sorting">Sort by</label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="distance" selected>Recently saved</option>
+            <option value="closing">Closing soonest</option>
+            <option value="salary-decending">Alphabetically</option>
+          </select>
+        </div>
+
+        <!-- END sort -->
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
 
         <!-- START cards -->
         <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
@@ -50,44 +64,43 @@ Find an apprenticeship - GOV.UK
         <p class="govuk-body govuk-!-margin-bottom-0">Sunshine Records Limited</p>
         <p class="govuk-body" style="color:#505a5f">
           Sheffield, S2 F1G</p>
-        <p class="govuk-body govuk-!-margin-bottom-1">Started on 31 January 2024</p>
+        <p class="govuk-body govuk-!-margin-bottom-1">Saved on 11 March 2024</p>
         <p class="govuk-body">
-          Closes 5 May at 11:59pm
+          Closes tomorrow at 11:59pm
         </p>
 
         <ul class="govuk-summary-list__actions-list">
-          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Continue application<span
-                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Apply now<span
+                class="govuk-visually-hidden"> apply</span></a></li>
           <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
-              href="./delete-application-started.html">Delete<span class="govuk-visually-hidden"> contact
-                details</span></a></li>
+              href="./delete-application-started.html">Remove<span class="govuk-visually-hidden"> remove</span></a></li>
         </ul>
 
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
         <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
           <a class="das-search-results__link" id="vacancy-page-02" href="..//vacancy-page-02.html">
-            Business Admin Apprentice</a>
+            Business Adminstration Apprenticeship</a>
         </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Five minds research LTC</p>
         <p class="govuk-body" style="color:#505a5f">
-          FIELDS Studios</p>
-        <p class="govuk-body govuk-!-margin-bottom-0">Started on 12 November 2023</p>
-        <p class="govuk-body" style="color:#505a5f">
-          Closes 8 April at 11:59pm
+          Sheffield, S18 7FA</p>
+        <p class="govuk-body govuk-!-margin-bottom-1">Saved on 3 January 2024</p>
+        <p class="govuk-body">
+          Closes 23 June at 11:59pm
         </p>
 
         <ul class="govuk-summary-list__actions-list">
-          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Continue application<span
-                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Apply on company’s website
+              (opens in new tab)<span class="govuk-visually-hidden"> apply</span></a></li>
           <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
-              href="./delete-application-started.html">Delete<span class="govuk-visually-hidden"> contact
-                details</span></a></li>
+              href="./delete-application-started.html">Remove<span class="govuk-visually-hidden"> Remove</span></a></li>
         </ul>
 
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
         <!-- END cards -->
 
         <h2 class="govuk-heading-m govuk-!-margin-top-9">Expired</h2>
-        <p class="govuk-body">Applications you started for vacancies that closed.
+        <p class="govuk-body">Apprenticeships that have now closed.
         </p>
 
         <details class="govuk-details">
@@ -98,23 +111,18 @@ Find an apprenticeship - GOV.UK
           </summary>
           <div class="govuk-details__text">
             <hr class="govuk-section-break govuk-section-break-non-visible govuk-!-margin-bottom-6 ">
-            <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
-              <a class="das-search-results__link" id="vacancy-aof" href="vacancy-page-aof.html">
-                Business Admin Apprenticeship</a>
-            </h2>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Business admin apprenticeship</h2>
+            <p class="govuk-body govuk-!-margin-bottom-0">Kapten services LTD</p>
             <p class="govuk-body" style="color:#505a5f">
-              Luna Tech Ltd</p>
-            <p class="govuk-body govuk-!-margin-bottom-0">Started on 30 October 2023</p>
-            <p class="govuk-body" style="color:#505a5f">
-              Closed 12 December 2023
+              Sheffield, S12 8SB</p>
+            <p class="govuk-body govuk-!-margin-bottom-1">Saved on 12 December 2023</p>
+            <p class="govuk-body">
+              Closed on 8 March
             </p>
 
             <ul class="govuk-summary-list__actions-list">
-              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">View application<span
-                    class="govuk-visually-hidden"> contact details</span></a></li>
-              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
-                  href="./delete-application-expired.html">Delete<span class="govuk-visually-hidden"> contact
-                    details</span></a></li>
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Remove<span
+                    class="govuk-visually-hidden"> remove</span></a></li>
             </ul>
             <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 ">
           </div>
