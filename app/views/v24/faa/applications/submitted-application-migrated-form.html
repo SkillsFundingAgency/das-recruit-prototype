@@ -57,25 +57,16 @@ Find an apprenticeship - GOV.UK
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Date of birth
-          <p class="govuk-body">
-            {{ data['date-of-birth-day'] or '28' }} {{ data['date-of-birth-month'] or 'April' }} {{
-            data['date-of-birth-year'] or '1999' }}
-          </p>
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <p class="govuk-body govuk-!-font-weight-bold">Phone</p>
-          {{ data['phone-number'] or '07700 9009754' }}
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
           Address
           <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage</p>
           <p class="govuk-body govuk-!-margin-bottom-0">London</p>
           <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
           </p>
         </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-font-weight-bold">Phone</p>
+          {{ data['phone-number'] or '07700 9009754' }}
+        </dd>
       </div>
     </dl>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
