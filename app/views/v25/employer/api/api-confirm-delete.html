@@ -1,0 +1,68 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Key for API - Apprenticeships - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Are you sure you want to delete this key?</h1>
+  
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        Deleting the key will disable the previous key and will stop your API from working until you get a new key.
+      </strong>
+    </div>
+
+      <form method="post" action="">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="api_delete_yes" name="api_delete" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="api-delete-no">
+                Yes, delete API key
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="api_delete_no" name="api_delete" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="api_delete_no">
+                No, do not delete API key
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save
+      </button>
+    </form>
+
+   </div>
+</div>
+{% endblock %}
+
+<!-- {% block pageScripts %}
+{{super()}}
+<script src="/public/javascripts/select2.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#apprenticeship-type').select2();
+  });
+</script>
+
+{% endblock %} -->

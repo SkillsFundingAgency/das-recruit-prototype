@@ -1,0 +1,57 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Confirm renewal of API key - Apprenticeships - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" novalidate>
+      {{ govukRadios({
+        idPrefix: "confirm-key",
+        name: "confirm-key",
+        fieldset:
+        {
+          legend:
+          {
+            text: "Are you sure you want to renew this key?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--xl govuk-!-margin-bottom-6"
+          }
+        },
+        hint: {
+          text: "Renewing the key will disable the previous key and will stop your API from working until you use the new key."
+        },
+        items: [
+        {
+          value: "yes~api-hub-new-key",
+          text: "Yes",
+          attributes:
+          {
+            required: required
+          }
+        },
+        {
+          value: "no~api-hub",
+          text: "No"
+        }
+        ]
+      }) }}
+
+      <p>
+        {{ govukButton ({
+          text: "Continue"
+        })}}
+      </p>
+    </form>
+  </div>
+
+  {% endblock %}

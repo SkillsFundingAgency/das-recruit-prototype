@@ -1,0 +1,81 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage advert
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Entry Level Development Engineer Apprentice</h1>
+
+  
+    <p class="govuk-body-l">Advert reference: VAC1000000997</p>
+
+    <p>This advert has been sent to us for review. We'll tell you within 24 hours if you need to make any edits to this advert.</p>
+
+<!-- ////START vacancy summry//// -->
+<h2 class="govuk-heading-m">Advert summary</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Status
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <strong class="govuk-tag govuk-tag--orange">
+        Pending DfE review
+      </strong>
+    </dd>
+    <!-- <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">
+        Close  <span class="govuk-visually-hidden"> vacancy</span>
+      </a>
+    </dd> -->
+  </div>
+
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Closing date
+      <br>
+      <br>
+      Possible start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+      31 Jan 2023
+      <br>
+      <br>
+      01 Feb 2023
+    </dd>
+    <!-- <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="3c-dates">
+        Change<span class="govuk-visually-hidden"> vacancy dates</span>
+      </a>
+    </dd> -->
+  </div>
+</dl>
+
+        <p class="govuk-body">
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="view">View advert</a> &nbsp;
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone advert</a> &nbsp;
+          <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Delete advert</a> &nbsp;
+        </p>
+    
+<!-- END vacancy summary  -->
+
+<br>
+
+
+
+</div>
+</div>
+
+{% endblock %}

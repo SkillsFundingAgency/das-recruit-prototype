@@ -1,0 +1,151 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-add-training-courses.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Training courses</h1>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"> {{ data['course-name'] or 'E33 Building Safety' }}</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="./delete/training-courses.html">
+              Delete<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="application-question-page-add-training-courses">
+              Change<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['year-achieved'] or '2018' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title"> Fire safety</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="..//apply/delete/training-courses.html">
+              Delete<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="application-question-page-add-training-courses">
+              Change<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2017
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Project management</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="..//apply/delete/training-courses.html">
+              Delete<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="application-question-page-add-training-courses">
+              Change<span class="govuk-visually-hidden"> training course</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Year
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2017
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    
+
+    <form action="application-question-page-add-training-courses" method="post">
+      <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
+        Add another training course
+      </button>
+    </form>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Have you completed this section?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section"
+                name="completed-training-courses-section" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                Yes, I’ve completed this section
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2"
+                name="completed-training-courses-section" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                No, I’ll come back to it later
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

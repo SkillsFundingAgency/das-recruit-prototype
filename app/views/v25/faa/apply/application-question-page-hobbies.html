@@ -1,0 +1,64 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-interests-you-about-this-apprenticeship.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">Hobbies and interests</h1>
+    <p class="govuk-body">This question is optional.</p>
+    <p class="govuk-body">AYou may want to add your hobbies and interests if you:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>do something in your time that’s relevant to this application</li>
+      <li>don’t have much work experience, but can show your knowledge or experience in other ways</li>
+    </ul>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to add your hobbies and interests?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-hobbies-yes" name="add-hobbies" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="add-hobbies-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-hobbies-no" name="add-hobbies" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="add-hobbies-no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="application-question-page-hobbies-interests-input" method="post">
+      <div class="govuk-button-group" href="application-question-page-hobbies-interests-input.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

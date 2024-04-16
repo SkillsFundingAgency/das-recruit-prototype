@@ -1,0 +1,37 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Recruitment API - Manage apprentices
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Recruitment tools</h1>  
+  </div>
+    <div class="govuk-grid-column-one-half">
+      <h2 class="govuk-heading-l">APIs</h2> 
+      <p class="govuk-body">
+        Create adverts using your existing content management system. You can also use the API to display all your adverts on any website.
+        <br><br>
+        Go to <a href="api" class="govuk-link govuk-link--no-visited-state">API homepage</a>.
+      </p>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <h2 class="govuk-heading-l">Reports</h2> 
+      <p class="govuk-body">
+        Use our reporting tools to track the performance of your adverts.
+        <br><br>
+        Go to your <a class="govuk-link  govuk-link--no-visited-state" href="reports/dashboard">Reporting homepage</a>.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

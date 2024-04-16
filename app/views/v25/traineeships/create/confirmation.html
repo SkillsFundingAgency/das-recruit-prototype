@@ -1,0 +1,43 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Vacancy submitted for approval - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Vacancy submitted for approval
+      </h1>
+      <div class="govuk-panel__body">
+        The vacancy reference number is
+        <br><strong>VAC1000000965</strong>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-7">What happens next</h2>
+    {% if data.user == employer %}{% set pronoun = "your" %}{%else%}{% set pronoun = "the" %}{%endif%}
+    {% if data.has_notifications == "yes"%}
+
+    <p class="govuk-body">We’ll check the vacancy within one working day and let you know by email if you need to make any edits. <a href="../notifications/notification-preferences">Manage your emails</a>.</p>
+    {% else %}
+    <p class="govuk-body">
+      We’ll check the vacancy and tell you within 24 hours if you need to make any edits. If the vacancy is not approved, we’ll let you know on the dashboard what changes you’ll need to make. <a href="../notifications/notification-preferences-new">Manage your recruitment emails</a> if you’d rather get an email.</p>
+    {% endif %}
+    <p class="govuk-body">When we approve your vacancy, it will appear on ​<a href="https://www.gov.uk/find-traineeship" target="_blank">Find a traineeship (opens in a new tab)</a>.</p>
+    <form method="post">
+
+      <div class="govuk-button-group govuk-!-margin-top-5">
+        <a class="govuk-button" href="employers-select">Create another vacancy</a>
+      </div>
+      <a class="govuk-link" href="../dashboard">Return to dashboard</a>
+
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
