@@ -394,17 +394,32 @@ Find an apprenticeship - GOV.UK
 
     <!-- START sort -->
     <div style="float:right; width:50%;">
-      <div class="govuk-form-group" style="text-align: right;">
-        <label for=" sorting">Sort results</label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="recent">Most recent</option>
-          <option value="distance" selected>Distance</option>
-          <option value="closing">Closing soon</option>
-          <option value="salary-decending">Salary high to low</option>
-          <option value="salary-accending">Salary low to high</option>
-        </select>
-      </div>
+      <form id="sortForm" action="" method="get">
+        <div class="govuk-form-group" style="text-align: right;">
+          <label for=" sorting">Sort results</label>
+          <select class="govuk-select" id="sort" name="sort" onchange="handleChange(this)">
+            <option value="recent">Most recent</option>
+            <option value="distance">Distance</option>
+            <option value="closing">Closing soon</option>
+            <option value="salary-decending">Salary high to low</option>
+            <option value="salary-accending">Salary low to high</option>
+          </select>
+        </div>
+      </form>
     </div>
+
+    <script>
+      function handleChange(select) {
+        var option = select.options[select.selectedIndex];
+        console.log("Selected option:", option.value);
+        var action = "";
+        if (option.value === "salary-decending") {
+          action = "search-listing-competitive-salary-high-to-low-closed.html";
+        }
+        console.log("Action:", action);
+        document.getElementById("sortForm").action = action;
+      }
+    </script>
     <div class="govuk-!-padding-bottom-9"></div>
 
     <!-- END sort -->
@@ -771,7 +786,7 @@ Find an apprenticeship - GOV.UK
       <!-- End the link with the heart icon -->
     </div>
     <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-    
+
     <!-- END cards -->
 
 
