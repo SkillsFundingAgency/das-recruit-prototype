@@ -16,75 +16,50 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
 
     <span class="govuk-caption-l">Create an account</span>
-    <h1 class="govuk-heading-l">Tell us your notification preferences</h1>
+    <h1 class="govuk-heading-l">Email notifications</h1>
+
+    <h2 class="govuk-heading-m">Updates on your applications</h2>
+    <p class="govuk-body">We’ll automatically email you when a company tells us if your application is successful or
+      unsuccessful.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <h2 class="govuk-heading-m">Reminders about your unfinished applications</h2>
+    <p class="govuk-body">We can also email you about applications you have not finished and remind you to apply.</p>
+    <p class="govuk-body">We’ll remind you when there’s a week to go, then 2 days to go. You can unsubscribe from these
+      reminders at any time in
+      your settings.</p>
+
     <form class="form" action="create-account-confirmation" method="post">
-
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="application-response-notification">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
             <h1 class="govuk-fieldset__heading">
-              Your application gets a response
+              Do you want to get reminders about unfinished applications?
             </h1>
           </legend>
-          <div id="application-response-notification-hint" class="govuk-hint">
-            Be notified when an application is successful or unsuccessful.
-          </div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="application-response-notification"
-                name="application-response-notification" type="checkbox" value="text">
-              <label class="govuk-label govuk-checkboxes__label" for="application-response-notification">
-                Text
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
               </label>
             </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="application-response-notification-2"
-                name="application-response-notification" type="checkbox" value="email">
-              <label class="govuk-label govuk-checkboxes__label" for="application-response-notification-2">
-                Email
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No
               </label>
             </div>
           </div>
         </fieldset>
       </div>
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="advert-closing-date-notification">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h1 class="govuk-fieldset__heading">
-              A vacancy is closing soon
-            </h1>
-          </legend>
-          <div id="advert-closing-date-notification-hint" class="govuk-hint">
-            Get a reminder 7 days before the closing date for an apprenticeship. We’ll notify you for your saved
-            vacancies and
-            apprenticeships you’ve began an application for.
-          </div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="advert-closing-date-notification"
-                name="advert-closing-date-notification" type="checkbox" value="text">
-              <label class="govuk-label govuk-checkboxes__label" for="advert-closing-date-notification">
-                Text
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="advert-closing-date-notification-2"
-                name="advert-closing-date-notification" type="checkbox" value="email">
-              <label class="govuk-label govuk-checkboxes__label" for="advert-closing-date-notification-2">
-                Email
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
 
 
       <div class="govuk-button-group" href="create-account-confirmation.html.html">
         <button class="govuk-button" data-module="govuk-button">
           Continue
         </button>
-        <a class="govuk-link" href="create-account-summary.html.html">Skip - don’t get notifications</a>
       </div>
     </form>
 
