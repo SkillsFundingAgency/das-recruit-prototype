@@ -1,0 +1,79 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="account-details.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Delete your Find an apprenticeship account</h1>
+    <p class="govuk-body">This will delete your:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>applications</li>
+      <li>saved vacancies</li>
+      <li>personal details</li>
+    </ul>
+    <div class="govuk-!-padding-bottom-3"></div>
+    <p class="govuk-body">This will delete your:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>withdraw any applications you’ve submitted</li>
+      <li>stop emailing you about apprenticeships</li>
+    </ul>
+    <div class="govuk-inset-text">
+      Deleting your account will not delete your GOV.UK One Login. Your GOV.UK One Login will keep working with other
+      GOV.UK
+      services.
+    </div>
+
+
+
+    <form class="form" action="create-account-confirmation" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to delete your account?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No (take me back to my account settings)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+      <div class="govuk-button-group" href="create-account-confirmation.html.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
