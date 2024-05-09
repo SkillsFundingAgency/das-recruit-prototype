@@ -1,0 +1,52 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="delete-your-account.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Confirm you want to delete your account</h1>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        Your applications, saved vacancies and personal details will be deleted forever.
+      </strong>
+    </div>
+    <p class="govuk-body">Enter your email address to delete your Find an apprenticeship account.</p>
+    <div class="govuk-!-padding-bottom-3"></div>
+
+
+    <form class="form" action="create-account-confirmation" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="event-name">
+          Email address
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
+      </div>
+
+
+      <div class="govuk-button-group" href="create-account-confirmation.html.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Delete my account
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}
