@@ -1,4 +1,4 @@
-{% extends "gov-uk-signed-out.html" %}
+{% extends "gov-uk-one-settings.html" %}
 
 {% block pageTitle %}
 Find an apprenticeship - GOV.UK
@@ -23,15 +23,22 @@ Find an apprenticeship - GOV.UK
         Your applications, saved vacancies and personal details will be deleted forever.
       </strong>
     </div>
-    <p class="govuk-body">Enter your email address to delete your Find an apprenticeship account.</p>
     <div class="govuk-!-padding-bottom-3"></div>
 
 
     <form class="form" action="delete-your-account-success-banner" method="post">
 
       <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--m" for="event-name">
-          Email address
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="account-number">
+            Confirm your account deletion
+          </label>
+        </h1>
+        <div id="account-number-hint" class="govuk-hint">
+          Enter your email address to delete your Find an apprenticeship account
+        </div>
+        <label class="govuk-label" for="event-name">
+          Your email address
         </label>
         <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
       </div>
