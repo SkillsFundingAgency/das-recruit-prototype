@@ -1,0 +1,67 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="account-details.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Change your answers to the equality question</h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sex
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Female
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="change-your-sex-gender.html">
+            Change<span class="govuk-visually-hidden"> sex</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Is the gender you identify with the same as your sex registered at birth?
+        </dt>
+        <dd class="govuk-summary-list__value">Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="equality-question-sex-gender.html">
+            Change<span class="govuk-visually-hidden"> Is the gender you identify with the same as your sex registered
+              at birth?</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Ethnic group
+        </dt>
+        <dd class="govuk-summary-list__value">
+          White (British)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="equality-question-ethinic-group.html">
+            Change<span class="govuk-visually-hidden"> ethnic group</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
