@@ -789,6 +789,29 @@ module.exports = function (router) {
       // Handle any other cases or invalid values here
       res.redirect('/' + base_url + 'faa/apply/equality-question-ethnic-group/default'); // You can replace 'default' with an appropriate route
     }
+  })
+  
+  
+  // CHANGE ETHNIC GROUP QUESTION PAGE - ETHNIC GROUP
+  router.post('/' + base_url + 'faa/setting/change-ethinic-group/action', function (req, res) {
+    var qual = req.body['ethnic-group']; // Access form submission data using req.body
+
+    if (qual === "white-ethnic-group") {
+      res.redirect('/' + base_url + 'faa/setting/equality-question-white-background');
+    } else if (qual === "mixed-ethnic-group") {
+      res.redirect('/' + base_url + 'faa/setting/equality-question-mixed-ethnic-group');
+    } else if (qual === "asian-ethnic-group") {
+      res.redirect('/' + base_url + 'faa/setting/equality-question-asian-british');
+    } else if (qual === "black-african-ethnic-group") {
+      res.redirect('/' + base_url + 'faa/setting/equality-question-black-african-caribbean-british');
+    } else if (qual === "other-ethnic-group") {
+      res.redirect('/' + base_url + 'faa/setting/equality-question-best-described-background');
+    } else if (qual === "prefer-not-to-say-ethnic-group") {
+      res.redirect('/' + base_url + 'faa/setting/equality-summary');
+    } else {
+      // Handle any other cases or invalid values here
+      res.redirect('/' + base_url + 'faa/setting/change-ethinic-group/default'); // You can replace 'default' with an appropriate route
+    }
   });
 
 }

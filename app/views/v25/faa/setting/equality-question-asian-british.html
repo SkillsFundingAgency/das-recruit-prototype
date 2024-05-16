@@ -1,0 +1,96 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="change-ethinic-group.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="change-equality-answers" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which of the following best describes your Asian or Asian British background?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail" name="ethnicityDetail" type="radio"
+                value="indian">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail">
+                Indian
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-2" name="ethnicityDetail" type="radio"
+                value="pakistani">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-2">
+                Pakistani
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-3" name="ethnicityDetail" type="radio"
+                value="bangladeshi">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-3">
+                Bangladeshi
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-4" name="ethnicityDetail" type="radio"
+                value="chinese">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-4">
+                Chinese
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-5" name="ethnicityDetail" type="radio"
+                value="other" data-aria-controls="conditional-ethnicityDetail-5">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-5">
+                Any other Asian background
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ethnicityDetail-5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="other-description">
+                  How would you describe your background? (optional)
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="other-description" name="otherDescription"
+                  type="text">
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-7" name="ethnicityDetail" type="radio"
+                value="skip">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-7">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group" href="hange-equality-answers.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
