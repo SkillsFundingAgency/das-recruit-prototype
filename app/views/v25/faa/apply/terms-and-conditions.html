@@ -1,0 +1,62 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-l">Terms and conditions</h1>
+        <p class="govuk-body">The Display advert API for Find an apprenticeship is run by the Department for Education
+          (DfE).</p>
+        <p class="govuk-body">By calling and using this API, you agree to our terms and conditions.</p>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h2 class="govuk-heading-m">Your responsibility</h2>
+        <p class="govuk-body">Do not:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>share your API key with others</li>
+          <li>mislead people using the content available through this API</li>
+          <li>disrupt other people's ability to use this API (for example, by consistently exceeding your usage rate)
+          </li>
+        </ul>
+        <p class="govuk-body">If we think you are misusing this API, we may block you from using it.</p>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h2 class="govuk-heading-m">Our responsibility</h2>
+        <p class="govuk-body">We strive to ensure that this API remains constantly available, free from viruses, and
+          that the information provided through the API is accurate and complete.</p>
+        <p class="govuk-body">However, we do not accept liability for:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you being unable to access this API (such as when we experience excessive demand or take the service down
+            for
+            maintenance)</li>
+          <li>delay or failure in receiving data</li>
+          <li>indirect damages arising from you using the API or relying on the content available through the API
+          </li>
+          <li>the content and availability of external websites that are linked from our service</li>
+        </ul>
+        <h3 class="govuk-heading-s">Notifying you of updates to the Display advert API</h3>
+        <p class="govuk-body">We will email you before we make changes to the Display advert API. For example, when a
+          new version of the API is being
+          released.</p>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}
