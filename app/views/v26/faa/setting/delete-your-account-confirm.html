@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="delete-your-account.html">Back</a>
+<a class="govuk-back-link" href="delete-your-account-and-withdraw-applications.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Confirm you want to delete your account</h1>
+    <h1 class="govuk-heading-l">Confirm your account deletion</h1>
     <div class="govuk-warning-text">
       <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
       <strong class="govuk-warning-text__text">
@@ -45,9 +45,10 @@ Find an apprenticeship - GOV.UK
 
 
       <div class="govuk-button-group" href="delete-your-account-success-banner.html">
-        <button class="govuk-button" data-module="govuk-button">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
           Delete my account
         </button>
+        <a class="govuk-link" href="account-details.html">Cancel (return to settings)</a>
       </div>
     </form>
 
