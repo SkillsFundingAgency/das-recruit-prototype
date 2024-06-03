@@ -1,0 +1,81 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="create-account-phone-number.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Create an account</span>
+    <h1 class="govuk-heading-l">Get email reminders</h1>
+    <p class="govuk-body">We can email you when a vacancy is about to close. We’ll remind you for vacancies you’ve saved
+      or started an application
+      for.
+    </p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          How often we send email reminders
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p class="govuk-body">We’ll send you a reminder 1 week before a vacancy’s closing date.
+        </p>
+        <p class="govuk-body">If you don’t apply, we’ll send you another reminder 2 days before the closing date.
+        </p>
+        <p class="govuk-body">You can change your email reminder settings at any time.
+        </p>
+      </div>
+    </details>
+
+    <form class="form" action="create-account-confirmation" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want email reminders?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes, remind me when a vacancy is closing soon
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No, don’t send me reminders
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group" href="create-account-confirmation.html.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+          data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              Your application for Business administration apprenticeship at Aspect 3 Apartments has been submitted.
+            </p>
+          </div>
+        </div>
+
+        <h1 class="govuk-heading-xl">Your applications</h1>
+
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./started.html" href="#1">Started</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page">Submitted</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./successful.html">Successful</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./unsuccessful-02.html">Unsuccessful</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <h2 class="govuk-heading-m">Submitted</h2>
+        <p class="govuk-body">Companies will contact you using the telephone number or email address on your
+          application.
+        </p>
+        <div class="govuk-!-padding-bottom-5"></div>
+
+        <!-- START cards -->
+
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-aof" href="vacancy-page-aof.html">
+            Business Apprenticeship</a>
+        </h2>
+        <p class="govuk-body" style="color:#505a5f">
+          Globe management LTD</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Submitted on 1 February 2024</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Closes on 3 March 2024
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+              href="withdraw-application-open.html">Withdraw application<span class="govuk-visually-hidden"> contact
+                details</span></a></li>
+        </ul>
+
+        <!-- END cards -->
+
+
+
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
