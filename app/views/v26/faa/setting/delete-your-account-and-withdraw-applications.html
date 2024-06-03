@@ -1,0 +1,62 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="delete-your-account.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Withdraw your outstanding applications</h1>
+    <p class="govuk-body">When we delete your account, we’ll withdraw applications you’ve submitted that have not
+      received a response yet.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <h2 class="govuk-heading-m">Applications we’ll withdraw</h2>
+    </p>
+  </div>
+</div>
+
+<div class="govuk-grid-column-two-thirds" style="background-color:#F3F2F1; padding: 30px; margin-bottom: 20px;">
+  <!-- Added margin-bottom here -->
+  <h3 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+    Business admin apprentice
+  </h3>
+  <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
+  <p class="govuk-body govuk-!-margin-bottom-5" style="color:#505a5f">
+    Sheffield, S1 3FG</p>
+  <p class="govuk-body govuk-!-margin-bottom-1">Submitted on 1 February 2024</p>
+</div>
+
+<div class="govuk-grid-column-two-thirds" style="background-color:#F3F2F1; padding: 30px;">
+  <h3 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+    Business admin apprentice
+  </h3>
+  <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
+  <p class="govuk-body govuk-!-margin-bottom-5" style="color:#505a5f">
+    Sheffield, S1 3FG</p>
+  <p class="govuk-body govuk-!-margin-bottom-1">Submitted on 1 February 2024</p>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="delete-your-account-confirm" method="post">
+      <div class="govuk-!-padding-bottom-8"></div>
+      <div class="govuk-button-group" href="delete-your-account-confirm.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="account-details.html">Cancel (return to settings)</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
