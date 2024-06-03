@@ -17,6 +17,8 @@ Find an apprenticeship - GOV.UK
     <span class="govuk-caption-l">Create an account</span>
     <h1 class="govuk-heading-l">Check your account details</h1>
 
+    <div class="govuk-!-padding-bottom-5"></div>
+    <h2 class="govuk-heading-m">Personal details</h2>
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -78,7 +80,7 @@ Find an apprenticeship - GOV.UK
           Email address
         </dt>
         <dd class="govuk-summary-list__value govuk-!-padding-bottom-5
-        ">
+            ">
           {{ data['email'] or 'sarah.philips@email.com' }}
         </dd>
         <dd class="govuk-summary-list__actions">
@@ -87,19 +89,21 @@ Find an apprenticeship - GOV.UK
           </a>
         </dd>
       </div>
+    </dl>
+
+    <div class="govuk-!-padding-bottom-5"></div>
+    <h2 class="govuk-heading-m">Email notifications</h2>
+    <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Email reminders
+          Do you want to get reminders about unfinished applications?
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body govuk-!-font-weight-bold">Remind me when a vacancy is closing soon</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Email me</li>
-          </ul>
+          Yes
         </dd>
         <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="application-question-page-name-input.html">
-            Change<span class="govuk-visually-hidden"> first name</span>
+          <a class="govuk-link" href="application-notifications-new-user.html">
+            Change<span class="govuk-visually-hidden"> email notifications</span>
           </a>
         </dd>
       </div>
@@ -108,7 +112,7 @@ Find an apprenticeship - GOV.UK
 
     <form action="..//search-listing-saved-vacancy" method="post" novalidate>
       <button class="govuk-button" href="..//search-listing-saved-vacancy.html" data-module="govuk-button">
-        Create your account
+        Confirm
       </button>
     </form>
 
