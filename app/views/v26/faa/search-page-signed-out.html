@@ -1,5 +1,8 @@
-{% extends "govuk-one-login-header.html" %}
-{% set activeLinkId = "servicelink1" %}
+{% extends "govuk-one-login-header--login.html" %}
+{% set serviceName = "Find an apprenticeship" %}
+
+{# Set where you want this to go to #}
+{% set signInLink = "search-page-signed-in" %}
 
 {% block pageTitle %}
 Find an apprenticeship - GOV.UK

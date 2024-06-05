@@ -5235,13 +5235,6 @@ only screen and (min-resolution:2dppx) {
     text-align: center
 }
 
-@-moz-document regexp('.*') {
-    details summary:not([tabindex]) {
-        display: list-item;
-        display: revert;
-    }
-}
-
 .warning {
     margin-right: 15px;
     border-left: 4px solid #f47738;

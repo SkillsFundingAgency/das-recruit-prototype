@@ -1,0 +1,23 @@
+{% extends "di-govuk-one-login-service-header/layouts/service-header.html" %}
+
+{% set serviceName = "Find an apprenticeship" %}
+{% set signOutLink = "search-page-signed-out" %}
+{% set navigationItems = [
+{
+href: "../../faa/search-page-signed-in.html",
+text: 'Search',
+id: 'servicelink1'
+},{
+href: "../faa/saved-vacancies/saved.html",
+text: 'Saved vacancies',
+id: 'servicelink2'
+},{
+href: "../faa/applications/started.html",
+text: 'Your applications',
+id: 'servicelink3'
+},{
+href: "../faa/setting/account-details.html",
+text: 'Settings',
+id: 'servicelink4'
+}]
+%}
