@@ -1,0 +1,88 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Addresses
+    </h1>
+
+    <table class="govuk-table responsive-table">
+      <tbody class="govuk-table__body">
+      
+        {% if data['mainaddress'] =="yes" %}
+        <tr class="govuk-table__row" role="row">
+          <td class="govuk-table__cell govuk-!-width-one-half" role="gridcell"><span class="table-heading" aria-hidden="true">Address</span>46 Gillingham Street, Pimlico, London, SW1V 1HU</td>
+
+          <td class="govuk-table__cell" role="gridcell">{% if data['addresspositions'] %} {{ data['addresspositions'] }} {% else %}2 {% endif %} positions</td>
+
+          <td class="govuk-table__cell" role="gridcell" style="text-align:right"><a href="#" class="govuk-link--no-visited-state js-remove" onClick="test()">Remove</a>&nbsp;&nbsp;&nbsp;<a class="govuk-link--no-visited-state" href="main-address">Edit</a></td>
+        </tr>
+        {% endif %}
+
+        {% if data['address1'] %} 
+        <tr class="govuk-table__row" role="row">
+          <td class="govuk-table__cell govuk-!-width-one-half" role="gridcell"><span class="table-heading" aria-hidden="true">Address</span>{{ data['address1'] }}</td>
+
+          <td class="govuk-table__cell" role="gridcell">{% if data['addresspositions1'] %} {{ data['addresspositions1'] }} {% else %}3 {% endif %} positions</td>
+
+          <td class="govuk-table__cell" role="gridcell" style="text-align:right"><a href="#" class="govuk-link--no-visited-state js-remove">Remove</a>&nbsp;&nbsp;&nbsp;<a class="govuk-link--no-visited-state" href="add-address">Edit</a></td>
+        </tr>
+        {% endif %}
+
+        {% if data['address2'] %} 
+        <tr class="govuk-table__row" role="row">
+          <td class="govuk-table__cell govuk-!-width-one-half" role="gridcell"><span class="table-heading" aria-hidden="true">Address</span>{{ data['address2'] }}</td>
+
+          <td class="govuk-table__cell" role="gridcell">{% if data['addresspositions2'] %} {{ data['addresspositions2'] }} {% else %}1 {% endif %} positions</td>
+
+          <td class="govuk-table__cell" role="gridcell" style="text-align:right"><a href="#" class="govuk-link--no-visited-state js-remove">Remove</a>&nbsp;&nbsp;&nbsp;<a class="govuk-link--no-visited-state" href="add-address1">Edit</a></td>
+        </tr>
+        {% endif %}
+  
+      </tbody>
+    </table>
+
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      <a href="{% if data['address1'] %}add-address1{% else %}add-address{% endif %}" class="govuk-link">Add another address</a>
+    </p>
+   
+          
+
+    <form method="post">
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+  $(function() {
+      $(".js-remove").click(function(){
+        $(this).parents('tr').fadeOut();
+      });
+  });
+
+</script>
+
+{% endblock %}

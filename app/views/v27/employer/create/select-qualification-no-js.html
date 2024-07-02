@@ -1,0 +1,90 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+What qualifications would you like the applicant to have? - Your apprenticeship advert - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
+        Apprentice{% endif %}</span>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--xl" for="searchClients">Add a qualification requirement
+      </h1>
+    </legend>
+
+    <form class="qualification-type-employer-no-js-form" id="qualification-type-employer-no-js-form" action="/v23/employer/create/select-qualification-no-js/action"
+      method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
+              <input class="govuk-radios__input" id="gcse" name="qualification-employer-no-js" type="radio" value="gcse">
+              <label class="govuk-label govuk-radios__label" for="qualification">
+                GCSE
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
+              <input class="govuk-radios__input" id="a-level" name="qualification-employer-no-js" type="radio" value="a-level">
+              <label class="govuk-label govuk-radios__label" for="a-level">
+                A level
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
+              <input class="govuk-radios__input" id="t-level" name="qualification-employer-no-js" type="radio" value="t-level">
+              <label class="govuk-label govuk-radios__label" for="t-level">
+                T level
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
+              <input class="govuk-radios__input" id="btec" name="qualification-employer-no-js" type="radio" value="btec">
+              <label class="govuk-label govuk-radios__label" for="btec">
+                BTEC
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
+              <input class="govuk-radios__input" id="degree" name="qualification-employer-no-js" type="radio" value="degree">
+              <label class="govuk-label govuk-radios__label" for="degree">
+                Degree
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type-employer-no-js">
+              <input class="govuk-radios__input" id="other" name="qualification-employer-no-js" type="radio"
+                value="other">
+              <label class="govuk-label govuk-radios__label" for="other">
+                Other
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

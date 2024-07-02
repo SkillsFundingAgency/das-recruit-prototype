@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% set currentPage = "registered" %}
+
+{% block pageTitle %}
+Account created - Apprenticeship services - GOV.UK
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-xl">
+			Account created
+		</h1>	
+		<p class="govuk-body">You are now able to access the Display advert API key.</p>	
+		
+		{{ govukButton({
+			text: "Access API key",
+			href: "display-adverts-api-key"
+		}) }}
+
+	</div>
+</div>
+
+{% endblock %}

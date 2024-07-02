@@ -1,0 +1,43 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Application submitted
+          </h1>
+          <div class="govuk-panel__body">
+            Business Administration Apprentice Level 3 (Ashbury), KING RECRUITMENT
+          </div>
+        </div>
+        <div class="govuk-!-padding-bottom-5"></div>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          This company will contact you if you’re invited to an interview. They’ll contact you using the telephone
+          number or email
+          address on your application.
+        </p>
+        <p class="govuk-body govuk-!-padding-bottom-5">
+          Check your application status in <a href="..//applications/submitted.html" class="govuk-link">your applications</a>.
+        </p>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+{% endblock %}
