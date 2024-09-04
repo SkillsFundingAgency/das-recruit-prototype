@@ -1,0 +1,52 @@
+{% extends "govuk-one-login-header--login.html" %}
+{% set serviceName = "Find an apprenticeship" %}
+
+{# Set where you want this to go to #}
+{% set signInLink = "./govuk-one-login-flow-start-page/sign-in-or-create" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Search alert deleted
+          </h1>
+          <div class="govuk-panel__body">
+            Business admin in Sheffield, South Yorkshire
+          </div>
+        </div>
+        <p class="govuk-body">We’ll stop emailing you with new apprenticeships that match this search.</p>
+        <h2 class="govuk-heading-m">What to do next</h2>
+        <p class="govuk-body">
+          If you want to delete other alerts, <a href="..//govuk-one-login/sign-in-or-create.html" class="govuk-link">sign in to manage your search alerts</a>.
+        </p>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
