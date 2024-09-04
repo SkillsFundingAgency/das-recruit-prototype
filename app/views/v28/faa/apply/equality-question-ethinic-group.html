@@ -1,0 +1,83 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="equality-question-sex-gender.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equality questions</span>
+    <h1 class="govuk-heading-l">What is your ethnic group?</h1>
+
+    <form class="ethnic-group-form" id="ethnic-group-form" action="/v24/faa/apply/equality-question-ethnic-group/action"
+      method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item" data-target="ethnic-group">
+              <input class="govuk-radios__input" id="white-ethnic-group" name="ethnic-group" type="radio" value="white-ethnic-group">
+              <label class="govuk-label govuk-radios__label" for="white-ethnic-group">
+                White
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="ethnic-group">
+              <input class="govuk-radios__input" id="mixed-ethnic-group" name="ethnic-group" type="radio"
+                value="mixed-ethnic-group">
+              <label class="govuk-label govuk-radios__label" for="mixed-ethnic-group">
+                Mixed or multiple ethnic groups
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="ethnic-group">
+              <input class="govuk-radios__input" id="asian-ethnic-group" name="ethnic-group" type="radio"
+                value="asian-ethnic-group">
+              <label class="govuk-label govuk-radios__label" for="asian-ethnic-group">
+                Asian or Asian British
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="ethnic-group">
+              <input class="govuk-radios__input" id="black-african-ethnic-group" name="ethnic-group" type="radio"
+                value="black-african-ethnic-group">
+              <label class="govuk-label govuk-radios__label" for="black-african-ethnic-group">
+                Black, African, Caribbean or Black British
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="ethnic-group">
+              <input class="govuk-radios__input" id="other-ethnic-group" name="ethnic-group" type="radio"
+                value="other-ethnic-group">
+              <label class="govuk-label govuk-radios__label" for="other-ethnic-group">
+                Other ethnic group
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item" data-target="ethnic-group">
+              <input class="govuk-radios__input" id="prefer-not-to-say-ethnic-group" name="ethnic-group" type="radio"
+                value="prefer-not-to-say-ethnic-group">
+              <label class="govuk-label govuk-radios__label" for="prefer-not-to-say-ethnic-group">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button" type="submit">Continue</button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+What qualifications would you like the applicant to have? - Your apprenticeship advert - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if data.hasError and data.errorType == "grades"%}
+    <div class="validation-summary-errors govuk-error-summary" role="alert" data-valmsg-summary="true"
+      aria-labelledby="error-summary-title" tabindex="-1">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Please fix these errors
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#grades-need-update" data-focuses="#grades-need-update" class="summary-link">GCSEs must include the
+              1-9 grading system</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
+        Apprentice{% endif %}</span>
+      Qualifications
+    </h1>
+    <p class="govuk-body">Add the qualifications an applicant will need to begin this apprenticeship.</p>
+    <p class="govuk-body">You can add:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>essential qualifications</li>
+      <li>desirable qualifications</li>
+    </ul>
+    <p class="govuk-body">You can create an advert with no qualification requirements. You can take on apprentice who
+      doesn’t have any previous
+      qualifications.</p>
+    <br>
+    <form method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to add any qualification requirements?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="qualification-requirements" name="qualification-requirements" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="qualification-requirements">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="qualification-requirements-2" name="qualification-requirements" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="qualification-requirements-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

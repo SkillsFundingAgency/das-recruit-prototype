@@ -1,0 +1,175 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Key for API - Apprenticeships - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!--{{ govukPanel({
+      titleText: "Key copied"      
+    }) }}-->
+        <h1 class="govuk-heading-xl">Key for API</h1>
+          <p class="govuk-body">
+            You need to copy the API key and give it to your developer, this gives them permission to connect to the API on your behalf.
+          </p>
+          <div class="app-summary-card ">
+            <header class="app-summary-card--header">
+              <h3 class="app-summary-card--title">Recruitment API</h3>
+              <div class="app-summary-card__actions">
+                <!--<ul class="app-summary-card__actions-list">
+                  <li class="app-summary-card__actions-list-item">
+                    <a class="govuk-link" href="#">
+                      Copy key<span class="govuk-visually-hidden"></span>
+                    </a>
+                  </li>
+                </ul>-->
+              </div>
+            </header>
+            <div class="app-summary-card--content">
+              <p class="govuk-body">
+                Create a vacancy on Find an apprenticeship using your existing systems.<br>
+                Give the API key and <a href="../../guidance/recruitment-api-documentation" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
+              </p>
+              <dl class="govuk-summary-list govuk-summary-list__m">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    API key
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <code style="color:darkred; font-size:14px;">99cfbdeb64f14277ac33d4dd06640ede</code>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">                    
+                      Key copied
+                  </dd>
+                </div>            
+                <!--<div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Key name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    recruitment-api-live
+                  </dd>
+                  <dd class="govuk-summary-list__value">                
+                  </dd>
+                </div>-->
+              </dl>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Do you need a new API key?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  Renewing the key will disable the previous key and will stop your API from working until you use the new key. <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renew key</a>.
+                </div>
+              </details>
+            </div>
+          </div>
+          <!--<div class="app-summary-card ">
+            <header class="app-summary-card--header">
+              <h3 class="app-summary-card--title">Recruitment API (Sandbox)</h3>
+              <div class="app-summary-card__actions">
+              </div>
+            </header>
+            <div class="app-summary-card--content">
+              <p class="govuk-body">
+                Test creating an advert on any website and Find an apprenticeship.<br>
+                Give the key and <a href="" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
+              </p>
+              <dl class="govuk-summary-list govuk-summary-list__m">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    API key
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <code style="color:darkred; font-size:14px;">79cfbdeb64f14277ac33d4dd06640dfg</code>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state" href="api-hub-copied">
+                      Copy<span class="govuk-visually-hidden"> key</span>
+                    </a>
+                  </dd>
+                </div>            
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Key name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    recruitment-api-sandbox
+                  </dd>
+                  <dd class="govuk-summary-list__value">                
+                  </dd>
+                </div>
+              </dl>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Do you need a new key?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renewing the key</a> will disable the previous key and will stop your API from working until you use the new key.
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="app-summary-card ">
+            <header class="app-summary-card--header">
+              <h3 class="app-summary-card--title">Display Advert API (Live)</h3>
+              <div class="app-summary-card__actions">
+              </div>
+            </header>
+            <div class="app-summary-card--content">
+              <p class="govuk-body">
+                Display recruitment adverts from Find an apprenticeship.<br>
+                Give the key and <a href="" class="govuk-link govuk-link--no-visited-state">this link to the API page</a> to your developer.
+              </p>
+              <dl class="govuk-summary-list govuk-summary-list__m">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    API key
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <code style="color:darkred; font-size:14px;">32cfbdeb64f14277ac33d4dd06640ilj</code>
+                  </dd>
+                  <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link govuk-link--no-visited-state" href="api-hub-copied">
+                      Copy<span class="govuk-visually-hidden"> key</span>
+                    </a>
+                  </dd>
+                </div>            
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Key name
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    display-advert-api
+                  </dd>
+                  <dd class="govuk-summary-list__actions"></dd>
+                </div>
+              </dl>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Do you need a new key?
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renewing the key</a> will disable the previous key and will stop your API from working until you use the new key.
+                </div>
+              </details>
+            </div>
+          </div>-->
+       </div>
+    </div>
+  </div>
+{% endblock %}

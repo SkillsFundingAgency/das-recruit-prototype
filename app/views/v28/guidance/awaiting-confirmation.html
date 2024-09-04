@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% set currentPage = "registered" %}
+
+{% block pageTitle %}
+Confirm your email address - Apprenticeship services - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">		
+		<!--{{ govukPanel({
+			titleText: "Something's happened"
+		}) }}
+		<p class="govuk-body">We’ve sent you a confirmation email.</p>-->
+		<h1 class="govuk-heading-xl">
+			Confirm your email address
+		</h1>	
+		<p class="govuk-body">To finish creating your account, confirm your email address using the email we have sent to you.</p>	
+		
+		<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+		<p class="govuk-body"><a href="email" class="govuk-link govuk-link--no-visited-state">View email</a></p>
+
+	</div>
+</div>
+
+{% endblock %}

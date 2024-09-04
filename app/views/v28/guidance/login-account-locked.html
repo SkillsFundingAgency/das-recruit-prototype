@@ -1,0 +1,71 @@
+{% extends "devhub-layout.html" %}
+
+{% set currentPage = "login" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript: window.history.go(-1)"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<div class="govuk-!-margin-bottom-9" style="padding:20px; border:#00703C solid 4px;">
+			<h1 class="bold-large">Account locked</h1>
+			<p>Your account is now locked, please try again in 10 minutes.</p>
+		</div>
+		<h1 class="govuk-heading-xl">
+			Sign in
+		</h1>
+		<p>
+			Sign in or <a href="register" class="govuk-link govuk-link--no-visited-state">create an account</a> to access APIs.
+		</p>
+
+		<form method="post" >
+			{{ govukInput({
+				label:
+				{
+					text: "Email address",
+					classes: "govuk-!-width-three-quarters"
+				},
+				id: "email",
+				name: "email",
+				type: "email",
+				classes: "govuk-!-width-three-quarters"
+			}) }}
+
+			{{ govukInput({
+				label:
+				{
+					text: "Password",
+					classes: "govuk-!-width-three-quarters"
+				},
+				hint:
+				{
+					text: ""
+				},
+				id: "password",
+				name: "password",
+				type: "password",
+				classes: "govuk-!-width-three-quarters"
+			}) }}
+
+			<input type="hidden" value="" name="redirect">
+			<input type="hidden" value="true" name="logged-in">
+
+			{{ govukButton({
+				text: "Sign in",
+				href: "api-list"
+			}) }}
+		</form>
+
+
+		<ul class="govuk-list">
+			<li><a href="forgotten-password-enter-email" class="govuk-link govuk-link--no-visited-state">Forgotten your password?</a></li>
+		</ul>
+	</div>
+</div>
+
+{% endblock %}
