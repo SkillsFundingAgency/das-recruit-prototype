@@ -761,7 +761,7 @@ module.exports = function (router) {
     if (qual === "yes-equality") {
       res.redirect('/' + base_url + 'faa/apply/equality-question-sex-gender');
     } else if (qual === "no-equality") {
-      res.redirect('/' + base_url + '/');
+      res.redirect('/' + base_url + 'faa/applications/submitted-equality-questions-not-answered');
     } else {
       // Handle any other cases or invalid values here
       res.redirect('/' + base_url + 'faa/apply/equality-question/default'); // You can replace 'default' with an appropriate route
