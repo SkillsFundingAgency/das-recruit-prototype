@@ -62,6 +62,26 @@ Find an apprenticeship - GOV.UK
           </div>
         </fieldset>
 
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              Company
+            </label>
+          </h1>
+          <input class="govuk-input" id="apprenticeship-company-name" name="apprenticeship-company-name" type="text"
+            value="{{ data['apprenticeship-company-name'] or '' }}">
+        </div>
+
+        <div class="govuk-form-group govuk-!-width-one-third">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+              Grade
+            </label>
+          </h1>
+          <input class="govuk-input" id="apprenticeship-grade" name="apprenticeship-grade" type="grade"
+            value="{{ data['apprenticeship-grade'] or '' }}">
+        </div>
+
         <div class="govuk-button-group">
           <button class="govuk-button" data-module="govuk-button">
             Save and continue
