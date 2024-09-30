@@ -267,15 +267,18 @@ Manage vacancy
         if (filterValue === "any") {
           heading.innerText = `${visibleCount} applications`; // Show total applications
         } else {
-          // Capitalize the first letter of the filterValue
-          const displayLocation = filterValue.charAt(0).toUpperCase() + filterValue.slice(1);
-          heading.innerText = `${visibleCount} ${displayLocation} applications`; // Update with specific location
+          // Get the human-readable location from the dropdown and display it
+          const selectElement = document.getElementById("filter");
+          const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
+
+          heading.innerText = `${visibleCount} applications in ${selectedOptionText}`;
         }
       } else {
         console.error("Heading element not found! Check the selector.");
       }
     };
   </script>
+
 
 
 
