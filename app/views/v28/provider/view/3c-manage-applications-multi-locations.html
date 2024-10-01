@@ -1,4 +1,4 @@
-{% extends "ma-layout.html" %}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
 Manage vacancy
@@ -8,128 +8,22 @@ Manage vacancy
 {{super()}}
 <a href="3a-live" class="govuk-back-link">Back</a>
 
-<style>
-  .search-field-darker .search-input input {
-    border-color: #0b0c0c;
-    height: 41px;
-  }
-
-  .search-submit button {
-    background-color: #005ea5;
-    height: 41px;
-  }
-
-  .search-submit {
-    height: 41px;
-
-  }
-
-  span.das-tag {
-    background: transparent;
-    border: 3px solid #bfc1c3;
-    color: #0b0c0c;
-    font-weight: 400;
-  }
-
-  span.das-tag--rejected {
-    border-color: #B10E1E;
-    color: #000000;
-  }
-
-  span.das-tag--closed {
-    border-color: #0b0c0c;
-
-  }
-
-  span.das-tag--live {
-    border-color: #006435;
-  }
-
-  span.das-tag--submitted {
-    border-color: #F47738;
-  }
-
-  .accordion-controls {
-    display: none !important;
-  }
-
-  .das-table__header--sort {
-    font-weight: normal
-  }
-
-  .annotate {
-    font-style: italic;
-    color: #366ED4;
-  }
-
-  select optgroup {
-    background: #000;
-    color: #fff;
-    font-style: normal;
-    font-weight: normal;
-  }
-
-
-
-
-  .hidden {
-    display: none;
-  }
-
-  .toolbar {
-    font-size: 0;
-  }
-
-  .toolbar-item {
-    border: 1px solid #aaa;
-    background: #ccc;
-  }
-
-  .toolbar-item[aria-disabled="false"]:focus {
-    background-color: #eee;
-  }
-
-  .offscreen {
-    clip: rect(1px 1px 1px 1px);
-    clip: rect(1px, 1px, 1px, 1px);
-    font-size: 18px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
-
-  .das-button-filter {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-
-  span.das-tag--transferred {
-    border-color: #005ea5;
-    margin-top: 5px
-  }
-
-  span.das-tag--pending {
-    border-color: #f47738;
-  }
-</style>
-
 {% endblock %}
 
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
+    <span class="govuk-caption-l">Gloucestershire Health and Care NHS Foundation Trust</span>
     <h1 class="govuk-heading-xl">Apprentice Catering Assistant</h1>
 
 
-    <p class="govuk-body-l">Advert reference: VAC10000039296</p>
-
+    <p class="govuk-body-l">Vacancy reference: VAC1000000997</p>
 
 
     <!-- ////START vacancy summry//// -->
-    <h2 class="govuk-heading-l">Advert summary</h2>
+    <h2 class="govuk-heading-l">Vacancy summary</h2>
 
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -143,7 +37,7 @@ Manage vacancy
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> close advert</span>
+            Change<span class="govuk-visually-hidden"> close vacancy</span>
           </a>
         </dd>
       </div>
@@ -157,10 +51,10 @@ Manage vacancy
           Possible start date
         </dt>
         <dd class="govuk-summary-list__value">
-          30 Oct 2024
+          31 Oct 2024
           <br>
           <br>
-          01 Jan 2025
+          10 Jan 2025
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="3c-dates">
@@ -171,20 +65,22 @@ Manage vacancy
     </dl>
 
     <p class="govuk-body">
-      <a class="govuk-link button-link  govuk-link--no-visited-state" href="view-multi-locations">View advert</a> &nbsp;
-      <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone advert</a> &nbsp;
+      <a class="govuk-link button-link  govuk-link--no-visited-state" href="view">View vacancy</a> &nbsp;
+      <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone vacancy</a> &nbsp;
     </p>
 
     <!-- END vacancy summary  -->
+
+
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
     <!-- START vacancy analytics -->
 
-    <h2 class="govuk-heading-l">Advert analytics</h2>
+    <h2 class="govuk-heading-l">Vacancy analytics</h2>
 
     <p>
-      To see how many people have looked at your advert, <a href="3b-vacancy-analytics">view advert analytics</a>.
+      To see how many people have looked at your vacancy, <a href="3b-vacancy-analytics">view vacancy analytics</a>.
     </p>
 
     <!-- END vacancy actions -->
@@ -198,12 +94,15 @@ Manage vacancy
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-3">Applications</h2>
-    <div class="govuk-!-padding-bottom-3"></div>
+    <h2 class="govuk-heading-l">Applications</h2>
 
 
     <!-- START multiple links -->
 
+    <p class="govuk-body">
+      <a href="6a-share-applications" class="govuk-link govuk-link--no-visited-state">Share multiple applications with
+        employer</a>
+    </p>
     <p class="govuk-body">
       <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications
         unsuccessful</a>
@@ -212,13 +111,17 @@ Manage vacancy
 
     <!-- START disability confident -->
     <div class="govuk-inset-text">
-      You are signed up to the <a href="#">Disability Confident scheme (opens in new tab)</a>.
+      Gloucestershire Health and Care NHS Foundation Trust is signed up to the <a
+        href="https://www.gov.uk/government/collections/disability-confident-campaign" class="govuk-link"
+        rel="noreferrer noopener" target="_blank">Disability Confident scheme (opens in new tab)</a>.
     </div>
     <!-- END disability confident -->
+
 
   </div>
 </div>
 <div class="govuk-!-padding-bottom-6"></div>
+
 
 <!-- FILTER start -->
 <div class="govuk-grid-row">
@@ -279,8 +182,8 @@ Manage vacancy
     };
   </script>
 
-
   <!-- FILTER end -->
+
 
   <!-- SEARCH start -->
   <div class="govuk-grid-column-two-thirds">
@@ -316,7 +219,6 @@ Manage vacancy
   </div>
 </div>
 <!-- SEARCH end -->
-
 <h3 class="govuk-heading-m govuk-!-margin-top-3">30 applications</h3>
 
 <!-- table START -->
@@ -328,7 +230,7 @@ set appsTableData = [
 name: "Keith Stewart",
 id: "678CFR0",
 status: "new",
-link: "../account/application-new-multi",
+link: "../account/application-new",
 classes: "govuk-tag--blue",
 date: "13 Sep 2023",
 location: "Derby (6 Broad Street), Leeds, Sheffield",
@@ -563,53 +465,11 @@ disability: "Yes"
       </td>
       <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
       <td class="govuk-table__cell" role="gridcell" data-label="Locations applied for">{{ applicant.location }}</td>
-      <!-- This is fixed -->
     </tr>
     {% endfor %}
   </tbody>
 </table>
 <!-- table END -->
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <nav class="govuk-pagination" aria-label="Pagination">
-      <ul class="govuk-pagination__list">
-        <li class="govuk-pagination__item govuk-pagination__item--current">
-          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
-            1
-          </a>
-        </li>
-        <li class="govuk-pagination__item">
-          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
-            2
-          </a>
-        </li>
-        <li class="govuk-pagination__item">
-          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-            3
-          </a>
-        </li>
-      </ul>
-      <div class="govuk-pagination__next">
-        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-          <span class="govuk-pagination__link-title">
-            Next<span class="govuk-visually-hidden"> page</span>
-          </span>
-          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
-            height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-            <path
-              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
-            </path>
-          </svg>
-        </a>
-      </div>
-    </nav>
-  </div>
-
-  <div class="govuk-grid-column-one-third" style="text-align: right;">
-    <p class="govuk-body">Showing 1 to 20 of 30 applications</p>
-  </div>
-</div>
 
 {% endblock %}
 
