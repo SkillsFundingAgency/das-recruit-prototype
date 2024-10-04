@@ -1,0 +1,68 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="task-list?section2=completed">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+              Technician Apprentice{% endif %}</span>
+            <h1 class="govuk-fieldset__heading">
+              Where {% if data.numberOfPositions > 1 %}will the 6 positions{% else %}is this apprenticeship{% endif %}
+              available?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                England
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                Scotland
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-6" name="whereDoYouLive" type="radio"
+                value="abroad">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-6">
+                I am a British citizen living abroad
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
