@@ -1,0 +1,75 @@
+{% extends "gov-uk-one-search.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a class="govuk-back-link" href="search-listing-nhs-vacancies.html">Back</a>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-8">See more details about this apprenticeship on NHS Jobs</h1>
+
+    <h1 class="govuk-heading-m govuk-!-margin-bottom-1">Research Administrator Apprenticeship</h1>
+    <p class="govuk-caption-m govuk-!-margin-bottom-1" style="color:#0b0c0c">Great Ormond Street Hospital for Children
+      NHS Foundation Trust</p>
+    <p class="govuk-caption-m govuk-!-margin-bottom-3" style="color:	#505a5f">London (WC1N 3JH)</p>
+
+    <!-- Add the link with the heart icon -->
+
+    <head>
+      <title>Link with Heart Icon</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+
+    <body>
+
+      <a href="vacancy-page-saved-vacancy.html" class="heart-link govuk-!-padding-right-5">
+        <i class="far fa-heart" style="color:		#1d70b8"></i> Save vacancy
+      </a>
+
+    </body>
+    <!-- End the link with the heart icon -->
+    <div class="govuk-!-padding-bottom-8"></div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue to NHS Jobs
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
