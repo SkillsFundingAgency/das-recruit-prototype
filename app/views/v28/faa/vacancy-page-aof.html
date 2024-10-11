@@ -8,7 +8,7 @@ Find an apprenticeship - GOV.UK
 {{super()}}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <a class="govuk-back-link" href="..//faa/search-listing-returning-user.html">Back</a>
+    <a class="govuk-back-link" href="..//faa/search-listing-signed-in.html">Back</a>
   </div>
 </div>
 
@@ -23,7 +23,7 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Business Apprenticeship</h1>
     <p class="govuk-caption-l" style="color:#0b0c0c">AOF Consulting Ltd</p>
-    <p class="govuk-caption-l govuk-!-margin-bottom-5" style="color:	#505a5f">Sheffield, S7 3PT</p>
+    <p class="govuk-caption-l govuk-!-margin-bottom-5" style="color:	#505a5f">Sheffield, Manchester, Leeds</p>
     <p class="govuk-body govuk-!-margin-bottom-1">Closes on 30 October at 11:59pm</p>
     <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
       Posted on 13 June</p>
@@ -201,9 +201,8 @@ Find an apprenticeship - GOV.UK
     <!-- START work -->
     <div class="govuk-!-padding-bottom-3"></div>
     <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="your-work">Work</h2>
-    <p class="govuk-body" style="color:	#505a5f">As an apprentice, you’ll work at a company and get hands-on
-      experience. You’ll gain new skills and work alongside
-      experienced staff.</p>
+    <p class="govuk-body" style="color:	#505a5f">Most of your apprenticeship is spent working. You’ll learn on the job
+      by getting hands-on experience.</p>
     <h3 class="govuk-heading-s">What you’ll do at work</h3>
     <p class="govuk-body">During this apprenticeship, you’ll work on real-world projects that will have a direct impact
       on our clients'
@@ -235,14 +234,19 @@ Find an apprenticeship - GOV.UK
     </ul>
 
     <h3 class="govuk-heading-s">Where you’ll work</h3>
-    <p class="govuk-body govuk-!-margin-bottom-0">13 Giant’s Walk</p>
-    <p class="govuk-body govuk-!-margin-bottom-0">Sheffield</p>
-    <p class="govuk-body govuk-!-margin-bottom-3">S7 3PT</p>
+    <p class="govuk-body">This apprenticeship is available in different locations. You can choose which application you
+      want to be considered for
+      at the interview stage.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>5 Clare Street, Sheffield, S7 3PT</li>
+      <li>3 Chapel Street, Manchester, M1 1AD </li>
+      <li>18 Mill Park, Leeds, LS1 2TB</li>
+    </ul>
 
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Check your travel to work
+          Check your travel to work time
         </span>
       </summary>
       <div class="govuk-details__text">
@@ -260,6 +264,17 @@ Find an apprenticeship - GOV.UK
         </div>
         <div class="govuk-form-group">
           <label class="govuk-label" for="subject">
+            Select location
+          </label>
+          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+            <option value="choose" selected>Select a location</option>
+            <option value="sheffield">5 Clare Street, Sheffield, S7 3PT</option>
+            <option value="manchester">3 Chapel Street, Manchester, M1 1AD</option>
+            <option value="leeds">18 Mill Park, Leeds, LS1 2TB</option>
+          </select>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="subject">
             Select a way of travelling
           </label>
           <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
@@ -273,18 +288,20 @@ Find an apprenticeship - GOV.UK
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Show route
         </button>
-        <img src="/public/images/Map-sheff-college.png" width="630px">
+        <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 3 miles </p>
+        <p class="govuk-body"><b>Duration</b> 15 minuets </p>
       </div>
     </details>
+    <img src="/public/images/multi-locations map.png" width="630px"></img>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- END work -->
 
 
     <!-- START training -->
     <h2 class="govuk-heading-m govuk-!-margin-bottom-5" id="your-training">Training</h2>
-    <p class="govuk-body style=" style="color:	#505a5f">An apprenticeship includes regular training with a college or
-      other training organisation. At least 20% of your working
-      hours will be spent training or studying.</p>
+    <p class="govuk-body style=" style="color:	#505a5f">Apprenticeships include time away from working for specialist
+      training. You’ll study to gain professional knowledge and
+      skills.</p>
     <h3 class="govuk-heading-s">College or training organisation</h3>
     <p class="govuk-body">AoF Consulting</p>
     <h3 class="govuk-heading-s">Your training course</h3>
@@ -450,9 +467,6 @@ Find an apprenticeship - GOV.UK
     <!-- START apply -->
     <h2 class="govuk-heading-m govuk-!-margin-bottom-3" id="apply-now">Apply now</h2>
     <p class="govuk-body">Closes on 30 October at 11:59pm</p>
-    <p class="govuk-body">When you apply, you’ll be asked to sign in with a GOV.UK One Login. You can create one at the
-      same time as applying for
-      this apprenticeship.</p>
     <form class="form" action="apply/application-task-list-returning-user" method="post">
       <div class="govuk-button-group" href="apply/application-task-list-returning-user.html">
         <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
