@@ -1,0 +1,84 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Equal opportunity</span>
+    <h1 class="govuk-heading-l">Disability Confident scheme</h1>
+    <img src="/public/images/disability-confident.png" width="130px">
+    <div class="govuk-!-padding-bottom-3"></div>
+    <div class="govuk-inset-text">
+      If you have disability of long-term health condition, this scheme could help you get an interview.
+    </div>
+    <p class="govuk-body">King Recruitment wants to help more disabled people reach the interview stage for this
+      apprenticeship.</p>
+    <p class="govuk-body">They’ll offer a fair proportion of interviews to people with a disability or long-term health
+      condition.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <h2 class="govuk-heading-m">Using the Disability Confident scheme</h2>
+    <p class="govuk-body">You can apply under this scheme if you have a disability or long-term health condition. This
+      includes non-visible
+      disabilities and conditions.</p>
+    <p class="govuk-body">
+      If you're unsure about your condition, check the <a
+        href="https://www.gov.uk/definition-of-disability-under-equality-act-2010"
+        class="govuk-link govuk-link--no-visited-state">definition of disability under the Equality Act 2010 (opens in
+        new tab)</a>.
+    </p>
+    <p class="govuk-body">To be considered for an interview, you’ll still need to meet the essential requirements for
+      this apprenticeship.</p>
+    <p class="govuk-body">You don’t need to tell us any details about your condition to apply under this scheme.</p>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    <form class="form" action="application-summary-disability-disclosure" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to apply under the Disability Confident scheme?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-disclosure-yes" name="disability-disclosure"
+                type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="disability-disclosure-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="disability-disclosure-no" name="disability-disclosure" type="radio"
+                value="no">
+              <label class="govuk-label govuk-radios__label" for="idisability-disclosure-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group" href="application-summary-disability-disclosure.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Settings</h1>
+
+
+        <h3 class="govuk-heading-m">Personal details</h3>
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Jones' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-name-input.html">
+                Change<span class="govuk-visually-hidden"> first name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['date-of-birth-day'] or '28' }} {{ data['date-of-birth-month'] or 'April' }} {{
+              data['date-of-birth-year'] or '1999' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-date-of-birth.html">
+                Change<span class="govuk-visually-hidden"> first name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Address
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage
+              <p class="govuk-body govuk-!-margin-bottom-0">London</p>
+              <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-postcode.html">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['phone-number'] or '07700 9009754' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-phone-number.html">
+                Change<span class="govuk-visually-hidden"> first name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            <dd class="govuk-summary-list__value govuk-!-padding-bottom-5
+              ">
+              {{ data['email'] or 'sarah.philips@email.com' }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-email-address.html">
+                Change<span class="govuk-visually-hidden"> email address</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+        <a href="#" class="govuk-link">Change your answers to the equality questions</a>
+        <div class="govuk-!-padding-bottom-9"></div>
+
+        <h3 class="govuk-heading-m">Email notifications</h3>
+        <p class="govuk-body">We’ll automatically email you when a company tell us if your application is successful or
+          unsuccessful.
+        </p>
+
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Do you want to get reminders about unfinished applications?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="change-notifications.html">
+                Change<span class="govuk-visually-hidden"> first name</span>
+              </a>
+            </dd>
+          </div>
+        </dl>
+
+        <div class="govuk-!-padding-bottom-9"></div>
+        <h3 class="govuk-heading-m">Delete your account</h3>
+        <a href="delete-your-account.html" class="govuk-link">Delete my account</a>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

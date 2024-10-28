@@ -1,0 +1,47 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="account-details.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Delete your Find an apprenticeship account</h1>
+    <p class="govuk-body">You’ll no longer be able to view your:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>saved vacancies</li>
+      <li>application history</li>
+    </ul>
+    <p class="govuk-body">We’ll stop sending you emails from Find an apprenticeship.</p>
+    <div class="govuk-inset-text">
+      Deleting your account will not delete your GOV.UK One Login. Your GOV.UK One Login will keep working with other
+      GOV.UK
+      services.
+    </div>
+
+
+
+    <form class="form" action="delete-your-account-and-withdraw-applications" method="post">
+      <div class="govuk-button-group" href="delete-your-account-and-withdraw-applications.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="account-details.html">Cancel (return to settings)</a>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

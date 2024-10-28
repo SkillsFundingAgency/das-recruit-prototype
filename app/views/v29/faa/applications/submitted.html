@@ -1,0 +1,206 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Your applications</h1>
+
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./started.html" href="#1">Started</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page">Submitted</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./successful.html">Successful</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./unsuccessful-02.html">Unsuccessful</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <h2 class="govuk-heading-m">Submitted</h2>
+        <p class="govuk-body">Companies will contact you using the telephone number or email address on your
+          application.
+        </p>
+        <div class="govuk-!-padding-bottom-7"></div>
+
+        <!-- START cards -->
+
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-submitted-application"
+            href="vacancy-page-submitted-application.html">
+            Business Apprenticeship</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Globe management LTD</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Sheffield (S3 7GE)</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Submitted on 1 February 2024</p>
+        <p class="govuk-body">
+          Closes on 3 March 2024
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+              href="..//applications/submitted-application-form.html">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+              href="withdraw-application-open.html">Withdraw application<span class="govuk-visually-hidden"> contact
+                details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="vacancy-page-02.html">
+            Admin Apprentice</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Fox Finance Limited</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Leeds, London</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Submitted on 23 January 2024</p>
+        <p class="govuk-body">
+          Closed on 3 February 2023
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+              href="..//applications/submitted-application-form.html">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+              href="withdraw-application-closed.html">Withdraw application<span class="govuk-visually-hidden"> contact
+                details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="/">
+            Business anaylst Apprentice</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Potts Law LTD</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Recruiting nationally</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Submitted on 21 January 2024</p>
+        <p class="govuk-body">
+          Closed on 3 February 2023
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="/">View application<span
+                class="govuk-visually-hidden">
+                contact details</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="/">Withdraw application<span
+                class="govuk-visually-hidden"> contact
+                details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <!-- END cards -->
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Withdrawn</h2>
+        <p class="govuk-body">Applications that you withdrew after submitting.
+        </p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show withdrawn applications
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <hr class="govuk-section-break govuk-section-break-non-visible govuk-!-margin-bottom-6 ">
+            <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+              <a class="das-search-results__link" id="vacancy-aof" href="..//vacancy-page-withdrawn-application.html">
+                Business Admin Apprenticeship</a>
+            </h2>
+            <p class="govuk-body govuk-!-margin-bottom-0">Tech Decisions LTD</p>
+            <p class="govuk-body" style="color:#505a5f">
+              Recruiting nationally</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Withdrawn application on 11 Jan 2024</p>
+            <p class="govuk-body">
+              Closes on 12 May 2024
+            </p>
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+                  href="..//applications/withdrawn-application-form.html">View application<span
+                    class="govuk-visually-hidden">
+                    contact details</span></a></li>
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Delete<span
+                    class="govuk-visually-hidden"> contact details</span></a></li>
+            </ul>
+          </div>
+          <div class="govuk-details__text">
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
+            <strong class="govuk-tag govuk-tag--orange govuk-!-margin-bottom-2">
+              Closing soon
+            </strong>
+            <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+              <a class="das-search-results__link" id="vacancy-aof" href="..//vacancy-page-withdrawn-application.html">
+                Business Admin Apprenticeship</a>
+            </h2>
+            <p class="govuk-body govuk-!-margin-bottom-0">Smiths Law LTD</p>
+            <p class="govuk-body" style="color:#505a5f">
+              Bristol, Leeds, Manchester</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Withdrawn application on 9 Jan 2024</p>
+            <p class="govuk-body">
+              Closes on tomorrow 11:59pm
+            </p>
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+                  href="..//applications/withdrawn-application-form.html">View application<span
+                    class="govuk-visually-hidden">
+                    contact details</span></a></li>
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Delete<span
+                    class="govuk-visually-hidden"> contact details</span></a></li>
+            </ul>
+          </div>
+          <div class="govuk-details__text">
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Business admin apprenticeship</h2>
+            <p class="govuk-body govuk-!-margin-bottom-0">Solar vision Limited</p>
+            <p class="govuk-body" style="color:#505a5f">
+              Bristol (BS1 4FT)</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Withdrawn application on 2 Jan 2024</p>
+            <p class="govuk-body" style="color:#505a5f">
+              Closed on 1 January 2024
+            </p>
+            <ul class="govuk-summary-list__actions-list">
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link"
+                  href="..//applications/withdrawn-application-form.html">View application<span
+                    class="govuk-visually-hidden">
+                    contact details</span></a></li>
+              <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Delete<span
+                    class="govuk-visually-hidden"> contact details</span></a></li>
+            </ul>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 ">
+          </div>
+        </details>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

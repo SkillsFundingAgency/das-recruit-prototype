@@ -1,0 +1,67 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="account-details.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Change your address manually</h1>
+    <p class="govuk-body">The address you want to show on applications.</p>
+    <form class="form" action="account-details" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full">
+          Address line 1
+        </label>
+        <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="full">
+          Address line 2 (optional)
+        </label>
+        <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="three-quarters">
+          Town or city
+        </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="threeQuarters" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="three-quarters">
+          County (optional)
+        </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="three-quarters" name="threeQuarters" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="one-third">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-!-width-one-third" id="one-third" name="oneThird" type="text">
+      </div>
+
+      <div class="govuk-button-group" href="account-details.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,163 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-add-volunteering-and-work-experience.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Work history</span>
+    <h1 class="govuk-heading-l">Volunteering or work experience</h1>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">{{ data['work-experience-organisation-name'] or 'Sheffield animal rescue'
+          }}</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/delete/volunteering-work-experience.html">
+              Delete<span class="govuk-visually-hidden"> volunteering and work experience</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/application-question-page-add-volunteering-and-work-experience.html">
+              Change<span class="govuk-visually-hidden"> volunteering and work experience</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What you did
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['what-you-did-in-the-work-experience-role'] or 'As a sports youth coach volunteer, I guided and
+              supported young athletes, fostering their love for sports and teaching
+              vital skills on and off the field. This included skill development, teamwork, and sportsmanship. I also
+              focused on game
+              strategy, physical fitness, mentoring, safety, and effective communication with parents. My role aimed to
+              motivate and
+              encourage athletes while engaging with the community to promote sports and positive values, shaping
+              well-rounded and
+              disciplined individuals.' }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Dates
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['work-experience-start-date-month'] or 'March' }} {{ data['work-experience-start-date-year'] or
+              '2019' }} to {{ data['work-experience-end-date-month'] or 'May' }} {{
+              data['work-experience-end-date-year'] or '2021' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Trust in us</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/delete/volunteering-work-experience.html">
+              Delete<span class="govuk-visually-hidden"> volunteering and work experience</span>
+            </a>
+          </li>
+          <li class="govuk-summary-card__action"> <a class="govuk-link"
+              href="..//apply/application-question-page-add-volunteering-and-work-experience.html">
+              Change<span class="govuk-visually-hidden"> volunteering and work experience</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What you did
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Volunteering at a children's mental health charity was a profoundly fulfilling experience. Organizing
+              therapeutic
+              activities and facilitating group sessions, I witnessed the resilience of young minds and learned about
+              the challenges
+              they face. Collaborating with a dedicated team, I gained insights into the importance of early
+              intervention. This
+              experience deepened my empathy and strengthened my commitment to advocating for mental health awareness
+              and support for
+              the younger generation. It reinforced my belief in the positive impact of community involvement on the
+              well-being of our
+              youth.
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Dates
+            </dt>
+            <dd class="govuk-summary-list__value">
+              October 2018 to May 2019
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+
+
+    <form action="application-question-page-add-volunteering-and-work-experience" method="post">
+      <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
+        Add volunteering or work experience
+      </button>
+    </form>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Have you completed this section?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-work-experience"
+                type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                Yes, I’ve completed this section
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2" name="completed-work-experience"
+                type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                No, I’ll come back to it later
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
