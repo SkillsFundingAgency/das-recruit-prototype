@@ -1,0 +1,69 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="task-list?section2=completed">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+              Technician Apprentice{% endif %}</span>
+            <h1 class="govuk-fieldset__heading">
+              Where {% if data.numberOfPositions > 1 %}will the 6 positions{% else %}will the apprentice{% endif %}
+              work?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="locationavailable-1" name="locationavailable" type="radio"
+                value="onelocation">
+              <label class="govuk-label govuk-radios__label" for="locationavailable-1">
+                One location
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="locationavailable-2" name="locationavailable" type="radio"
+                value="multiplelocation">
+              <label class="govuk-label govuk-radios__label" for="locationavailable-2">
+                More than one location
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                Add up to 10 locations to your vacancy
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="locationavailable-3" name="locationavailable" type="radio"
+                value="acrossallofengland">
+              <label class="govuk-label govuk-radios__label" for="locationavailable-3">
+                Across all of England
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                Your apprenticeship will display as a national vacancy
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
