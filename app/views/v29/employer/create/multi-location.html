@@ -1,0 +1,74 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+      Technician Apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl">Add more than one location</h1>
+    <p class="govuk-body">We’ll show your advert when someone searches for an apprenticeship in any of these locations.
+    </p>
+    <p class="govuk-body">If you accept applications through Find an apprenticeship, we’ll ask applicants where they
+      want to apply for.
+    </p>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <form method="post" action="task-list?section2=completed">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Add locations
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Select up to 10 locations
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                33 Ditchfield Road, Leeds S8 8BR
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                33 Ditchfield Road, Leeds S8 8BR
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                18 Hope Valley, London S33 0AY
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <form action="application-question-page-add-another-qualification" method="post">
+        <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
+          Add a new location
+        </button>
+      </form>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
