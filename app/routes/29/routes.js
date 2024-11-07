@@ -830,4 +830,22 @@ module.exports = function (router) {
     }
   })
 
+  // ADD SINGLE LOCATION - LOCATIONS
+  router.post('/' + base_url + 'employer/create/location/action', function (req, res) {
+    var qual = req.body['one-location']; // Access form submission data using req.body
+
+    if (qual === "location-1") {
+      res.redirect('/' + base_url + 'employer/create/task-list?section2=completed');
+    } else if (qual === "location-2") {
+      res.redirect('/' + base_url + 'employer/create/task-list?section2=completed');
+    } else if (qual === "location-3") {
+      res.redirect('/' + base_url + 'employer/create/task-list?section2=completed');
+    } else if (qual === "location-add") {
+      res.redirect('/' + base_url + 'employer/create/add-new-location-postcode');
+    } else {
+      // Handle any other cases or invalid values here
+      res.redirect('/' + base_url + 'employer/create/location/default'); // You can replace 'default' with an appropriate route
+    }
+  })
+
 }

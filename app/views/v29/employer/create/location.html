@@ -13,7 +13,8 @@ Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form method="post" action="task-list?section2=completed">
+    <form form class="select-one-location" id="select-one-location"
+      action="/v29/employer/create/location/action" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -27,32 +28,32 @@ Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
             Select one location
           </div>
           <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+            <div class="govuk-radios__item" data-target="one-location">
+              <input class="govuk-radios__input" id="location-1" name="one-location"
+                type="radio" value="location-1">
+              <label class="govuk-label govuk-radios__label" for="location-1">
                 Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
               </label>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+            <div class="govuk-radios__item" data-target="one-location">
+              <input class="govuk-radios__input" id="location-2" name="one-location"
+                type="radio" value="location-2">
+              <label class="govuk-label govuk-radios__label" for="location-2">
                 Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
               </label>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+            <div class="govuk-radios__item" data-target="one-location">
+              <input class="govuk-radios__input" id="location-3" name="one-location"
+                type="radio" value="location-3">
+              <label class="govuk-label govuk-radios__label" for="location-3">
                 Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
               </label>
             </div>
             <div class="govuk-radios__divider">or</div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login"
+            <div class="govuk-radios__item" data-target="one-location">
+              <input class="govuk-radios__input" id="location-add" name="one-location" type="radio" value="location-add"
                 aria-describedby="signIn-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn-2">
+              <label class="govuk-label govuk-radios__label" for="location-add">
                 Add a new location
               </label>
               <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
