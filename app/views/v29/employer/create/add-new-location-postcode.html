@@ -13,7 +13,7 @@ Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form class="form" action="application-question-page-select-address" method="post">
+    <form class="form" action="add-new-location-select-address" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -30,8 +30,8 @@ Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
               For example SW1A 2AA
             </div>
             <div class="govuk-form-group">
-              <input class="govuk-input govuk-input--width-10" id="postcode-input" name="postcode-input" type="postcode"
-                value="{{ data['postcode-input'] or '' }}">
+              <input class="govuk-input govuk-input--width-10" id="advert-postcode-input" name="advert-postcode-input" type="postcode"
+                value="{{ data['advert-postcode-input'] or '' }}">
             </div>
             <p class="govuk-body govuk-!-padding-top-5">
               <a href="#" class="govuk-link">Enter address manually</a>
