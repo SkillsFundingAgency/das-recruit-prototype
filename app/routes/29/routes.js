@@ -814,7 +814,7 @@ module.exports = function (router) {
     }
   });
 
-  // WHERE IS THIS APPRENTICESHIP AVAILABLE PAGE - LOCATIONS
+  // WHERE IS THIS APPRENTICESHIP AVAILABLE PAGE EMPLOYER - LOCATIONS
   router.post('/' + base_url + 'employer/create/where-is-this-apprenticeship-available/action', function (req, res) {
     var qual = req.body['locations']; // Access form submission data using req.body
 
@@ -827,6 +827,22 @@ module.exports = function (router) {
     } else {
       // Handle any other cases or invalid values here
       res.redirect('/' + base_url + 'employer/create/where-is-this-apprenticeship-available/default'); // You can replace 'default' with an appropriate route
+    }
+  })
+
+  // WHERE IS THIS APPRENTICESHIP AVAILABLE PAGE PROVIDER - LOCATIONS
+  router.post('/' + base_url + 'provider/create/where-is-this-apprenticeship-available/action', function (req, res) {
+    var qual = req.body['locations']; // Access form submission data using req.body
+
+    if (qual === "one-location") {
+      res.redirect('/' + base_url + 'provider/create/location');
+    } else if (qual === "multi-location") {
+      res.redirect('/' + base_url + 'provider/create/multi-location-cities');
+    } else if (qual === "national") {
+      res.redirect('/' + base_url + 'provider/create/nationwide-location-info');
+    } else {
+      // Handle any other cases or invalid values here
+      res.redirect('/' + base_url + 'provider/create/where-is-this-apprenticeship-available/default'); // You can replace 'default' with an appropriate route
     }
   })
 

@@ -13,44 +13,43 @@ Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form method="post" action="task-list?section2=completed">
+    <form form class="apprenticeship-locations" id="apprenticeship-locations"
+      action="/v29/provider/create/where-is-this-apprenticeship-available/action" method="post">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
               Technician Apprentice{% endif %}</span>
             <h1 class="govuk-fieldset__heading">
-              Where {% if data.numberOfPositions > 1 %}will the 6 positions{% else %}will the apprentice{% endif %}
-              work?
+              Where {% if data.numberOfPositions > 1 %}will the 6 positions{% else %}is this apprenticeship{% endif %}
+              available?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="locationavailable-1" name="locationavailable" type="radio"
-                value="onelocation">
-              <label class="govuk-label govuk-radios__label" for="locationavailable-1">
+            <div class="govuk-radios__item" data-target="locations">
+              <input class="govuk-radios__input" id="one-location" name="locations" type="radio" value="one-location">
+              <label class="govuk-label govuk-radios__label" for="one-location">
                 One location
               </label>
             </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="locationavailable-2" name="locationavailable" type="radio"
-                value="multiplelocation">
-              <label class="govuk-label govuk-radios__label" for="locationavailable-2">
+            <div class="govuk-radios__item" data-target="locations">
+              <input class="govuk-radios__input" id="multi-location" name="locations" type="radio"
+                value="multi-location">
+              <label class="govuk-label govuk-radios__label" for="multi-location">
                 More than one location
               </label>
               <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                Add up to 10 locations to your vacancy
+                Add up to 10 locations to your advert
               </div>
             </div>
             <div class="govuk-radios__divider">or</div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="locationavailable-3" name="locationavailable" type="radio"
-                value="acrossallofengland">
-              <label class="govuk-label govuk-radios__label" for="locationavailable-3">
+            <div class="govuk-radios__item" data-target="locations">
+              <input class="govuk-radios__input" id="national" name="locations" type="radio" value="national">
+              <label class="govuk-label govuk-radios__label" for="national">
                 Across all of England
               </label>
               <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
-                Your apprenticeship will display as a national vacancy
+                Your apprenticeship will display as a national advert
               </div>
             </div>
           </div>
