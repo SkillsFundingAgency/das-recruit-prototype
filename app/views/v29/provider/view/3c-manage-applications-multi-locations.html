@@ -65,7 +65,8 @@ Manage vacancy
     </dl>
 
     <p class="govuk-body">
-      <a class="govuk-link button-link  govuk-link--no-visited-state" href="view-mulit-locations.html">View vacancy</a> &nbsp;
+      <a class="govuk-link button-link  govuk-link--no-visited-state" href="view-mulit-locations.html">View vacancy</a>
+      &nbsp;
       <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone vacancy</a> &nbsp;
     </p>
 
@@ -123,8 +124,43 @@ Manage vacancy
 <div class="govuk-!-padding-bottom-6"></div>
 
 
-<!-- FILTER start -->
+
 <div class="govuk-grid-row">
+  <!-- SEARCH start -->
+  <div class="govuk-grid-column-two-thirds">
+    <form action="vacancies" method="get">
+      <div class="row-group">
+        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
+          <fieldset class="govuk-fieldset">
+
+            <div class="form-group search-field search-field-darker">
+              <div class="search-input search-input-with-button">
+                <label class="govuk-label" for="search">
+                  Search by name or application ID
+                </label>
+
+                <div class="autocomplete__parent_wrapper">
+                  <div class="autocomplete__wrapper">
+                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search"
+                      name="search" placeholder="" role="combobox" type="text"
+                      value="{%if query.search %}{{query.search}}{%endif%}">
+                  </div>
+                </div>
+
+              </div>
+              <div class="search-submit">
+                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search
+                  clients</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- SEARCH end -->
+
+  <!-- FILTER start -->
   <div class="govuk-grid-column-one-third">
     <form id="filterForm">
       <div class="govuk-form-group">
@@ -181,44 +217,9 @@ Manage vacancy
       }
     };
   </script>
-
   <!-- FILTER end -->
-
-
-  <!-- SEARCH start -->
-  <div class="govuk-grid-column-two-thirds">
-    <form action="vacancies" method="get">
-      <div class="row-group">
-        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
-          <fieldset class="govuk-fieldset">
-
-            <div class="form-group search-field search-field-darker">
-              <div class="search-input search-input-with-button">
-                <label class="govuk-label" for="search">
-                  Search by name or application ID
-                </label>
-
-                <div class="autocomplete__parent_wrapper">
-                  <div class="autocomplete__wrapper">
-                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search"
-                      name="search" placeholder="" role="combobox" type="text"
-                      value="{%if query.search %}{{query.search}}{%endif%}">
-                  </div>
-                </div>
-
-              </div>
-              <div class="search-submit">
-                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search
-                  clients</button>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-      </div>
-    </form>
-  </div>
 </div>
-<!-- SEARCH end -->
+
 <h3 class="govuk-heading-m govuk-!-margin-top-3">30 applications</h3>
 
 <!-- table START -->
