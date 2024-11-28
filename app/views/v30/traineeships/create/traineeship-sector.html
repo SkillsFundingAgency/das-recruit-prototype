@@ -1,0 +1,71 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+What training will the apprentice take? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Optical Assistant Traineeship{% endif %}</span>
+
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--xl" for="sort">
+            Select the traineeship sector
+          </label>
+        </h1>
+
+        <form method="post">
+
+          <div class="govuk-form-group">
+            <select class="govuk-select" id="sort" name="sort">
+               <option value="published selected">Select an option</option>
+              <option value="published">Agriculture, environmental and animal care</option>
+              <option>Creative and design</option>
+              <option value="views">Business and administration</option>
+              <option value="comments">Construction</option>
+              <option value="comments">Education and childcare</option>
+              <option>Engineering and manufacturing</option>
+              <option>Health and science</option>
+              <option>Digital</option>
+              <option>Transport and logistics</option>
+              <option>Sales, marketing and procurement</option>
+              <option>Care services</option>
+              <option>Catering and hospitality</option>
+              <option>Hair and beauty</option>
+              <option>Legal, finance and accounting</option>
+              <option>Protective services</option>
+            </select>
+          </div>
+              
+
+          <div class="govuk-form-group">
+            {{ govukButton({
+              text: "Save and continue",
+              href: "short-description"
+            }) }}   
+            <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+            <!--<input type="submit" class="govuk-button" data-module="govuk-button" data-automation="btn-continue" name="button" value="Preview">-->
+          </div>
+
+
+        </form>
+
+      </div>
+  </div>
+  <div class="govuk-visually-hidden">
+    {% for training in data.training_full %}
+    <span class="data-item">{{training.name}}</span>
+    {% endfor %}
+  </div>
+
+
+
+{% endblock %}

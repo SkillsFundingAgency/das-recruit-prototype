@@ -1,0 +1,108 @@
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">About you</span>
+    <h1 class="govuk-heading-l">Add your skills</h1>
+    </p>
+
+
+    <div class="govuk-form-group">
+      <form class="form" action="application-summary-skills" method="post">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="add-skills">
+            Add a skill
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          We recommend adding at least 6 skills
+        </div>
+        <label class="govuk-label" for="skills">
+          Skill 1
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="skill-one" name="skill-one" type="one"
+          value="{{ data['skill-one'] or '' }}">
+    </div>
+
+
+    <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Add another skill
+    </button>
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="skills-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to add any of these skills?
+          </h1>
+        </legend>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="skills-1" name="skills" type="checkbox" value="communication">
+            <label class="govuk-label govuk-checkboxes__label" for="skills-1">
+              Communication skills
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="skills-2" name="skills" type="checkbox" value="team-work">
+            <label class="govuk-label govuk-checkboxes__label" for="skills-2">
+              Team working
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="skills-3" name="skills" type="checkbox" value="problem-solving">
+            <label class="govuk-label govuk-checkboxes__label" for="skills-3">
+              Problem solving
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="skills-4" name="skills" type="checkbox" value="organisation">
+            <label class="govuk-label govuk-checkboxes__label" for="skills-4">
+              Organisation skills
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="skills-5" name="skills" type="checkbox" value="IT-skills">
+            <label class="govuk-label govuk-checkboxes__label" for="skills-5">
+              IT skills
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="skills-6" name="skills" type="checkbox"
+              value="attention-to-detail">
+            <label class="govuk-label govuk-checkboxes__label" for="skills-6">
+              Attension to detail
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+
+
+    <div class="govuk-button-group" href="application-summary-skills.html">
+      <button class="govuk-button" data-module="govuk-button">
+        Save skills
+      </button>
+    </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

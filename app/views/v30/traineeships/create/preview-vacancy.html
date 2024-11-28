@@ -1,0 +1,272 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Preview your vacancy - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent%}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back to check your answers</a>
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-xl">Preview your vacancy</h1>
+      
+    </div>
+
+    
+    <div class="govuk-grid-column-full govuk-!-margin-bottom-7">
+    <div class="govuk-!-padding-7" style="border:1px solid #b1b4b6">
+
+      <div class="govuk-grid-row govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-width-three-quarters">
+            {% if data.title %}{{data.title}}{% else %}Customer Relations Trainee{% endif %}
+            <div class="govuk-caption-xl govuk-!-margin-top-1">ROCKIT CHILDREN'S BOUTIQUE LTD</div>
+          </h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row govuk-!-margin-bottom-6">
+        <div class="govuk-grid-column-two-thirds">
+
+          <p class="govuk-body">Do you want to gain work experience as a Customer Relations Trainee whilst working from home? If you are aged 16-24, unemployed and qualified below a level 4, please get in touch about working for this bright and quirky company.</p>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <button class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
+            Apply for traineeship
+          </button>
+          <p class="govuk-body-s">Closing date: 31 Mar 2022</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row" id="apprenticeshipSummary">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Traineeship summary</h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds" id="vacancyDescription">
+          <p>A traineeship is a course with work experience that gets you ready for work or an apprenticeship. It can last up to 12 months.</p>
+
+          <p>You can apply if you’re:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>eligible to work in England</li>
+            <li>unemployed and have little or no work experience</li>
+            <li>Aged 16 to 24 and qualified below Level 4</li>
+          </ul>
+          
+          <p>You’ll get:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>A work experience placement</li>
+            <li>Help with English and maths (if you need it)</li>
+          </ul>
+
+          <p>You won’t be paid, but you may be given expenses for things like travel and meals.</p>
+
+          <h3 class="govuk-heading-s">Training provided</h3>
+
+          <p>During your 2 weeks of work experience as a Customer Relations Trainee you will:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Identify potential wholesale stockists</li>
+            <li>Contact potential stockists to introduce Rockit Kids and find out if they would be interested in placing a wholesale order (semi-scripted)</li>
+            <li>Record communications and progress using a spreadsheet</li>
+          </ul>
+
+          <h3 class="govuk-heading-s">Work experience provided</h3>
+          <p>This 10-week Traineeship opportunity includes 8 weeks of work preparation training and 2 weeks of work experience.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Real Work Placement of minimum 70 hours</li>
+            <li>You could get a Level 1 Award qualification in Work Skills Development and a Level 1 Award in Customer Service</li>
+            <li>Help with English and maths functional skills, if needed and digital support</li>
+            <li>Ongoing support to access employment, apprenticeship, education, or training opportunities</li>
+          </ul>
+    
+          <p>The Traineeship is unpaid, but you can still claim out of work benefits.</p>
+  
+
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Working week</h3>
+          <p>Flexible working, Full-time, Compressed Hours<br>
+            Total hours per week: 37
+          </p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Expected duration</h3>
+          <p>45 Months</p>
+  
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Possible start date</h3>
+          <p>01 Sep 2022</p>
+ 
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Date posted</h3>
+          <p>28 Feb 2022</p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Training provider</h3>
+          <p>NORTHERN TRAINING ACADEMY LIMITED</p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Contact</h3>
+          <p>
+            Debbie Taylor McDonald<br>
+            07554430571<br>
+            <span style="word-break:break-all">debbietaylormcdonald@northerntraining.com</span>
+          </p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Reference number</h3>
+          <p>VAC1000031062</p>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Positions</h3>
+          <p>10 available</p>
+     
+
+        </div>
+
+
+        
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Employer</h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <p>ROCKIT CHILDREN'S BOUTIQUE LTD<br>
+          <a href="#" title="ROCKIT CHILDREN'S BOUTIQUE LTD Website">https://rockitkids.co.uk/</a></p>
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Address</h3>
+          <ul class="govuk-list">
+            <li>Unit Dc1</li>
+            <li>Boscombe Road</li>
+            <li>Coventry</li>
+            <li>Dunstable</li>
+            <li>LU5 4FE</li>
+          </ul>
+
+        </div>
+ 
+        <div class="govuk-grid-column-one-half">
+          <img style="width:100%" id="static-map" src="https://maps.googleapis.com/maps/api/staticmap?markers=52.400997,-1.508122&amp;size=465x256&amp;zoom=12&amp;client=gme-skillsfundingagency&amp;signature=lCuCTEI-K25bn1YgDLOSpzopvFk=" alt="Location map">
+
+        </div>
+
+      </div>
+
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Desired skills and what this will lead to</h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Desired skills and qualities</h3>
+          <p>No skills required as training will be given.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Good interpersonal skills</li>
+            <li>Exceptional manners</li>
+            <li>Able to exercise good judgement and appropriateness when talking to potential clients</li>
+            <li>Good written and spoken English</li>
+          </ul>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">What this will lead to</h3>
+          <p>Job, apprenticeship or further training upon completion.</p>
+
+        </div>
+
+      </div>
+      <!-- 
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Training</h2>
+        </div>
+      
+        <div class="govuk-grid-column-one-half">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Training provider</h3>
+          <p>WILTSHIRE COLLEGE</p>
+          
+        </div>
+
+        <div class="govuk-grid-column-one-half">
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">Apprenticeship standard</h3>
+          <p>Safety, health and environment technician<br>
+          Level 3 (A level)</p>
+  
+        </div>
+  
+      </div>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">
+            Employer's Application Instructions
+          </h2>
+        </div>
+        <div class="govuk-grid-column-three-quarters">
+          <p class="govuk-!-margin-bottom-8">Please apply through the Civil Service Jobs website.</p>
+          <p>This traineeship requires you to apply through the employer's website.</p>
+          <p class="govuk-!-margin-bottom-1"><a id="external-employer-website" href="#">Apply now</a></p>
+          <p class="govuk-body-s">Closing date: 31 Mar 2022</p>
+        </div>
+      </div> -->
+     
+    </div>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h2 class="govuk-heading-m">Now submit your vacancy</h2>
+
+      <p class="govuk-body">By submitting this vacancy you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Proofread your vacancy for spelling and formatting to avoid it being rejected by our QA team.
+        </strong>
+      </div>
+      
+      <form action="/form-handler" method="post" novalidate>
+        <div class="govuk-button-group">
+          <input type="hidden" name="answers-checked" value="true">
+         
+            <a href="confirmation" class="govuk-button" data-module="govuk-button">Submit vacancy</a>
+        
+
+          <!-- <button class="govuk-button" data-module="govuk-button">
+            
+          </button> -->
+
+          <a href="check-your-answers" class="govuk-button govuk-button--secondary">Change your answers</a>
+        </div>
+
+      </form>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h1 class="govuk-heading-s">No longer need this vacancy?</h1>
+
+      <a href="delete" class="govuk-button govuk-button--warning">Delete vacancy</a>
+
+
+    </div>
+  </div>
+</div>
+{% endblock %}

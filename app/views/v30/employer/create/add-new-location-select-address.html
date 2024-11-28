@@ -1,0 +1,67 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post" action="task-list?section2=completed">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+              Technician Apprentice{% endif %}</span>
+
+            <h1 class="govuk-heading-xl">Select an address</h1>
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Postcode</h2>
+            <p class="govuk-body govuk-!-font-weight-bold"> {{ data['advert-postcode-input'] or 'SW1A 2AA' }}
+              <a class="govuk-body" href="add-new-location-postcode" class="govuk-link" rel="noreferrer noopener"
+                target="_blank"> Change</a>
+            </p>
+
+            <div class="govuk-!-padding-bottom-2"></div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-!-margin-bottom-0" for="sort">
+                10 addresses found
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Select address</option>
+                <option value="hathway">1 Hatchway Cottage</option>
+                <option value="brook">5 Brook House</option>
+                <option value="manor">6 The Manor</option>
+                <option value="cobblers">10 Cobblers house</option>
+                <option value="bath">11 Bath House</option>
+                <option value="penny">13 Penny Cottage</option>
+                <option value="broomhill">14 Broomhill House</option>
+                <option value="honey">15 Honey Cottage</option>
+                <option value="oakhill">16 Oakhill House</option>
+                <option value="hill">18 Hill House</option>
+              </select>
+            </div>
+
+            <p class="govuk-body govuk-!-padding-top-5">
+              <a href="add-new-location-enter-manual-address" class="govuk-link">Enter address manually</a>
+            </p>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,146 @@
+
+{% extends "layout-guidance.html" %}
+
+{% block pageTitle %}
+Recruit an apprentice - Collection - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Apprenticeships</a>
+    </li>
+    <!--<li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="#">Voting</a>
+    </li>-->
+  </ol>
+  </div>
+  </div>
+
+  <div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds contents-list">
+        
+        <span class="govuk-caption-xl gem-c-title__context">Collection</span>
+        <h1 class="govuk-heading-xl">Recruit an apprentice</h1>
+        <p class="govuk-body-l">How to use the Recruit an apprentice service to create, post and manage apprenticeship adverts.</p>
+          <ol class="govuk-list govuk-body-s contents">
+            <li id="contents">Contents</li>
+            <li>&mdash; <a href="#employers" class="govuk-link govuk-link--no-visited-state">Employers</a></li>
+            <li>&mdash; <a href="#providers" class="govuk-link govuk-link--no-visited-state">Training providers</a></li>
+            <li>&mdash; <a href="#recruitment-apis" class="govuk-link govuk-link--no-visited-state">Display adverts API</a></li>           
+          </ol>
+        </div>          
+        <div class="govuk-grid-column-one-third">
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds mainstream-guide-content">
+            <!--<h2 class="govuk-heading-m">Overview</h2>-->
+              <p class="govuk-body">
+                Recruit an apprentice is the official government service for posting and managing apprenticeship adverts. Candidates can view and apply for apprenticeships on <a href="https://www.findapprenticeship.service.gov.uk/apprenticeshipsearch" class="govuk-link govuk-link--no-visited-state">Find an apprenticeship</a>.
+              </p>
+              <h2 class="govuk-heading-m govuk-!-margin-top-9" id="employers">Employers</h2>
+              <p class="govuk-body">
+                Information for employers on how to create and manage apprenticeship adverts, along with guidance on using our recruitment APIs. 
+                <br><br>
+                Our recruitment APIs may be useful if you want to create adverts using your existing systems or display adverts from Find an apprenticeship on your websites.
+              </p>
+              <ul class="gem-c-document-list">
+                <li class="gem-c-document-list__item">
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="creating-an-apprenticeship-advert">Creating an apprenticeship advert</a>                              
+                </li>
+                <li class="gem-c-document-list__item">          
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="employers-get-started">Get started with the recruitment APIs</a>
+                </li>
+                <li class="gem-c-document-list__item">          
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="https://www.gov.uk/government/collections/disability-confident-campaign">Disability confident employer scheme</a>
+                </li>
+                <!--<li class="gem-c-document-list__item">          
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="https://www.gov.uk/employer-preventing-discrimination/recruitment">Employers: preventing discrimination</a>
+                </li>-->
+              </ul>
+              <h2 class="govuk-heading-m govuk-!-margin-top-9" id="providers">Training providers</h2>
+              <p class="govuk-body">
+                Information for training providers on how to create and manage apprenticeship vacancies, along with guidance on using our recruitment APIs. 
+              </p>
+              <p class="govuk-body">
+                Our recruitment APIs may be useful if you want to create vacancies using your existing systems or display vacancies from Find an apprenticeship on your websites.
+              </p>
+              <ul class="gem-c-document-list">
+                <li class="gem-c-document-list__item">
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="creating-an-apprenticeship-vacancy">Creating an apprenticeship vacancy</a>               
+                </li>
+                <li class="gem-c-document-list__item">          
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="providers-get-started">Get started with the recruitment APIs</a>
+                </li>
+              </ul>
+              <h2 class="govuk-heading-m govuk-!-margin-top-9" id="recruitment-apis">Display adverts API</h2>
+              <p class="govuk-body">
+                You can use our Display adverts API to display adverts from Find an apprenticeship on any website, even if you don’t have an Apprenticeship service account.
+                <br><br>
+                APIs (Application Programming Interfaces) let applications share information and data with each other.
+                <br><br>
+                You'll need someone with technical knowledge to connect your system with the API, for example a software developer. 
+              </p>                       
+              <h3 class="govuk-heading-s" id="legacy-tools">Legacy tools</h3>
+              <p class="govuk-body">
+                The RSS feed and Av live legacy tools will no longer be available from March 2022 and our new Display adverts API should be used instead.
+              </p>
+              <ul class="gem-c-document-list">
+                <li class="gem-c-document-list__item">
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="display-adverts-from-faa">Display adverts from Find an apprenticeship if you don’t have an Apprenticeship service account</a>
+                </li>
+              </ul>      
+              <!--<ul class="gem-c-document-list">
+                <li class="gem-c-document-list__item">
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="https://www.gov.uk/government/publications/apprenticeship-vacancies-rss-feeds">Recruit an apprentice: RSS feeds</a>               
+                </li>
+                <li class="gem-c-document-list__item">          
+                  <a class="gem-c-document-list__item-title govuk-link govuk-link--no-visited-state" href="https://www.gov.uk/government/publications/av-live-how-to-set-up-and-use">Av live: how to set up and use</a>
+                </li>
+              </ul>-->
+              <ul class="gem-c-pagination__list" data-module="gem-track-click">
+                <li class="gem-c-pagination__item gem-c-pagination__item--next">
+                  <a href="/how-to-vote/voting-and-coronavirus" class="govuk-link gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="/how-to-vote/voting-and-coronavirus" data-track-dimension="next" data-track-dimension-index="29">
+                    <span class="gem-c-pagination__link-title">
+                      <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
+                        <path d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                      </svg>
+                      <span class="gem-c-pagination__link-text">Next</span>
+                    </span>
+                    <span class="gem-c-pagination__link-divider visually-hidden">:</span>
+                    <!--<span class="gem-c-pagination__link-label">Label</span>-->
+                  </a>
+                </li>
+                </ul>
+                  <!--
+                    <div class="pagination">
+                    <p class="govuk-heading-s"><a href="#" class="pagination-link">Next</a></p>
+                    <p class="govuk-body-s pagination-subtitle-link"><a href="#">Voting and coronavirus (COVID-19)</a></p>
+                    </div>
+                  -->
+              </div>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="related-navigation">
+          <h2 class="govuk-heading-s">Related content</h2>
+          <ul class="govuk-list related-links">
+            <li class="govuk-body-s"><a href="#">List item 1</a></li>
+            <li class="govuk-body-s"><a href="#">List item 2</a></li>
+          </ul>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="..//application-summary-volunteering-work-experience.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Work history</span>
+    <h1 class="govuk-heading-l">Do you want to delete this volunteering or work experience?</h1>
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">{{ data['work-experience-organisation-name'] or 'Sheffield animal rescue'
+          }}</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              What you did
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['what-you-did-in-the-work-experience-role'] or 'As a sports youth coach volunteer, I guided and
+              supported young athletes, fostering their love for sports and teaching
+              vital skills on and off the field. This included skill development, teamwork, and sportsmanship. I also
+              focused on game
+              strategy, physical fitness, mentoring, safety, and effective communication with parents. My role aimed to
+              motivate and
+              encourage athletes while engaging with the community to promote sports and positive values, shaping
+              well-rounded and
+              disciplined individuals.' }}
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Dates
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['work-experience-start-date-month'] or 'March' }} {{ data['work-experience-start-date-year'] or
+              '2019' }} to {{ data['work-experience-end-date-month'] or 'May' }} {{
+              data['work-experience-end-date-year'] or '2021' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+
+    <div class="govuk-!-padding-bottom-5"></div>
+
+
+
+    <form action="..//application-summary-volunteering-work-experience" method="post" novalidate>
+      <div class="govuk-button-group" href="..//application-summary-volunteering-work-experience.html">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Yes, delete
+        </button>
+        <a class="govuk-link" href="..//application-summary-volunteering-work-experience.html">Cancel – don't delete</a>
+      </div>
+      
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}

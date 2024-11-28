@@ -1,0 +1,69 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Which employer do you want to create a vacancy for? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Which employer do you want to create a vacancy for?</h1>
+
+    <form method="post" action="employers-select-0">
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            The employer I want to select is not listed
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          The employer is not listed because you do not have permission to create a vacancy for them. <br><br>
+          You'll need to contact them to give you permission in the 'training provider permissions’ section of their Apprenticeship service account. 
+        </div>
+      </details>
+      
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-visually-hidden">Search employer name or account name</legend>
+        <div class="govuk-form-group search-field search-field-darker">
+
+          <div class="search-input search-input-with-button">
+            <label class="govuk-label" for="query">
+              <!--Client reference-->
+              Search employer name or account name
+            </label>
+
+            <div class="autocomplete__parent_wrapper">
+              <div class="autocomplete__wrapper">
+                <div aria-atomic="true" aria-live="polite" role="status" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; padding: 0px; position: absolute; white-space: nowrap; width: 1px;">
+                  <span>No search results.</span>
+                  <span>,,</span>
+                </div>
+                <input aria-owns="searchOrgs__listbox" autocomplete="off" class="autocomplete__input" id="searchOrgsAuto" name="query" placeholder="" role="combobox" type="text" style="display:none;" value="">
+              </div>
+            </div>
+            <input class="govuk-text" name="searchOrgQuery" id="searchOrgsQuery" value="test">
+          </div>
+          <div class="search-submit">
+            <button class="govuk-button" data-module="govuk-button" type="submit" id="searchOrgsSubmit" name="searchOrgsSubmit" value="Search Organisations">Search Organisations</button>
+          </div>
+        </div>
+      </fieldset>
+      
+
+      <p class="govuk-body"><a href="employers-select">Clear search</a></p>
+
+      <p class="govuk-body govuk-!-margin-bottom-6">0 employers match <b>'test'</b></p>
+
+         
+    </form>
+
+  </div>
+</div>
+{% endblock %}

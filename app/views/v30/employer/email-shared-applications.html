@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% set currentPage = "login" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+
+<p>
+	To: <br>
+	From: The Apprenticeship service <br>
+	Subject: You have new applications shared with you by a training provider
+</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+		<h1 class="govuk-heading-m">
+			Applications shared for you to review 
+		</h1>
+		
+		<p>
+			Dear Gloucestershire Health and Care NHS Foundation Trust,
+		</p>
+
+		<p>
+			Lifetime training have sent you applications to review for Entry level development engineer apprentice.		
+		</p>
+
+		<p>
+			Sign in to your apprenticeship service account to view the applications. 
+		</p>
+
+		<p>
+			View shared applications: <a href="login-shared">https://recruit-apprentice.service.gov.uk/accounts//8c0-d087f-a295-4cee-b3f8-40b7f174ae01</a></a>
+		</p>
+
+		<p>
+			From <br>
+			The Apprenticeship service
+		</p>
+
+		<p>
+			This is an automated message – do not reply.
+		</p>
+
+	</div>
+</div>
+
+{% endblock %}

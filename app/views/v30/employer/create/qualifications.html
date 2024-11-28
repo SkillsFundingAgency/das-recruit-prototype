@@ -1,0 +1,129 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+What qualifications would you like the applicant to have? - Your apprenticeship advert - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if data.hasError and data.errorType == "grades"%}
+    <div class="validation-summary-errors govuk-error-summary" role="alert" data-valmsg-summary="true"
+      aria-labelledby="error-summary-title" tabindex="-1">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        Please fix these errors
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#grades-need-update" data-focuses="#grades-need-update" class="summary-link">GCSEs must include the
+              1-9 grading system</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+      <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
+        Apprentice{% endif %}</span>
+      Add a qualification
+    </h1>
+    <p class="govuk-hint"> <a class="govuk-link--no-visited-state" target="_blank"
+        href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels"> What's the GCSE
+        grading system? (opens in a new tab)</a></p>
+    <br>
+    <form method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" id="QualificationsHeading" for="QualificationType">Type of qualification</label>
+        <select class="govuk-select" id="QualificationType" name="QualificationType">
+          <option value="">Select from list</option>
+          <option value="GCSE or equivalent" {% if data.hasError or (data.edit=="yes" and
+            query.editQualificationType=="GCSE or equivalent" )%}selected="selected" {% endif %}>GCSE
+          </option>
+          <option value="A Level or equivalent" {% if data.edit=="yes" and
+            query.editQualificationType=="A Level or equivalent" %}selected="selected" {% endif %}>A Level
+          </option>
+          <option value="T Level or equivalent" {% if data.edit=="yes" and
+            query.editQualificationType=="T Level or equivalent" %}selected="selected" {% endif %}>T Level
+          </option>
+          <option value="BTEC or equivalent" {% if data.edit=="yes" and
+            query.editQualificationType=="BTEC or equivalent" %}selected="selected" {% endif %}>BTEC
+          </option>
+          <option value="Degree or equivalent" {% if data.edit=="yes" and
+            query.editQualificationType=="Degree or equivalent" %}selected="selected" {% endif %}>Degree
+          </option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+
+        <label class="govuk-label" for="Subject">Subject</label>
+
+        <input class="govuk-input govuk-input--width-20"
+          value="{% if data.hasError %}{{data.Subject}}{%elseif query.edit == " yes"%}{{query.editSubject}}{% endif %}"
+          type="text" maxlength="50" id="Subject" name="Subject">
+      </div>
+      <div id="grades-need-update"
+        class="govuk-form-group {%if data.hasError and data.errorType == 'grades'%}govuk-form-group--error{% endif%}"
+        data-bind="parentvalElement:grade">
+        <label class="govuk-label" for="Grade">Grade</label>
+        {% if data.hasError and data.errorType == "grades" %}
+        <span id="provider-need-update" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span>GCSEs must include the 1-9 grading system
+        </span>
+        {% endif %}
+        <input class="govuk-input govuk-input--width-20 {% if data.hasError and data.errorType == " grades"
+          %}govuk-input--error{% endif %}" value="{% if data.hasError %}{{data.Grade}}{% elseif query.edit == "
+          yes"%}{{query.editGrade}}{% endif %}" type="text" maxlength="30" id="Grade" name="Grade">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">Is this qualification essential or desirable?</h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="WeightingYes" type="radio" value="Essential"
+                data-display="Essential" name="Weighting" data-automation="radio-weighting-yes" {% if (data.hasError and
+                data.Weighting=="Essential" ) or query.editWeight=="Essential" %}checked="checked" {% endif %}>
+              <label class="govuk-label govuk-radios__label" for="WeightingYes">Essential</label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                The applicant must have this qualification to be considered
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="WeightingNo" type="radio" value="Desirable"
+                data-display="Desirable" name="Weighting" data-automation="radio-weighting-no" {% if (data.hasError and
+                data.Weighting=="Desirable" ) or query.editWeight=="Desirable" %}checked="checked" {% endif %}>
+              <label class="govuk-label govuk-radios__label" for="WeightingNo">Desirable</label>
+              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                This qualification would be a nice to have, but is not required
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+  {% endblock %}

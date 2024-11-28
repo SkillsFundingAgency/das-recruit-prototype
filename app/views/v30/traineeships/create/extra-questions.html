@@ -1,0 +1,54 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Do you have any questions you would like to ask applicants? (optional) - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    
+    <h1 class="govuk-heading-xl">Do you have any questions you would like to ask applicants? (optional)</h1>
+
+    <form method="post" action="task-list?section5=completed">
+
+             <p>Applicants will answer these questions if they apply through Find a traineeship.</p>
+
+             <p>For example, why do you want to do a work placement with this company? What interests you about this traineeship? </p>
+            
+             <br>
+  
+             <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+                Question 1 (optional)
+                </label>
+              </h1>
+              <input class="govuk-input" id="event-name" name="event-name" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+                Question 2 (optional)
+                </label>
+              </h1>
+              <input class="govuk-input" id="event-name" name="event-name" type="text">
+            </div>
+            
+            <br>
+            
+    <button class="govuk-button" data-module="govuk-button">
+      
+      Save and continue
+    </button>
+      
+      
+      <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+
+  </div>
+</div>
+{% endblock %}
