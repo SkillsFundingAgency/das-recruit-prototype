@@ -221,15 +221,21 @@ Find an apprenticeship - GOV.UK
           </ul>
 
           <h2 class="govuk-heading-m govuk-!-margin-top-8">Disability Confident</h2>
-          <p class="govuk-body">This company has joined the government’s Disability Confident scheme.</p>
           <ul class="govuk-task-list">
+
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <span class="app-task-list__task-name">
-                <a href="application-question-page-disability-disclosure.html"
-                  aria-describedby="disclose-disability-status">
-                  Interview under the Disability Confident scheme
-                </a>
-              </span>
+              <div class="govuk-task-list__name-and-hint">
+                <div class="govuk-task-list__name-and-hint">
+                  <a href="application-question-page-disability-disclosure.html"
+                    aria-describedby="disclose-disability-status">
+                    Apply under the Disability Confident scheme
+                  </a>
+                </div>
+                <div id="company-details-3-hint" class="govuk-task-list__hint">
+                  This company has joined a government scheme
+                </div>
+
+              </div>
 
               {% if data['completed-disability-disclosure-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
@@ -246,15 +252,21 @@ Find an apprenticeship - GOV.UK
             </li>
           </ul>
 
-          <h2 class="govuk-heading-m govuk-!-margin-top-8">Choose where to apply</h2>
+          <h2 class="govuk-heading-m govuk-!-margin-top-8">Locations</h2>
           <ul class="govuk-task-list">
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <span class="app-task-list__task-name">
-                <a href="application-question-page-select-location-preference.html"
-                  aria-describedby="interview-adjustments-status">
-                  Locations you want to apply for
-                </a>
-              </span>
+              <div class="govuk-task-list__name-and-hint">
+                <div class="govuk-task-list__name-and-hint">
+                  <a href="application-question-page-select-location-preference.html"
+                    aria-describedby="interview-adjustments-status">
+                    Where do you want to apply for?
+                  </a>
+                </div>
+                <div id="company-details-3-hint" class="govuk-task-list__hint">
+                  This apprenticeship is available in different locations
+                </div>
+              </div>
+
 
               {% if data['completed-location-preference-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
