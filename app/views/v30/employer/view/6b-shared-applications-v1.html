@@ -28,43 +28,45 @@ Manage vacancy
 <h2 class="govuk-heading-l govuk-!-margin-top-3">Applications (30)</h2>
 
 <!-- SEARCH start -->
-<div class="govuk-grid-column-two-thirds">
-  <form action="vacancies" method="get">
-    <div class="row-group">
-      <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
-        <fieldset class="govuk-fieldset">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="vacancies" method="get">
+      <div class="row-group">
+        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
+          <fieldset class="govuk-fieldset">
 
-          <div class="form-group search-field search-field-darker">
-            <div class="search-input search-input-with-button">
-              <label class="govuk-label" for="search">
-                Search by name or application ID
-              </label>
+            <div class="form-group search-field search-field-darker">
+              <div class="search-input search-input-with-button">
+                <label class="govuk-label" for="search">
+                  Search by name or application ID
+                </label>
 
-              <div class="autocomplete__parent_wrapper">
-                <div class="autocomplete__wrapper">
-                  <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search"
-                    name="search" placeholder="" role="combobox" type="text"
-                    value="{%if query.search %}{{query.search}}{%endif%}">
+                <div class="autocomplete__parent_wrapper">
+                  <div class="autocomplete__wrapper">
+                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search"
+                      name="search" placeholder="" role="combobox" type="text"
+                      value="{%if query.search %}{{query.search}}{%endif%}">
+                  </div>
                 </div>
-              </div>
 
+              </div>
+              <div class="search-submit">
+                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search
+                  clients</button>
+              </div>
             </div>
-            <div class="search-submit">
-              <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search
-                clients</button>
-            </div>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>
 <!-- SEARCH end -->
 
-<div class="govuk-grid-column-two-thirds">
-  <div class="govuk-!-padding-bottom-5"></div>
-  <h3 class="govuk-heading-m">30 applications</h3>
-</div>
+
+<div class="govuk-!-padding-bottom-5"></div>
+<h3 class="govuk-heading-m">30 applications</h3>
+
 
 
 <!-- table START -->
