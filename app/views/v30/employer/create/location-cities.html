@@ -13,91 +13,86 @@ Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+            Technician Apprentice{% endif %}</span>
+          <h1 class="govuk-fieldset__heading">
+            Add a location
+          </h1>
+        </legend>
+        <div id="contact-hint" class="govuk-hint">
+          Select one location
+        </div>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <h3 class="govuk-heading-s govuk-!-padding-top-3">Exeter</h3>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+          <h3 class="govuk-heading-s govuk-!-padding-top-3">London</h3>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+          <h3 class="govuk-heading-s govuk-!-padding-top-3">Plymouth</h3>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
+              type="radio" value="Organisation {{i}}" data-search-value="Organisation">
+            <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
+              Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form action="add-new-location-postcode" method="post">
+      <button class="govuk-button govuk-button--secondary govuk-!-margin-bottom-9" data-module="govuk-button">
+        Add a new location
+      </button>
+    </form>
+
     <form method="post" action="task-list?section2=completed">
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
-              Technician Apprentice{% endif %}</span>
-            <h1 class="govuk-fieldset__heading">
-              Add a location
-            </h1>
-          </legend>
-          <div id="contact-hint" class="govuk-hint">
-            Select one location
-          </div>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <h3 class="govuk-heading-s govuk-!-padding-top-3">Exeter</h3>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <h3 class="govuk-heading-s govuk-!-padding-top-3">London</h3>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <h3 class="govuk-heading-s govuk-!-padding-top-3">Plymouth</h3>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="selected-organisation-id" name="selected-organisation-id"
-                type="radio" value="Organisation {{i}}" data-search-value="Organisation">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id">
-                Cheylesmore House, 5 Quinton Rd, Coventry CV1 2WT
-              </label>
-            </div>
-            <div class="govuk-radios__divider">or</div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login"
-                aria-describedby="signIn-2-item-hint">
-              <label class="govuk-label govuk-radios__label" for="signIn-2">
-                Add a new location
-              </label>
-              <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
-                Enter a location that is not on this list
-              </div>
-            </div>
-          </div>
-        </fieldset>
-      </div>
       <div class="govuk-button-group">
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
         <a class="govuk-link" href="../dashboard">Cancel</a>
       </div>
-
     </form>
 
   </div>
