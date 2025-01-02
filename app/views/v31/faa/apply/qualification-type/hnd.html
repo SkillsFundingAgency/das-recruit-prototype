@@ -1,0 +1,85 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="..//application-question-page-qualification-type.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Add a Higher National Diploma (HND)</h1>
+
+    <form class="form" action="..//application-summary-qualifications" method="post">
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="hnd-subject">
+            Subject
+          </label>
+        </h1>
+        <input class="govuk-input" id="hnd-subject" name="hnd-subject" type="subject"
+          value="{{ data['hnd-subject'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="hnd-location">
+            College
+          </label>
+        </h1>
+        <input class="govuk-input" id="hnd-location" name="hnd-location" type="location"
+          value="{{ data['hnd-location'] or '' }}">
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="hnd-grade">
+            Grade
+          </label>
+        </h1>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="pass" selected>Pass</option>
+          <option value="merit">Merit</option>
+          <option value="distinction">Distinction</option>
+        </select>
+      </div>
+      <div class="govuk-!-padding-bottom-3"></div>
+
+
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="year-acheived">
+            Year achieved
+          </label>
+        </h1>
+        <div id="event-name-hint" class="govuk-hint">
+          If you are still studying, enter the year you’ll finish
+        </div>
+        <input class="govuk-input govuk-input--width-4" id="qualifications-hnd-year-achieved"
+          name="qualifications-hnd-year-achieved" type="year" aria-describedby="event-name-hint"
+          value="{{ data['qualifications-hnd-year-achieved'] or '' }}">
+      </div>
+
+
+      <div class="govuk-button-group" href="..//application-summary-qualifications.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

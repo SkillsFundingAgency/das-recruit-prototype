@@ -1,0 +1,392 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="6-shared-new" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-xl">Shared applications</span>
+    <h1 class="govuk-heading-xl">Development Engineer Apprentice</h1>
+
+    <p>
+      Each application is anonymised. If you decide to interview the applicant, you will be able to see their name and
+      contact information.
+    </p>
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-5"></div>
+
+<h2 class="govuk-heading-l govuk-!-margin-top-3">Applications (30)</h2>
+
+<!-- SEARCH start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="vacancies" method="get">
+      <div class="row-group">
+        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
+          <fieldset class="govuk-fieldset">
+
+            <div class="form-group search-field search-field-darker">
+              <div class="search-input search-input-with-button">
+                <label class="govuk-label" for="search">
+                  Search by name or application ID
+                </label>
+
+                <div class="autocomplete__parent_wrapper">
+                  <div class="autocomplete__wrapper">
+                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search"
+                      name="search" placeholder="" role="combobox" type="text"
+                      value="{%if query.search %}{{query.search}}{%endif%}">
+                  </div>
+                </div>
+
+              </div>
+              <div class="search-submit">
+                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search
+                  clients</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- SEARCH end -->
+
+
+<div class="govuk-!-padding-bottom-5"></div>
+<h3 class="govuk-heading-m">30 applications</h3>
+
+
+
+<!-- table START -->
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{%
+set appsTableData = [
+{
+id: "C5662EA",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v2",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "10 Jan 2023"
+},
+{
+id: "LP07688",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "LHK76TY",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "CP765D8",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "R384JP4",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "B1003GH",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+},
+{
+id: "KR9678F",
+status: "RESPONSE NEEDED",
+link: "../account/application-shared-v1",
+classes: "govuk-tag--blue",
+date: "Not reviewed",
+shared: "12 Jan 2023"
+}
+]
+%}
+<table class="govuk-table responsive-table" data-module="das-table-sort">
+  <thead class="govuk-table__header">
+    <tr class="govuk-table__row" role="row">
+
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Applicant</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Response</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date reviewed</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date shared</a>
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    {% for applicant in appsTableData %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" role="gridcell" data-label="Application ID">
+        <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.id }}</a>
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Status">
+        {{ govukTag({
+        text: applicant.status,
+        classes: applicant.classes
+        }) }}
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }} </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.shared }} </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!-- table END -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
+            height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path
+              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-one-third" style="text-align: right;">
+    <p class="govuk-body">Showing 1 to 20 of 30 applications</p>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+
+<!-- Today's date -->
+<script>
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var n = new Date();
+  var y = n.getFullYear();
+  var m = n.getMonth();
+  var d = n.getDate();
+  document.getElementById("date").innerHTML = d + " " + months[m] + " " + y;
+</script>
+
+<!-- Table sorts -->
+<script>
+  const selectAllCB = document.getElementById("select-all-applications");
+  const allApplicantsCB = document.getElementsByName('applications');
+
+  const tableSort = () => {
+    const getCellValue = (tr, idx) => {
+      return tr.children[idx].innerText || tr.children[idx].textContent
+    };
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+      v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
+    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
+
+    const handleClick = event => {
+      event.preventDefault();
+      const sortLink = event.target
+
+      allSortLinks.forEach(link => {
+        if (link === event.target) return false;
+        link.parentNode.classList.add("das-table--double-arrows")
+        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
+        link.setAttribute("aria-sort", "none")
+      });
+
+      if (sortLink.classList.contains("das-table__sort--asc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      } else if (sortLink.classList.contains("das-table__sort--desc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
+        sortLink.setAttribute("aria-sort", "ascending")
+      } else {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.add("das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      }
+
+      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
+        .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+          .indexOf(sortLink.parentNode), this.asc = !this.asc))
+        .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+    }
+
+    allSortLinks.forEach(link => {
+      link.addEventListener('click', handleClick)
+    });
+  }
+
+  if (document.querySelector('[data-module="das-table-sort"]')) {
+    tableSort();
+  }
+
+</script>
+
+
+{% endblock %}

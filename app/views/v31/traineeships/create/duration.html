@@ -1,0 +1,54 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Duration and working hours - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Optical Assistant Traineeship{% endif %}</span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Duration and working hours</h1>
+
+    <form method="post" action="positions">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="duration">
+          How long is the traineeship?
+        </label>
+        <div class="govuk-hint">A traineeship can last from 6 weeks up to 12 months, though most traineeships last for less than 6 months.</div>
+        <input class="govuk-input govuk-input--width-4" id="duration" name="duration" type="text">
+        <select class="govuk-select" id="sort" name="sort">
+
+          <option value="published">Weeks</option>
+          <option value="published">Months</option>
+        </select>
+      </div>
+
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="250">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="workingWeekDescription">
+            Weekly hours on the traineeship
+          </label>
+          <div class="govuk-hint">Include the hours and days of the week the trainee will be in training and on placement.</div>
+          <textarea class="govuk-textarea govuk-!-width-three-quarters govuk-js-character-count " id="workingWeekDescription"
+            name="workingWeekDescription" rows="5"></textarea>
+        </div>
+        <div id="workingWeekDescription-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 250 characters
+        </div>
+      </div>
+
+      <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
+        </div>
+      </form>
+  </div>
+</div>
+{% endblock %}

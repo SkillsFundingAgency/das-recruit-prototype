@@ -22,11 +22,15 @@ GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <!-- Sprints section starts -->
   <div class="govuk-grid-column-two-thirds">
-    {% include './v30/_summary.html' %}
+    {% include './v31/_summary.html' %}
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9">
       Previous sprints archive
     </h2>
+
+    {% set v30Html %}
+    {% include './v30/_summary.html' %}
+    {% endset %}
 
     {% set v29Html %}
     {% include './v29/_summary.html' %}
@@ -152,6 +156,20 @@ GOV.UK Prototype Kit
     id: "accordion-default",
     items:
     [
+    {
+    heading:
+    {
+    text: "FAA Design 15 (30)"
+    },
+    content:
+    {
+    html: v30Html
+    },
+    summary:
+    {
+    html: '28 November 2024 &mdash; 2 January 2025'
+    }
+    },
     {
     heading:
     {

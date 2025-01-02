@@ -1,0 +1,46 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+What do you want to call this vacancy? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post">
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="100">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="with-hint">
+              What do you want to call this vacancy?
+              </label>
+            </h1>
+            <p class="govuk-body">Use a title that relates to the traineeship, this will help it get found in the Find a traineeship search.</p>
+            <div id="with-hint-hint" class="govuk-hint">
+              Must include the word ‘trainee’ or ‘traineeship’
+            </div>
+            <input class="govuk-input govuk-js-character-count" id="title" name="title" type="text" value="{% if data.title and data.edit == 'yes' %}{{data.title}}{%endif%}">
+          </div>
+        
+          <div id="title-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 100 characters
+          </div>
+        
+        </div>
+
+        {{ govukButton({
+          text: "Save and continue",
+          href: "traineeship-sector?return_url"
+        }) }}      
+        <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

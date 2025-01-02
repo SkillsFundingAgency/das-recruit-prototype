@@ -1,0 +1,327 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your application</h1>
+    <p class="govuk-body">
+      Business administration apprentice at KING RECRUITMENT.
+    </p>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <!-- Add the link with the print icon -->
+
+    <head>
+      <title>Link with Print Icon</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+
+    <body>
+
+      <a href="#" class="print-link govuk-!-padding-right-5">
+        <i class="fas fa-print" style="color: #1d70b8"></i> Print your application
+      </a>
+
+    </body>
+    <!-- End the link with the print icon -->
+    <div class="govuk-!-padding-bottom-5"></div>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-8"></div>
+
+
+    <!-- START personal details -->
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Full name
+          <p class="govuk-body">
+            {{ data['first-name'] or 'Sarah' }} {{ data['last-name'] or 'Jones' }}
+          </p>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-font-weight-bold">Email address</p>
+          {{ data['email'] or 'sarah.philips@email.com' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+          <p class="govuk-body govuk-!-margin-bottom-0">1 Hatchway Cottage</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">London</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'SW1A 2AA' }}</p>
+          </p>
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-font-weight-bold">Phone</p>
+          {{ data['phone-number'] or '07700 9009754' }}
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END personal details -->
+
+    <!-- START education -->
+    <h2 class="govuk-heading-m">Education</h2>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Name of most recent school/college</h3>
+    <p class="govuk-body">Nottingham Trent University</p>
+
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Years attended</h3>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <p class="govuk-body govuk-!-margin-bottom-0">Started</p>
+            <p class="govuk-body">2015</p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p class="govuk-body govuk-!-margin-bottom-0">Finished</p>
+            <p class="govuk-body">2019</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END education -->
+
+
+    <!-- START qualifications -->
+
+    <h2 class="govuk-heading-m">Qualifications</h2>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-table__caption govuk-table__caption--s">A Level</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Grade</th>
+          <th scope="col" class="govuk-table__header">Year</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">History</td>
+          <td class="govuk-table__cell">B</td>
+          <td class="govuk-table__cell">2015</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Business</td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">2015</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Art</td>
+          <td class="govuk-table__cell">B</td>
+          <td class="govuk-table__cell">2015</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-table__caption govuk-table__caption--s">GCSE</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Grade</th>
+          <th scope="col" class="govuk-table__header">Year</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Maths</td>
+          <td class="govuk-table__cell">B</td>
+          <td class="govuk-table__cell">2013</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">English</td>
+          <td class="govuk-table__cell">B</td>
+          <td class="govuk-table__cell">2013</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Science</td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">2013</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">History</td>
+          <td class="govuk-table__cell">A</td>
+          <td class="govuk-table__cell">2013</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Business</td>
+          <td class="govuk-table__cell">B</td>
+          <td class="govuk-table__cell">2013</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Art</td>
+          <td class="govuk-table__cell">A</td>
+          <td class="govuk-table__cell">2013</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <caption class="govuk-table__caption govuk-table__caption--s">Degree</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Subject</th>
+          <th scope="col" class="govuk-table__header">Grade</th>
+          <th scope="col" class="govuk-table__header">Year</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Business</td>
+          <td class="govuk-table__cell">C</td>
+          <td class="govuk-table__cell">2019</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END qualifications -->
+
+    <!-- START work experience -->
+    <h2 class="govuk-heading-m">Work experience</h2>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Work experience</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">To</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Betty's cafe - Customer service assistant
+            interact with customers to address their concerns, answer their questions and assist them with their needs
+          </td>
+          <td class="govuk-table__cell">Mar 2013</td>
+          <td class="govuk-table__cell">Nov 2015</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END work experience -->
+
+    <!-- START training courses -->
+    <h2 class="govuk-heading-m">Training course</h2>
+
+    <table class="govuk-table govuk-table--small-text-until-tablet">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Training course</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">To</th>
+          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">From</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Traning corp LTD - Business management</td>
+          <td class="govuk-table__cell">Feb 2013</td>
+          <td class="govuk-table__cell">Oct 2013</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END training courses -->
+
+    <!-- START skills -->
+    <h2 class="govuk-heading-m">Skills the employer wants</h2>
+    <p class="govuk-body">Communication skills, Organisation skills, Presentation skills, Team working, Attention to
+      detail</p>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END skills -->
+
+
+
+    <!-- START role questions -->
+    <h2 class="govuk-heading-m">About you</h2>
+
+    <h3 class="govuk-heading-s">What are your main strengths?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">My biggest strength is that I can think on my feet and can work under
+      a lot of pressure. As an event manager at Sarah’s
+      boutique, we were organising an IT conference that needed a number of last-minute changes - due to a speaker
+      canceling
+      because of an emergency and 2 of our volunteers not being able to show up.
+      So, we allocated more time to each speaker and added a QA section at the end of each speech. We also encouraged
+      the
+      present speakers to talk about their business and personal experience more in-depth after they were done with
+      their
+      speech.
+      As for being understaffed, one day before the conference, I reached out to my network and found 2 students who
+      were
+      willing to help out. I personally met them 2 hours before the conference and got them up to speed with everything
+      we
+      were doing for the day, and gave them their tasks.</p>
+
+    <h3 class="govuk-heading-s">What skills would you like improve during this apprenticeship?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">I would like to learn more about business and leadership. I feel that
+      working for your company will give me many
+      opportunities to expand my knowledge in these areas while helping your team to grow and your company to be more
+      profitable.</p>
+
+    <h3 class="govuk-heading-s">What are your hobbies and interests?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">I would like to learn more about business and leadership. I feel that
+      working for your company will give me many
+      opportunities to expand my knowledge in these areas while helping your team to grow and your company to be more
+      profitable.</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END role questions -->
+
+    <!-- START additional questions -->
+    <h2 class="govuk-heading-m">Additional questions</h2>
+
+    <h3 class="govuk-heading-s">How will your travel to this role?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">I intend to travel by car.</p>
+
+    <h3 class="govuk-heading-s">Why have you applied to this role?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-3">I want this job because I am looking for an opportunity that lets me
+      exercise my skill with numbers and eye for detail.
+      I feel this position will allow me to succeed because my interpersonal skills help me establish meaningful
+      relationships
+      with vendors, and my experience with accounting software allows me to confidently manage invoices and inventory
+      databases</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END additional questions -->
+
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-m">Equality Questions</h2>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Do you have a learning difficulty, disability or health problem?
+    </h3>
+    <p class="govuk-body">No</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Is there anything we can do to support your interview?
+    </h3>
+    <p class="govuk-body">I don't have any interview support requirements</p>
+    <!-- END equal opportunity questions -->
+
+
+
+  </div>
+</div>
+
+{% endblock %}

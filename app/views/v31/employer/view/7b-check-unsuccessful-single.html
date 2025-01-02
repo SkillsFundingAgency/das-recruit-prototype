@@ -1,0 +1,82 @@
+{% extends "ma-home-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-l">Make this application unsuccessful</h1>
+
+
+    <p class="govuk-body">You will make this application unsuccessful:</p>
+    <div class="govuk-inset-text">
+      Ellen Collins:897DW5T
+    </div>
+
+    <p class="govuk-body">This applicant will be notified with this message:</p>
+    <div class="govuk-inset-text">
+      {{ data['contact-by-unsuccessful'] }}
+    </div>
+
+
+    <!-- radio buttons START -->
+    <div class="govuk-grid-row">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to make this applicantion unsuccessful?
+            </h1>
+          </legend>
+
+          <form method="post" action="3c-manage-applications-unsuccessful-single">
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="share_applications_yes" name="share_applications" type="radio"
+                  value="yes">
+                <label class="govuk-label govuk-radios__label" for="share_applications_yes">
+                  Yes
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="share_applications_no" name="share_applications" type="radio"
+                  value="no">
+                <label class="govuk-label govuk-radios__label" for="share_applications_no">
+                  No
+                </label>
+              </div>
+            </div>
+
+        </fieldset>
+      </div>
+      <!-- radio buttons END -->
+
+      {{ govukWarningText({
+<<<<<<< Updated upstream
+      text: "You cannot undo this action.",
+=======
+      text: "This action cannot be undone.",
+>>>>>>> Stashed changes
+      iconFallbackText: "Fallback text"
+      }) }}
+
+      <button class="govuk-button" data-module="govuk-button">
+        Confirm
+      </button>
+
+      </form>
+
+    </div>
+  </div>
+
+  {% endblock %}

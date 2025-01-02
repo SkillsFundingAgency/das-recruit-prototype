@@ -1,0 +1,86 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Key for API - Manage apprenticeships - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Key for API</h1>
+    <p class="govuk-body">
+      The API key gives your developer permission to connect to the API on your behalf.
+    </p>
+    <h2 class="govuk-heading-l">
+      {% if data['apiName'] == "recruitment-api" %}
+        Recruitment API
+      {% elseif data['apiName'] == "recruitment-api-sandbox" %}
+        Recruitment API (Sandbox)
+      {% else %}
+        Display Adverts API
+      {% endif %}
+    </h2>
+    <p class="govuk-body">
+      {% if data['apiName'] == "recruitment-api" %}
+        Create an advert on Find an apprenticeship using your existing systems.
+      {% elseif data['apiName'] == "recruitment-api-sandbox" %}
+        Test creating an advert on Find an apprenticeship using your existing systems.
+      {% else %}
+        Display recruitment adverts from Find an apprenticeship.
+      {% endif %}                
+      <br><br>
+      You'll need to send the API key and the API page to your developer. 
+      <br>
+      You can do this by copying the information below and pasting it into an email.
+      <br><br>             
+    </p>
+    <div class="app-summary-card ">
+      <header class="app-summary-card--header" data-module="app-copy">
+          {% if data['apiName'] == "recruitment-api" %}
+            <code style="color:darkgreen; font-size:16px;">99cfbdeb64f14277ac33d4dd06640ede<br><br>https://developer.apprenticeships.education.gov.uk/recruitment-api-documentation</code>
+          {% elseif data['apiName'] == "recruitment-api-sandbox" %}
+            <code style="color:darkgreen; font-size:16px;">67tuhjkfki4kfkei4kfjj7iboto6908l<br><br>https://developer.apprenticeships.education.gov.uk/recruitment-api-sandbox-documentation</code>
+          {% else %}
+            <code style="color:darkgreen; font-size:16px;">34dkhjrjvjiojfivjoidjfem33435mfm<br><br>https://developer.apprenticeships.education.gov.uk/display-adverts-api-documentation</code>
+          {% endif %}                    
+      </header>
+    </div>
+    <details class="govuk-details govuk-!-margin-top-9" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          No longer want this API key?
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <h2 class="govuk-heading-m">
+          Renew API key 
+        </h2>
+        <p>
+          You may want to renew your API key for security reasons or because of a change in your systems or staff. 
+        </p>
+        <p>
+          Renewing your API key will stop the previous key from working and create a new key for you to use. <br><br>
+          <a href="api-confirm-key" class="govuk-link govuk-link--no-visited-state">Renew API key</a>
+      </p>
+      <h2 class="govuk-heading-m">
+        Delete API key 
+      </h2>
+      <p>
+        If you no longer want to use this API you can delete your key.
+        This will stop the API from working. <br><br>
+        <a href="api-confirm-delete" class="govuk-link govuk-link--no-visited-state">Delete API key</a>
+    </p>
+      </div>
+    </details>
+  
+
+  </div>
+</div>
+{% endblock %}

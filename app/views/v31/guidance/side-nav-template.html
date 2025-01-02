@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  API documentation - Apprenticeship service - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<div class="login-nav login-border">
+  <ul class="login-nav__list">
+    <!--<li class="login-nav__list-item"><a href="login" class="govuk-link login-nav__link govuk-link--no-visited-state" id="Link-ManageAccount">Sign in / Create account</a>|</li>-->
+    <li class="login-nav__list-item">user@domain.co.uk |</li>
+    <li class="login-nav__list-item"><a href="#" class="govuk-link login-nav__link govuk-link--no-visited-state">Sign out</a></li>
+  </ul>
+</div>
+<hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+{% endblock%}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">    
+    <nav class="moj-side-navigation" aria-label="Side navigation">
+      <p class="govuk-body">Side nav heading</p>
+      <ul class="moj-side-navigation__list">
+        <li class="moj-side-navigation__item moj-side-navigation__item--active">
+          <a href="#1" aria-current="location">Nav item 1</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#2">Nav item 2</a>
+        </li>
+        <li class="moj-side-navigation__item">
+          <a href="#3">Nav item 3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Heading xl</h1>
+    <p class="govuk-body">
+      Body content
+    </p>
+  </div>
+</div>
+{% endblock %}

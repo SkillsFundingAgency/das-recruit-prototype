@@ -1,0 +1,67 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Add contact information - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Optical Assistant Traineeship{% endif %}</span>
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+              Do you want to add any contact details?
+            </h1>
+            <p>This should be someone an applicant can contact to ask questions about the traineeship position.</p>
+            <form method="post" action="task-list?section4=completed">
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  
+                  <div class="govuk-radios" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="yes" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                      <div class="govuk-hint">Select at least one option.</div>
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="EmployerContactName">First and last name (optional)</label>
+                        <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactName" name="EmployerContactName" value="{% if data.EmployerContactName %}{{data.EmployerContactName}}{%endif%}">
+                      </div>
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="EmployerContactEmail">Email address (optional)</label>
+                        <input class="govuk-input govuk-input--width-20" maxlength="100" type="text" id="EmployerContactEmail" name="EmployerContactEmail" value="{% if data.EmployerContactEmail %}{{data.EmployerContactEmail}}{%endif%}">
+                      </div>
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="EmployerContactPhone">Phone number (optional)</label>
+                        <input class="govuk-input govuk-input--width-20" type="tel" maxlength="16" id="EmployerContactPhone" name="EmployerContactPhone" value="{% if data.EmployerContactPhone %}{{data.EmployerContactPhone}}{%endif%}">
+                      </div>
+
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone">
+                      <label class="govuk-label govuk-radios__label" for="contact-2">
+                        No
+                      </label>
+                    </div>            
+                  </div>
+
+                </fieldset>
+              </div>
+              <div class="govuk-button-group">
+                <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+                <a class="govuk-link" href="../dashboard">Cancel</a>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+{% endblock %}
