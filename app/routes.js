@@ -42,6 +42,7 @@ require('./routes/28/routes.js')(router);
 require('./routes/29/routes.js')(router);
 require('./routes/30/routes.js')(router);
 require('./routes/31/routes.js')(router);
+require('./routes/32/routes.js')(router);
 
 
 

@@ -1,0 +1,677 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="3a-live" class="govuk-back-link">Back</a>
+
+<style>
+  .search-field-darker .search-input input {
+    border-color: #0b0c0c;
+    height: 41px;
+  }
+
+  .search-submit button {
+    background-color: #005ea5;
+    height: 41px;
+  }
+
+  .search-submit {
+    height: 41px;
+
+  }
+
+  span.das-tag {
+    background: transparent;
+    border: 3px solid #bfc1c3;
+    color: #0b0c0c;
+    font-weight: 400;
+  }
+
+  span.das-tag--rejected {
+    border-color: #B10E1E;
+    color: #000000;
+  }
+
+  span.das-tag--closed {
+    border-color: #0b0c0c;
+
+  }
+
+  span.das-tag--live {
+    border-color: #006435;
+  }
+
+  span.das-tag--submitted {
+    border-color: #F47738;
+  }
+
+  .accordion-controls {
+    display: none !important;
+  }
+
+  .das-table__header--sort {
+    font-weight: normal
+  }
+
+  .annotate {
+    font-style: italic;
+    color: #366ED4;
+  }
+
+  select optgroup {
+    background: #000;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+
+
+  .hidden {
+    display: none;
+  }
+
+  .toolbar {
+    font-size: 0;
+  }
+
+  .toolbar-item {
+    border: 1px solid #aaa;
+    background: #ccc;
+  }
+
+  .toolbar-item[aria-disabled="false"]:focus {
+    background-color: #eee;
+  }
+
+  .offscreen {
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    font-size: 18px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  .das-button-filter {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  span.das-tag--transferred {
+    border-color: #005ea5;
+    margin-top: 5px
+  }
+
+  span.das-tag--pending {
+    border-color: #f47738;
+  }
+</style>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Apprentice Catering Assistant</h1>
+
+
+    <p class="govuk-body-m">Advert reference: VAC10000039296</p>
+
+
+
+    <!-- ////START vacancy summry//// -->
+    <h2 class="govuk-heading-l">Advert summary</h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green">
+            Live
+          </strong>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> close advert</span>
+          </a>
+        </dd>
+      </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Closing date
+          <br>
+          <br>
+          Possible start date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          30 Oct 2024
+          <br>
+          <br>
+          01 Jan 2025
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="3c-dates">
+            Change<span class="govuk-visually-hidden"> change dates</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <p class="govuk-body">
+      <a class="govuk-link button-link  govuk-link--no-visited-state" href="view-multi-locations">View advert</a> &nbsp;
+      <a class="govuk-link button-link  govuk-link--no-visited-state" href="#">Clone advert</a> &nbsp;
+    </p>
+
+    <!-- END vacancy summary  -->
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- START vacancy analytics -->
+
+    <h2 class="govuk-heading-l">Advert analytics</h2>
+
+    <p>
+      To see how many people have looked at your advert, <a href="3b-vacancy-analytics">view advert analytics</a>.
+    </p>
+
+    <!-- END vacancy actions -->
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+  </div>
+</div>
+
+<!-- manage applications -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-3">Applications (30)</h2>
+    <div class="govuk-!-padding-bottom-3"></div>
+
+
+    <!-- START multiple links -->
+
+    <p class="govuk-body">
+      <a href="8a-multiple-unsuccessful" class="govuk-link govuk-link--no-visited-state">Make multiple applications
+        unsuccessful</a>
+    </p>
+    <!-- END multiple links -->
+
+    <!-- START disability confident -->
+    <div class="govuk-inset-text">
+      You are signed up to the <a href="#">Disability Confident scheme (opens in new tab)</a>.
+    </div>
+    <!-- END disability confident -->
+
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-6"></div>
+
+
+<div class="govuk-grid-row">
+
+  <!-- SEARCH start -->
+  <div class="govuk-grid-column-two-thirds">
+    <form action="vacancies" method="get">
+      <div class="row-group">
+        <div class="search-table column-two-thirds govuk-!-margin-bottom-4">
+          <fieldset class="govuk-fieldset">
+
+            <div class="form-group search-field search-field-darker">
+              <div class="search-input search-input-with-button">
+                <label class="govuk-label" for="search">
+                  Search by name or application ID
+                </label>
+
+                <div class="autocomplete__parent_wrapper">
+                  <div class="autocomplete__wrapper">
+                    <input aria-owns="searchClients__listbox" autocomplete="off" class="autocomplete__input" id="search"
+                      name="search" placeholder="" role="combobox" type="text"
+                      value="{%if query.search %}{{query.search}}{%endif%}">
+                  </div>
+                </div>
+
+              </div>
+              <div class="search-submit">
+                <button class="button" type="submit" id="searchSubmit" name="searchSubmit" value="Search">Search
+                  clients</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- SEARCH end -->
+
+  <!-- LOCATION FILTER start -->
+  <div class="govuk-grid-column-one-third">
+    <form id="filterForm">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="filter">
+          Filter by location
+        </label>
+        <select class="govuk-select" id="filter" name="filter" aria-haspopup="listbox"
+          aria-labelledby="exp_elem exp_button" onchange="filterTable()">
+          <optgroup label="Location">
+            <option value="any">All locations</option>
+            <option value="derby (6 broad street)">Derby (6 Broad Street)</option>
+            <option value="derby (8 main way)">Derby (8 Main Way)</option>
+            <option value="leeds">Leeds</option>
+            <option value="sheffield">Sheffield</option>
+          </optgroup>
+        </select>
+
+      </div>
+    </form>
+  </div>
+  
+
+  <script>
+    const filterTable = () => {
+      const filterValue = document.getElementById("filter").value.toLowerCase();
+      const tableRows = document.querySelectorAll(".govuk-table__body .govuk-table__row");
+      let visibleCount = 0; // Variable to keep track of visible rows
+
+      tableRows.forEach(row => {
+        const locationCell = row.querySelector('td[data-label="Locations applied for"]').innerText.toLowerCase();
+
+        // Include rows where the selected location is present or where "Open to all locations" is listed
+        if (filterValue === "any" || locationCell.includes(filterValue) || locationCell.includes("open to all locations")) {
+          row.style.display = "";  // Show the row
+          visibleCount++; // Increment visible count
+        } else {
+          row.style.display = "none";  // Hide the row
+        }
+      });
+
+      // Update the heading with the number of visible applications and location
+      const heading = document.querySelector("h3.govuk-heading-m"); // Adjust this if your heading is h3
+      if (heading) {
+        if (filterValue === "any") {
+          heading.innerText = `${visibleCount} applications`; // Show total applications
+        } else {
+          // Get the human-readable location from the dropdown and display it
+          const selectElement = document.getElementById("filter");
+          const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
+
+          heading.innerText = `${visibleCount} applications in ${selectedOptionText}`;
+        }
+      } else {
+        console.error("Heading element not found! Check the selector.");
+      }
+    };
+  </script>
+  <!-- LOCATION FILTER end -->
+</div>
+
+
+<h3 class="govuk-heading-m govuk-!-margin-top-3">30 applications</h3>
+
+<!-- table START -->
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{%
+set appsTableData = [
+{
+name: "Keith Stewart",
+id: "678CFR0",
+status: "new",
+link: "../account/application-new-multi-locations",
+classes: "govuk-tag--blue",
+date: "13 Sep 2023",
+location: "Derby (6 Broad Street), Leeds, Sheffield",
+disability: "Prefer not to say"
+},
+{
+name: "Ellen Collins",
+id: "6H0IL55",
+status: "new",
+link: "../account/application-review-no",
+classes: "govuk-tag--blue",
+date: "13 Sep 2023",
+location: "Derby (8 Main Way)",
+disability: "No"
+},
+{
+name: "Cynthia Perez",
+id: "FL13JK0",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "15 Sep 2023",
+location: "Derby (8 Main Way), Sheffield",
+disability: "No"
+},
+{
+name: "Susie Noble",
+id: "LL13J9H",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "15 Sep 2023",
+location: "Derby (6 Broad Street)",
+disability: "No"
+},
+{
+name: "Judy Ward",
+id: "897DW5T",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "15 Sep 2023",
+location: "Open to all locations",
+disability: "No"
+},
+{
+name: "Charles Davis",
+id: "B2LH789",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "15 Sep 2023",
+location: "Derby (8 Main Way), Derby (8 Broad Street), Leeds",
+disability: "Prefer not to say"
+},
+{
+name: "Neena Patel",
+id: "78BH067",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "15 Sep 2023",
+location: "Derby (8 Main Way), Leeds",
+disability: "No"
+},
+{
+name: "Jose Robinson",
+id: "LY6TY44",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "15 Sep 2023",
+location: "Derby (8 Main Way), Derby (8 Broad Street), Leeds",
+disability: "Prefer not to say"
+},
+{
+name: "John Smith",
+id: "39DBE1A",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Open to all locations",
+disability: "Yes"
+},
+{
+name: "Frank Jones",
+id: "28BY3W",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Derby (6 Broad Street), Sheffield",
+disability: "Yes"
+},
+{
+name: "Mia Adlin",
+id: "F3YT8Y",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Derby (6 Broad Street)",
+disability: "Yes"
+},
+{
+name: "Corrie Slack",
+id: "3G7RT5R",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Open to all locations",
+disability: "Yes"
+},
+{
+name: "Vanessa Asante",
+id: "TY12GKD",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Derby (8 Main Way), Derby (8 Broad Street), Leeds",
+disability: "Yes"
+},
+{
+name: "Lucy Pond",
+id: "DS15TYP",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Derby (8 Main Way)",
+disability: "Yes"
+},
+{
+name: "Isabella Grey",
+id: "DS15TYP",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Leeds",
+disability: "Yes"
+},
+{
+name: "James Boulder",
+id: "LY5FU67",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Derby (6 Broad Street)",
+disability: "Yes"
+},
+{
+name: "Chloe Godden",
+id: "TR3FR21",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Sheffield",
+disability: "Yes"
+},
+{
+name: "Niamh Scott",
+id: "FTP1R23",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Leeds, Sheffield",
+disability: "Yes"
+},
+{
+name: "Jarvis Nell",
+id: "DY23F41",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Leeds",
+disability: "Yes"
+},
+{
+name: "Danielle Price",
+id: "HAK9F56",
+status: "new",
+link: "",
+classes: "govuk-tag--blue",
+date: "16 Sep 2023",
+location: "Open to all locations",
+disability: "Yes"
+}
+]
+%}
+<table class="govuk-table responsive-table" data-module="das-table-sort">
+  <thead class="govuk-table__header">
+    <tr class="govuk-table__row" role="row">
+
+      <th scope="col" class="govuk-table__header" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort das-table__sort--asc" aria-sort="ascending">Name </a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Application ID</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Status</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        <a href="#" class="govuk-link das-table__sort">Date applied</a>
+      </th>
+      <th scope="col" class="govuk-table__header das-table--double-arrows" aria-sort="none">
+        Locations
+      </th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    {% for applicant in appsTableData %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell" role="gridcell" data-label="Name">
+        <a href="{{ applicant.link }}" class="govuk-link govuk-link--no-visited-state">{{ applicant.name }}</a>
+        <input type="hidden" name="{{ applicant.id }}-name" value="{{ applicant.name }}">
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Application ID">{{ applicant.id }}</td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Status">
+        {{ govukTag({
+        text: applicant.status,
+        classes: applicant.classes
+        }) }}
+      </td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Date applied">{{ applicant.date }}</td>
+      <td class="govuk-table__cell" role="gridcell" data-label="Locations applied for">{{ applicant.location }}</td>
+      <!-- This is fixed -->
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<!-- table END -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg"
+            height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path
+              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-one-third" style="text-align: right;">
+    <p class="govuk-body">Showing 1 to 20 of 30 applications</p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script>
+  const selectAllCB = document.getElementById("select-all-applications");
+  const allApplicantsCB = document.getElementsByName('applications');
+
+  const tableSort = () => {
+    const getCellValue = (tr, idx) => {
+      return tr.children[idx].innerText || tr.children[idx].textContent
+    };
+
+    const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+      v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+
+    const sortableTable = document.querySelector('[data-module="das-table-sort"]');
+    const allSortLinks = sortableTable.querySelectorAll('.govuk-table__header .govuk-link');
+
+    const handleClick = event => {
+      event.preventDefault();
+      const sortLink = event.target
+
+      allSortLinks.forEach(link => {
+        if (link === event.target) return false;
+        link.parentNode.classList.add("das-table--double-arrows")
+        link.classList.remove("das-table__sort--asc", "das-table__sort--desc")
+        link.setAttribute("aria-sort", "none")
+      });
+
+      if (sortLink.classList.contains("das-table__sort--asc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--asc", "das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      } else if (sortLink.classList.contains("das-table__sort--desc")) {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.replace("das-table__sort--desc", "das-table__sort--asc")
+        sortLink.setAttribute("aria-sort", "ascending")
+      } else {
+        sortLink.parentNode.classList.remove("das-table--double-arrows")
+        sortLink.classList.add("das-table__sort--desc")
+        sortLink.setAttribute("aria-sort", "descending")
+      }
+
+      Array.from(sortableTable.querySelectorAll('.govuk-table__body .govuk-table__row'))
+        .sort(comparer(Array.from(sortLink.parentNode.parentNode.children)
+          .indexOf(sortLink.parentNode), this.asc = !this.asc))
+        .forEach(tr => sortableTable.querySelector(".govuk-table__body").appendChild(tr));
+    }
+
+    allSortLinks.forEach(link => {
+      link.addEventListener('click', handleClick)
+    });
+  }
+
+  if (document.querySelector('[data-module="das-table-sort"]')) {
+    tableSort();
+  }
+</script>
+
+{% endblock %}

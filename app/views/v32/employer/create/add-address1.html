@@ -1,0 +1,93 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Where will the apprentices work? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Add an address
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="autocomplete-default">
+              Start typing the address or postcode
+            </label>
+            {# <input class="govuk-input" id="autocomplete-default" type="text"> #}
+            <div id="tt-default" class="autocomplete-wrapper"></div>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="addresspositions2">
+              Number of positions for this address
+            </label>
+            <input class="govuk-input govuk-input govuk-input--width-4" id="addresspositions2" name="addresspositions2" type="text"  value="{{ data['addresspositions2'] }}">
+          </div>
+                    
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- AUTOCOMPLETE SCRIPT DATA -->
+
+<script type="text/javascript" src="/public/javascripts/accessible-autocomplete.min.js"></script>
+
+<script type="text/javascript">
+  var providers = [
+    "13 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "14 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "15 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "16 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "17 Thorne House, Townsend Avenue, Coventry, CV1 1AB",
+    "10 Dunkeld Road, Perth, PH1 5TW",
+    "46 Gillingham Street, Pimlico, London, SW1V 1HU",
+    "Stagecoach Midlands, Main Road, Far Cotton, Northampton, NN4 8ES",
+    "Gillmoss Bus Depot, East Lancashire Road, Liverpool, L11 0BB",
+    "West Ham Garage, Stephenson Street, London, E16 4SA",
+    "Stagecoach West, 3rd Floor, 65 London Rd, Gloucester, GL1 3F",
+    "County Ground Edgbaston Road, Birmingham, B5 7QU",
+    "104 Victoria Centre, Nottingham, NG1 3",
+    "Building 8 East Midlands Airport Castle Donnington, Derby, DE74 2SA",
+    "Aerial House, 69 City Rd, Newcastle Upon Tyne, NE1 2",
+    "Crown Square, Manchester, M60 1PR",
+  ]
+</script>
+
+<script type="text/javascript">
+  var element = document.querySelector('#tt-default')
+  var id = 'autocomplete-default'
+  accessibleAutocomplete({
+    element: element,
+    id: id,
+    source: providers,
+    name: "address2"
+  })
+</script>
+
+{% endblock %}

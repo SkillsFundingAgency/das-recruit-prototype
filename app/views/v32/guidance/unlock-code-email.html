@@ -1,0 +1,33 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype kit    
+{% endblock %}
+
+{% block content %}
+<!--<main id="content" role="main" style="text-align: center;">-->
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <img src="/public/images/das-raa-unlock-code-email.png" width="1280px" id="email">
+          <div style="margin-left: 45%;">
+          <!--<h1 class="govuk-heading-m">Create an account to access the API key</h1>-->
+          <p class="govuk-body">
+            Dear Sarah Philips,
+            <br><br>
+            Enter this code to unlock your account:
+            <h2 class="govuk-heading-l">
+                ABC123
+            </h2>
+            This code replaces any previous unlock codes we’ve sent you. It will expire at midnight on 9 December 2021.
+            <br><br>
+            If you’ve closed your browser, you can open a new window using this link: <a href="#" class="govuk-link govuk-link--no-visited-state">https://pp-login.apprenticeships.education.gov.uk/identity/connect/authorize?client_id=easaccpp&response_type=code&scope=openid%20profile&redirect_uri=https%3A%2F%2Faccounts.pp-eas.apprenticeships.education.gov.uk%2Fservice%2FsignIn&state=pk2jJ_VmDbDgg0ORlOtYisc4oxJJuvxRNZHXXtZRSMKF6xii2id81aDlNU57SKI-boWsir9oP6uZNJFVpjqmJ1yRP4FitWW0kikT75jjt4klL9HoMFbG3H94FVbecR5A9Vy5aX2XRs_E2C0yLGElvuZXgd78AVEPB8f5F-dP0kkppbJaG0ZUftMiZDjGvxZx&nonce=762c63e025d14c25bf0f5fac71060590</a>
+            <br><br>
+            This is an automated message. Please don’t reply to this email.
+            <br><br>          
+            From
+            <br><br>          
+            The Apprenticeship Service
+          </p>
+        </div>
+<!--</main>  -->
+{% endblock %}

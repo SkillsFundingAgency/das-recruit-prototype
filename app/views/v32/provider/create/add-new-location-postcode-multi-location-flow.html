@@ -1,0 +1,52 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="add-new-location-select-address-multi-location-flow" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+              Technician Apprentice{% endif %}</span>
+
+            <h1 class="govuk-heading-xl govuk-!-margin-bottom-3">Add a new location</h1>
+            <p class="govuk-body">Enter the postcode for this location.</p>
+
+            <label class="govuk-label govuk-!-margin-top-5" for="postcode">
+              Postcode
+            </label>
+            <div id="postcode-hint" class="govuk-hint">
+              For example SW1A 2AA
+            </div>
+            <div class="govuk-form-group">
+              <input class="govuk-input govuk-input--width-10" id="advert-postcode-input" name="advert-postcode-input"
+                type="postcode" value="{{ data['advert-postcode-input'] or '' }}">
+            </div>
+            <p class="govuk-body govuk-!-padding-top-5">
+              <a href="add-new-location-enter-manual-address" class="govuk-link">Enter address manually</a>
+            </p>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Find address</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

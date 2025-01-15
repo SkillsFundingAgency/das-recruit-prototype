@@ -1,0 +1,37 @@
+{% extends "gov-uk-one-saved-vacancies.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Saved vacancies</h1>
+        <p class="govuk-body">You have not selected any vacancies yet.
+        </p>
+        <div class="govuk-inset-text">
+          <head>
+            <title>Link with Heart Icon</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+          </head>
+          You can save a vacancy by selecting <i class="far fa-heart" style="color:		#1d70b8"></i> when you search for
+          apprenticeships. Vacancies you save
+          are added to this page.
+        </div>
+      </div>
+
+
+  </main>
+</div>
+
+{% endblock %}
