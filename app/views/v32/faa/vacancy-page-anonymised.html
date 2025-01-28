@@ -23,7 +23,7 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-full">
     <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Business Support Admin Apprentice</h1>
     <p class="govuk-caption-l" style="color:#0b0c0c">Financial industry</p>
-    <p class="govuk-caption-l govuk-!-margin-bottom-5" style="color:	#505a5f">Manchester, Sheffield</p>
+    <p class="govuk-caption-l govuk-!-margin-bottom-5" style="color:	#505a5f">Leeds, Manchester, Sheffield</p>
     <p class="govuk-body govuk-!-margin-bottom-1">Closes Monday 4 December</p>
     <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
       Posted 5 days ago</p>
@@ -239,9 +239,61 @@ Find an apprenticeship - GOV.UK
     </div>
     <p class="govuk-body">This apprenticeship is available in these locations:</p>
     <ul class="govuk-list govuk-list--bullet">
+      <li>Leeds (LS1)</li>
       <li>Manchester (M1)</li>
-      <li>Sheffield (S10)</li>
+      <li>Sheffield (S18)</li>
     </ul>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Check your travel to work time
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <h3 class="govuk-heading-s">Check your travel to work time</h3>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label" for="event-name">
+              Enter your postcode
+            </label>
+          </h1>
+          <div id="event-name-hint" class="govuk-hint">
+            For example SW1A 2AA <a href="#" class="govuk-link"> use current location</a>
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="width-10" name="width10" type="text">
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="subject">
+            Select location
+          </label>
+          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+            <option value="choose" selected>Select a location</option>
+            <option value="sheffield">Leeds (LS1)</option>
+            <option value="manchester">Manchester (M1)</option>
+            <option value="leeds">Sheffield (S18)</option>
+          </select>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="subject">
+            Select a way of travelling
+          </label>
+          <select class="govuk-select" id="subject" name="subject" aria-describedby="subject-hint">
+            <option value="choose" selected>Select a method</option>
+            <option value="public-transport">Public transport</option>
+            <option value="car">Car</option>
+            <option value="cycling">Cycling</option>
+            <option value="walking">Walking</option>
+          </select>
+        </div>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Show route
+        </button>
+        <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 3 miles </p>
+        <p class="govuk-body"><b>Duration</b> 15 minuets </p>
+      </div>
+    </details>
+    <img src="/public/images/multi-locations map.png" width="630px"></img>
 
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- END work -->
