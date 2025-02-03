@@ -1,0 +1,40 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="account-details.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="form" action="account-details" method="post">
+      <h1 class="govuk-heading-l">Change your phone number</h1>
+      <p class="govuk-body">Use a number that companies can phone you on. For example, to invite you to an interview.
+      </p>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="phone-number">
+          Telephone number
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="phone-number" name="phone-number" type="phone"
+          value="{{ data['phone-number'] or '' }}">
+      </div>
+
+      <div class="govuk-button-group" href="account-details.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -43,6 +43,7 @@ require('./routes/29/routes.js')(router);
 require('./routes/30/routes.js')(router);
 require('./routes/31/routes.js')(router);
 require('./routes/32/routes.js')(router);
+require('./routes/33/routes.js')(router);
 
 
 

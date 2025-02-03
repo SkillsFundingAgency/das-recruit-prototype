@@ -1,0 +1,89 @@
+{% extends "gov-uk-one-settings.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="change-ethinic-group.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="change-equality-answers" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which of the following best describes your White background?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail" name="ethnicityDetail" type="radio"
+                value="british">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail">
+                English, Welsh, Scottish, Northern Irish or British
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-2" name="ethnicityDetail" type="radio"
+                value="irish">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-2">
+                Irish
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-3" name="ethnicityDetail" type="radio"
+                value="gypsy-traveller">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-3">
+                Gypsy or Irish Traveller
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-4" name="ethnicityDetail" type="radio"
+                value="other" data-aria-controls="conditional-ethnicityDetail-4">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-4">
+                Any other White background
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-ethnicityDetail-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="other-description">
+                  How would you describe your background? (optional)
+                </label>
+                <input class="govuk-input govuk-!-width-one-half" id="other-description" name="otherDescription"
+                  type="text">
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ethnicityDetail-6" name="ethnicityDetail" type="radio"
+                value="skip">
+              <label class="govuk-label govuk-radios__label" for="ethnicityDetail-6">
+                Prefer not to say
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group" href="change-equality-answers.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

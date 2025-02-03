@@ -1,0 +1,442 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent%}
+{{super()}}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <a href="../dashboard" class="govuk-back-link">Return to your applications</a>
+  </div>
+  <div class="govuk-grid-column-one-half govuk-!-padding-top-2" style="text-align:right; opacity:0.3">
+    <a href="?section1=completed&&section2=completed&&section3=completed&&section4=completed&&section5=completed" class="govuk-link">Skip</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if data.title %}<span class="govuk-caption-xl">{{data.title}}</span>{% endif%}
+    <h1 class="govuk-heading-xl">
+      Create a traineeship vacancy
+    </h1>
+    
+    <!--<p class="govuk-body">
+      Review the details that will appear in your advert. You can still make changes if you need to.<br>
+      Once we've approved your advert, it will appear on ​the <a href="https://www.gov.uk/apply-apprenticeship" class="govuk-link" target="_blank">Find an apprenticeship service (opens in a new tab or window)</a>.
+    </p>
+    <p class="govuk-body"><a href="vacancy-preview" class="govuk-button" data-module="govuk-button">Preview advert</a></p>-->
+    
+    <!--<h2 class="govuk-heading-s govuk-!-margin-bottom-2">Application incomplete</h2>
+    <p class="govuk-body govuk-!-margin-bottom-7">You have completed 0 of 4 sections.</p>-->
+
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Vacancy summary 
+          <span style="margin-left:248px;">           
+            {% if data.section1 == "completed" %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--blue app-task-list__tag" id="list-convictions-status">In progress</strong>
+            {% endif %}
+          </span>
+        </h2>
+        <ul class="app-task-list__items">
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="employer" aria-describedby="eligibility-status">
+                Name of employer
+              </a>
+           </span> 
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              <a href="title?return_url=task-list" aria-describedby="eligibility-status">
+                Vacancy title
+              </a>
+           </span> 
+          </li>
+          
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
+              <a href="traineeship-sector?return_url=task-list" aria-describedby="eligibility-status">
+                Traineeship sector
+              </a>
+              {% else %}
+                Traineeship sector
+              {% endif %}
+            </span>
+            <!--{% if data.import_no %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+
+          <!--<li class="app-task-list__item">
+            <span class="app-task-list__task-name">              
+              {% if data.section1 == "completed" %}
+              <a href="select-training-provider?return_url=task-list" aria-describedby="contact-details-status">
+                Have you found a training provider?
+              </a>
+              {% else %}
+                Have you found a training provider?
+              {% endif %}
+            </span>
+            {% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
+              <a href="short-description?return_url=task-list" aria-describedby="contact-details-status">
+                Summary of the traineeship
+              </a>
+              {% else %}
+              Summary of the traineeship
+              {% endif %}
+            </span>
+            <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
+              <a href="training-provided?return_url=task-list" aria-describedby="contact-details-status">
+                Training provided
+              </a>
+              {% else %}
+                Training provided
+              {% endif %}
+            </span>
+            <!--{% if data.commodities and ( data.commodities | length ) > 0  or data.stock_number or data.upload or data.variety or data.number_of_packages %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2.</span> Placement details
+          <span style="margin-left:246px;">
+            {% if data.section2 == "completed" %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </span>
+        </h2>        
+        <ul class="app-task-list__items">
+  
+           <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
+              <a href="dates?return_url=task-list" aria-describedby="contact-details-status">
+                Closing and start dates
+              </a>
+              {% else %}
+                Closing and start dates
+              {% endif %}
+            </span>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section1 == "completed" %}
+              <a href="work-experience-provided?return_url=task-list" aria-describedby="contact-details-status">
+                Work experience provided
+              </a>
+              {% else %}
+                Work experience provided
+              {% endif %}
+            </span>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section2 == "completed" %}
+              <a href="duration?return_url=task-list" aria-describedby="contact-details-status">
+                Duration and working hours
+              </a>
+              {% else %}
+                Duration and working hours
+              {% endif %}
+            </span>
+          </li>
+
+        
+         <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section2 == "completed" %}
+              <a href="positions?return_url=task-list" aria-describedby="contact-details-status">
+                Number of positions
+              </a>
+              {% else %}
+                Number of positions
+              {% endif %}
+            </span>
+   
+          </li>
+          
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section2 == "completed" %}
+              <a href="location?return_url=task-list" aria-describedby="contact-details-status">
+                Address
+              </a>
+              {% else %}
+                Address
+              {% endif %}
+            </span>            
+
+          </li>
+
+         
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3.</span>Requirements and prospects
+          <span style="margin-left:130px;">
+            {% if data.section3 == "completed" %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}
+          </span>
+        </h2>
+        <ul class="app-task-list__items">
+          <!--<li class="app-task-list__item" style="border-top:none;">
+            Content explaining that the user needs to add more information
+          </li>-->
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section2 == "completed" %}
+              <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
+                Skills
+              </a>
+              {% else%}
+                Skills
+              {% endif %}
+            </span>
+            <!--{% if data.port_entry or data.port_export or data.transport_method %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>  
+        
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section3 == "completed" %}
+              <a href="future-prospects?return_url=task-list" aria-describedby="contact-details-status">
+                Future prospects
+              </a>
+              {%else%}
+                Future prospects
+              {%endif%}
+            </span>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section3 == "completed" %}
+              <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
+                Other things to consider
+              </a>
+              {%else%}
+                Other things to consider
+              {%endif%}
+            </span>
+            <!--{% if data.port_entry or data.port_export or data.transport_method %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {% else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {% endif %}-->
+          </li>
+
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4.</span> About the employer
+          <span style="margin-left:227px;">
+            {% if data.section4 == "completed" %}
+            <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+            {%else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%endif%}
+          </span>
+        </h2>
+ 
+        <ul class="app-task-list__items">
+
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section3 == "completed" %}
+              <a href="employer-name?return_url=task-list" aria-describedby="list-convictions-status">
+                Name of employer on vacancy
+              </a>
+              {%else%}
+                Name of employer on vacancy
+              {%endif%}
+            </span>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section4 == "completed" %}
+              <a href="about-employer?return_url=task-list" aria-describedby="list-convictions-status">
+                Employer information
+              </a>
+              {%else%}
+                Employer information
+              {%endif%}
+            </span>
+          </li>
+
+          <li class="app-task-list__item">
+            <span class="app-task-list__task-name">
+              {% if data.section4 == "completed" %}
+              <a href="contact?return_url=task-list" aria-describedby="list-convictions-status">
+                Contact details
+              </a>
+              {%else%}
+                Contact details
+              {%endif%}
+            </span>
+          </li>
+
+        </ul>
+      </li>
+
+
+<!-- section 5 START -->
+<li>
+  <h2 class="app-task-list__section">
+    <span class="app-task-list__section-number">5.</span> Application
+    <span style="margin-left:310px;">
+      {% if data.section5 == "completed" %}
+      <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+      {%else%}
+      <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+      {%endif%}
+    </span>
+  </h2>
+
+  <ul class="app-task-list__items">
+    <li class="app-task-list__item">
+      <span class="app-task-list__task-name">
+        {% if data.section4 == "completed" %}
+        <a href="extra-questions?return_url=task-list" aria-describedby="list-convictions-status">
+          Questions for applicants
+        </a>
+        {%else%}
+        Questions for applicants
+        {%endif%}
+      </span>
+    </li>
+
+  </ul>
+</li>
+<!-- section 5 END -->
+
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">6.</span> Check and submit your vacancy
+          <span style="margin-left:105px;">
+            {% if data.section5 == "completed" %}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%else%}
+            <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status">Not started</strong>
+            {%endif%}
+          </span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <span class="task-list-submit-enabled">
+              <span class="app-task-list__task-name">
+                  <!--<a href="vacancy-preview" aria-describedby="list-convictions-status">-->
+                {% if data.section5 == "completed" %}
+                <a href="check-your-answers" aria-describedby="list-convictions-status">  
+                  Check your answers and submit your vacancy
+                </a>
+                {%else%}
+                  Check your answers and submit your vacancy
+                {%endif%}
+              </span>
+            </span>
+          </li>
+        </ul>
+      </li>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <h1 class="govuk-heading-s">No longer need this vacancy?</h1>
+
+      <a href="delete" class="govuk-button govuk-button--warning">Delete vacancy</a>
+
+    </ol>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script type="text/javascript">
+     
+    // don't disable the submit link on localhost
+    let hostname = window.location.hostname;
+    var urlParams = new URLSearchParams(window.location.search);
+
+    if (hostname.indexOf('localhost') > -1 || urlParams.get('test')) {
+      $('.task-list-submit-enabled').show();
+      $('.task-list-submit-disabled').hide();
+    }else{    
+      window.addEventListener('load', function() {
+        var tasks = $('.app-task-list__tag')
+        var max = tasks.length - 2
+        $('.task-list-max').text(max)
+        var count = 0
+        tasks.each(function(index, value) {
+          console.log($(value).text())
+          if ($(value).text() == "Completed") {
+            count += 1
+          }
+        })
+        if (count >= max-1) {
+          $('.task-list-submit-enabled').show()
+          $('.task-list-submit-disabled').hide()
+        }
+        $('.task-list-completed').text(count)
+      })
+    }
+
+    $('.task-list-submit-enabled').show();
+    $('.task-list-submit-disabled').hide();
+</script>
+{% endblock %}
