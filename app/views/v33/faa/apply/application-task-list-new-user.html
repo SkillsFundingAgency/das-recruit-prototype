@@ -18,7 +18,7 @@ Find an apprenticeship - GOV.UK
 
         <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Apply for Business Administration Apprentice</h1>
         <p class="govuk-caption-l govuk-!-margin-bottom-3" style="color:	#505a5f">King Recruitment</p>
-        <p class="govuk-body govuk-!-margin-bottom-3">Closes in 3 days (Friday 4 August at 11:59pm)</p>
+        <p class="govuk-body govuk-!-margin-bottom-3">Closes in 3 days (Friday 4 August 2025 at 11:59pm)</p>
         <p class="govuk-body govuk-!-margin-bottom-7">
           <a href="../vacancy-page-02.html" class="govuk-link" rel="noreferrer noopener" target="_blank">View vacancy
             (opens
@@ -221,15 +221,21 @@ Find an apprenticeship - GOV.UK
           </ul>
 
           <h2 class="govuk-heading-m govuk-!-margin-top-8">Disability Confident</h2>
-          <p class="govuk-body">This company has joined the government’s Disability Confident scheme.</p>
           <ul class="govuk-task-list">
+
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <span class="app-task-list__task-name">
-                <a href="application-question-page-disability-disclosure.html"
-                  aria-describedby="disclose-disability-status">
-                  Interview under the Disability Confident scheme
-                </a>
-              </span>
+              <div class="govuk-task-list__name-and-hint">
+                <div class="govuk-task-list__name-and-hint">
+                  <a href="application-question-page-disability-disclosure.html"
+                    aria-describedby="disclose-disability-status">
+                    Apply under the Disability Confident scheme
+                  </a>
+                </div>
+                <div id="company-details-3-hint" class="govuk-task-list__hint">
+                  This company has joined a government scheme
+                </div>
+
+              </div>
 
               {% if data['completed-disability-disclosure-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
