@@ -20,7 +20,8 @@ Find an apprenticeship - GOV.UK
 
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
-        <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Junior Mechanic' }} , {{ data['employer-name'] or 'BMW' }}</h2>
+        <h2 class="govuk-summary-card__title">{{ data['role-name'] or 'Junior Mechanic' }} , {{ data['employer-name'] or
+          'BMW' }}</h2>
         <ul class="govuk-summary-card__actions">
           <li class="govuk-summary-card__action"> <a class="govuk-link" href="..//apply/delete/jobs.html">
               Delete<span class="govuk-visually-hidden"> jobs and work experience</span>
@@ -40,11 +41,15 @@ Find an apprenticeship - GOV.UK
               Responsibilities
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with inquiries about products, scanning and updating the prices on
-              products, liaising with senior members of staff, keeping the shop cleaning and organised.
-              
-              The role involved stacking selfs, assisting customers with inquiries about products, scanning and updating the prices on
+              {{ data['what-you-did-in-the-role'] or 'The role involved stacking selfs, assisting customers with
+              inquiries about products, scanning and updating the prices on
               products, liaising with senior members of staff, keeping the shop cleaning and organised.' }}
+              <div class="govuk-!-padding-bottom-3"></div>
+              <p class="govuk-body">The role involved stacking selfs, assisting customers with inquiries about products,
+                scanning and updating
+                the prices on
+                products, liaising with senior members of staff, keeping the shop cleaning and organised.
+              </p>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
