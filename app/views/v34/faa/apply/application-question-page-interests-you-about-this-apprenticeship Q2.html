@@ -15,26 +15,13 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Application questions</span>
-    <h1 class="govuk-heading-l">Question 2</h1>
-
-    <p class="govuk-body">Explain to the company why you want to do this apprenticeship.</p>
-
-    <p class="govuk-body">You could write about:</p>
-    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
-      <li> the <b>Foundation in catering and hospitality </b> course</li>
-      <li>working for <b> WESTMINSTER LUXURY STAYS </b> </li>
-      <li>hobbies you have that are relevant to this apprenticeship</li>
-    </ul>
+    <h1 class="govuk-heading-l">Where do you see yourself in 5 years?</h1>
 
 
     <form action="application-task-list-new-user" method="post" novalidate>
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="with-hint">
-              Your interest in this apprenticeship
-            </label>
-          </h2>
+      
           <textarea class="govuk-textarea govuk-js-character-count" id="like-to-learn" name="like-to-learn" rows="5"
             aria-describedby="like-to-learn-info">{{ data['like-to-learn'] or '' }}</textarea>
         </div>
