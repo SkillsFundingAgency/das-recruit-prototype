@@ -1,0 +1,53 @@
+{% extends "trainee-layout.html" %}
+
+{% block pageTitle %}
+Description of the vacancy - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Optical Assistant Traineeship{% endif %}</span>
+              Is this an occupational traineeship?
+            </h1>
+          </legend>
+          <div class="govuk-hint">Occupational traineeships support progression into an apprenticeship or occupation. For example, a bricklaying traineeship can support progression to a Bricklayer Apprenticeship (L2).</div>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes" name="occupational" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no" name="occupational" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="no">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+    
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+    </form>
+
+  </div>
+</div>
+{% endblock %}

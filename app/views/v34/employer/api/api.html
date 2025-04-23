@@ -1,0 +1,45 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Get started with the recruitment APIs - Manage apprentices
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Get started with the recruitment APIs</h1>
+      <h2 class="govuk-heading-l">What do our APIs do?</h2> 
+      <p class="govuk-body">
+        APIs (Application Programming Interfaces) let applications share information and data with each other.
+        <br><br>
+        We have two APIs you can use:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li><strong>Recruitment API</strong> &ndash; our Recruitment API allows you to create adverts on Find an apprenticeship using your own systems</li>
+        <li><strong>Display adverts API</strong> &ndash; our Display adverts API allows you to display adverts from Find an apprenticeship on your own websites</li>
+      </ul>
+      <h2 class="govuk-heading-l">How do I use the APIs?</h2> 
+      <div class="govuk-inset-text">
+        You'll need someone with technical knowledge to connect your system with the API, for example a software developer.
+      </div>
+      <p class="govuk-body">
+        You can share this <a href="../../guidance/get-started#working-together" class="govuk-link govuk-link--no-visited-state">developer get started page</a> with the person who is going to connect your system with the API, they can access the API from there.             
+        <br><br>
+        You will need to give your developer API keys. The keys give your developer permission to connect to the API on your behalf.
+        <br><br>
+        Your developer will also be able to try out the API using the sandbox provided.
+      </p>
+      <h2 class="govuk-heading-l">Where do I access the API Key?</h2>
+      <p class="govuk-body">
+        If you have owner permissions you will be able to access the <a href="api-list" class="govuk-link govuk-link--no-visited-state">API keys here</a>. 
+      </p>
+  </div>
+</div>
+{% endblock %}

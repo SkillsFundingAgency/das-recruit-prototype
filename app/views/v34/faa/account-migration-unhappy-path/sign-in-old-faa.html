@@ -1,0 +1,73 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="transfer-data.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">Transfer your data</span>
+        <h1 class="govuk-heading-l">Sign in to your old Find an apprenticeship account</h1>
+        <p class="govuk-body">Enter the email address and password you used before 31 July 2024. This is not your GOV.UK
+          One Login.</p>
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I don’t know my old account details
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">You’ll need to contact us for help.</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Telephone: 08000 150 400</p>
+            <p class="govuk-body">Available Monday to Friday, 8am to 8pm</p>
+            <a href="https://www.gov.uk/call-charges" class="govuk-link">Find out more about call charges</a>
+          </div>
+        </details>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <div
+              style="background-color:#F3F2F1;   padding-top: 30px; padding-right: 30px; padding-bottom: 30px; padding-left: 30px">
+              <h2 class="govuk-heading-m govuk-!-padding-bottom-3">Your old account details</h2>
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="width-20">
+                  Email address
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+              </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--s" for="width-20">
+                  Password
+                </label>
+                <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+              </div>
+              <form class="form" action="confirm-transfer" method="post">
+                <div class="govuk-button-group" href="confirm-transfer.html">
+                  <button class="govuk-button" data-module="govuk-button">
+                    Sign in
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+
+{% endblock %}

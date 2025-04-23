@@ -1,0 +1,82 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Application questions</span>
+    <h1 class="govuk-heading-l">Question 2</h1>
+
+    <p class="govuk-body">Explain to the company why you want to do this apprenticeship.</p>
+
+    <p class="govuk-body">You could write about:</p>
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li> the <b>Foundation in catering and hospitality </b> course</li>
+      <li>working for <b> WESTMINSTER LUXURY STAYS </b> </li>
+      <li>hobbies you have that are relevant to this apprenticeship</li>
+    </ul>
+
+
+    <form action="application-task-list-new-user" method="post" novalidate>
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="with-hint">
+              Your interest in this apprenticeship
+            </label>
+          </h2>
+          <textarea class="govuk-textarea govuk-js-character-count" id="like-to-learn" name="like-to-learn" rows="5"
+            aria-describedby="like-to-learn-info">{{ data['like-to-learn'] or '' }}</textarea>
+        </div>
+        <div id="like-to-learn-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
+        </div>
+
+        <div class="govuk-!-padding-bottom-7"></div>
+
+        <form action="application-task-list-new-user" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                Have you completed this section?
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="have-you-completed-this-section" name="completed-question-two"
+                    type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                    Yes, I’ve completed this section
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="have-you-completed-this-section-2"
+                    name="completed-question-two" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                    No, I’ll come back to it later (saves your answer)
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="govuk-!-padding-bottom-5"></div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+
+
+  </div>
+</div>
+
+{% endblock %}

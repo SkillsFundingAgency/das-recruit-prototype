@@ -1,0 +1,273 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Check your application before submitting</h1>
+    <div class="govuk-inset-text">
+      This is what the company will see when they view your application.
+    </div>
+    <!-- Add the link with the print icon -->
+
+    <head>
+      <title>Link with Print Icon</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+
+    <body>
+
+      <a href="#" class="print-link govuk-!-padding-right-5">
+        <i class="fas fa-print" style="color: #1d70b8"></i> Print your application
+      </a>
+
+    </body>
+    <!-- End the link with the print icon -->
+    <div class="govuk-!-padding-bottom-7"></div>
+    <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-8"></div>
+
+
+    <!-- START personal details -->
+    <h2 class="govuk-heading-m">Personal details</h2>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['first-name'] or 'Leon' }} {{ data['last-name'] or 'Kirby' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body govuk-!-margin-bottom-0">55 Deltic Lane</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Derby</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">Derbyshire</p>
+          <p class="govuk-body govuk-!-margin-bottom-0">{{ data['postcode-input'] or 'DE4 6HJ' }}</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['phone-number'] or '07700 9009754' }}
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <p class="govuk-summary-list__value govuk-!-padding-bottom-0">leon.kirby@example.com </p>
+      </div>
+    </dl>
+   
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- END personal details -->
+      
+    
+    <!-- START qualifications -->
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">GSCEs</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Maths
+            </dt>
+            <dd class="govuk-summary-list__value">
+              3 (predicted)
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Science
+            </dt>
+            <dd class="govuk-summary-list__value">
+              4
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              English
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History
+            </dt>
+            <dd class="govuk-summary-list__value">
+              1
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Geography
+            </dt>
+            <dd class="govuk-summary-list__value">
+              2
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+  
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- END qualifications -->
+
+
+    
+
+    <!-- START role questions -->
+    <h2 class="govuk-heading-m">Application questions</h2>
+<div class="govuk-!-padding-bottom-5"></div>
+
+
+    <h3 class="govuk-heading-s" style="text-align: left;">What interests you about this apprenticeship?</h3>
+    
+    <p class="govuk-body govuk-!-margin-bottom-1">I would make a good business administrator as I am an organised individual.
+    </p>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <p class="govuk-body govuk-!-margin-bottom-1">I currently help my family run their business (retail) where I make many documents to keep the business run smoothly.
+      This includes commercial invoices, staff rotas and more. I do this using Microsoft Office on the company’s PC. This
+      shows my organisation and existing knowledge of how to be an administrator in a business environment.</p>
+      <div class="govuk-!-padding-bottom-3"></div>
+      <p class="govuk-body govuk-!-margin-bottom-1">I have also done 2 training courses in business. One of these focused on digital business practices, meaning I can
+        bring digital thinking into an existing office environment. 
+        I also did a course on boosting my business potential which
+        taught me how increase team performance and the importance of working in a quality way.</p>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+    <p class="govuk-body govuk-!-margin-bottom-1">I am a proactive and dedicated individual with a strong work ethic and a genuine desire to learn and develop.
+  </p>
+
+      <div class="govuk-!-padding-bottom-3"></div>
+      <p class="govuk-body govuk-!-margin-bottom-1">Thank you for reading my application.</p>
+
+
+
+    <div class="govuk-!-padding-bottom-8"></div>
+
+    <h3 class="govuk-heading-s" style="text-align: left;">Q3</h3>
+    
+    <p class="govuk-body govuk-!-margin-bottom-1">Answer part I.</p>
+    <div class="govuk-!-padding-bottom-3"></div>
+    <p class="govuk-body govuk-!-margin-bottom-1">Answer part II.</p>
+    
+    
+
+    
+    <div class="govuk-!-padding-bottom-8"></div>
+
+    <h3 class="govuk-heading-s" style="text-align: left;">Q3</h3>
+    
+    <p class="govuk-body govuk-!-margin-bottom-1">I can drive so will be commuting
+      to and from work by car.</p>
+    <div class="govuk-!-padding-bottom-3"></div>
+    <p class="govuk-body govuk-!-margin-bottom-1">Answer part II.</p>
+    
+    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <!-- END role questions -->
+
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-m">Get support at an interview</h2>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to request support at an interview?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Interview support request
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['interview-adjustments-input'] or 'No' }}
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END equal opportunity questions -->
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-m">Disability Confidence scheme</h2>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to apply under the Disability Confident scheme?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END equal opportunity questions -->
+
+
+    <!-- START submit -->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Submit your application
+          </h1>
+        </legend>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              I understand that I won't be able to make any changes after I submit my application
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="equality-question" method="post">
+      <div class="govuk-button-group" href="equality-question.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

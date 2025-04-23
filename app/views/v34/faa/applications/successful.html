@@ -1,0 +1,104 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Your applications</h1>
+
+        <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+          <ul class="moj-sub-navigation__list">
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./started.html" href="#1">Started</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./submitted.html">Submitted</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" aria-current="page">Successful</a>
+            </li>
+
+            <li class="moj-sub-navigation__item">
+              <a class="moj-sub-navigation__link" href="./unsuccessful-02.html">Unsuccessful</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <h2 class="govuk-heading-m">Successful</h2>
+        <p class="govuk-body">
+          The company will contact you to discuss your next steps.
+        </p>
+        <div class="govuk-!-padding-bottom-7"></div>
+
+        <!-- START cards -->
+
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link govuk-link--no-visited-state" id="..//vacancy-02" href="..//vacancy-page-02.html">
+            Business Apprenticeship</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">King Recruitment</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Sheffield (S3 7GE)</p>
+        <p class="govuk-body">Offered to you on 1 February 2024</p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link govuk-link--no-visited-state" id="..//vacancy-02" href="/">
+            Business Admin Apprentice</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Dental care LTD</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Recruiting nationally</p>
+        <p class="govuk-body">Offered to you on 21 January 2024</p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link govuk-link--no-visited-state" id="..//vacancy-02" href="/">
+            Business Analyst Apprentice</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Code source LIMITED</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Bristol, Manchester</p>
+        <p class="govuk-body">Offered to you on 11 January 2024</p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">View application<span
+                class="govuk-visually-hidden"> contact details</span></a></li>
+        </ul>
+        <!-- END cards -->
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment
+      Technician Apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl">Recruit across all of England</h1>
+    <p class="govuk-body">Add more information to recruit nationally.
+    </p>
+    <p class="govuk-body">Explain if your apprenticeship:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>is available in many locations across England</li>
+      <li>is remote working</li>
+      <li>provides live-in accommodation</li>
+    </ul>
+    <div class="govuk-!-padding-bottom-5"></div>
+    <form method="post" action="task-list?section2=completed">
+
+      <h2 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="your-answer">
+          Add more information about where the apprentice will work
+        </label>
+      </h2>
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="500">
+        <div class="govuk-form-group">
+          <textarea class="govuk-textarea govuk-js-character-count" id="main-strengths" name="main-strengths" rows="5"
+            aria-describedby="main-strengths-info"></textarea>
+        </div>
+        <div id="main-strengths-info" class="govuk-hint govuk-character-count__message">
+          <p class="govuk-hint govuk-!-margin-bottom-0">You can enter up to 500 characters</p>
+        </div>
+      </div>
+
+
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="create-account-name-input.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Create an account</span>
+    <h1 class="govuk-heading-l">Date of birth and upload a certificate</h1>
+    <div class="govuk-inset-text">
+      We don’t share your date of birth when you apply for an apprenticeship.
+    </div>
+    <p class="govuk-body govuk-!-margin-bottom-7">We only use your age to make our service work. For example, to show
+      you the correct National Minimum Wage rate for your age.</p>
+    <form class="form" action="create-account-postcode" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              What is your date of birth?
+            </h1>
+          </legend>
+          <div id="date-of-birth-hint" class="govuk-hint">
+            For example, 31 3 1980
+          </div>
+          <div class="govuk-date-input" id="date-of-birth">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day"
+                  name="date-of-birth-day" type="text" inputmode="numeric"
+                  value="{{ data['date-of-birth-day'] or '' }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month"
+                  name="date-of-birth-month" type="text" inputmode="numeric"
+                  value="{{ data['date-of-birth-month'] or '' }}">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year"
+                  name="date-of-birth-year" type="text" inputmode="numeric"
+                  value="{{ data['date-of-birth-year'] or '' }}">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label"   style="color: #d53880"  for=" file-upload-1">
+          Definitely upload your certificate here
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" style="color: #d53880" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
+
+      <div class="govuk-button-group" href="create-account-postcode.html.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+{% endblock %}

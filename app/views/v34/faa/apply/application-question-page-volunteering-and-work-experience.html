@@ -1,0 +1,73 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Work history</span>
+    <h1 class="govuk-heading-l">Volunteering and work experience</h1>
+
+    <p class="govuk-body">You can add experience you’ve gained outside of paid work. For example:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>voluntary roles</li>
+      <li>work experience placements</li>
+      <li>internships</li>
+    </ul>
+    
+<div class="govuk-!-padding-bottom-5"></div>
+<h3 class="govuk-heading-s">If you have not done volunteering or work experience</h3>
+<p class="govuk-body">You do not need to have done any volunteering or experience to apply. Mentioning unpaid experience can make your
+application stronger.</p>
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Do you want to add any volunteering and work experience?
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-qualifications-yes" name="add-qualifications" type="radio"
+              value="yes">
+            <label class="govuk-label govuk-radios__label" for="add-qualifications-yes">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="add-qualifications-no" name="add-qualifications" type="radio"
+              value="no">
+            <label class="govuk-label govuk-radios__label" for="add-qualifications-no">
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <form class="form" action="application-question-page-add-volunteering-and-work-experience" method="post">
+      <div class="govuk-button-group" href="application-question-page-add-volunteering-and-work-experience.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

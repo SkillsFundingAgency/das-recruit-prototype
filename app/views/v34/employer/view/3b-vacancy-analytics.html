@@ -1,0 +1,84 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Manage vacancy
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="3c-manage-applications" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Advert analytics</h1>
+
+<!-- analytics START -->
+
+
+     <p>Showing stats from 9th Jan 2023 to 15th Jan 2023.</p>
+    
+    <p class="govuk-body">Analytics show the total amount and the change from the previous 7 days.</p>
+
+      <div class="analytics--block govuk-grid-column-one-half" style="border: 1px solid">
+        <!-- <h3 class="analytics--header govuk-heading-s">Appeared in search</h3> -->
+        <h3 class="govuk-heading-s">Appeared in search</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">68 <span class="govuk-visually-hidden">times</span></div> -->
+          <p class="analytics--info govuk-!-font-weight-bold govuk-!-font-size-48">68</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+12</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div>
+        <!-- <div class="analytics--summary">
+          <div class="analytics--numeric">68 <span class="govuk-visually-hidden">times</span></div>
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+12</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div> -->
+      </div>
+      <div class="analytics--block govuk-grid-column-one-half" style="border: 1px solid">
+        <!-- <h3 class="analytics--header govuk-heading-s">Total times viewed</h3> -->
+        <h3 class="govuk-heading-s">Total times viewed</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">12</div> -->
+          <p class="analytics--info govuk-!-font-weight-bold govuk-!-font-size-48">42</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+5</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div>
+      </div>
+      <div class="analytics--block govuk-grid-column-one-half" style="border: 1px solid">
+        <!-- <h3 class="analytics--header govuk-heading-s">Total applications started</h3> -->
+        <h3 class="govuk-heading-s">Total applications started</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">7</div> -->
+          <p class="analytics--info govuk-!-font-weight-bold govuk-!-font-size-48">27</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">+1</span> increase <span class="govuk-visually-hidden"> in the last 7 days</span></p>
+        </div>
+      </div>
+      <div class="analytics--block govuk-grid-column-one-half" style="border: 1px solid">
+        <!-- <h3 class="analytics--header govuk-heading-s">Total applications submitted</h3> -->
+        <h3 class="govuk-heading-s">Total applications submitted</h3>
+        <div class="analytics--summary">
+          <!-- <div class="analytics--numeric">1</div> -->
+          <p class="analytics--info govuk-!-font-weight-bold govuk-!-font-size-48">20</p>
+          <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+          <p class="analytics--info"><span class="govuk-!-font-weight-bold">No</span> increase</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ////END ANALYTICS//// -->
+
+  
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

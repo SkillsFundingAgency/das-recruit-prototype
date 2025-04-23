@@ -1,0 +1,76 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-select-location-preference.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Locations</span>
+    <h1 class="govuk-heading-l">Where you want to apply for</h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Where do you want to apply for?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>5 Clare Street, Sheffield, S7 3PT</li>
+            <li>3 Chapel Street, Manchester, M1 1AD</li>
+          </ul>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="application-question-page-select-location-preference.html">
+            Change<span class="govuk-visually-hidden"> locations</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+    <div class="govuk-!-padding-bottom-5"></div>
+
+
+    <form action="application-task-list-new-user-multi-location" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            Have you completed this section?
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section"
+                name="completed-location-preference-section" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">
+                Yes, I’ve completed this section
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="have-you-completed-this-section-2"
+                name="completed-location-preference-section" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">
+                No, I’ll come back to it later
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
