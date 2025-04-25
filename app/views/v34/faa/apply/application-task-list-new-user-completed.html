@@ -10,7 +10,7 @@ Find an apprenticeship - GOV.UK
 
 {% block content %}
 
-<a class="govuk-back-link govuk-link--no-visited-state" href="/v34/faa/vacancy-page-signed-in-under21">Back</a>
+<a class="govuk-back-link govuk-link--no-visited-state" href="/v34/faa/applications/started">Back</a>
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -45,16 +45,8 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-qualification-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-qualification-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -64,16 +56,9 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-training-courses-section'] == "yes" %}
+              
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-training-courses-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
           </ul>
@@ -87,16 +72,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-jobs'] == "yes" %}
+             
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-jobs'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+             
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -107,16 +86,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-work-experience'] == "yes" %}
+              
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-work-experience'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+            
 
             </li>
           </ul>
@@ -134,16 +107,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-question-two'] == "yes" %}
+             
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-question-two'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+              
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -154,16 +121,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-employer-question-two'] == "yes" %}
+             
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-employer-question-two'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+              
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -174,16 +135,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-employer-questions'] == "yes" %}
+             
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-employer-questions'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+             
 
             </li>
           </ul>
@@ -198,17 +153,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-interview-adjustments-section'] == "yes" %}
+              
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-interview-adjustments-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
-
+            
             </li>
           </ul>
 
@@ -223,18 +171,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
           
-              {% if data['completed-disability-disclosure-section'] == "yes" %}
+             
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
           
-              {% elseif data['completed-disability-disclosure-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-          
-              {% else %}
-              <div class="govuk-task-list__status" id="company-details-1-status">
-                Previous answer
-              </div>
-          
-              {% endif %}
+              
           
           
             </li>
@@ -242,7 +182,7 @@ Find an apprenticeship - GOV.UK
 
          
 
-          <div class="govuk-button-group govuk-!-margin-top-8" href="application-preview-page-02.html">
+          <div class="govuk-button-group govuk-!-margin-top-8" href="/v34/faa/apply/application-preview-page-02">
             <button class="govuk-button" data-module="govuk-button">
               Continue
             </button>
