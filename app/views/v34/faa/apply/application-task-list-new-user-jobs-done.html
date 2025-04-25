@@ -10,7 +10,10 @@ Find an apprenticeship - GOV.UK
 
 {% block content %}
 
-<a class="govuk-back-link govuk-link--no-visited-state" href="/v34/faa/vacancy-page-signed-in-under21">Back</a>
+<a class="govuk-back-link govuk-link--no-visited-state" href="/v34/faa/vacancy-page-signed-in-under21"
+  onclick="event.preventDefault();">
+  Back
+</a>
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper " id="main-content" role="main">
@@ -40,21 +43,14 @@ Find an apprenticeship - GOV.UK
           <ul class="govuk-task-list">
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a class="govuk-link govuk-link--no-visited-state" href="/v34/faa/apply/application-question-page-qualification" aria-describedby="qualifications-status">
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-qualification.html" aria-describedby="qualifications-status">
                   School, college and university qualifications
                 </a>
               </span>
 
-              {% if data['completed-qualification-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-qualification-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+              
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
@@ -64,16 +60,10 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-training-courses-section'] == "yes" %}
+              
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-training-courses-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+              
 
             </li>
           </ul>
@@ -87,21 +77,15 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
 
-              {% if data['completed-jobs'] == "yes" %}
+             
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-jobs'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
+            
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-volunteering-and-work-experience.html"
+                <a class="govuk-link govuk-link--no-visited-state" href="/v34/faa/apply/application-question-page-volunteering-and-work-experience"
                   aria-describedby="work-experience-status">
                   Volunteering and work experience
                 </a>
@@ -223,13 +207,13 @@ Find an apprenticeship - GOV.UK
                 </a>
               </span>
           
-                            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
+<strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
           
           
             </li>
           </ul>
 
+         
 
           <div class="govuk-button-group govuk-!-margin-top-8" href="application-preview-page-02.html">
             <button class="govuk-button" data-module="govuk-button">
