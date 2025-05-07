@@ -217,32 +217,26 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             {% endif %}
           </span>
         </h2>
+        <p class="govuk-body" style="margin-left:30px; color: #64676C;">
+          Foundation apprenticeships do not require applicants to have specific skills or qualifications before applying.
+        </p>
+
+
         <ul class="app-task-list__items">
 
-          <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              {% if data.section2 == "completed" %}
-              <a href="skills?return_url=task-list" aria-describedby="contact-details-status">
-                Skills
-              </a>
-              {% else%}
-              Skills
-              {% endif %}
-            </span>
+        <li class="app-task-list__item">
+          <span class="app-task-list__task-name" style="color: #64676C;">
+            Skills (not required)
+          </span>
+        </li>
 
-          </li>
 
           <li class="app-task-list__item">
-            <span class="app-task-list__task-name">
-              {% if data.section3 == "completed" %}
-              <a href="qualifications?return_url=task-list" aria-describedby="contact-details-status">
-                Qualifications
-              </a>
-              {%else%}
-              Qualifications
-              {%endif%}
+            <span class="app-task-list__task-name" style="color: #64676C;">
+              Qualifications (not required)
             </span>
           </li>
+
 
           <li class="app-task-list__item">
             <span class="app-task-list__task-name">
@@ -260,10 +254,10 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
-                Other applicant requirements
+                Other things to consider
               </a>
               {%else%}
-              Other applicant requirements
+              Other things to consider
               {%endif%}
             </span>
           </li>

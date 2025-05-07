@@ -1,0 +1,286 @@
+{% extends "tp-layout.html" %}
+
+
+{% block pageTitle %}
+Manage apprentices
+{% endblock %}
+{% block beforeContent %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <section>
+      <span class="govuk-caption-l">Business administration apprenticeship</span>
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">
+        Chloe Knowles
+      </h1>
+
+      <p class="govuk-body-l govuk-!-padding-bottom-6">Application ID: 764YGRB</p>
+
+      <h2 class="govuk-heading-l">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-!-margin-bottom-0">5 Cambridge Street</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">Sheffield</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">South Yorkshire</p>
+            <p class="govuk-body govuk-!-margin-bottom-0">S1 4HP</p>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            07700 900000 
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value govuk-!-padding-bottom-5
+                          ">
+            <a href="mailto:faizal.dawood@domainname.co.uk">chloe.knowles@example.com</a>
+          </dd>
+        </div>
+      </dl>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </section>
+
+    <!-- START qualifications -->
+    <section>
+      <h2 class="govuk-heading-l">School, college and university qualifications</h2>
+
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">GSCEs</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Maths
+              </dt>
+              <dd class="govuk-summary-list__value">
+                4
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Science
+              </dt>
+              <dd class="govuk-summary-list__value">
+                4
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                English
+              </dt>
+              <dd class="govuk-summary-list__value">
+                5
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                History
+              </dt>
+              <dd class="govuk-summary-list__value">
+                6
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Geography
+              </dt>
+              <dd class="govuk-summary-list__value">
+                4
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </section>
+    <!-- END qualifications -->
+
+
+    <!-- START role questions -->
+    <h2 class="govuk-heading-l">Application questions</h2>
+
+    <h3 class="govuk-heading-s">What interests you about this apprenticeship?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-5">{{ data['main-strengths'] or 'The Jenkins apprenticeship interests me because it offers a practical pathway to develop professional skills within a
+    dynamic industry.' }}</p>
+    <p class="govuk-body govuk-!-margin-bottom-5">I'm drawn to the opportunity to learn from experienced professionals while contributing to a reputable company. My
+    passion for communication, particularly on the phone, aligns perfectly with the role's requirements. I'm eager to
+    enhance my organisational and administrative abilities, learning essential data handling and Microsoft Office skills.
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-5">This apprenticeship represents a chance to gain valuable experience and build a solid foundation for a successful career
+    in business administration.
+    </p>
+
+    <h3 class="govuk-heading-s">What’s most important in a team?</h3>
+    <p class="govuk-body govuk-!-margin-bottom-5">{{ data['like-to-learn'] or 'For me, it’s about trust. You need to be able to trust your other team colleagues to delivery and have mutual respect
+    for each other. Collaboration works best when you trust each other.' }}</p>
+    
+
+    <h3 class="govuk-heading-s" style="text-align: left;">Are you able to get to this apprenticeship?</h3>
+
+    <p class="govuk-body govuk-!-margin-bottom-5">{{ data['employer-question-two'] or 'I have a driver’s license so can drive to the workplace.' }}</p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    </hr>
+    <!-- END role questions -->
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-l">Get support at an interview</h2>
+
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to request support at an interview?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END equal opportunity questions -->
+
+    <!-- START equal opportunity questions -->
+    <h2 class="govuk-heading-l">Disability Confidence scheme</h2>
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Do you want to apply under the Disability Confident scheme?
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+      </div>
+    </dl>
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <!-- END equal opportunity questions -->
+
+    <!-- RADIO BUTTONS     -->
+    <section>
+
+      <form method="post" action="application-new">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What do you want to do with this application?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application" name="application" type="radio" value="review">
+                <label class="govuk-label govuk-radios__label" for="application">
+                  Review
+                </label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                  Change this application's status to 'in review' and make a decision later. Does not notify the
+                  applicant.
+                </div>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email"
+                    type="email" spellcheck="false" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
+                <label class="govuk-label govuk-radios__label" for="application-3">
+                  Mark application for interviewing with the employer
+                </label>
+                <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  Change this application's status to 'interviewing' because the employer will interview this applicant.
+                  Does not notify
+                  the applicant.
+                </div>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-text">
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
+                    type="tel" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-4" name="application" type="radio" value="successful"
+                  data-aria-controls="conditional-contact-4">
+                <label class="govuk-label govuk-radios__label" for="application-4">
+                  Make successful
+                </label>
+                <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  Send a notification to the applicant offering them this apprenticeship.
+                </div>
+                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                </div>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-5" name="application" type="radio"
+                  value="unsuccessful" data-aria-controls="conditional-contact-5">
+                <label class="govuk-label govuk-radios__label" for="application-4">
+                  Make unsuccessful and give feedback
+                </label>
+                <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
+                  Send a notification to the applicant telling them they won't be offered this apprenticeship.
+                </div>
+                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                </div>
+              </div>
+
+
+          </fieldset>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+
+      </form>
+
+
+
+    </section>
+
+
+  </div>
+</div>
+
+
+{% endblock %}
