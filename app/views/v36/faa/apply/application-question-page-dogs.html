@@ -1,0 +1,57 @@
+{% extends "gov-uk-signed-out.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-jobs.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Create an account</span>
+    <form class="form" action="application-notifications-new-user" method="post">
+      <h1 class="govuk-heading-l">Do you like dogs?</h1>
+      <p class="govuk-body">I really love dogs
+      </p>
+      <div class="govuk-form-group">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio"
+                  value="wales">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                  Wales
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio"
+                  value="northern-ireland">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">
+                  Northern Ireland
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group" href="application-notifications-new-user.html">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </div>
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

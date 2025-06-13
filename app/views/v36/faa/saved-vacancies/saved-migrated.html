@@ -1,0 +1,130 @@
+{% extends "gov-uk-one-saved-vacancies.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Saved vacancies</h1>
+
+        <div class="govuk-inset-text">
+          You’ll be able to save vacancies soon. Until then, we’ve transferred your saved vacancies from the old Find an
+          apprenticeship.
+        </div>
+
+        <!-- START sort -->
+
+        <div class="govuk-form-group">
+          <label for=" sorting">Sort by</label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="distance" selected>Recently saved</option>
+            <option value="closing">Closing soonest</option>
+          </select>
+        </div>
+
+        <!-- END sort -->
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+
+        <!-- START cards -->
+        <strong class="govuk-tag govuk-tag--orange govuk-!-margin-bottom-2">
+          Closing soon
+        </strong>
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="..//vacancy-page-02.html">
+            Business Apprenticeship</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">King recruitment LTD</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Sheffield, S1 3FG</p>
+        <p class="govuk-body govuk-!-margin-bottom-1">Saved on 2 April 2024</p>
+        <p class="govuk-body">
+          Closes 30 April at 11:59pm
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Apply now<span
+                class="govuk-visually-hidden"> apply now</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="..//vacancy-page-02.html">
+            Business Admin Apprentice</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Sunshine Records Limited</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Sheffield, S2 F1G</p>
+        <p class="govuk-body govuk-!-margin-bottom-1">Saved on 11 March 2024</p>
+        <p class="govuk-body">
+          Closes 22 June at 11:59pm
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Apply now<span
+                class="govuk-visually-hidden"> apply</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
+          <a class="das-search-results__link" id="vacancy-page-02" href="..//vacancy-page-02.html">
+            Business Adminstration Apprenticeship</a>
+        </h2>
+        <p class="govuk-body govuk-!-margin-bottom-0">Five minds research LTC</p>
+        <p class="govuk-body" style="color:#505a5f">
+          Sheffield, S18 7FA</p>
+        <p class="govuk-body govuk-!-margin-bottom-1">Saved on 3 January 2024</p>
+        <p class="govuk-body">
+          Closes 23 June at 11:59pm
+        </p>
+
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#">Apply on company’s website
+              (opens in new tab)<span class="govuk-visually-hidden"> apply</span></a></li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6 ">
+        <!-- END cards -->
+
+        <h2 class="govuk-heading-m govuk-!-margin-top-9">Expired</h2>
+        <p class="govuk-body">Vacancies you saved that have now closed.
+        </p>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Show expired vacancies
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <hr class="govuk-section-break govuk-section-break-non-visible govuk-!-margin-bottom-6 ">
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-1">Business admin apprenticeship</h2>
+            <p class="govuk-body govuk-!-margin-bottom-0">Kapten services LTD</p>
+            <p class="govuk-body" style="color:#505a5f">
+              Sheffield, S12 8SB</p>
+            <p class="govuk-body govuk-!-margin-bottom-1">Saved on 12 December 2023</p>
+            <p class="govuk-body">
+              Closed on 8 March
+            </p>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 ">
+          </div>
+        </details>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

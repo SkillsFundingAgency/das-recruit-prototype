@@ -1,0 +1,98 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-qualification.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What is your most recent qualification?
+      </h1>
+    </legend>
+    <div id="qualification-type-hint" class="govuk-hint">
+      You’ll be able to add your other qualifications later
+    </div>
+
+    <form class="qualification-type-form" id="qualification-type-form" action="/v33/faa/apply/qualification-type/action"
+      method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="gcse" name="qualification" type="radio" value="gcse">
+              <label class="govuk-label govuk-radios__label" for="qualification">
+                GCSE
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="btec" name="qualification" type="radio" value="btec">
+              <label class="govuk-label govuk-radios__label" for="btec">
+                BTEC
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="t-level" name="qualification" type="radio" value="t-level">
+              <label class="govuk-label govuk-radios__label" for="t-level">
+                T level
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="as-level" name="qualification" type="radio" value="as-level">
+              <label class="govuk-label govuk-radios__label" for="as-level">
+                AS level
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="a-level" name="qualification" type="radio" value="a-level">
+              <label class="govuk-label govuk-radios__label" for="a-level">
+                A level
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="apprenticeship" name="qualification" type="radio"
+                value="apprenticeship">
+              <label class="govuk-label govuk-radios__label" for="apprenticeship">
+                Apprenticeship
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="degree" name="qualification" type="radio" value="degree">
+              <label class="govuk-label govuk-radios__label" for="degree">
+                Degree (undergraduate, postgraduate or foundation)
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="qualification-type">
+              <input class="govuk-radios__input" id="other-qualification" name="qualification" type="radio"
+                value="other-qualification">
+              <label class="govuk-label govuk-radios__label" for="other-qualification">
+                Other (including international qualifications)
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+      </div>
+
+    </form>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

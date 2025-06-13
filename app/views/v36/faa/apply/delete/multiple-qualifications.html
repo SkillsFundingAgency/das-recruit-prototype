@@ -1,0 +1,86 @@
+{% extends "gov-uk-one.html" %}
+
+{% block pageTitle %}
+Find an apprenticeship - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a class="govuk-back-link" href="application-question-page-qualification-type.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Education history</span>
+    <h1 class="govuk-heading-l">Do you want to delete these qualifications?</h1>
+
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">GSCEs</h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Maths
+            </dt>
+            <dd class="govuk-summary-list__value">
+              C (predicted)
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Science
+            </dt>
+            <dd class="govuk-summary-list__value">
+              B
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              English
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              History
+            </dt>
+            <dd class="govuk-summary-list__value">
+              A
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Geography
+            </dt>
+            <dd class="govuk-summary-list__value">
+              D
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <form action="..//application-summary-qualifications.html" method="post" novalidate>
+      <div class="govuk-button-group" href="..//application-summary-qualifications.html">
+        <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+          Yes, delete
+        </button>
+        <a class="govuk-link" href="..//application-summary-qualifications.html">Cancel – don't delete</a>
+      </div>
+    </form>
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
