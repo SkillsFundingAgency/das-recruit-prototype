@@ -1,0 +1,59 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Confirm apprenticeship training - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Confirm apprenticeship training course</h1>
+
+    <!-- <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %} vacancy</span>
+    <h1 class="govuk-heading-xl">
+      Confirm the training provider
+    </h1> -->
+    <div class="das-confirm-card" style="background-color:#f4f4f4;padding:20px;margin-bottom:30px;">
+      <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-3">
+        Foundation
+      </strong>
+
+      <h2 class="govuk-heading-m">{%if data.training_level %}{{data.training_level}}{% else %}Business and administration foundation apprenticeship Level: 2{%endif%}<span class="govuk-caption-m">
+      Level:
+    <br>
+      Typical duration: 12 months
+      <br>
+      Foundation apprenticeship
+        <br>
+      </span>
+
+    </h2>
+    {% if data.expiryDate %}
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        <span id="selected-training" class="govuk-!-font-weight-bold">This apprenticeship training closes to new starters from 1 August 2022.
+
+      </strong>
+    </div>
+    {% endif %}
+    <p class="govuk-body govuk-!-margin-bottom-0"><a href="std-select?change=yes">Change apprenticeship training</a><br></p>
+    </div>
+    <form method="post">
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
+        </div>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

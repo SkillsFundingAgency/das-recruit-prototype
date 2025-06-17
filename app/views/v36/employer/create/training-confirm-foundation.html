@@ -1,0 +1,72 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Confirm apprenticeship training - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+<style media="screen">
+
+</style>
+{% endblock %}
+{% block content %}
+
+
+    <!-- <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business Administration Apprentice{% endif %} vacancy</span>
+    <h1 class="govuk-heading-xl">
+      Confirm the training provider
+    </h1> -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Confirm apprenticeship training course</h1>
+    
+    <div class="das-confirm-card" style="background-color:#f4f4f4; padding:20px; margin-bottom:30px;">
+      <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-3">
+        Foundation
+      </strong>
+    
+      {% if data.training_level %}
+      <h2 class="govuk-heading-m govuk-!-margin-bottom-3">
+        Business and administration foundation apprenticeship Level: 2
+      </h2>
+      {% endif %}
+    
+      <span class="govuk-caption-m govuk-!-margin-bottom-3">
+        Level: <br>
+        Typical duration: 12 months<br>
+        Foundation apprenticeship<br>
+      </span>
+    
+      {% if data.expiryDate %}
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          <span id="selected-training" class="govuk-!-font-weight-bold">
+            This apprenticeship training closes to new starters from 1 August 2022.
+          </span>
+        </strong>
+      </div>
+      {% endif %}
+    
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        <a href="std-select?change=yes">Change apprenticeship training</a>
+      </p>
+    </div>
+
+    <form method="post">
+        <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">
+            Save and continue
+          </button>
+
+          <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        </div>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "ma-layout.html" %}
+{% extends "tp-layout.html" %}
 
 {% block pageTitle %}
 Do you have any questions you would like to ask applicants? (optional) - Recruitment - {{serviceName}} - GOV.UK
@@ -12,35 +12,32 @@ Do you have any questions you would like to ask applicants? (optional) - Recruit
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    
-    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
-      Apprentice{% endif %}</span>
+
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif
+      %}</span>
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Application questions on Find an apprenticeship</h1>
-    
+
     <p>Find an apprenticeship includes set questions that applicants will need to answer. You can add extra questions if
       you
       need to ask more.</p>
-    
+
     <h3 class="govuk-heading-s">Question 1</h3>
     <p>What are your skills and strengths?</p>
-    
-    <h3 class="govuk-heading-s">Question 2</h3>
-    <p>What interests you about this apprenticeship?</p>
-    
+
+    <h3 class="govuk-heading-s">Question 2 (optional)</h3>
+    <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription"
+      rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
+
     <h3 class="govuk-heading-s">Question 3 (optional)</h3>
     <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription"
       rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
-    
-    <h3 class="govuk-heading-s">Question 4 (optional)</h3>
-    <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription"
-      rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
-    
-    
-    
-    <a href="../dashboard" class="govuk-button"
+
+
+
+    <a href="/v34/provider/create/task-list%20foundation?edit=no&section5=completed" class="govuk-button"
       data-module="govuk-button">Save and continue</a>
-    
-    
+
+
     <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
 
   </div>

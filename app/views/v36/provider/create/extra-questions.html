@@ -12,42 +12,35 @@ Do you have any questions you would like to ask applicants? (optional) - Recruit
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    
-    <h1 class="govuk-heading-xl">Do you have any questions you would like to ask applicants? (optional)</h1>
 
-    <form method="post" action="task-list?section5=completed">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Application questions on Find an apprenticeship</h1>
 
-             <p>Applicants will answer these questions if they apply through Find an apprenticeship.</p>
+    <p>Find an apprenticeship includes set questions that applicants will need to answer. You can add extra questions if
+      you
+      need to ask more.</p>
 
-             <p>For example, ‘How will you travel to this apprenticeship?’</p>
+    <h3 class="govuk-heading-s">Question 1</h3>
+    <p>What are your skills and strengths?</p>
 
-             <br>
-  
-             <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
-                Question 1 (optional)
-                </label>
-              </h1>
-              <input class="govuk-input" id="event-name" name="event-name" type="text">
-            </div>
+    <h3 class="govuk-heading-s">Question 2</h3>
+    <p>What interests you about this apprenticeship?</p>
 
-            <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
-                Question 2 (optional)
-                </label>
-              </h1>
-              <input class="govuk-input" id="event-name" name="event-name" type="text">
-            </div>
-            
-            <br>
-            
-    <button class="govuk-button" data-module="govuk-button">
-      
-      Save and continue
-    </button>
-      
-      
-      <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
+    <h3 class="govuk-heading-s">Question 3 (optional)</h3>
+    <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription"
+      rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
+
+    <h3 class="govuk-heading-s">Question 4 (optional)</h3>
+    <textarea class="govuk-textarea govuk-js-character-count" id="shortDescription" name="shortDescription"
+      rows="5">{% if data.shortDescription and data.edit == "yes" %}{{data.shortDescription}}{% endif %}</textarea>
+
+
+
+    <a href="/v34/provider/create/task-list%20foundation?edit=no&section5=completed" class="govuk-button"
+      data-module="govuk-button">Save and continue</a>
+
+
+    <a href="../dashboard" class="govuk-body das-button--link">Cancel</a>
 
   </div>
 </div>
