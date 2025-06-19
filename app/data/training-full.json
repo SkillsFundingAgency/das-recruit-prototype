@@ -796,4 +796,6 @@
 {"name": " Welding - level 3, Level: 3 (Standard) ","level": 1,"used": 0},
 {"name": " Workplace pensions (administrator or consultant), Level: 3 (Standard) ","level": 1,"used": 0},
 {"name": " Youth Work, Level: 2 ","level": 1,"used": 0},
-{"name": " Youth Work, Level: 3 ","level": 1,"used": 0}]
+{"name": " Youth Work, Level: 3 ","level": 1,"used": 0},
+  {"name": " Example foundation, Level: 3 (Foundation) ","level": 1,"used": 0}
+]
