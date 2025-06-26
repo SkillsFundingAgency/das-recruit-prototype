@@ -71,14 +71,20 @@ module.exports = function (router) {
   })
 
   router.post('/' + base_url + '*/create/training-select', function (req, res) {
-    if (req.body.training_level == "different") {
+    let redirectUrl = '/' + base_url + req.params[0] + '/create/training-confirm';
+    if (req.body.training_level === "different") {
       console.log("working")
 
       req.body.training_level = req.body.training_level_new
       req.session.data.training_level = req.body.training_level_new
       console.log(req.body.training_level)
     }
-    res.redirect(301, '/' + base_url + req.params[0] + '/create/training-confirm')
+
+    if (req.body.trainingType === "Foundation") {
+      redirectUrl = '/' + base_url + req.params[0] + '/create/training-confirm-foundation'
+    }
+
+    res.redirect(redirectUrl)
   })
 
   router.post('/' + base_url + '*/create/training-confirm', function (req, res) {
@@ -100,18 +106,23 @@ module.exports = function (router) {
   })
 
   router.post('/' + base_url + '*/create/std-select', function (req, res) {
-    if (req.body.training_level == "different") {
-      console.log("working")
+    let redirectUrl = '/' + base_url + req.params[0] + '/create/std-confirm';
 
+    if (req.body.training_level === "different") {
       req.body.training_level = req.body.training_level_new
       req.session.data.training_level = req.body.training_level_new
       console.log(req.body.training_level)
     }
-    if (req.session.data.journey == "new") {
-      res.redirect(301, '/' + base_url + req.params[0] + '/create/training-first-select')
+
+    if (req.session.data.journey === "new") {
+      redirectUrl = '/' + base_url + req.params[0] + '/create/training-first-select'
     }
-    //res.redirect(301, '/' + base_url + req.params[0] + '/create/std-confirm')
-    res.redirect(301, '/' + base_url + req.params[0] + '/create/std-confirm')
+
+    if (req.body.trainingType === "Foundation") {
+      redirectUrl = '/' + base_url + req.params[0] + '/create/std-confirm-foundation'
+    }
+
+    res.redirect(redirectUrl)
   })
 
 
@@ -289,7 +300,7 @@ module.exports = function (router) {
   })
   router.post('/' + base_url + '*/create/long-description', function (req, res) {
     //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no")
-    res.redirect(301, '/' + base_url + req.params[0] + "/create/task-list?edit=no&section1=completed")
+    res.redirect(301, '/' + base_url + req.params[0] + "/create/training-details")
   })
   router.post('/' + base_url + '*/create/training-provided', function (req, res) {
     //res.redirect(301, '/' + base_url + req.params[0] + "/create/vacancy-preview?edit=no")
