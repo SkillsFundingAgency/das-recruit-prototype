@@ -45,6 +45,7 @@ module.exports = {
   "orgName" :                 "ABC opticians",
   "providerName":             "PLUMPTON COLLEGE",
   "training_level":           "Business and Administration Level: 3",
+"trainingType":            "Apprenticeship",
   "hasTradingName" :          "no",
   "numberOfPositions":        1,
   "NumberOfEntities" :        5,
