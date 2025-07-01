@@ -1,0 +1,52 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Do you have any questions you would like to ask applicants? (optional) - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+      <h1 class="govuk-panel__title">
+        Advert submitted for approval
+      </h1>
+      <div class="govuk-panel__body">
+        The advert reference number is<br><strong>VAC100000264</strong>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-6">What happens next</h2>
+
+    <p class="govuk-body govuk-!-margin-bottom-4">
+      We'll check the advert and tell you within 24 hours if you need to make any edits. If the advert is not approved,
+      we'll
+      let you know on the dashboard what changes you'll need to make.
+      <a href="#" class="govuk-link">Manage your recruitment emails</a> if you'd rather get an email.
+    </p>
+
+    <p class="govuk-body govuk-!-margin-bottom-8">
+      When we approve your advert, it will appear on the
+      <a href="#" class="govuk-link">Find an apprenticeship service (opens in new tab).</a>
+    </p>
+
+    <div class="govuk-!-margin-bottom-4">
+      <button class="govuk-button" data-module="govuk-button">
+        Create another vacancy
+      </button>
+    </div>
+
+    <p class="govuk-body">
+      <a href="#" class="govuk-link govuk-link--no-visited-state">Return to dashboard</a>
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

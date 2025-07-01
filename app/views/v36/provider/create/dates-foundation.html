@@ -1,0 +1,146 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Important dates - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if hasError and errorType == "dates" %}
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#passport-issued-error">The start date must be before 01 08 2022 when the apprenticeship training  closes to new starters.</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Closing and start dates</h1>
+    <!-- {% if data.expiryDate %}
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        <span id="selected-training" class="govuk-!-font-weight-bold">{% if data.training_level %}{{data.training_level}}{%else%}Aerospace engineer, Level: 6 (Standard){%endif%}</span> is closed to new starters from 1 August 2020.
+        <a class="govuk-link" href="training_level">Change apprenticeship training</a>
+
+      </strong>
+    </div>
+    {% endif %} -->
+
+    <form method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="closing-hint" role="group">
+          <label class="govuk-label govuk-label--m" for="shortDescription">
+            Application closing date
+          </label>
+          <div id="closing-hint" class="govuk-hint">
+            For example, 19 11 2021
+          </div>
+          <div class="govuk-date-input" id="closing">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="closing-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="closing-day" name="closing-day"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="closing-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="closing-month" name="closing-month"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="closing-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="closing-year" name="closing-year"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group {% if hasError and errorType == "dates" %}govuk-form-group--error{%endif%}">
+        <fieldset class="govuk-fieldset" aria-describedby="start-hint" role="group">
+          <label class="govuk-label govuk-label--m" for="shortDescription">
+            Apprenticeship start date
+
+          </label>
+          {% if hasError and errorType == "dates" %}
+          <span id="dates-need-update" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> The start date must be before 01 08 2022 when the apprenticeship training closes to new starters.
+          </span>
+          {% endif %}
+          <div id="start-hint" class="govuk-hint">
+            {% if data.expiryDate and not hasError %}
+            The start date must be before the {% if data.training_level %} {{data.training_level}} {%else%}Animal Care, Level: 2{%endif%} closes to new starters on 01 08 2022 <br> <br>
+            {% elseif data.expiryDate and hasError %}
+            You may want to <a href="training-select{% if data.edit=="yes" %}?edit=yes"{% else %}?edit=no"{% endif %} class="govuk-link">find different apprenticeship training</a> that doesnt have an ending date.<br><br>
+            {% endif %}
+            For example, 02 12 2021
+          </div>
+          <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="start-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="start_day"
+                  type="number" pattern="[0-9]*" {% if data.start_day and data.edit=="yes" %}value="{{data.start_day}}"{%endif%}>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="start-month">
+                  Month
+                </label>
+
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="start_month"
+                  type="number" pattern="[0-9]*" {% if data.start_month and data.edit=="yes" %}value="{{data.start_month}}"{%endif%}>
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="start-year" >
+                  Year
+                </label>
+
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="start_year"
+                  type="number" pattern="[0-9]*" {% if data.start_year and data.edit=="yes" %}value="{{data.start_year}}"{%endif%}>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group">
+          <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+          <a class="govuk-link" href="../dashboard">Cancel</a>
+        </div>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

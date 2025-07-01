@@ -16,48 +16,30 @@ Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Create a vacancy</h1>
-    <p class="govuk-body">Advertise an apprenticeship on <a href="https://www.gov.uk/apply-apprenticeship"
-        class="govuk-link govuk-link--no-visited-state">Find an apprenticeship (opens in new tab)</a>.</p>
-    <p class="govuk-body">You can accept applications through our service or add a link to your own website.</p>
+    <p class="govuk-body">Advertise an apprenticeship in England on <a href="https://www.gov.uk/apply-apprenticeship"
+        class="govuk-link govuk-link--no-visited-state">Find an apprenticeship (opens in new tab)</a>. You can accept applications using Find an apprenticeship or add a link to your own application website.</p>
+    
 
-    <div class="govuk-inset-text">
-      You can only use this service to advertise apprenticeships in England. There’s different services for <a
-        href="https://www.apprenticeships.scot/for-employers/" class="govuk-link">Scotland</a>, <a
-        href="https://www.gov.wales/recruit-apprentice-guidance-employers/how" class="govuk-link">Wales</a> and <a
-        href="https://www.nibusinessinfo.co.uk/content/advertise-apprenticeship-opportunities-jobapplyni"
-        class="govuk-link">Northern Ireland</a>.
-    </div>
 
-    <h2 class="govuk-heading-m">Before you start</h2>
-    <p class="govuk-body">Before you create a vacancy, you’ll need to know:</p>
+    <h2 class="govuk-heading-m">Before creating a vacancy</h2>
+    <p class="govuk-body">Make sure you have</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>the employer</li>
-      <li>the training course</li>
-      <li>the pay</li>
-      <li>how long the apprenticeship will be</li>
-      <li>the work and training hours</li>
+      <li><a href="#" class="govuk-link govuk-link--no-visited-state">reserved funding</a> if the employer you're working with does not pag the apprenticeship levy</li>
+      <li>got details such as the apprenticeship's wage and working hours</li>
     </ul>
-
-    <p class="govuk-body">If you’re working with an employer who does not pay the apprenticeship levy, you should <a
-        href="#" target="_blank">reserve funding for the apprenticeship</a> before creating a vacancy.</p>
-
 
 
     {% set _forwardLink = "employers-select" %}
 
     {{ govukButton({
-    text: "Start now",
+    text: "Create vacancy",
     href: _forwardLink,
     classes: "govuk-!-margin-top-2 govuk-!-margin-bottom-8",
     isStartButton: true
     }) }}
 
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Submit vacancy using our recruitment APIs</h3>
-    <p class="govuk-body">If you have technical knowledge, you can use your own system to submit adverts to Find an
-      apprenticeship.</p>
-    <p class="govuk-body">
-      <a href="#" class="govuk-link">Get started with the recruitment APIs</a>
-    </p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Creating vacancies on your own system using our APIs</h3>
+    <p class="govuk-body">If you're working with a software developer, you can connect your system to Find an apprenticeship by <a href="#" class="govuk-link govuk-link--no-visited-state">using our APIs.</a></p>
   </div>
 </div>
 

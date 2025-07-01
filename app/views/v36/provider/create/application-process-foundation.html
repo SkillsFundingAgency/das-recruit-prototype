@@ -16,21 +16,25 @@ How would you like to receive applications? - Recruitment - {{serviceName}} - GO
     <form method="post" action="task-list?section4=completed">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician Apprentice{% endif %}</span>
+          <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
           <h1 class="govuk-fieldset__heading">How would you like to receive applications?</h1>
         </legend>
-        <p class="govuk-body">We'll publish all vacancies on <a href="https://www.gov.uk/apply-apprenticeship" class="govuk-body govuk-link" rel="noopener" target="_blank">Find an apprenticeship (opens in a new tab),</a> but you can include a link to your own website where applicants can apply directly.</p>
+        <p class="govuk-body">We'll publish all vacancies on <a href="https://www.gov.uk/apply-apprenticeship"
+            class="govuk-body govuk-link" rel="noopener" target="_blank">Find an apprenticeship (opens in a new
+            tab),</a> but you can include a link to your own website where applicants can apply directly.</p>
         <div class="govuk-form-group">
           <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="display-name-registered" name="selected_display_name" type="radio" value="registered">
+              <input class="govuk-radios__input" id="display-name-registered" name="selected_display_name" type="radio"
+                value="registered">
               <label class="govuk-label govuk-radios__label" for="display-name-registered">
                 Through the Find an apprenticeship service
               </label>
             </div>
 
             <div class="govuk-radios__item " data-module="business-name-vacancy-panel">
-              <input class="govuk-radios__input" id="display-name-trading" name="selected_display_name" type="radio" value="trading" data-aria-controls="trading-name-conditional">
+              <input class="govuk-radios__input" id="display-name-trading" name="selected_display_name" type="radio"
+                value="trading" data-aria-controls="trading-name-conditional">
               <label class="govuk-label govuk-radios__label" for="display-name-trading">
                 Through an external website
               </label>
@@ -40,18 +44,20 @@ How would you like to receive applications? - Recruitment - {{serviceName}} - GO
                 <label class="govuk-label" for="ApplicationUrl">
                   Application website link
                 </label>
-                <input class="govuk-input govuk-input--width-30" id="ApplicationUrl" name="ApplicationUrl" type="text" value="{% if data.ApplicationUrl %}{{data.ApplicationUrl }}{% else %}{% endif %}">
+                <input class="govuk-input govuk-input--width-30" id="ApplicationUrl" name="ApplicationUrl" type="text"
+                  value="{% if data.ApplicationUrl %}{{data.ApplicationUrl }}{% else %}{% endif %}">
               </div>
 
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="TrainingDescription">
-                    How to apply (optional)
-                  </label>
-                  <label class="govuk-label" for="TrainingDescription">
-                    <span class="govuk-hint">What applicants will need to do on your application website</span>
-                  </label>
-                  <textarea class="govuk-textarea" id="ApplicationInstructions" name="ApplicationInstructions" rows="5" aria-describedby="more-detail-hint">{% if data.ApplicationInstructions %}{{data.ApplicationInstructions }}{% else %}{% endif %}</textarea>
-                </div>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="TrainingDescription">
+                  How to apply (optional)
+                </label>
+                <label class="govuk-label" for="TrainingDescription">
+                  <span class="govuk-hint">What applicants will need to do on your application website</span>
+                </label>
+                <textarea class="govuk-textarea" id="ApplicationInstructions" name="ApplicationInstructions" rows="5"
+                  aria-describedby="more-detail-hint">{% if data.ApplicationInstructions %}{{data.ApplicationInstructions }}{% else %}{% endif %}</textarea>
+              </div>
 
             </div>
 

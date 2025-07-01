@@ -21,10 +21,10 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Vacancy title
+            Name of employer
           </dt>
           <dd class="govuk-summary-list__value">
-            [[your vacancy name]]
+            [[name of employer]]
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -34,10 +34,10 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Name of organisation
+            Vacancy title
           </dt>
           <dd class="govuk-summary-list__value">
-            [[selected organisation]]
+            [[vacancy title]]
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -51,6 +51,8 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
           </dt>
           <dd class="govuk-summary-list__value">
             [[selected training]]
+            <div style="margin-top: 10px;">
+            </div>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -58,19 +60,7 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Training provider
-          </dt>
-          <dd class="govuk-summary-list__value">
-            [[your training provider]]
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> training provider</span>
-            </a>
-          </dd>
-        </div>
+      
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Summary of the apprenticeship
@@ -86,7 +76,7 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            What the apprentice will do at work
+            What will the apprentice do at work?
           </dt>
           <dd class="govuk-summary-list__value">
             [[your short description]]
@@ -145,25 +135,8 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Pay rate
-            <br>
-            <br>
-            Extra information about pay (optional)
-          </dt>
-          <dd class="govuk-summary-list__value">
-            [[selected pay]]
-            <br>
-            <br>
-            [[your description, or if the user has not written anything just put None]]
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> description</span>
-            </a>
-          </dd>
-        </div>
+
+
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -194,6 +167,29 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            Wage
+            <br>
+            <br>
+            Extra information about pay (optional)
+            <br>
+            <br>
+            Company benefits (optional)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            [[selected pay]]
+            <br>
+            <br>
+            [[your description, or if the user has not written anything just put None]]
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="#">
+              Change<span class="govuk-visually-hidden"> description</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Number of positions
           </dt>
           <dd class="govuk-summary-list__value">
@@ -212,15 +208,15 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
             Where is this apprenticeship available?
             <br>
             <br>
-            Address
+            Add more information about where the apprentice will work
           </dt>
           <dd class="govuk-summary-list__value">
-            One location
+            Across all of England
             <br>
             <br>
-            <p class="govuk-body govuk-!-margin-bottom-0">10 Jam Jar Way</p>
-            <p class="govuk-body govuk-!-margin-bottom-0">Sheffield</p>
-            <p class="govuk-body govuk-!-margin-bottom-3">S3 7GE</p>
+            <br>
+            <br>
+            <p class="govuk-body govuk-!-margin-bottom-0">[[Infos]]</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="where-is-this-apprenticeship-available">
@@ -237,13 +233,11 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Skills
+            What is the expected career progression after this apprenticeship?
           </dt>
           <dd class="govuk-summary-list__value">
             <ul class="govuk-list govuk-list--bullet">
-              <li>[[skills and qualities 1]]</li>
-              <li>[[skills and qualities 2]]</li>
-              <li>[[skills and qualities 3]]</li>
+              [[info]]
               <!--          <li>Communication skills</li>
                 <li>Attention to detail</li>
                 <li>Customer care skills</li> -->
@@ -258,11 +252,11 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Qualifications
+            What other requirements are there for this apprenticeship? 
           </dt>
           <dd class="govuk-summary-list__value">
             <ul class="govuk-list govuk-list--bullet">
-              <li>[[Qualificattion information]]</li>
+              [[info]]
               <!--          <li>GCSE or equivalent English (Grade 8) essential</li> -->
             </ul>
           </dd>
@@ -273,33 +267,6 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Expected career progression after this apprenticeship
-          </dt>
-          <dd class="govuk-summary-list__value">
-            [[your description]]
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> description</span>
-            </a>
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Other things to consider (optional)
-          </dt>
-          <dd class="govuk-summary-list__value">
-            [[selected considerations]]
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="#">
-              Change<span class="govuk-visually-hidden"> considerations</span>
-            </a>
-          </dd>
-        </div>
       </dl>
 
       <!-- section start -->
@@ -326,21 +293,20 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
             Employer information
             <br>
             <br>
-            Disability Confident Employer?
-            <br>
-            <br>
             Organisation website (optional)
+            <br>
+            <br>
+            Disability Confident Employer
           </dt>
           <dd class="govuk-summary-list__value">
             [[selected information]]
             <br>
             <br>
             <br>
-            [[Yes if selected tick box, No if not selected]]
-            <br>
-            <br>
             [[your description, or if the user has not written anything just put None]]
-          </dd>
+            <br>
+            <br>
+            [[Yes if selected tick box, No if not selected]]
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
               Change<span class="govuk-visually-hidden"> description</span>
@@ -350,22 +316,24 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Contact details
+            Contact name (optional)
             <br>
             <br>
-            Contact name
+            Contact email (optional)
             <br>
             <br>
-            Contact number
+            Contact number (optional)
           </dt>
           <dd class="govuk-summary-list__value">
-            [[Yes/No]]
-            <br>
-            <br>
             [[Contact name if selected]]
             <br>
             <br>
-            [[Contact number if selected]]
+            <br>
+            [[Email]]
+            <br>
+            <br>
+            <br>
+            [[Yes or No]]
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -376,12 +344,12 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Application website
+            Application website link
             <br>
             <br>
             <br>
             <br>
-            Explain the application process (optional)
+            How to apply (optional)
           </dt>
           <dd class="govuk-summary-list__value">
             [[selected answer, if it is ‘different website, the link should be included]]
@@ -400,7 +368,7 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
       <!-- section end -->
 
       <!-- section start -->
-      <h2 class="govuk-heading-m">Application</h2>
+      <h2 class="govuk-heading-m">Application questions</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
@@ -413,12 +381,26 @@ Check your answers before submitting your vacancy - Recruitment - {{serviceName}
             Question 2
             <br>
             <br>
+            <br>
+            Question 3
+            <br>
+            <br>
+            <br>
+            Question 4
           </dt>
           <dd class="govuk-summary-list__value">
-            [[show question or 'None' if they haven't entered one]]
+            What are your skills and strengths?
             <br>
             <br>
-            [[show question or 'None' if they haven't entered one]]
+            <br>
+            What interests you about this apprenticeship?
+            <br>
+            <br>
+            What’s most important in a team?
+            <br>
+            <br>
+            <br>
+            Are you able to get to this apprenticeship?
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
