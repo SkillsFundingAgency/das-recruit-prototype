@@ -1,0 +1,60 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Add contact information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+        <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+        Do you want to add a contact to this advert?
+      </h1>
+      <form method="post" class="dirty">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <div id="changedName-hint" class="govuk-hint">
+              Add someone people can contact about this apprenticeship before applying
+            </div>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                value="scotland">
+              <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+    </div>
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+      <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+    </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}

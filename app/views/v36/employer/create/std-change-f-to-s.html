@@ -1,11 +1,7 @@
-{% extends "tp-layout.html" %}
+{% extends "ma-layout.html" %}
 
-{% block pageTitle %}Confirm apprenticeship training - Recruitment - {{serviceName}} - GOV.UK
-{% endblock %}
-
-{% block beforeContent %}
-{{super()}}
-<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% block pageTitle %}
+Advert submitted for approval - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -25,18 +21,15 @@
 
     <div class="das-confirm-card" style="background-color:#f4f4f4; padding:20px; margin-bottom:30px;">
 
-      <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-3">
-        Foundation
-      </strong>
       <h2 class="govuk-heading-m govuk-!-margin-bottom-3">
-        Foundation in business and administration Level: 2
+        Business administrator Level: 3
       </h2>
 
 
       <span class="govuk-caption-m govuk-!-margin-bottom-3">
-        Level: 2 intermediate (equivalent to GCSEs) <br>
+        Level: 3 advanced (equivalent to A levels) <br>
         Typical duration: 12 months<br>
-        Foundation apprenticeship<br>
+        Apprenticeship standard<br>
       </span>
 
       {% if data.expiryDate %}
@@ -57,11 +50,13 @@
     </div>
 
     <div class="govuk-inset-text">
-      <p class="govuk-body">This will change the course from an <strong>apprenticeship standard</strong> to a
-        <strong>foundation apprenticeship</strong>.</p>
-      <p class="govuk-body">We’ll remove this vacancy’s skills and qualifications requirements. Applicants do not need specific skills or
-      qualifications to apply for a foundation apprenticeship.</p>
-      <p class="govuk-body">You should also review the other sections of your vacancy.</p>
+      <p class="govuk-body">This will change the course from a <strong>foundation apprenticeship</strong> to an
+        <strong>apprenticeship standard</strong>.
+      </p>
+      <p class="govuk-body">You'll need to review this advert's requirements. This is because standards can have
+        different entry requirements for
+        applicants.</p>
+      <p class="govuk-body">You should also review the other sections of your advert.</p>
     </div>
 
 
@@ -75,7 +70,6 @@
 
   </div>
 </div>
-
 
 
 {% endblock %}

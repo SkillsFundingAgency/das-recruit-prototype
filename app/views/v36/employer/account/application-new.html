@@ -53,7 +53,7 @@ Manage apprentices
             Email address
           </dt>
           <dd class="govuk-summary-list__value govuk-!-padding-bottom-5
-                      ">
+                          ">
             <a href="mailto:faizal.dawood@domainname.co.uk">keith.stewart@domainname.co.uk</a>
           </dd>
         </div>
@@ -383,7 +383,7 @@ Manage apprentices
     <!-- START role questions -->
     <h2 class="govuk-heading-l">Application questions</h2>
 
-    <h3 class="govuk-heading-s">What is your skills and strengths?</h3>
+    <h3 class="govuk-heading-s">What are your skills and strengths?</h3>
     <p class="govuk-body govuk-!-margin-bottom-5">{{ data['main-strengths'] or 'My biggest strength is that I can think
       on my feet and can work under a lot of
       pressure. As an event manager at Sarah’s boutique, we were organizing an IT conference that needed a number of
@@ -397,7 +397,7 @@ Manage apprentices
       found 2 students
       who were willing to help out. I personally met them 2 hours before the conference and got them up to speed
       with
-      everything we were doing for the day, and gave them their tasks
+      everything we were doing for the day, and gave them their tasks.
     </p>
 
     <h3 class="govuk-heading-s">What interests you about this apprenticeship?</h3>
@@ -409,8 +409,12 @@ Manage apprentices
     <p class="govuk-body">Working for your company will provide me with valuable opportunities to enhance my knowledge
       of business and leadership
       while contributing to your team's growth and the company's profitability.
-
     </p>
+
+    <h3 class="govuk-heading-s" style="text-align: left;">What's most important in a team?</h3>
+
+    <p class="govuk-body govuk-!-margin-bottom-5">{{ data['employer-question-two'] or 'Team work is so good to bounce
+      ideas.' }}</p>
 
     <h3 class="govuk-heading-s" style="text-align: left;">How will you travel to this apprenticeship?</h3>
 
@@ -464,9 +468,6 @@ Manage apprentices
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- END equal opportunity questions -->
 
-
-
-
     <!-- RADIO BUTTONS     -->
     <section>
 
@@ -500,15 +501,18 @@ Manage apprentices
                 </div>
               </div>
 
+
+
+
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="application-3" name="application" type="radio" value="shortlist">
                 <label class="govuk-label govuk-radios__label" for="application-3">
                   Mark application for interviewing
                 </label>
                 <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
-                  Change this application's status to 'interviewing' because you want to interview this applicant. Does
-                  not notify the
-                  applicant.
+                  Change this application's status to 'interviewing' because the employer will interview this applicant.
+                  Does not notify
+                  the applicant.
                 </div>
               </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
@@ -526,16 +530,10 @@ Manage apprentices
                 <label class="govuk-label govuk-radios__label" for="application-4">
                   Make successful
                 </label>
-                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
                   Send a notification to the applicant offering them this apprenticeship.
                 </div>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-text">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
-                    type="tel" autocomplete="tel">
+                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
                 </div>
               </div>
 
@@ -546,16 +544,10 @@ Manage apprentices
                 <label class="govuk-label govuk-radios__label" for="application-4">
                   Make unsuccessful and give feedback
                 </label>
-                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
+                <div id="sign-in-3-item-hint" class="govuk-hint govuk-radios__hint">
                   Send a notification to the applicant telling them they won't be offered this apprenticeship.
                 </div>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-text">
-                  </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text"
-                    type="tel" autocomplete="tel">
+                <div id="sign-in-4-item-hint" class="govuk-hint govuk-radios__hint">
                 </div>
               </div>
 

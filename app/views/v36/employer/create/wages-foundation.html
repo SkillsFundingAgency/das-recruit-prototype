@@ -1,0 +1,105 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+How much would you like to pay the apprentice? - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- {{minWage}} -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {% if data.error == "wages" %}
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+      data-module="error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#yearly-wage-issue">The yearly wage must be at least £{{minWage}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    {% endif %}
+    <div class="govuk-form-group">
+      <form method="post" action="positions">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+            <h1 class="govuk-fieldset__heading">
+              How much will the apprentice be paid?
+            </h1>
+          </legend>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio"
+                    value="england">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                    Set wage yourself
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    This must be more than the National Minimum Wage for apprentices
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio"
+                    value="scotland">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                    National Minimum Wage
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    Displayed as a yearly wage of £9,884.16 to £19.506.24
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio"
+                    value="wales">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                    National Minimum Wage for apprentices
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    Displayed as a yearly wage of £9,884.16
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio"
+                    value="wales">
+                  <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+                    Set as competitve
+                  </label>
+                  <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                    Not providing a salary may limit applications for this apprenticeship
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        </fieldset>
+    </div>
+
+
+    <div class="govuk-button-group">
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+      <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+    </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

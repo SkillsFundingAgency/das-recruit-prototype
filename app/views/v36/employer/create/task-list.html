@@ -37,7 +37,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
     <ol class="app-task-list">
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">1. </span> Advert summary
+          <span class="app-task-list__section-number">1. </span> Advert summary 
           <span style="margin-left:260px;">
             {% if data.section1 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
@@ -210,10 +210,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section2 == "completed" %}
               <a href="wages?return_url=task-list" aria-describedby="contact-details-status">
-                Pay rate and benefits
+                Wage and company benefits
               </a>
               {% else %}
-              Pay rate and benefits
+              Wage and company benefits
               {% endif %}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -309,10 +309,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="future-prospects?return_url=task-list" aria-describedby="contact-details-status">
-                Future prospects
+                After this apprenticeship
               </a>
               {%else%}
-              Future prospects
+              After this apprenticeship
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -326,10 +326,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section3 == "completed" %}
               <a href="things-to-consider?return_url=task-list" aria-describedby="contact-details-status">
-                Other applicant requirements
+                Other requirements
               </a>
               {%else%}
-              Other applicant requirements
+              Other requirements
               {%endif%}
             </span>
           </li>
@@ -398,10 +398,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="application-process?return_url=task-list" aria-describedby="list-convictions-status">
-                Website for applications
+                Application website
               </a>
               {%else%}
-              Website for applications
+              Application website
               {%endif%}
             </span>
             <!--{% if data.port_entry or data.port_export or data.transport_method %}
@@ -418,7 +418,7 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
       <!-- section 5 START -->
       <li>
         <h2 class="app-task-list__section">
-          <span class="app-task-list__section-number">5.</span> Application
+          <span class="app-task-list__section-number">5.</span> Application questions
           <span style="margin-left:310px;">
             {% if data.section5 == "completed" %}
             <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
@@ -434,10 +434,10 @@ Create an apprenticeship advert - Your apprenticeship adverts - {{serviceName}} 
             <span class="app-task-list__task-name">
               {% if data.section4 == "completed" %}
               <a href="extra-questions?return_url=task-list" aria-describedby="list-convictions-status">
-                Questions for applicants
+                Application questions on Find an apprenticeship
               </a>
               {%else%}
-              Questions for applicants
+              Application questions on Find an apprenticeship
               {%endif%}
             </span>
           </li>

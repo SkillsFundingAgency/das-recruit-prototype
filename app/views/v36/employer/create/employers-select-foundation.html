@@ -15,59 +15,54 @@ Which organisation is this advert for? - Your apprenticeship adverts - {{service
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<!--     {% if query.error == "yes" %}
-    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
-      <h2 class="govuk-error-summary__title" id="error-summary-title">
-        Please fix these errors
-      </h2>
-      <div class="govuk-error-summary__body">
-        <ul class="govuk-list govuk-error-summary__list">
-          <li>
-            <a href="#dob-error">You must select an employer</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    {% endif %} -->
+    <span class="govuk-caption-xl govuk-!-margin-bottom-2">
+      Business administration apprentice
+    </span>
 
-    <!-- <span class="govuk-caption-xl">Recuitment</span> -->
-    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Which organisation is this advert for?</h1>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">
+      Which organisation is this advert for?
+    </h1>
 
-    <!--<form method="post" id="employers-form" action="create-vacancy">-->
+    <p class="govuk-body govuk-!-margin-bottom-6">
+      To make sure your advert appears in search results, use a title that relates to the apprenticeship training.
+    </p>
+
     <form method="post" id="employers-form">
- 
-      <div id="oranisation-list" class="govuk-form-group {% if query.error == "yes" %}govuk-form-group--error{%endif%}">
+
+      <div id="organisation-list" class="govuk-form-group govuk-!-margin-bottom-6">
         <fieldset class="govuk-fieldset">
-          <!--<h2 class="govuk-heading-s">Select employer</h2>-->
-       <!--    {% if query.error == 'yes' %}
-          <span id="employer-error" class="govuk-error-message">You must select and employer</span>
-          {% endif %} -->
+
           <div class="govuk-radios">
-            {% for employer in data.employers %}
-            {% if loop.index < 10 %}
-            <div class="govuk-radios__item selection-item" data-item-id="{{loop.index+1}}">
-              <input class="govuk-radios__input" id="selected-organisation-id-{{loop.index+1}}" name="selected_organisation_id" type="radio" value="{{employer.businessName}}" data-search-value="Organisation {{loop.index+1}}">
-              <label class="govuk-label govuk-radios__label" for="selected-organisation-id-{{loop.index+1}}">
-                {{employer.businessName}}
+            <div class="govuk-radios__item govuk-!-margin-bottom-2">
+              <input class="govuk-radios__input" id="org-1" name="selected_organisation_id" type="radio"
+                value="Company A">
+              <label class="govuk-label govuk-radios__label" for="org-1">
+                King Recruitment
               </label>
             </div>
-            {% endif %}
-            {% endfor %}
+
+            <div class="govuk-radios__item govuk-!-margin-bottom-2">
+              <input class="govuk-radios__input" id="org-2" name="selected_organisation_id" type="radio"
+                value="Company B">
+              <label class="govuk-label govuk-radios__label" for="org-2">
+                Medical Recruitment Company
+              </label>
+            </div>
           </div>
+
         </fieldset>
       </div>
 
-      <div class="govuk-button-group">
+      <div class="govuk-button-group govuk-!-margin-top-9">
         <button class="govuk-button" data-module="govuk-button">
           Save and continue
         </button>
-
-        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+        <a href="../dashboard" class="govuk-link">Cancel</a>
       </div>
-      
+
     </form>
 
   </div>
 </div>
+
 {% endblock %}

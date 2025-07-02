@@ -1,7 +1,7 @@
 {% extends "ma-layout.html" %}
 
 {% block pageTitle %}
-How the apprentice will train - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+Tasks and training details - Your apprenticeship adverts - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -43,30 +43,19 @@ How the apprentice will train - Your apprenticeship adverts - {{serviceName}} - 
     </div>
     {% endif%}
 
-    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Safety, Health & Environment Technician
-      Apprentice{% endif %}</span>
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">How the apprentice will train</h1>
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif
+      %}</span>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">What will the apprentice do at work?</h1>
+    <p class="govuk-body govuk-!-margin-bottom-5">List the tasks an apprentice will do on a normal day while working.
+    </p>
+    <span class="govuk-hint">You must write your answer as bullet points. Include at least 3 bullet points</span>
     <div class="govuk-!-padding-bottom-3"></div>
     <form method="post">
 
 
       <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
         <div class="govuk-form-group {% if 'VacancyDescription' in data.errorType %}govuk-form-group--error{% endif %}">
-          <label class="govuk-label govuk-label--m" for="VacancyDescription">
-            The apprentice’s training schedule (optional)
-          </label>
-          <p class="govuk-body">If you’ve agreed the apprentice’s training, include:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>where training will take place (at work or at a college - if it involves travelling somewhere else,
-              include the address
-              if you can) </li>
-            <li>how often training will be</li>
-          </ul>
 
-          <div class="govuk-inset-text">
-            If you don’t enter anything, we’ll display a message saying that the training schedule hasn't been agreed
-            yet.
-          </div>
 
           {% if 'VacancyDescription' in data.errorType %}
           <span id="VacancyDescription-error" class="govuk-error-message">
@@ -78,33 +67,6 @@ How the apprentice will train - Your apprenticeship adverts - {{serviceName}} - 
             class="govuk-textarea {% if 'VacancyDescription' in data.errorType %}govuk-textarea--error{% endif %} js-character-count "
             id="VacancyDescription" name="VacancyDescription" rows="9"
             aria-describedby="more-detail-hint">{% if data['VacancyDescription'] %}{{data['VacancyDescription'] }}{% else %}{% endif %}</textarea>
-        </div>
-      </div>
-      <div class="govuk-!-padding-bottom-5"></div>
-      <div class="govuk-character-count" data-module="character-count" data-minlength="50" data-maxlength="500">
-        <div
-          class="govuk-form-group {% if 'TrainingQualification' in data.errorType %}govuk-form-group--error{% endif %}">
-          <label class="govuk-label govuk-label--m" for="TrainingQualification">
-            Additional training information (optional)
-          </label>
-          <p class="govuk-body">This could include:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>further information about the training provider</li>
-            <li>how the training course will be structured</li>
-          </ul>
-          <p class="govuk-body">Don’t include what the training course will teach. We’ll automatically display the
-            skills an apprentice will learn,
-            taken from this course’s knowledge, skills and behaviours (KSBs).</p>
-          {% if 'TrainingQualification' in data.errorType %}
-          <span id="TrainingQualification-error" class="govuk-error-message">
-            <span class="govuk-visually-hidden">Error:</span> Training and qualifications must not contain contain a
-            banned word or phrase
-          </span>
-          {% endif %}
-          <textarea
-            class="govuk-textarea js-character-count {% if 'TrainingQualification' in data.errorType %}govuk-textarea--error{% endif %}"
-            id="TrainingQualification" name="TrainingQualification" rows="9"
-            aria-describedby="more-detail-hint">{% if data['TrainingQualification']%}{{data['TrainingQualification']}}{% else %}{% endif %}</textarea>
         </div>
       </div>
       <div class="govuk-button-group">

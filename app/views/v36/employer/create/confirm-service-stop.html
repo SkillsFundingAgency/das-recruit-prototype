@@ -1,0 +1,32 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Manage apprentices
+{% endblock %}
+{% block beforeContent %}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-8">
+      You need to agree training with a provider
+    </h1>
+    
+    <div class="govuk-inset-text">
+      There are currently no training providers available for <strong> Business and administration foundation (Level 2).</strong>
+      </div>
+    
+      <p class="govuk-body">
+        To continue, find a provider who can deliver this course. You can use your account to
+        <a href="#" class="govuk-link">ask if any training providers can run this course for you</a>.
+      </p>
+          <p class="govuk-body govuk-!-margin-bottom-8">If a provider has already agreed to run this course, contact them for help.</p>
+
+    
+  </div>
+</div>
+
+{% endblock %}

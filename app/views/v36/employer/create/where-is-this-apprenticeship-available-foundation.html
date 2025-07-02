@@ -1,0 +1,68 @@
+{% if data.user=='employer'%}{% extends "ma-layout.html" %}{%else%}{% extends "tp-layout.html" %}{%endif%}
+
+{% block pageTitle %}
+Where will the apprentices work? - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form form class="apprenticeship-locations" id="apprenticeship-locations" action="/v30/employer/create/where-is-this-apprenticeship-available/action"
+      method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+            <h1 class="govuk-fieldset__heading">
+              Where {% if data.numberOfPositions > 1 %}will the 6 positions{% else %}is this apprenticeship{% endif %}
+              available?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item" data-target="locations">
+              <input class="govuk-radios__input" id="one-location" name="locations" type="radio" value="one-location">
+              <label class="govuk-label govuk-radios__label" for="one-location">
+                One location
+              </label>
+            </div>
+            <div class="govuk-radios__item" data-target="locations">
+              <input class="govuk-radios__input" id="multi-location" name="locations" type="radio"
+                value="multi-location">
+              <label class="govuk-label govuk-radios__label" for="multi-location">
+                More than one location
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                Add up to 10 locations to your advert
+              </div>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item" data-target="locations">
+              <input class="govuk-radios__input" id="national" name="locations" type="radio"
+                value="national">
+              <label class="govuk-label govuk-radios__label" for="national">
+                Across all of England
+              </label>
+              <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                Your apprenticeship will display as a national advert
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <a class="govuk-link" href="../dashboard">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

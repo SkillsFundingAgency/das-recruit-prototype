@@ -1,0 +1,71 @@
+{% extends "ma-layout.html" %}
+
+{% block pageTitle %}
+Employer information - Your apprenticeship adverts - {{serviceName}} - GOV.UK
+{% endblock %}
+
+
+{% block beforeContent %}
+{{super()}}
+<a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-xl">{% if data.title %}{{data.title}}{% else %}Business administration apprentice{% endif %}</span>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-5">Information about {{data.orgName}}</h1>
+    {% if data.EmployerDescription and data.journey != 'new' %}
+    <p class="govuk-body">Updating the employer information will also update the employer information on any unapproved adverts eg. draft, pending review or rejected adverts.</p>
+    {%else%}
+    <p class="govuk-body">You can add information about your organiasation. This information will be saved and automatically applied for any new vacancy for this organisation.</p>
+    {%endif%}
+    <form method="post">
+      <div class="govuk-character-count govuk-input--width-50" data-module="character-count" data-minlength="50" data-maxlength="500">
+        <div class="govuk-form-group">
+          <label class="govuk-label visiual" for="EmployerDescription">Tell us about your organisation</label>
+          <!--<textarea class="govuk-textarea js-character-count" rows="5" data-val-length-max="500" id="EmployerDescription" name="EmployerDescription">{% if data.EmployerDescription and data.journey != 'new' %}{{ data.EmployerDescription}}{%endif%}</textarea>-->
+          <textarea class="govuk-textarea js-character-count" rows="5" data-val-length-max="500" id="EmployerDescription" name="EmployerDescription"></textarea>
+    
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="EmployerWebsiteUrl">
+          Website for organisation (optional)
+        </label>
+        <input class="govuk-input govuk-input--width-30" maxlength="100" type="text" id="EmployerWebsiteUrl" name="EmployerWebsiteUrl" value="{% if data.EmployerWebsiteUrl %}{{data.EmployerWebsiteUrl}}{%endif%}">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="nationality-hint">
+          <legend class="govuk-label govuk-label--m" for="shortDescription">
+            Disability Confident employer (optional) 
+          </legend>
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="is-disability-confident" name="is-disability-confident" type="checkbox"
+                value="british" aria-describedby="is-disability-confident">
+              <label class="govuk-label govuk-checkboxes__label" for="is-disability-confident">
+                This employer has signed up to the <a href="https://www.gov.uk/government/collections/disability-confident-campaign" rel="noopener"
+                  target="_blank" title="Disability Confident employer scheme and guidance (opens in a new window)">Disability
+                  Confident scheme (opens in new tab)</a>.
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-button-group govuk-!-margin-top-7">
+        <a href="contact" class="govuk-button">Save and continue</a>
+        <a href="../dashboard" class="govuk-link" href="#">Cancel</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+{% endblock %}
