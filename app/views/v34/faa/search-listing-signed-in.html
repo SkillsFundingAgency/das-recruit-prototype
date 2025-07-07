@@ -35,7 +35,7 @@ Find an apprenticeship - GOV.UK
         }
       </style>
 
-      <div class="das-filter__header">
+      <div class="das-filter__header" style="background-color: #B2B4B6;">
         <div class="govuk-!-padding-bottom-3"></div>
 
         <div class="moj-filter__header-title">
@@ -56,12 +56,11 @@ Find an apprenticeship - GOV.UK
           <div class="moj-filter__selected-heading">
 
             <div class="moj-filter__heading-title">
-              <h2 class="govuk-heading-m">Selected filters</h2>
+              <h2 class="govuk-heading-m">Active filters</h2>
             </div>
 
             <div class="moj-filter__heading-action">
-              <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear</a></p>
-            </div>
+              <a class="govuk-link govuk-link--no-visited-state small-regular-text" href="">Clear filters</a>      </div>
 
           </div>
 
@@ -102,8 +101,7 @@ Find an apprenticeship - GOV.UK
 
           <body>
 
-            <a href="search-listing-search-alert-saved.html" class="bell-link govuk-!-padding-right-5"
-              style="font-weight: bold;">
+            <a href="search-listing-search-alert-saved.html" class="bell-link govuk-!-padding-right-5">
               <i class="far fa-bell" style="color: #1d70b8"></i> Create an alert for this search
             </a>
 
@@ -148,9 +146,9 @@ Find an apprenticeship - GOV.UK
               <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox"
-                    value="hmrc">
+                    value="hmrc" checked>
                   <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                    Hide companies recruiting nationally
+                    Include apprenticeships recruiting nationally
                   </label>
                 </div>
               </div>
@@ -162,7 +160,50 @@ Find an apprenticeship - GOV.UK
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
                   <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                    Qualification type and level
+                    Apprenticeship type
+                  </span>
+                </h2>
+              </div>
+            
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content govuk-!-padding-top-0"
+                aria-labelledby="accordion-default-heading-1">
+            
+                <div class="govuk-form-group govuk-!-margin-top-0 govuk-!-padding-top-0">
+                  <fieldset class="govuk-fieldset">
+            
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" />
+                        <label class="govuk-label govuk-checkboxes__label" for="level-2">
+                          Foundation apprenticeship
+                        </label>
+                        <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint govuk-!-font-size-16">
+                          Introductory apprenticeships for young people, level 2
+                        </div>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="level-3" name="levels" type="checkbox" value="3" />
+                        <label class="govuk-label govuk-checkboxes__label" for="level-3">
+                          Apprenticeship
+                        </label>
+                        <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint govuk-!-font-size-16">
+                          Apprenticeships that qualify you for a job, level 2 to 7
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </fieldset>
+            
+            
+                </div>
+              </div>
+            </div>
+
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Apprenticeship level
                   </span>
                 </h2>
               </div>
@@ -173,22 +214,6 @@ Find an apprenticeship - GOV.UK
                 <div class="govuk-form-group govuk-!-margin-top-0 govuk-!-padding-top-0">
                   <fieldset class="govuk-fieldset">
 
-                    <h3 class="govuk-accordion__section-heading">Foundation apprenticeship</h3>
-                    
-                    
-                    <div class="govuk-checkboxes govuk-checkboxes--small">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" />
-                        <label class="govuk-label govuk-checkboxes__label" for="level-2">
-                          Level 2
-                        </label>
-                        <div id="level-item-hint" class="govuk-hint govuk-checkboxes__hint govuk-!-font-size-16">
-                          Equal to GCSE
-                        </div>
-                      </div>
-
-
-                    <h3 class="govuk-accordion__section-heading govuk-!-margin-top-6">Apprenticeship standard</h3>
                      <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" />
@@ -265,7 +290,7 @@ Find an apprenticeship - GOV.UK
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
                   <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                    Job categories
+                    Job category
                   </span>
                 </h2>
               </div>
@@ -415,6 +440,9 @@ Find an apprenticeship - GOV.UK
                   </label>
                 </div>
               </div>
+              <a href="search-listing-signed-in-filtered" class="govuk-button" id="filters-submit-second"
+                style="margin-top: 30px; margin-bottom: 5px;">Apply filters</a>
+
           </div>
 
         </div>
