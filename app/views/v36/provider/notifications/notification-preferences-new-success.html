@@ -6,249 +6,249 @@ Manage apprentices
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div class="grid-row dashboard-header">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="grid-row dashboard-header">
+            <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+              aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+              <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                  Success
+                </h2>
+              </div>
+              <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">
+                  Recruitment email settings saved.
+                </p>
+              </div>
+            </div>
 
-      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title"
-        data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Success
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            Recruitment email settings saved.
-          </p>
+            <div class="column-two-thirds">
+              <h1 class="govuk-heading-xl">Manage your recruitment emails</h1>
+            </div>
+      
+            <!-- SECTION 1 -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    When a vacancy is approved or rejected
+                  </h2>
+                </legend>
+                <p class="govuk-body" style="color: #505A5F;">
+                  DfE reviews vacancies before they go live. Depending on your permissions, employers may also review
+                  vacancies.
+                </p>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="approval-submitted" name="vacancy_approval_notifications"
+                      type="radio" value="personal">
+                    <label class="govuk-label govuk-radios__label" for="approval-submitted">
+                      Only get for vacancies I’ve submitted
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="approval-all" name="vacancy_approval_notifications" type="radio"
+                      value="team">
+                    <label class="govuk-label govuk-radios__label" for="approval-all">
+                      Get for all vacancies in our team's account
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="approval-none" name="vacancy_approval_notifications" type="radio"
+                      value="none">
+                    <label class="govuk-label govuk-radios__label" for="approval-none">
+                      Do not get this email
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+      
+            <br>
+      
+            <!-- STYLES -->
+            <style>
+              .govuk-radios__conditional {
+                border-left: none !important;
+                margin-left: 0;
+                padding-left: 0;
+              }
+      
+              .custom-inset {
+                border-left: 5px solid #b1b4b6;
+                margin-left: 15px;
+                padding-left: 20px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+              }
+            </style>
+      
+            <!-- SECTION 2 - with conditional groups -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    When vacancies receive new applications
+                  </h2>
+                </legend>
+      
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      
+                  <!-- Radio 1 -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="apps-submitted" name="new_app_notifications" type="radio"
+                      value="submitted" data-aria-controls="conditional-apps-submitted">
+                    <label class="govuk-label govuk-radios__label" for="apps-submitted">
+                      Only get for vacancies I’ve submitted
+                    </label>
+                  </div>
+      
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-apps-submitted">
+                    <div class="custom-inset">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h3 class="govuk-heading-s">How often do you want to receive emails about new applications?</h3>
+                        </legend>
+                        <div class="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="submitted-immediate" name="submitted_frequency"
+                              type="radio" value="immediate">
+                            <label class="govuk-label govuk-radios__label" for="submitted-immediate">As soon as a new
+                              application is received</label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="submitted-daily" name="submitted_frequency" type="radio"
+                              value="daily">
+                            <label class="govuk-label govuk-radios__label" for="submitted-daily">Once a day</label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="submitted-weekly" name="submitted_frequency" type="radio"
+                              value="weekly">
+                            <label class="govuk-label govuk-radios__label" for="submitted-weekly">Once a week</label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+      
+                  <!-- Radio 2 -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="apps-all" name="new_app_notifications" type="radio" value="all"
+                      data-aria-controls="conditional-apps-all">
+                    <label class="govuk-label govuk-radios__label" for="apps-all">
+                      Get for all vacancies in our team’s account
+                    </label>
+                  </div>
+      
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-apps-all">
+                    <div class="custom-inset">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h3 class="govuk-heading-s">How often do you want to receive emails about new applications?</h3>
+                        </legend>
+                        <div class="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="all-immediate" name="all_frequency" type="radio"
+                              value="immediate">
+                            <label class="govuk-label govuk-radios__label" for="all-immediate">As soon as a new application is
+                              received</label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="all-daily" name="all_frequency" type="radio" value="daily">
+                            <label class="govuk-label govuk-radios__label" for="all-daily">Once a day</label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="all-weekly" name="all_frequency" type="radio"
+                              value="weekly">
+                            <label class="govuk-label govuk-radios__label" for="all-weekly">Once a week</label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+      
+                  <!-- Radio 3 -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="apps-none" name="new_app_notifications" type="radio" value="none">
+                    <label class="govuk-label govuk-radios__label" for="apps-none">
+                      Do not get this email
+                    </label>
+                  </div>
+      
+                </div>
+              </fieldset>
+            </div>
+      
+            <br>
+      
+            <!-- SECTION 3 -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    When an employer has reviewed applications shared with them
+                  </h2>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="review-submitted" name="employer_review_notifications" type="radio"
+                      value="personal">
+                    <label class="govuk-label govuk-radios__label" for="review-submitted">
+                      Only get for vacancies I’ve submitted
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="review-all" name="employer_review_notifications" type="radio"
+                      value="team">
+                    <label class="govuk-label govuk-radios__label" for="review-all">
+                      Get for all vacancies in our team's account
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="review-none" name="employer_review_notifications" type="radio"
+                      value="none">
+                    <label class="govuk-label govuk-radios__label" for="review-none">
+                      Do not get this email
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+      
+            <br>
+      
+            <!-- SECTION 4 -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    When an employer publishes a vacancy with us as the training provider
+                  </h2>
+                </legend>
+                <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="publish-yes" name="employer_publish_notifications" type="radio"
+                      value="yes">
+                    <label class="govuk-label govuk-radios__label" for="publish-yes">
+                      Get this email
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="publish-no" name="employer_publish_notifications" type="radio"
+                      value="no">
+                    <label class="govuk-label govuk-radios__label" for="publish-no">
+                      Do not get this email
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+      
+            <div class="govuk-button-group">
+              <button class="govuk-button govuk-!-margin-top-3" data-module="govuk-button">Save settings</button>
+            </div>
+          </div>
         </div></div>
-
-      <div class="column-two-thirds">
-        <h1 class="govuk-heading-xl">
-          Manage your recruitment emails
-        </h1>
-      </div>
-    </div>
-    <form method="post">
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h2 class="govuk-fieldset__heading">
-              When a vacancy is approved or rejected
-            </h2>
-          </legend>
-          <p class="govuk-body" style="color: #505A5F;">
-            DfE reviews vacancies before they go live. Depending on your permissions, employers may also review vacancies. </p>
-          <div class="govuk-radios" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-personal" name="notifications_level" type="radio"
-                value="personal">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-personal">
-                Only get for vacancies I’ve submitted
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-personal" name="notifications_level" type="radio"
-                value="personal">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-personal">
-                Get for all vacancies in our team's account
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-group" name="notifications_level" type="radio"
-                value="group">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-group">
-                Do not get this email
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <br>
-
-      <style>
-        /* Optional: hide default conditional left border */
-        .govuk-radios__conditional {
-          border-left: none !important;
-          margin-left: 0;
-          padding-left: 0;
-        }
       
-        /* Only apply inset styling to actual content block */
-        .custom-inset {
-          border-left: 5px solid #b1b4b6;
-          margin-left: 15px;
-          padding-left: 20px;
-          padding-top: 15px;
-          padding-bottom: 10px;
-        }
-      </style>
-      
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h2 class="govuk-fieldset__heading">
-              When vacancies receive new applications
-            </h2>
-          </legend>
-      
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-      
-            <!-- Radio 1 -->
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-new-apps-1" name="notifications_new_applications"
-                type="radio" value="submitted" data-aria-controls="conditional-applications-extra-1">
-              <label class="govuk-label govuk-radios__label" for="notifications-new-apps-1">
-                Only get for vacancies I’ve submitted
-              </label>
-            </div>
-      
-            <!-- Radio 2 -->
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-new-apps-2" name="notifications_new_applications"
-                type="radio" value="all" data-aria-controls="conditional-applications-extra-2">
-              <label class="govuk-label govuk-radios__label" for="notifications-new-apps-2">
-                Get for all vacancies in our team’s account
-              </label>
-            </div>
-      
-            <!-- Radio 3 -->
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-new-apps-3" name="notifications_new_applications"
-                type="radio" value="none">
-              <label class="govuk-label govuk-radios__label" for="notifications-new-apps-3">
-                Do not get this email
-              </label>
-            </div>
-      
-            <!-- Conditional for radio 1 -->
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applications-extra-1">
-              <div class="custom-inset">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    <h3 class="govuk-heading-s">How often do you want to receive emails about new applications?</h3>
-                  </legend>
-                  <div class="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="withdraw-yes-1" name="withdraw_notify" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="withdraw-yes-1">As soon as a new application is received</label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="withdraw-yes-1" name="withdraw_notify" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="withdraw-yes-1">Once a day</label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="withdraw-no-1" name="withdraw_notify" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="withdraw-no-1">Once a week</label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-      
-            <!-- Conditional for radio 2 -->
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applications-extra-2">
-              <div class="custom-inset">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    <h3 class="govuk-heading-s">How often do you want to receive emails about new applications?</h3>
-                  </legend>
-                  <div class="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="withdraw-yes-2" name="withdraw_notify" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="withdraw-yes-2">As soon as a new application is received</label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="withdraw-yes-2" name="withdraw_notify" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="withdraw-yes-2">Once a day</label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="withdraw-no-2" name="withdraw_notify" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="withdraw-no-2">Once a week</label>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-            </div>
-      
-          </div>
-        </fieldset>
-      </div>
-      
-      <br>
-
-    
-      
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h2 class="govuk-fieldset__heading">
-              When an employer has reviewed applications shared with them
-            </h2>
-          </legend>
-          <div class="govuk-radios" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-personal" name="notifications_level" type="radio"
-                value="personal">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-personal">
-                Only get for vacancies I’ve submitted
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-group" name="notifications_level" type="radio"
-                value="group">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-group">
-                Get for all vacancies in our team's account
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-group" name="notifications_level" type="radio"
-                value="group">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-group">
-                Do not get this email
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <br>
-      
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h2 class="govuk-fieldset__heading">
-              When an employer publishes a vacancy with us as the training provider
-            </h2>
-          </legend>
-          <div class="govuk-radios" data-module="radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-personal" name="notifications_level" type="radio"
-                value="personal">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-personal">
-                Get this email
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="notifications-level-group" name="notifications_level" type="radio"
-                value="group">
-              <label class="govuk-label govuk-radios__label" for="notifications-level-group">
-                Do not get this email
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-      <form method="post" action="manage-emails-saved">
-
-        <div class="govuk-button-group">
-          <button class="govuk-button govuk-!-margin-top-3" data-module="govuk-button">
-            Save settings
-          </button>
-      </form>
-  </div>
-</div>
 {% endblock %}
