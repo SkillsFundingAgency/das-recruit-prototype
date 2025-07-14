@@ -1,0 +1,38 @@
+{% extends "tp-layout.html" %}
+
+{% block pageTitle %}
+Create a vacancy - Recruitment - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l govuk-!-margin-top-7">National Insurance number</h1>
+    <p class="govuk-body govuk-!-margin-bottom-7">You’ll need to enter your National Insurance number. We use it to match your details with your applications and get
+    updates from other government services.</p>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="national-insurance-number">
+        National Insurance number
+      </label>
+      <div id="national-insurance-number-hint" class="govuk-hint">
+        It’s on your National Insurance card, benefit letter, payslip or P60 – for example, ‘QQ 12 34 56 C’
+      </div>
+      <input class="govuk-input govuk-!-margin-bottom-7 govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number"
+        name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+      
+      <a href="../view-vacancy/0-dashboard" class="govuk-link das-button--link">
+        Cancel
+      </a>
+      
+    
+
+  </div>
+</div>
+
+{% endblock %}
