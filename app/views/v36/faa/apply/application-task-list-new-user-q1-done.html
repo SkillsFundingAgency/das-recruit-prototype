@@ -6,64 +6,61 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="..//search-listing.html">Back</a>
 {% endblock %}
 
 {% block content %}
+
+<a class="govuk-back-link govuk-link--no-visited-state" href="/v34/faa/vacancy-page-signed-in-under21"
+  onclick="event.preventDefault();">
+  Back
+</a>
 
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Apply for Business Administration Apprentice</h1>
-        <p class="govuk-caption-l govuk-!-margin-bottom-3" style="color:	#505a5f">King Recruitment</p>
-        <p class="govuk-body govuk-!-margin-bottom-3">Closes in 3 days (Friday 4 August 2025 at 11:59pm)</p>
+        <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-4">
+  Foundation
+</strong>
+
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Apply for Construction apprentice</h1>
+        <p class="govuk-caption-m govuk-!-margin-bottom-0" style="color:	#000000">JONES BUILDERS</p>
+        <p class="govuk-body govuk-!-margin-bottom-3" style="color:#505a5f">Bristol (BS2 2JA)</p>
+        <p class="govuk-body govuk-!-margin-bottom-0">Closes on 28 May 2025</p>
         <p class="govuk-body govuk-!-margin-bottom-7">
-          <a href="../vacancy-page-02.html" class="govuk-link" rel="noreferrer noopener" target="_blank">View vacancy
-            (opens
-            in new tab)</a>
+          <a href="/v34/faa/vacancy-page-signed-in-under21" class="govuk-link govuk-link--no-visited-state " rel="noreferrer noopener"
+            target="_blank">View vacancy (opens in new tab)</a>
         </p>
 
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
         <form class="form" action="application-preview-page-02" method="post">
+          
           <h2 class="govuk-heading-m">Education history</h2>
           <ul class="govuk-task-list">
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-qualification.html" aria-describedby="qualifications-status">
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-qualification.html" aria-describedby="qualifications-status">
                   School, college and university qualifications
                 </a>
               </span>
 
-              {% if data['completed-qualification-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-qualification-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-training-courses.html" aria-describedby="training-courses-status">
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-training-courses.html" aria-describedby="training-courses-status">
                   Training courses
                 </a>
               </span>
 
-              {% if data['completed-training-courses-section'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-training-courses-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
           </ul>
@@ -72,93 +69,51 @@ Find an apprenticeship - GOV.UK
           <ul class="govuk-task-list">
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-jobs.html" aria-describedby="job-status">
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-jobs.html" aria-describedby="job-status">
                   Jobs
                 </a>
               </span>
 
-              {% if data['completed-jobs'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-jobs'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-volunteering-and-work-experience.html"
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-volunteering-and-work-experience.html"
                   aria-describedby="work-experience-status">
                   Volunteering and work experience
                 </a>
               </span>
 
-              {% if data['completed-work-experience'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-work-experience'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
           </ul>
 
           <h2 class="govuk-heading-m govuk-!-margin-top-8">Application questions</h2>
           <ul class="govuk-task-list">
-            <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <span class="app-task-list__task-name">
-                <a href="application-question-page-main-strengths.html" aria-describedby="job-role-status">
-                  What are your skills and strengths?
-                </a>
-              </span>
-
-
-              {% if data['completed-role-questions'] == "yes" %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
-
-              {% elseif data['completed-role-questions'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-interests-you-about-this-apprenticeship.html"
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-interests-you-about-this-apprenticeship.html"
                   aria-describedby="additional-questions-status">
                   What interests you about this apprenticeship?
                 </a>
               </span>
 
-              {% if data['completed-question-two'] == "yes" %}
               <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
 
-              {% elseif data['completed-question-two'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
 
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-employer-question-two.html"
+                <a class="govuk-link govuk-link--no-visited-state" href="/v34/faa/apply/application-question-page-interests-you-about-this-apprenticeship-Q2.htm"
                   aria-describedby="additional-questions-status">
-                  How will you get to and from this vacancy every day if<br>successful?<br>
+                 Where do you see yourself in 5 years?<br>
                 </a>
               </span>
 
@@ -176,9 +131,9 @@ Find an apprenticeship - GOV.UK
             </li>
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-employer-question-one.html"
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-employer-question-one.html"
                   aria-describedby="additional-questions-status">
-                  When you’re balancing multiple projects, how do you<br>keep yourself organised?<br>
+                How will you travel to this role?<br>
                 </a>
               </span>
 
@@ -200,7 +155,7 @@ Find an apprenticeship - GOV.UK
           <ul class="govuk-task-list">
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
               <span class="app-task-list__task-name">
-                <a href="application-question-page-interview-adjustments.html"
+                <a class="govuk-link govuk-link--no-visited-state" href="application-question-page-interview-adjustments.html"
                   aria-describedby="interview-adjustments-status">
                   Request adjustments on your application
                 </a>
@@ -220,37 +175,24 @@ Find an apprenticeship - GOV.UK
             </li>
           </ul>
 
+        
           <h2 class="govuk-heading-m govuk-!-margin-top-8">Disability Confident</h2>
+          <p class="govuk-body" style="color:	#505a5f">This company has joined a government scheme.</p>
           <ul class="govuk-task-list">
-
             <li class="govuk-task-list__item govuk-task-list__item--with-link">
-              <div class="govuk-task-list__name-and-hint">
-                <div class="govuk-task-list__name-and-hint">
-                  <a href="application-question-page-disability-disclosure.html"
-                    aria-describedby="disclose-disability-status">
-                    Apply under the Disability Confident scheme
-                  </a>
-                </div>
-                <div id="company-details-3-hint" class="govuk-task-list__hint">
-                  This company has joined a government scheme
-                </div>
-
-              </div>
-
-              {% if data['completed-disability-disclosure-section'] == "yes" %}
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
-
-              {% elseif data['completed-disability-disclosure-section'] == "no" %}
-              <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-              {% else %}
-              <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-              {% endif %}
-
-
+              <span class="app-task-list__task-name">
+                <a class="govuk-link govuk-link--no-visited-state" href="application-summary-disability-disclosure.html" aria-describedby="disclose-disability-status">
+                  Interview under the Disability Confident scheme
+                </a>
+              </span>
+          
+<strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
+          
+          
             </li>
           </ul>
+
+         
 
           <div class="govuk-button-group govuk-!-margin-top-8" href="application-preview-page-02.html">
             <button class="govuk-button" data-module="govuk-button">

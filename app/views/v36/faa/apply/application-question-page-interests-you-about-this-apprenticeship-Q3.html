@@ -8,7 +8,8 @@ Find an apprenticeship - GOV.UK
 {{super()}}
 <a class="govuk-back-link govuk-link--no-visited-state" href="#" onclick="return false;">
   Back
-</a>{% endblock %}
+</a>
+{% endblock %}
 
 {% block content %}
 
@@ -16,31 +17,18 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Application questions</span>
-    <h1 class="govuk-heading-l">What interests you about this apprenticeship?</h1>
-
-    <p class="govuk-body">Explain to the company why you want to do this apprenticeship.</p>
-
-    <p class="govuk-body">You could write about:</p>
-    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
-      <li> the <b>Construction foundation apprenticeship</b> course</li>
-      <li>working for <b> JONES BUILDERS </b> </li>
-      <li>hobbies you have that are relevant to this apprenticeship</li>
-    </ul>
+    <h1 class="govuk-heading-l">How will you travel to this role?</h1>
 
 
     <form action="application-task-list-new-user" method="post" novalidate>
       <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="300">
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="with-hint">
-              Your interest in this apprenticeship
-            </label>
-          </h2>
+
           <textarea class="govuk-textarea govuk-js-character-count" id="like-to-learn" name="like-to-learn" rows="5"
             aria-describedby="like-to-learn-info">{{ data['like-to-learn'] or '' }}</textarea>
         </div>
         <div id="like-to-learn-info" class="govuk-hint govuk-character-count__message">
-          <p class="govuk-hint govuk-!-margin-bottom-0">You have 300 words remaining</p>
+          <p class="govuk-hint govuk-!-margin-bottom-0">300 words remaining</p>
         </div>
 
         <div class="govuk-!-padding-bottom-7"></div>
@@ -70,12 +58,11 @@ Find an apprenticeship - GOV.UK
             </fieldset>
           </div>
           <div class="govuk-!-padding-bottom-5"></div>
-  
+          
         </form>
-
-        <a href="/v34/faa/apply/application-task-list-new-user-q1-done.html" class="govuk-button" id="filters-submit-second">Continue </a>
-
       </div>
+
+      <a href="/v34/faa/apply/application-task-list-new-user-q3-done.html" class="govuk-button" id="filters-submit-second">Continue </a>
 
 
   </div>

@@ -6,7 +6,9 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+<a class="govuk-back-link govuk-link--no-visited-state" href="#" onclick="return false;">
+  Back
+</a>
 {% endblock %}
 
 {% block content %}
@@ -27,7 +29,7 @@ Find an apprenticeship - GOV.UK
     </ul>
     <h2 class="govuk-heading-m">It’s your choice when to discuss your needs</h2>
     <p class="govuk-body">If you make a request here, we’ll show it on your application.</p>
-    <p class="govuk-body">You can choose to select <b>No</b> on this question, even if you need adjustments. You can
+    <p class="govuk-body">You can choose to select 'No' on this question, even if you need adjustments. You can
       wait and see if the company offers you an interview first, and
       then discuss your needs with them. </p>
     <div class="govuk-!-padding-bottom-5"></div>
@@ -77,11 +79,10 @@ Find an apprenticeship - GOV.UK
 
 
       <div class="govuk-button-group" href="application-summary-interview-adjustments.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
+  
       </div>
     </form>
+<a href="/v34/faa/apply/application-task-list-new-user-interview-adj-done.html" class="govuk-button" id="filters-submit-second">Continue </a>
 
 
 

@@ -6,7 +6,9 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+<a class="govuk-back-link govuk-link--no-visited-state" href="#" onclick="return false;">
+  Back
+</a>
 {% endblock %}
 
 {% block content %}
@@ -69,11 +71,8 @@ Find an apprenticeship - GOV.UK
       </div>
 
 
-      <div class="govuk-button-group" href="application-summary-disability-disclosure.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </div>
+    <a href="/v34/faa/apply/application-task-list-new-user-completed" class="govuk-button" id="filters-submit-second">Continue </a>
+
     </form>
 
 

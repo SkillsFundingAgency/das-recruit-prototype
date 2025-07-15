@@ -8,7 +8,7 @@ Find an apprenticeship - GOV.UK
 {{super()}}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <a class="govuk-back-link" href="search-listing.html">Back</a>
+    <a class="govuk-back-link" href="search-listing-signed-in.html">Back</a>
   </div>
 </div>
 
@@ -20,37 +20,13 @@ Find an apprenticeship - GOV.UK
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
-      data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Important
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading">
-          Application started.
-          <a class="govuk-notification-banner__link" href="./apply/application-task-list-returning-user.html">Continue
-            your application</a>.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-4">
-      Foundation
-    </strong>
     <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Business Administration Apprentice</h1>
-    <p class="govuk-caption-l" style="color:#0b0c0c">KING RECRUITMENT</p>
+    <p class="govuk-caption-l" style="color:#0b0c0c">King Recruitment</p>
     <p class="govuk-caption-l govuk-!-margin-bottom-5" style="color:	#505a5f">Sheffield (S3 7GE)</p>
-    <p class="govuk-body govuk-!-margin-bottom-1">Closes on Tuesday 23 June 2024</p>
+    <p class="govuk-body govuk-!-margin-bottom-1">Closes in 5 days (14 October 2025 at 11:59pm)</p>
     <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-      Posted on 19 September</p>
+      Posted on 19 September 2024</p>
 
 
     <!-- Add the link with the heart icon -->
@@ -62,7 +38,7 @@ Find an apprenticeship - GOV.UK
 
     <body>
 
-      <a href="#" class="heart-link govuk-!-padding-right-5">
+      <a href="vacancy-page-saved-vacancy.html" class="heart-link govuk-!-padding-right-5">
         <i class="far fa-heart" style="color:		#1d70b8"></i> Save vacancy
       </a>
 
@@ -160,6 +136,18 @@ Find an apprenticeship - GOV.UK
   <!--  intro -->
   <div class="govuk-grid-column-two-thirds">
     <h2 class=" govuk-heading-m govuk-!-margin-bottom-3" id="summary">Summary</h2>
+    <div class="govuk-inset-text" style="border-left: 10px solid #F9DCE8; background-color: white; color: black;">
+      Foundation apprenticeships are introductory courses that help young people get started in an industry. You do not need
+      to have any specific qualifications or experience to apply.<br><br>
+      Anyone between 16 and 21 can start a foundation apprenticeship.<br><br>
+      If you're between 22 and 24, you can start if you:<br><br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have an EHC plan</li>
+        <li>are in care or have been in care</li>
+        <li>are in prison or have been in prison</li>
+      </ul>
+    </div>
+
     <p class="govuk-body">As the business administration apprentice, you will be responsible for
       supporting the day-to-day running of our office.
       You will need to provide helpful and fast support to both staff and clients. You may also need to take on some
@@ -173,12 +161,12 @@ Find an apprenticeship - GOV.UK
           Wage
         </dt>
         <dd class="govuk-summary-list__value">
-          You’ll start on £19,670<p class="govuk-body govuk-!-font-size-14 govuk-!-margin-0">
-            National Minimum Wage for a 20 year old</p>
-          <p class="govuk-body govuk-!-font-size-14 govuk-!-margin-0">
+          £19,670 a year<p class="govuk-body govuk-!-font-size-14 govuk-!-margin-0">
+            National Minimum Wage for an under 18 year old</p>
+          <p class="govuk-body govuk-!-font-size-14">
             <a href="https://www.gov.uk/national-minimum-wage-rates" class="govuk-link" rel="noreferrer noopener"
-              target="_blank">Minimum wage rates (opens in new
-              tab)</a>
+              target="_blank">Check minimum wage rates (opens in
+              new tab)</a>
           </p>
           <p class="govuk-body govuk-!-padding-top-3">The pay may be negotiated and may rise after a probation period
             has been successfully completed.</p>
@@ -203,10 +191,10 @@ Find an apprenticeship - GOV.UK
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Possible start date
+          Start date
         </dt>
         <dd class="govuk-summary-list__value">
-          <p class="govuk-body">Thursday 20 October</p>
+          <p class="govuk-body">Thursday 20 October 2025</p>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -267,11 +255,11 @@ Find an apprenticeship - GOV.UK
     <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
-          Check your travel to work
+          Check your travel to work time
         </span>
       </summary>
       <div class="govuk-details__text">
-        <h3 class="govuk-heading-s">Check your travel to work</h3>
+        <h3 class="govuk-heading-s">Check your travel to work time</h3>
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label" for="event-name">
@@ -298,9 +286,11 @@ Find an apprenticeship - GOV.UK
         <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
           Show route
         </button>
-        <img src="/public/images/Map-sheff-college.png" width="630px">
+        <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 3 miles </p>
+        <p class="govuk-body"><b>Duration</b> 15 minuets </p>
       </div>
     </details>
+    <img src="/public/images/Sheffield-map.png" width="630px"></img>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- END work -->
 
@@ -310,12 +300,16 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body style=" style="color:	#505a5f">Apprenticeships include time away from working for specialist
       training. You’ll study to gain professional knowledge and
       skills.</p>
-    <h3 class="govuk-heading-s">College or training organisation</h3>
-    <p class="govuk-body">Sheffield Professional College</p>
-    <h3 class="govuk-heading-s">Your training course</h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">College or training provider</h3>
+    <p class="govuk-body govuk-!-margin-bottom-5">Sheffield Professional College</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Training course</h3>
     <p class="govuk-body govuk-!-margin-bottom-1" style="color:#0b0c0c">Business administrator (Level 3)</p>
-    <p class="govuk-body" style="color:	#505a5f">Equal to A levels</p>
-    <details class="govuk-details govuk-!-margin-top-0" data-module="govuk-details">
+    <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-5"><a
+        class="govuk-link govuk-link--no-visited-state"
+        href="https://www.apprenticeships.gov.uk/apprentices/about-apprenticeships?#UnderstandingApprenticeshiplevelsandqualifications"
+        target="_blank" rel="external">Understanding apprenticeship levels (opens in new tab)</a></p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">What you’ll learn</h3>
+    <details class="govuk-details govuk-!-margin-bottom-5" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           Course contents
@@ -384,10 +378,12 @@ Find an apprenticeship - GOV.UK
       </div>
     </details>
 
-    <h3 class="govuk-heading-s">Your training plan</h3>
-    <p class="govuk-body">You will spend a day week at Sheffield Professional College 0930 to 1730.</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Your training plan</h3>
+    <p class="govuk-body govuk-!-margin-bottom-5">You will spend a day week at Sheffield Professional College 0930 to
+      1730.
+    </p>
 
-    <h3 class="govuk-heading-s">Additional training information</h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Additional training information</h3>
     <p class="govuk-body govuk-!-margin-bottom-0">COURSE SCHEDULE</p>
     <p class="govuk-body govuk-!-margin-bottom-0">1. INTRODUCTION TO BUSINESS ADMINISTRATION</p>
     <p class="govuk-body govuk-!-margin-bottom-0">2. SAFETY IN THE WORKPLACE</p>
@@ -489,14 +485,20 @@ Find an apprenticeship - GOV.UK
 
     <!-- START apply -->
     <h2 class="govuk-heading-m govuk-!-margin-bottom-3" id="apply-now">Apply now</h2>
-    <p class="govuk-body">Closes on 23 June 2024</p>
-    <p class="govuk-body">When you apply, you’ll be asked to sign in with a GOV.UK One Login. You can create one at the
-      same time as applying for
-      this apprenticeship.</p>
-    <form class="form" action="govuk-one-login/sign-in-or-create" method="post">
-      <div class="govuk-button-group" href="govuk-one-login/sign-in-or-create.html">
+    <div class="govuk-inset-text" style="border-left: 10px solid #F9DCE8; background-color: white; color: black;">
+      Anyone between 16 and 21 can start a foundation apprenticeship.<br><br>
+      If you're between 22 and 24, you can start if you:<br><br>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>have an EHC plan</li>
+        <li>are in care or have been in care</li>
+        <li>are in prison or have been in prison</li>
+      </ul>
+    </div>
+    <p class="govuk-body">Closes in 14 days (Tuesday 3 September)</p>
+    <form class="form" action="./apply/application-task-list-new-user" method="post">
+      <div class="govuk-button-group govuk-!-margin-top-5" href="./apply/application-task-list-new-user.html">
         <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
-          Continue your application
+          Sign in to apply
         </button>
       </div>
     </form>

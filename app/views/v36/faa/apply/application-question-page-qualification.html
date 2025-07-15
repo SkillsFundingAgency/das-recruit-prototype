@@ -6,7 +6,9 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+<a class="govuk-back-link govuk-link--no-visited-state" href="#" onclick="return false;">
+  Back
+</a>
 {% endblock %}
 
 {% block content %}
@@ -16,15 +18,18 @@ Find an apprenticeship - GOV.UK
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Education history</span>
     <h1 class="govuk-heading-l">School, college and university qualifications</h1>
-    <p class="govuk-body">Add qualifications you have from school, college and university.</p>
-    <p class="govuk-body">You can add predicted grades for GCSEs, BTECs, A levels or T levels if you do not have your
-      results yet.
+    <p class="govuk-body">You should add your qualifications from school, college and university.</p>
+    <p class="govuk-body">If you’re waiting on your results, you can add your predicted grades for your GCSEs, BTECs, A levels or T levels.
     </p>
-    <p class="govuk-body">Some apprenticeships don’t need you to have any qualifications. Check the vacancy’s
-      requirements section to see what
-      qualifications are essential.</p>
+   
     <div class="govuk-!-padding-bottom-5"></div>
 
+    <h3 class="govuk-heading-s">If you do not have qualifications</h3>
+    <p class="govuk-body">Many apprenticeships, like foundation apprenticeships, do not require you to have any qualifications to apply.</p>
+
+    <div class="govuk-!-padding-bottom-5"></div>
+
+    
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -51,13 +56,9 @@ Find an apprenticeship - GOV.UK
       </fieldset>
     </div>
 
-    <form class="form" action="application-question-page-qualification-type" method="post">
-      <div class="govuk-button-group" href="application-question-page-qualification-type.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </div>
-    </form>
+          <a href="/v34/faa/apply/application-task-list-new-user-quals-done.html" class="govuk-button"
+            id="filters-submit-second">Continue</a>
+
 
 
 

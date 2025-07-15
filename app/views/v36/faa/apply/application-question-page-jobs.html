@@ -6,7 +6,9 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="application-task-list-new-user.html">Back</a>
+<a class="govuk-back-link govuk-link--no-visited-state" href="#" onclick="return false;">
+  Back
+</a>
 {% endblock %}
 
 {% block content %}
@@ -19,10 +21,13 @@ Find an apprenticeship - GOV.UK
     <p class="govuk-body">If you’ve worked before, you can add:</p>
     <ul class="govuk-list govuk-list--bullet">
       <li>your current job</li>
-      <li>previous jobs you’d like to mention</li>
+      <li>previous jobs</li>
     </ul>
-    <p class="govuk-body">An apprenticeship can be your first job.</p>
 
+    <div class="govuk-!-padding-bottom-5"></div>
+    <h3 class="govuk-heading-s">If this would be your first job</h3>
+    <p class="govuk-body">Most apprenticeships do not require workplace experience. An apprenticeship can often be your first job.</p>
+    
     <div class="govuk-!-padding-bottom-5"></div>
 
     <div class="govuk-form-group">
@@ -51,13 +56,8 @@ Find an apprenticeship - GOV.UK
       </fieldset>
     </div>
 
-    <form class="form" action="application-question-page-add-jobs" method="post">
-      <div class="govuk-button-group" href="application-question-page-add-jobs.html">
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-      </div>
-    </form>
+  <a href="/v34/faa/apply/application-task-list-new-user-jobs-done.html" class="govuk-button" id="filters-submit-second">Continue </a>
+
 
 
 

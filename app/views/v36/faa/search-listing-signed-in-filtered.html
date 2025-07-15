@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link" href="search-page-signed-in.html">Back</a>
+<a class="govuk-back-link" href="/v34/faa/search-page-signed-in.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@ Find an apprenticeship - GOV.UK
 <!-- START title -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">12 results found</h1>
+    <h1 class="govuk-heading-l">3 results found</h1>
   </div>
 </div>
 <div class="govuk-!-padding-bottom-3"></div>
@@ -35,52 +35,54 @@ Find an apprenticeship - GOV.UK
         }
       </style>
 
-      <div class="das-filter__header" style="background-color: #B2B4B6;">
-        <div class="govuk-!-padding-bottom-3"></div>
+<div class="das-filter__header" style="background-color: #B2B4B6;">
+  <div class="govuk-!-padding-bottom-3"></div>
 
-        <div class="moj-filter__header-title">
-          <h2 class="govuk-heading-m govuk-!-padding-left-4">Filter</h2>
-        </div>
+  <div class="moj-filter__header-title">
+    <h2 class="govuk-heading-m govuk-!-padding-left-4">Filter</h2>
+  </div>
 
-        <div class="moj-filter__header-action">
+  <div class="moj-filter__header-action">
 
-        </div>
+  </div>
 
-      </div>
+</div>
 
       <div class="moj-filter__content">
 
         <div class="moj-filter__selected">
-
-
+        
+        
           <div class="moj-filter__selected-heading">
-
+        
             <div class="moj-filter__heading-title">
               <h2 class="govuk-heading-m">Active filters</h2>
             </div>
-
+        
             <div class="moj-filter__heading-action">
-              <a class="govuk-link govuk-link--no-visited-state small-regular-text" href="">Clear filters</a>      </div>
-
+              <a class="govuk-link govuk-link--no-visited-state small-regular-text" href="">Clear filters</a>
+            </div>
+        
           </div>
-
+        
           <h3 class="govuk-heading-s govuk-!-margin-bottom-0">What</h3>
-
+        
           <ul class="moj-filter-tags">
-          <li>
-             <a class="moj-filter__tag" href="/path/to/remove/this" style="display: flex; justify-content: space-between; align-items: center; padding-right: 0px;">
-             <span>Construction</span>
-            <span style="margin-left: 8px; font-weight: bold; font-size: 1.2em;">×</span>
-            </a>
+            <li>
+              <a class="moj-filter__tag" href="/path/to/remove/this"
+                style="display: flex; justify-content: space-between; align-items: center; padding-right: 0px;">
+                <span>Construction</span>
+                <span style="margin-left: 8px; font-weight: bold; font-size: 1.2em;">×</span>
+              </a>
             </li>
-            </ul>
-
-
-
+          </ul>
+        
+        
+        
           <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Where</h3>
-
-
-
+        
+        
+        
           <ul class="moj-filter-tags">
             <li>
               <a class="moj-filter__tag" href="/path/to/remove/this"
@@ -92,28 +94,42 @@ Find an apprenticeship - GOV.UK
           </ul>
 
 
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Apprenticeship type</h3>
+          
+          
+          
+          <ul class="moj-filter-tags">
+            <li>
+              <a class="moj-filter__tag" href="/path/to/remove/this"
+                style="display: flex; justify-content: space-between; align-items: center; padding-right: 0px;">
+                <span>Foundation apprenticeship</span>
+                <span style="margin-left: 8px; font-weight: bold; font-size: 1.2em;">×</span>
+              </a>
+            </li>
+          </ul>
+        
+        
           <div class="govuk-!-padding-bottom-4"></div>
-
+        
           <head>
             <title>Link with Bell Icon</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
           </head>
-
+        
           <body>
-
+        
             <a href="search-listing-search-alert-saved.html" class="bell-link govuk-!-padding-right-5">
               <i class="far fa-bell" style="color: #1d70b8"></i> Create an alert for this search
             </a>
-
-
+        
+        
           </body>
-
+        
         </div>
 
         <div class="moj-filter__options">
 
-          <a href="search-listing-signed-in-filtered" class="govuk-button" id="filters-submit-second">Apply filters</a>
-
+          <button type="submit" class="govuk-button" id="filters-submit-second">Apply filters</button>
 
           <div class="govuk-form-group">
             <label for="Keyword" class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-!-margin-bottom-0">What
@@ -156,6 +172,7 @@ Find an apprenticeship - GOV.UK
 
 
           <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
             <div class="govuk-accordion__section">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
@@ -173,7 +190,7 @@ Find an apprenticeship - GOV.UK
             
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" />
+                        <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" checked/>
                         <label class="govuk-label govuk-checkboxes__label" for="level-2">
                           Foundation apprenticeship
                         </label>
@@ -190,7 +207,7 @@ Find an apprenticeship - GOV.UK
                           Apprenticeships that qualify you for a job, level 2 to 7
                         </div>
                       </div>
-                      
+            
                     </div>
                   </fieldset>
             
@@ -207,14 +224,14 @@ Find an apprenticeship - GOV.UK
                   </span>
                 </h2>
               </div>
-          
+            
               <div id="accordion-default-content-1" class="govuk-accordion__section-content govuk-!-padding-top-0"
                 aria-labelledby="accordion-default-heading-1">
-          
+            
                 <div class="govuk-form-group govuk-!-margin-top-0 govuk-!-padding-top-0">
                   <fieldset class="govuk-fieldset">
-
-                     <div class="govuk-checkboxes govuk-checkboxes--small">
+            
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="level-2" name="levels" type="checkbox" value="2" />
                         <label class="govuk-label govuk-checkboxes__label" for="level-2">
@@ -271,16 +288,16 @@ Find an apprenticeship - GOV.UK
                       </div>
                     </div>
                   </fieldset>
-
+            
                   <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-top-4 govuk-!-margin-bottom-0">
                     <a class="govuk-link govuk-link--no-visited-state"
                       href="https://www.apprenticeships.gov.uk/apprentices/about-apprenticeships?#UnderstandingApprenticeshiplevelsandqualifications"
                       target="_blank" rel="external">
-                     About levels (opens in new tab)
+                      About levels (opens in new tab)
                     </a>
                   </p>
-
-
+            
+            
                 </div>
               </div>
             </div>
@@ -289,23 +306,23 @@ Find an apprenticeship - GOV.UK
             <div class="govuk-accordion__section">
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                    Job category
-                  </span>
+                  <button class="govuk-accordion__section-button" id="accordion-default-heading-2" aria-expanded="false"
+                    aria-controls="accordion-default-content-2" type="button">
+                    Job categories
+                  </button>
                 </h2>
               </div>
               <div id="accordion-default-content-2" class="govuk-accordion__section-content"
-                aria-labelledby="accordion-default-heading-2">
+                aria-labelledby="accordion-default-heading-2" hidden>
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="route-2868f657-3279-452a-9196-24f7294bd950"
-                          name="sectors" type="checkbox" value="Agriculture, environmental and animal care">
-                        <label class="govuk-label govuk-checkboxes__label"
-                          for="route-2868f657-3279-452a-9196-24f7294bd950">
+                        <input class="govuk-checkboxes__input" id="route-2868f657-3279-452a-9196-24f7294bd950" name="sectors"
+                          type="checkbox" value="Agriculture, environmental and animal care">
+                        <label class="govuk-label govuk-checkboxes__label" for="route-2868f657-3279-452a-9196-24f7294bd950">
                           Agriculture, environmental and animal care
-                        </label>
+                        </label>      
                       </div>
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="route-7e11990f-1967-4fdc-9f56-b49893d73645"
@@ -442,7 +459,6 @@ Find an apprenticeship - GOV.UK
               </div>
               <a href="search-listing-signed-in-filtered" class="govuk-button" id="filters-submit-second"
                 style="margin-top: 30px; margin-bottom: 5px;">Apply filters</a>
-
           </div>
 
         </div>
@@ -497,84 +513,13 @@ Find an apprenticeship - GOV.UK
     <div class="govuk-!-padding-bottom-2"></div>
     
     <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-        <h2 class="govuk-heading-m das-search-results__heading govuk-!-margin-bottom-1">
-          <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-aof" href="vacancy-page-aof.html style="white-space: nowrap;>
-          Construction Management Apprentice</a>
-        </h2>
-        <p class="govuk-body govuk-!-margin-bottom-0">Crossroads Construction Company</p>
-        <p class="govuk-body" style="color:#505a5f">
-          Bristol (BS1 6GA)</p>
-        <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 0.2 miles</p>
-        <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 1 August 2025</p>
-        <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Construction site supervisor (level 4)</p>
-        <p class="govuk-body"><b>Wage</b> £20,000 a year</p>
-        <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes 1 June 2025</p>
-        <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-          Posted 24 April 2025</p>
-          
-      </div>
-
-      <!-- Add the link with the heart icon -->
-      <div class="govuk-grid-column-one-quarter" style="text-align: right; height: 280px;">
-      
-        <head>
-          <title>Link with Heart Icon</title>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-          <style>
-            .heart-link {
-              display: inline-flex;
-              align-items: center;
-              color: #1d70b8;
-              font-family: Arial, sans-serif;
-              text-decoration: none;
-              /* Remove underline from the whole link initially */
-            }
-      
-            .heart-link span {
-              text-decoration: underline;
-              /* Only underline the text inside the span */
-            }
-      
-            .heart-link i {
-              margin-right: 8px;
-              font-size: 1.2em;
-              /* Add space between icon and text */
-            }
-          </style>
-          
-        </head>
-      
-        <body>
-          <a href="#" class="heart-link govuk-link--no-visited-state">
-            <i class="far fa-heart"></i> <span>Save</span>
-          </a>
-
-          <img src="/public/images/disability-confident.png" style="margin-top: 220px;" width="130px">
-       
-        </body>
-      </div>
-
-      <!-- End the link with the heart icon -->
-
-
-    </div>
-
-
-
-
-
-    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-three-quarters">
         <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-2">
           New
         </strong>
         <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-          <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
+          <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in-under21.html">
             Construction apprentice</a>
         </h2>
         <p class="govuk-body govuk-!-margin-bottom-0">JONES BUILDERS</p>
@@ -625,7 +570,7 @@ Find an apprenticeship - GOV.UK
         </head>
       
         <body>
-          <a href="#" class="heart-link govuk-link--no-visited-state">
+          <a href="#" class="heart-link">
             <i class="far fa-heart"></i> <span>Save</span>
           </a>
           
@@ -635,276 +580,15 @@ Find an apprenticeship - GOV.UK
       <!-- End the link with the heart icon -->
     </div>
 
-
-
-
-    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-three-quarters">
-        <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-          <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-            QS Apprenticeship (Quantity Surveyor)</a>
-        </h2>
-        <p class="govuk-body govuk-!-margin-bottom-0">DISTINCTION HOUSES LTD</p>
-        <p class="govuk-body" style="color:#505a5f">
-          Bristol (BS4 9HA)</p>
-        <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 2.1 miles</p>
-        <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 12 September 2025</p>
-        <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Construction quantity surveyor (degree) (level 6)</p>
-        <p class="govuk-body"><b>Wage</b> Competitive</p>
-        <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 24 days (Friday 21 May 2025)
-        </p>
-        <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-          Posted on 21 March 2025</p>
-        <div class="govuk-!-padding-bottom-5"></div>
-      </div>
-    
-      <!-- Add the link with the heart icon -->
-      <div class="govuk-grid-column-one-quarter" style="text-align: right; height: 280px;">
-    
-        <head>
-          <title>Link with Heart Icon</title>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-          <style>
-            .heart-link {
-              display: inline-flex;
-              align-items: center;
-              color: #1d70b8;
-              font-family: Arial, sans-serif;
-              text-decoration: none;
-              /* Remove underline from the whole link initially */
-            }
-    
-            .heart-link span {
-              text-decoration: underline;
-              /* Only underline the text inside the span */
-            }
-    
-            .heart-link i {
-              margin-right: 8px;
-              font-size: 1.2em;
-              /* Add space between icon and text */
-            }
-          </style>
-    
-        </head>
-    
-        <body>
-          <a href="#" class="heart-link govuk-link--no-visited-state">
-            <i class="far fa-heart"></i> <span>Save</span>
-          </a>
-<img src="/public/images/disability-confident.png" style="margin-top: 240px;" width="130px">        </body>
-      </div>
-    
-      <!-- End the link with the heart icon -->
-    </div>
-    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-
-
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <strong class="govuk-tag govuk-tag--orange govuk-!-margin-bottom-2">
-      Closing soon
-    </strong>
-    <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-      Apprentice Groundworker</a>
-    </h2>
-    <p class="govuk-body govuk-!-margin-bottom-0">DISTINCTION HOUSES LTD</p>
-    <p class="govuk-body" style="color:#505a5f">
-      Bristol (BS4 9HA)</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 2.1 miles</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 12 September 2025</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Groundworker (level 2)</p>
-    <p class="govuk-body"><b>Wage</b> £11,778 to £15,047.60 a year</p>
-    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 4 days (Tuesday 13 May 2025)
-    </p>
-    <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-      Posted 14 April 2025</p>
-    <div class="govuk-!-padding-bottom-5"></div>
-  </div>
-
-  <!-- Add the link with the heart icon -->
-  <div class="govuk-grid-column-one-quarter" style="text-align: right; height: 280px;">
-
-    <head>
-      <title>Link with Heart Icon</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-      <style>
-        .heart-link {
-          display: inline-flex;
-          align-items: center;
-          color: #1d70b8;
-          font-family: Arial, sans-serif;
-          text-decoration: none;
-          /* Remove underline from the whole link initially */
-        }
-
-        .heart-link span {
-          text-decoration: underline;
-          /* Only underline the text inside the span */
-        }
-
-        .heart-link i {
-          margin-right: 8px;
-          font-size: 1.2em;
-          /* Add space between icon and text */
-        }
-      </style>
-
-    </head>
-
-    <body>
-      <a href="#" class="heart-link govuk-link--no-visited-state">
-        <i class="far fa-heart"></i> <span>Save</span>
-      </a>
-<img src="/public/images/disability-confident.png" style="margin-top: 250px;" width="130px">
-    </body>
-  </div>
-
-  <!-- End the link with the heart icon -->
-</div>
 <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
 
 
 
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
     <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-        Landscape consutrction apprenticeship</a>
-    </h2>
-    <p class="govuk-body govuk-!-margin-bottom-0">South West Build and Design</p>
-    <p class="govuk-body" style="color:#505a5f">
-      Bristol (BS14 1JK)</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 4.6 miles</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 1 July 2025</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Horticulture or landscape construction operative (level 2)</p>
-    <p class="govuk-body"><b>Wage</b> £18,000 a year</p>
-    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes on Friday 21 May 2025
-    </p>
-    <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-      Posted 21 February 2025</p>
-    <div class="govuk-!-padding-bottom-5"></div>
-  </div>
-
-  <!-- Add the link with the heart icon -->
-  <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-
-    <head>
-      <title>Link with Heart Icon</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-      <style>
-        .heart-link {
-          display: inline-flex;
-          align-items: center;
-          color: #1d70b8;
-          font-family: Arial, sans-serif;
-          text-decoration: none;
-          /* Remove underline from the whole link initially */
-        }
-
-        .heart-link span {
-          text-decoration: underline;
-          /* Only underline the text inside the span */
-        }
-
-        .heart-link i {
-          margin-right: 8px;
-          font-size: 1.2em;
-          /* Add space between icon and text */
-        }
-      </style>
-
-    </head>
-
-    <body>
-      <a href="#" class="heart-link govuk-link--no-visited-state">
-        <i class="far fa-heart"></i> <span>Save</span>
-      </a>
-    </body>
-  </div>
-
-  <!-- End the link with the heart icon -->
-</div>
-<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-
-
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-        Quantitive Surveyorship Apprenticeship 2025</a>
-    </h2>
-    <p class="govuk-body govuk-!-margin-bottom-0">South West Build and Design</p>
-    <p class="govuk-body" style="color:#505a5f">
-      Bristol (BS14 1JK)</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 4.6 miles</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 1 July 2025</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Construction quantity surveyor (degree) (level 6)</p>
-    <p class="govuk-body"><b>Wage</b> £24,500 a year</p>
-    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes on Friday 21 May 2025
-    </p>
-    <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-      Posted 21 February 2025</p>
-    <div class="govuk-!-padding-bottom-5"></div>
-  </div>
-
-  <!-- Add the link with the heart icon -->
-  <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-
-    <head>
-      <title>Link with Heart Icon</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-      <style>
-        .heart-link {
-          display: inline-flex;
-          align-items: center;
-          color: #1d70b8;
-          font-family: Arial, sans-serif;
-          text-decoration: none;
-          /* Remove underline from the whole link initially */
-        }
-
-        .heart-link span {
-          text-decoration: underline;
-          /* Only underline the text inside the span */
-        }
-
-        .heart-link i {
-          margin-right: 8px;
-          font-size: 1.2em;
-          /* Add space between icon and text */
-        }
-      </style>
-
-    </head>
-
-    <body>
-      <a href="#" class="heart-link govuk-link--no-visited-state">
-        <i class="far fa-heart"></i> <span>Save</span>
-      </a>
-    </body>
-  </div>
-
-  <!-- End the link with the heart icon -->
-</div>
-<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-
-
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-        FOUNDATION APPRENTICESHIP</a>
+      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in-22to24.html">
+        Business apprenticeship 2025 cycle</a>
     </h2>
     <p class="govuk-body govuk-!-margin-bottom-0">Premium Housebuilders</p>
     <p class="govuk-body" style="color:#505a5f">
@@ -956,7 +640,7 @@ Find an apprenticeship - GOV.UK
     </head>
 
     <body>
-      <a href="#" class="heart-link govuk-link--no-visited-state">
+      <a href="#" class="heart-link">
         <i class="far fa-heart"></i> <span>Save</span>
       </a>
     </body>
@@ -967,167 +651,78 @@ Find an apprenticeship - GOV.UK
 <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
 
 
+
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-    <strong class="govuk-tag govuk-tag--orange govuk-!-margin-bottom-2">
-      Closing soon
+    <strong class="govuk-tag govuk-tag--blue govuk-!-margin-bottom-2">
+      New
     </strong>
     <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-        Apprentice Construction Support (office-based)</a>
+      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in-over25">
+        Site Construction Apprentice (sites nationwide)</a>
     </h2>
-    <p class="govuk-body govuk-!-margin-bottom-0">Day Homes</p>
+    <p class="govuk-body govuk-!-margin-bottom-0">JS CONSTRUCTION LTD</p>
     <p class="govuk-body" style="color:#505a5f">
-      Bradley Stoke (BS28 1UY )</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 8.5 miles</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 21 May 2025</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Constructor support technician (level 4)</p>
-    <p class="govuk-body"><b>Wage</b> £22,448 a year</p>
-    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes in 3 days (4 May 2025)
-    </p>
-    <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-      Posted 20 April 2025</p>
-    <div class="govuk-!-padding-bottom-5"></div>
-
-
-  </div>
-
-  <!-- Add the link with the heart icon -->
-  <div class="govuk-grid-column-one-quarter" style="text-align: right;">
-
-    <head>
-      <title>Link with Heart Icon</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-      <style>
-        .heart-link {
-          display: inline-flex;
-          align-items: center;
-          color: #1d70b8;
-          font-family: Arial, sans-serif;
-          text-decoration: none;
-          /* Remove underline from the whole link initially */
-        }
-
-        .heart-link span {
-          text-decoration: underline;
-          /* Only underline the text inside the span */
-        }
-
-        .heart-link i {
-          margin-right: 8px;
-          font-size: 1.2em;
-          /* Add space between icon and text */
-        }
-      </style>
-
-    </head>
-
-    <body>
-      <a href="#" class="heart-link govuk-link--no-visited-state">
-        <i class="far fa-heart"></i> <span>Save</span>
-      </a>
-    </body>
-  </div>
-
-  <!-- End the link with the heart icon -->
-</div>
-<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-
-
-
-
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-three-quarters">
-    <h2 class="govuk-heading-m  das-search-results__heading govuk-!-margin-bottom-1">
-      <a class="das-search-results__link govuk-link--no-visited-state" id="vacancy-02" href="vacancy-page-signed-in.html">
-        Pipe fitter apprenticeship (site-based)</a>
-    </h2>
-    <p class="govuk-body govuk-!-margin-bottom-0">Day Homes</p>
-    <p class="govuk-body" style="color:#505a5f">
-      Bradley Stoke (BS28 1UY )</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Distance</b> 8.5 miles</p>
+      Recruiting nationally</p>
     <p class="govuk-body govuk-!-margin-bottom-1"><b>Start date</b> 14 June 2025</p>
-    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Engineering construction pipefitter (level 3)</p>
-    <p class="govuk-body"><b>Wage</b> £22,448 a year</p>
-    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes 1 June 2025
+    <p class="govuk-body govuk-!-margin-bottom-1"><b>Qualification</b> Construction foundation apprenticeship (level 2)</p>
+    <p class="govuk-body"><b>Wage</b> £19,250 a year</p>
+    <p class="govuk-body govuk-!-margin-bottom-0 govuk-!-margin-top-1">Closes on 23 May 2025
     </p>
     <p class="govuk-body govuk-!-font-size-16" style="color:#505a5f">
-      Posted 20 April 2025</p>
+      Posted 28 April 2025</p>
+    <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-2">
+      Foundation
+    </strong>
     <div class="govuk-!-padding-bottom-5"></div>
-
-
   </div>
 
-  <!-- Add the link with the heart icon -->
-  <div class="govuk-grid-column-one-quarter" style="text-align: right;">
+<!-- Add the link with the heart icon -->
+<div class="govuk-grid-column-one-quarter" style="text-align: right; height: 280px;">
 
-    <head>
-      <title>Link with Heart Icon</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-      <style>
-        .heart-link {
-          display: inline-flex;
-          align-items: center;
-          color: #1d70b8;
-          font-family: Arial, sans-serif;
-          text-decoration: none;
-          /* Remove underline from the whole link initially */
-        }
+  <head>
+    <title>Link with Heart Icon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+      .heart-link {
+        display: inline-flex;
+        align-items: center;
+        color: #1d70b8;
+        font-family: Arial, sans-serif;
+        text-decoration: none;
+        /* Remove underline from the whole link initially */
+      }
 
-        .heart-link span {
-          text-decoration: underline;
-          /* Only underline the text inside the span */
-        }
+      .heart-link span {
+        text-decoration: underline;
+        /* Only underline the text inside the span */
+      }
 
-        .heart-link i {
-          margin-right: 8px;
-          font-size: 1.2em;
-          /* Add space between icon and text */
-        }
-      </style>
+      .heart-link i {
+        margin-right: 8px;
+        font-size: 1.2em;
+        /* Add space between icon and text */
+      }
+    </style>
 
-    </head>
+  </head>
 
-    <body>
-      <a href="#" class="heart-link govuk-link--no-visited-state">
-        <i class="far fa-heart"></i> <span>Save</span>
-      </a>
-    </body>
-  </div>
+  <body>
+    <a href="#" class="heart-link">
+      <i class="far fa-heart"></i> <span>Save</span>
+    </a>
 
-  <!-- End the link with the heart icon -->
+          <img src="/public/images/disability-confident.png" style="margin-top: 330px;" width="130px">
+
+  </body>
 </div>
+
+<!-- End the link with the heart icon -->
+</div>
+
+
 <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6 ">
-
-
-
-
-
-    <nav class="govuk-pagination" role="navigation" aria-label="results">
-      <ul class="govuk-pagination__list">
-        <li class="govuk-pagination__item govuk-pagination__item--current">
-          <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="#" aria-label="Page 1" aria-current="page">
-            1
-          </a>
-        </li>
-        <li class="govuk-pagination__item">
-          <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="#" aria-label="Page 2">
-            2
-          </a>
-        </li>
-      </ul>
-      <div class="govuk-pagination__next">
-        <a class="govuk-link govuk-pagination__link govuk-link--no-visited-state" href="#" rel="next"> <span
-            class="govuk-pagination__link-title">Next</span> <svg
-            class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13"
-            width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-            <path
-              d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z">
-            </path>
-          </svg></a>
-      </div>
-    </nav>
 
 
 

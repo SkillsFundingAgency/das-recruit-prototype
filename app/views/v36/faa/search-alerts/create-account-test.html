@@ -6,7 +6,7 @@ Find an apprenticeship - GOV.UK
 
 {% block beforeContent %}
 {{super()}}
-<a class="govuk-back-link">Back</a>
+<a class="govuk-back-link" href="create-account-name-input.html">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,20 +15,13 @@ Find an apprenticeship - GOV.UK
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <span class="govuk-caption-l">Create an account</span>
-    <h1 class="govuk-heading-l">Date of birth</h1>
-
-    <p class="govuk-body">We’ll use your age to: </p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>check that you’re old enough to use this service </li>
-      <li>check if you can apply for foundation apprenticeships</li>
-      <li>calculate the correct minimum wage for you </li>
-    </ul>
-
-    <p class="govuk-body govuk-!-margin-bottom-7">We also monitor which age groups use our service to help us make
-      improvements. </p>
+    <h1 class="govuk-heading-l">Date of birth and upload a certificate</h1>
+    <div class="govuk-inset-text">
+      We don’t share your date of birth when you apply for an apprenticeship.
+    </div>
+    <p class="govuk-body govuk-!-margin-bottom-7">We only use your age to make our service work. For example, to show
+      you the correct National Minimum Wage rate for your age.</p>
     <form class="form" action="create-account-postcode" method="post">
-
-
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -36,8 +29,8 @@ Find an apprenticeship - GOV.UK
               What is your date of birth?
             </h1>
           </legend>
-          <div id="date-of-birth-hint" class="govuk-hint govuk-!-margin-bottom-6" style="color: #b1b4b6;">
-            For example, 31 03 1980
+          <div id="date-of-birth-hint" class="govuk-hint">
+            For example, 31 3 1980
           </div>
           <div class="govuk-date-input" id="date-of-birth">
             <div class="govuk-date-input__item">
@@ -74,11 +67,26 @@ Find an apprenticeship - GOV.UK
         </fieldset>
       </div>
 
+      <div class="govuk-form-group">
+        <label class="govuk-label"   style="color: #d53880"  for=" file-upload-1">
+          Definitely upload your certificate here
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
 
+      <div class="govuk-form-group">
+        <label class="govuk-label" style="color: #d53880" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
 
-    
-
-<a href="/v34/faa/search-page-signed-in.html" class="govuk-button" id="filters-submit-second">Continue</a>
+      <div class="govuk-button-group" href="create-account-postcode.html.html">
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
 
 
   </div>

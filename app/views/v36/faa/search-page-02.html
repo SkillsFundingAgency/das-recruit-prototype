@@ -2,7 +2,7 @@
 {% set serviceName = "Find an apprenticeship" %}
 
 {# Set where you want this to go to #}
-{% set signInLink = "./govuk-one-login-flow-start-page/sign-in-or-create" %}
+{% set signInLink = "/v34/faa/search-alerts/create-account-date-of-birth.html" %}
 
 {% block pageTitle %}
 Find an apprenticeship - GOV.UK
@@ -64,14 +64,19 @@ Find an apprenticeship - GOV.UK
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="govuk-grid-column-one-half">
-          <form class="form" action="search-listing" method="post">
-            <div class="govuk-button-group" href="search-listing">
-              <button class="govuk-button" data-module="govuk-button">
+          <form class="form" action="/v36/faa/search-listing" method="post">
+            <div class="govuk-button-group">
+              <button class="govuk-button" data-module="govuk-button" type="submit">
                 Search
               </button>
-              <a class="govuk-link" href="sector-selection-page">Browse by your interests instead</a>
+              <a class="govuk-link" href="#" onclick="return false;">Browse by your interests instead</a>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    
+
 
         </div>
       </div>

@@ -31,15 +31,23 @@ Find an apprenticeship - GOV.UK
         </div>
       </div>
 
+      <strong class="govuk-tag govuk-tag--pink govuk-!-margin-bottom-4">
+        Foundation
+      </strong>
 
-      <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Apply for Business Apprenticeship</h1>
-      <p class="govuk-caption-l govuk-!-margin-bottom-3" style="color:	#505a5f">AOF Consulting Ltd</p>
-      <p class="govuk-body govuk-!-margin-bottom-3">Closes on 30 October at 11:59pm</p>
+
+      <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Apply for Business Apprenticeship</h1>
+      <p class="govuk-caption-m govuk-!-margin-bottom-0" style="color:	#000000">AOF CONSULTING LTD</p>
+      <p class="govuk-body govuk-!-margin-bottom-3" style="color:#505a5f">London (SW1 2XU)</p>
+      <p class="govuk-body govuk-!-margin-bottom-0">Closes on 30 October at 11:59pm</p>
+      <p class="govuk-body-s govuk-!-margin-bottom-3" style="color:#505a5f">Posted on 23 January 2024</p>
       <p class="govuk-body govuk-!-margin-bottom-7">
-        <a href="../vacancy-page-aof.html" class="govuk-link" rel="noreferrer noopener" target="_blank">View vacancy
+        <a href="../vacancy-page-aof.html" class="govuk-link govuk-link--no-visited-state " rel="noreferrer noopener" target="_blank">View vacancy
           (opens
           in new tab)</a>
       </p>
+
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
       <form class="form" action="application-preview-page-02" method="post">
         <h2 class="govuk-heading-m">Education history</h2>
@@ -138,29 +146,7 @@ Find an apprenticeship - GOV.UK
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
             <span class="app-task-list__task-name">
-              <a href="application-question-page-main-strengths.html" aria-describedby="job-role-status">
-                What are your skills and strengths?
-              </a>
-            </span>
 
-
-            {% if data['completed-role-questions'] == "yes" %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
-
-            {% elseif data['completed-role-questions'] == "no" %}
-            <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-            {% else %}
-            <div class="govuk-task-list__status" id="company-details-1-status">
-              Previous answer
-            </div>
-
-            {% endif %}
-
-
-          </li>
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <span class="app-task-list__task-name">
               <a href="application-question-page-interests-you-about-this-apprenticeship.html"
                 aria-describedby="additional-questions-status">
                 What interests you about this apprenticeship?
@@ -180,47 +166,7 @@ Find an apprenticeship - GOV.UK
 
             {% endif %}
 
-          </li>
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <span class="app-task-list__task-name">
-              <a href="application-question-page-employer-question-two.html"
-                aria-describedby="additional-questions-status">
-                How will you get to and from this vacancy every day if<br>successful?<br>
-              </a>
-            </span>
-
-            {% if data['completed-employer-question-two'] == "yes" %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
-
-            {% elseif data['completed-employer-question-two'] == "no" %}
-            <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">Incomplete</strong>
-
-            {% else %}
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-            {% endif %}
-
-          </li>
-          <li class="govuk-task-list__item govuk-task-list__item--with-link">
-            <span class="app-task-list__task-name">
-              <a href="application-question-page-employer-question-one.html"
-                aria-describedby="additional-questions-status">
-                When you’re balancing multiple projects, how do you<br>keep yourself organised?<br>
-              </a>
-            </span>
-
-            {% if data['completed-employer-questions'] == "yes" %}
-            <strong class="govuk-tag govuk-tag--grey app-task-list__tag">Completed</strong>
-
-            {% elseif data['completed-employer-questions'] == "no" %}
-            <strong class="govuk-tag govuk-tag--light-blue app-task-list__tag">In progress</strong>
-
-            {% else %}
-            <strong class="govuk-tag govuk-tag--blue app-task-list__tag">Not yet started</strong>
-
-            {% endif %}
-
-          </li>
+          
         </ul>
 
         <h2 class="govuk-heading-m govuk-!-margin-top-8">Interview adjustments</h2>
@@ -249,8 +195,8 @@ Find an apprenticeship - GOV.UK
         </ul>
 
         <h2 class="govuk-heading-m govuk-!-margin-top-8">Disability Confidence</h2>
-        <p class="govuk-body" style="color:	#505a5f">This company has joined the government’s Disability Confidence
-          scheme.</p>
+        
+        <p class="govuk-body" style="color:	#505a5f">This company has joined a government scheme.</p>
         <ul class="govuk-task-list">
           <li class="govuk-task-list__item govuk-task-list__item--with-link">
             <span class="app-task-list__task-name">
