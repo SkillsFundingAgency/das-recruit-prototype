@@ -1,6 +1,14 @@
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
 {% block header %}
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+homepageUrl: "#"
+}) }}
+
+
 <header class="cross-service-header" role="banner" data-module="one-login-header">
     <div class="one-login-header" data-one-login-header-nav>
         <div class="one-login-header__container govuk-width-container">
